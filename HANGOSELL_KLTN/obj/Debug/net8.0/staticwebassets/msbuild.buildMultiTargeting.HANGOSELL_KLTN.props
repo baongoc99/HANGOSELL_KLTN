@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\HANGOSELL_KLTN.props" />
+</Project>

@@ -1,0 +1,75 @@
+﻿@model HANGOSELL_KLTN.Models.EF.Category
+
+@{
+    ViewData["Title"] = "Create Category";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        <div class="page-header">
+
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">Add Category</h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/Admin/Category">Category</a></li>
+                        <li class="breadcrumb-item active">Add Category</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card comman-shadow">
+                    <div class="card-body">
+                        <form action="/Admin/Category/Create" method="POST" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="mb-3">
+                                    <label asp-for="Title" class="form-label">Category Name</label>
+                                    <input asp-for="Title" id="title" name="Title" class="form-control" />
+                                    <span asp-validation-for="Title" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="Description" class="form-label">Description</label>
+                                    <textarea asp-for="Description" id="description" name="Description" class="form-control"></textarea>
+                                    <span asp-validation-for="Description" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="Position" class="form-label">Position</label>
+                                    <input asp-for="Position" id="position" name="Position" type="number" class="form-control" />
+                                    <span asp-validation-for="Position" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="SeoTitle" class="form-label">SEO Title</label>
+                                    <input asp-for="SeoTitle" id="seoTitle" name="SeoTitle" class="form-control" />
+                                    <span asp-validation-for="SeoTitle" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="SeoKeyword" class="form-label">SEO Keyword</label>
+                                    <input asp-for="SeoKeyword" id="seoKeyword" name="SeoKeyword" class="form-control" />
+                                    <span asp-validation-for="SeoKeyword" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="SeoDescription" class="form-label">SEO Description</label>
+                                    <textarea asp-for="SeoDescription" id="seoDescription" name="SeoDescription" class="form-control"></textarea>
+                                    <span asp-validation-for="SeoDescription" class="text-danger"></span>
+                                </div>
+                                <div class="col-12">
+                                    <div class="customer-submit">
+                                        <button type="submit" class="btn btn-primary">Create</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
