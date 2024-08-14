@@ -1,0 +1,108 @@
+﻿@model List<HANGOSELL_KLTN.Models.EF.Role>
+
+@{
+    ViewData["Title"] = "Create Employee";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">Add Employee</h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/Admin/Employee">Employees</a></li>
+                        <li class="breadcrumb-item active">Add Employee</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/Admin/Employee/Create" method="POST" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-12 col-sm-4">
+                                <div class="form-group local-forms">
+                                    <label for="CodeEmployee" class="form-label">Employee Code <span class="login-danger">*</span></label>
+                                    <input type="text" class="form-control" id="CodeEmployee" name="CodeEmployee" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <div class="form-group local-forms">
+                                    <label for="EmployeeName" class="form-label">Employee Name <span class="login-danger">*</span></label>
+                                    <input type="text" class="form-control" id="EmployeeName" name="EmployeeName" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <div class="form-group local-forms">
+                                    <label for="Email" class="form-label">Email <span class="login-danger">*</span></label>
+                                    <input type="email" class="form-control" id="Email" name="Email" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <div class="form-group local-forms">
+                                    <label for="PhoneNumber" class="form-label">Phone Number <span class="login-danger">*</span></label>
+                                    <input type="tel" class="form-control" id="PhoneNumber" name="PhoneNumber" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <div class="form-group local-forms">
+                                    <label for="DateOfBirth" class="form-label">Date of Birth <span class="login-danger">*</span></label>
+                                    <input type="date" class="form-control datetimepicker" id="DateOfBirth" name="DateOfBirth" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <div class="form-group local-forms">
+                                    <label for="JoinDate" class="form-label">Join Date <span class="login-danger">*</span></label>
+                                    <input type="date" class="form-control datetimepicker" id="JoinDate" name="JoinDate" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <div class="form-group local-forms">
+                                    <label for="RoleID" class="form-label">Role <span class="login-danger">*</span></label>
+                                    <select class="form-control select" id="RoleID" name="RoleID" required>
+                                        @foreach (var role in ViewBag.Roles)
+                                        {
+                                            <option value="@role.Id">@role.RoleName</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <div class="form-group local-forms">
+                                    <label for="Password" class="form-label">Password <span class="login-danger">*</span></label>
+                                    <input type="password" class="form-control" id="Password" name="Password" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <div class="form-group local-forms">
+                                    <label for="Address" class="form-label">Address <span class="login-danger">*</span></label>
+                                    <input type="text" class="form-control" id="Address" name="Address" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <div class="form-group local-forms">
+                                    <label for="Avatar" class="form-label">Avatar (Optional)</label>
+                                    <input type="file" class="form-control" id="Avatar" name="Avatar">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <div class="form-group local-forms">
+                                    <label for="Position" class="form-label">Position (Optional)</label>
+                                    <input type="text" class="form-control" id="Position" name="Position">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="student-submit">
+                                    <button type="submit" class="btn btn-primary">Create</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

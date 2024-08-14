@@ -445,3 +445,4 @@ C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\obj\Debug\net8.0\refint
 C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\obj\Debug\net8.0\HANGOSELL_KLTN.pdb
 C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\obj\Debug\net8.0\HANGOSELL_KLTN.genruntimeconfig.cache
 C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\obj\Debug\net8.0\ref\HANGOSELL_KLTN.dll
+C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\obj\Debug\net8.0\HANGOSELL_KLTN.sourcelink.json

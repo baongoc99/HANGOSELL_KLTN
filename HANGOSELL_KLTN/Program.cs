@@ -1,13 +1,17 @@
 ﻿using AspNetCoreHero.ToastNotification;
 using HANGOSELL_KLTN.Data;
+using HANGOSELL_KLTN.Models.EF;
 using HANGOSELL_KLTN.Service;
 using Microsoft.EntityFrameworkCore;
-using System.Text.Encodings.Web;
-using System.Text.Unicode;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<CategoryService>();
+builder.Services.AddScoped<EmployeeService>();
+builder.Services.AddScoped<RoleService>();
+builder.Services.AddScoped<CustomerService>();
+builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<SupplierService>();
 
 // Thêm cấu hình DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -57,7 +61,7 @@ app.UseAuthorization();
 // Cấu hình route mặc định trước, sau đó là route cho các khu vực
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Login}/{id?}");
 
 app.MapControllerRoute(
     name: "areas",

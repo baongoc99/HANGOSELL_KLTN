@@ -1,117 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|c:\\users\\user\\source\\repos\\hangosell_kltn\\hangosell_kltn\\areas\\admin\\views\\category\\createcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|solutionrelative:hangosell_kltn\\areas\\admin\\views\\category\\createcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|c:\\users\\user\\source\\repos\\hangosell_kltn\\hangosell_kltn\\areas\\admin\\views\\category\\editcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|solutionrelative:hangosell_kltn\\areas\\admin\\views\\category\\editcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|c:\\users\\user\\source\\repos\\hangosell_kltn\\hangosell_kltn\\areas\\admin\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|solutionrelative:hangosell_kltn\\areas\\admin\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|c:\\users\\user\\source\\repos\\hangosell_kltn\\hangosell_kltn\\models\\ef\\modeldataset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|solutionrelative:hangosell_kltn\\models\\ef\\modeldataset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|c:\\users\\user\\source\\repos\\hangosell_kltn\\hangosell_kltn\\areas\\admin\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|solutionrelative:hangosell_kltn\\areas\\admin\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|c:\\users\\user\\source\\repos\\hangosell_kltn\\hangosell_kltn\\models\\ef\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|solutionrelative:hangosell_kltn\\models\\ef\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Sidebar.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Shared\\_Sidebar.cshtml",
-              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Shared\\_Sidebar.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Shared\\_Sidebar.cshtml",
-              "RelativeToolTip": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Shared\\_Sidebar.cshtml",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAACsAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-09T09:37:21.31Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Models\\EF\\Category.cs",
-              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Models\\EF\\Category.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Models\\EF\\Category.cs",
-              "RelativeToolTip": "HANGOSELL_KLTN\\Models\\EF\\Category.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAQwCkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-09T09:29:28.317Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CreateCategory.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Category\\CreateCategory.cshtml",
-              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Category\\CreateCategory.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Category\\CreateCategory.cshtml",
-              "RelativeToolTip": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Category\\CreateCategory.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-09T09:26:18.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditCategory.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Category\\EditCategory.cshtml",
-              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Category\\EditCategory.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Category\\EditCategory.cshtml",
-              "RelativeToolTip": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Category\\EditCategory.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAEYAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-09T09:26:16.717Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Category\\Index.cshtml",
-              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Category\\Index.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Category\\Index.cshtml",
-              "RelativeToolTip": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Category\\Index.cshtml",
-              "ViewState": "AQIAABoAAAAAAAAAAADwvzkAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-09T09:20:07.365Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ModelDataset.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Models\\EF\\ModelDataset.cs",
-              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Models\\EF\\ModelDataset.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Models\\EF\\ModelDataset.cs",
-              "RelativeToolTip": "HANGOSELL_KLTN\\Models\\EF\\ModelDataset.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-09T09:17:23.607Z"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

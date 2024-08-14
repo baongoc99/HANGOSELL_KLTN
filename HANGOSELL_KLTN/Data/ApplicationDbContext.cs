@@ -84,11 +84,21 @@ namespace HANGOSELL_KLTN.Data
 
             // Seed dữ liệu mẫu cho các thực thể
 
-            // Seed Categories
-            modelBuilder.Entity<Category>().HasData(
-                new Category { Id = 1, Title = "Electronics", Position = 1, SeoTitle = "Electronics Category", SeoKeyword = "electronics, gadgets", SeoDescription = "Find the latest electronics here." },
-                new Category { Id = 2, Title = "Books", Position = 2, SeoTitle = "Books Category", SeoKeyword = "books, literature", SeoDescription = "Browse our collection of books." }
-            );
+                // Seed Categories
+                modelBuilder.Entity<Category>().HasData(
+                    new Category { Id = 1, Title = "Electronics", Description = "Explore a wide range of electronics and gadgets.", Position = 1, SeoTitle = "Electronics Category", SeoKeyword = "electronics, gadgets", SeoDescription = "Find the latest electronics here." ,
+                        CreateDate = new DateTime(2023, 1, 2),
+                        CreateBy = "Admin",
+                        ModifiedDate = new DateTime(2024, 8, 13),
+                        ModifiedBy = "Admin"
+                    },
+                    new Category { Id = 2, Title = "Books", Description = "Discover a world of literature with our vast collection of books.", Position = 2, SeoTitle = "Books Category", SeoKeyword = "books, literature", SeoDescription = "Browse our collection of books." ,
+                        CreateDate = new DateTime(2023, 1, 1),
+                        CreateBy = "Admin",
+                        ModifiedDate = new DateTime(2024, 8, 13),
+                        ModifiedBy = "Admin"
+                    }
+                );
 
             // Seed Roles
             modelBuilder.Entity<Role>().HasData(
