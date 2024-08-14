@@ -38,6 +38,8 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
 
         public IActionResult Edit(Customer customer)
         {
+            Customer customer1 = customerService.GetCustomerById(customer.Id);
+            customer.Password = customer1.Password;
             customerService.UpdateCustomer(customer);
             return Redirect("/Admin/Customer");
         }
