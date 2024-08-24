@@ -1,8 +1,8 @@
 ﻿@model List<HANGOSELL_KLTN.Models.EF.Employee>
 
 @{
-    ViewData["Title"] = "List User";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "List Employee";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <div class="page-wrapper">
@@ -13,10 +13,13 @@
                 <div class="col">
                     <h3 class="page-title">List Employee</h3>
                     <div class="col-auto text-end float-end ms-auto download-grp">
-                        <a href="/Admin/Employee/CreateEmployee" class="btn btn-outline-gray me-2">
+                        <a href="/Admin/Employee/Download" class="btn btn-outline-success me-2" style="">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="/Admin/Employee" class="btn btn-outline-gray me-2 active">
                             <i class="fa fa-list" aria-hidden="true"></i>
                         </a>
-                        <a href="/Admin/Employee/CreateEmployee" class="btn btn-outline-gray me-2">
+                        <a href="/Admin/Employee/GridEmployee" class="btn btn-outline-gray me-2">
                             <i class="fa fa-th" aria-hidden="true"></i>
                         </a>
                         <a href="/Admin/Employee/CreateEmployee" class="btn btn-outline-gray me-2">

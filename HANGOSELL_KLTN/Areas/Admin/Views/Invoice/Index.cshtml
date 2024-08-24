@@ -1,0 +1,75 @@
+﻿@model List<HANGOSELL_KLTN.Models.EF.Order>
+
+@{
+    ViewData["Title"] = "List Invoice";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        <div class="page-header">
+
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">List Invoice</h3>
+                    <div class="col-auto text-end float-end ms-auto download-grp">
+                        <a href="/Admin/Invoice/Download" class="btn btn-outline-success me-2">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <a href="/Admin/Invoice" class="btn btn-outline-gray me-2 active">
+                            <i class="fa fa-list" aria-hidden="true"></i>
+                        </a>
+                        <a href="/Admin/Invoice/CreateInvoice" class="btn btn-outline-gray me-2">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card bg-comman w-100">
+                <div class="card-body">
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="text-center">STT</th>
+                                <th class="text-center">CodeInvoice</th>
+                                <th class="text-center">CompanyName</th>
+                                <th class="text-center">Total</th>
+                                <th class="text-center">Date</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="text-center">@item.Id</td>
+                                    <td class="text-center">@item.Code</td>
+                                    <td class="text-center">@item.Customer.CompanyName</td>
+                                    <td class="text-center">@item.Total</td>
+                                    <td class="text-center">@item.CreateDate</td>
+                                    <td class="text-center">@item.Status</td>
+                                    <td class="text-center">
+                                        <a href="/Admin/Employee/EditEmployee?id=@item.Id" class="btn btn-sm btn-warning">
+                                            <i class="fa fa-edit"></i>
+                                        </a>
+                                        <a href="/Admin/UserRoles/DetailUserRoles/@item.Id" class="btn btn-sm btn-info">
+                                            <i class="fa fa-info-circle"></i>
+                                        </a>
+                                        <a href="/Admin/Employee/Delete?id=@item.Id" class="btn btn-sm btn-danger">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

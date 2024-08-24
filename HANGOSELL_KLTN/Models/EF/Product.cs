@@ -39,13 +39,13 @@ namespace HANGOSELL_KLTN.Models.EF
         [Range(0, int.MaxValue, ErrorMessage = "Số lượng không được âm.")]
         public int Quantity { get; set; }
 
-        public bool IsHome { get; set; }
+        public bool? IsHome { get; set; }
 
-        public bool IsSale { get; set; }
+        public bool? IsSale { get; set; }
 
-        public bool IsFeature { get; set; }
+        public bool? IsFeature { get; set; }
 
-        public bool IsHot { get; set; }
+        public bool? IsHot { get; set; }
 
         [StringLength(150, ErrorMessage = "Tiêu đề SEO không được vượt quá 150 ký tự.")]
         public string? SeoTitle { get; set; }

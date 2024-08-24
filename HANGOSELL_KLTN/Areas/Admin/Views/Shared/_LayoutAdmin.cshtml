@@ -1,0 +1,61 @@
+﻿@using HANGOSELL_KLTN.Models.EF
+@using Microsoft.Extensions.Localization
+
+@{
+    LanguageViewModel languageViewModel = new LanguageViewModel();
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Sale Management</title>
+    <link rel="shortcut icon" href="@Url.Content("~/Client/img/iconlogo.png")">
+    <link href="~/Client/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Client/plugins/feather/feather.css" rel="stylesheet" />
+    <link href="~/Client/plugins/icons/flags/flags.css" rel="stylesheet" />
+    <link href="~/Client/plugins/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="~/Client/plugins/fontawesome/css/all.min.css" rel="stylesheet" />
+    <link href="~/Client/plugins/icons/feather/feather.css" rel="stylesheet" />
+    <link href="~/Client/plugins/datatables/datatables.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="@Url.Content("~/Client/plugins/simple-calendar/simple-calendar.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Client/plugins/select2/css/select2.min.css")">
+    <link href="~/Client/css/toastr.min.css" rel="stylesheet" />
+    <link href="~/client/css/style.css" rel="stylesheet" />
+    <link href="~/Client/css/feather.css" rel="stylesheet" />
+    <link href="~/Client/css/ckeditor.css" rel="stylesheet" />
+    <link href="~/Client/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+   
+</head>
+
+<body>
+    <div class="main-wrapper">
+        @* header *@
+        @await Html.PartialAsync("_header")
+
+        @* side bar *@
+        @await Html.PartialAsync("_Sidebar")
+
+        @* content page *@
+        <div class="content-wrapper">
+            <!-- Nội dung của trang -->
+            @RenderBody()
+        </div>
+
+        @* footer *@
+        @await Html.PartialAsync("_footer")
+    </div>
+
+    @await Html.PartialAsync("_script")
+    <script>
+        $(document).ready(function () {
+            $('.select2-hidden-accessible').select2({
+                closeOnSelect: false
+            });
+        });
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

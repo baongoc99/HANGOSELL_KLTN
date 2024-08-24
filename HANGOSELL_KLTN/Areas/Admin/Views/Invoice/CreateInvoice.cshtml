@@ -1,0 +1,474 @@
+﻿    @model HANGOSELL_KLTN.Models.EF.ModelDataset
+
+@{
+    ViewData["Title"] = "Create Invoice";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        <div class="page-header">
+
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">Create Invoice</h3>
+                    <div class="col-auto text-end float-end ms-auto download-grp">
+                        <a href="/Admin/Invoice" class="btn btn-outline-gray me-2 active">
+                            <i class="fa fa-list" aria-hidden="true"></i>
+                        </a>
+                        <a href="/Admin/Invoice/GridInvoice" class="btn btn-outline-gray me-2">
+                            <i class="fa fa-th" aria-hidden="true"></i>
+                        </a>
+                        <a href="/Admin/Invoice/CreateInvoice" class="btn btn-outline-gray me-2">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/Admin/Order/ThanhToan" method="POST" enctype="multipart/form-data">
+
+                        <div class="row">
+                            <div class="col-4">
+                                <input type="hidden" id="Id" class="form-control" name="Id">
+                                <div class="row">
+                                    <div class="mb-3">
+                                        <div class=" local-forms">
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <label>CompanyName <span class="login-danger">*</span></label>
+                                                    <select id="CompanyNameSelect" class="form-select form-control" name="CompanyName">
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-2" style="margin-left:-20px">
+                                                    <button type="button" class="btn btn-primary " style="padding-bottom: 13px;" data-bs-toggle="modal" data-bs-target="#addCustomerModals">
+                                                        New
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class=" local-forms">
+                                            <label>ContactPerson <span class="login-danger">*</span></label>
+                                            <input type="text" id="ContactPerson" class="form-control" name="ContactPerson">
+                                            @* <span asp-validation-for="ContactPerson" class="invalid-feedback"></span> *@
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class=" local-forms">
+                                            <label>Email <span class="login-danger">*</span></label>
+                                            <input type="email" id="Email" class="form-control" name="Email">
+                                            @* <span asp-validation-for="Email" class="invalid-feedback"></span> *@
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class=" local-forms">
+                                            <label>PhoneNumber <span class="login-danger">*</span></label>
+                                            <input type="text" id="PhoneNumber" class="form-control" name="PhoneNumber">
+                                            @* <span asp-validation-for="PhoneNumber" class="invalid-feedback"></span> *@
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class=" local-forms">
+                                            <label>Address <span class="login-danger">*</span></label>
+                                            <input type="text" id="Address" class="form-control" name="Address">
+                                            @* <span asp-validation-for="Address" class="invalid-feedback"></span> *@
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8">
+
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">ID</th>
+                                            <th class="text-center">Quantity</th>
+                                            <th class="text-center">TotalPrice</th>
+                                            <th class="text-center">Product</th>
+                                            <th class="text-center">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (Model.orderDetailCustomers != null)
+                                        {
+                                            @foreach (var orderDetailCustomer in Model.orderDetailCustomers)
+                                            {
+                                                <tr>
+
+                                                    <td class="text-center">@orderDetailCustomer.Id</td>
+                                                    <td class="text-center">@orderDetailCustomer.Quantity</td>
+                                                    <td class="text-center">@orderDetailCustomer.TotalPrice</td>
+                                                    <td class="text-center">@orderDetailCustomer.Product.Title</td>
+                                                    <td class="text-center">
+                                                        <a href="/Admin/Customer/EditCustomer" class="btn btn-sm btn-warning">
+                                                            <i class="fa fa-edit"></i>
+                                                        </a>
+                                                        <a href="/Admin/Customer/Delete" class="btn btn-sm btn-danger">
+                                                            <i class="fa fa-trash"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            }
+
+                                        }
+                                        else
+                                        {
+                                            <p>[]null</p>
+                                        }
+                                    </tbody>
+                                </table>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-6 ">
+                                        <div class="form-group local-forms">
+                                            <label for="CodeEmployee" class="form-label">Status <span class="login-danger">*</span></label>
+                                            <textarea type="text" class="form-control" id="Status" name="Status" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 ">
+                                        <div class="row">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-center">Total </th>
+                                                        <th class="text-center">@ViewData["TongTien"]</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-center">Sale</th>
+                                                        <th class="text-center">000</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-center">Total Price</th>
+                                                        <th class="text-center">@ViewData["TongTien"]</th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-12 text-end">
+                                    <div class="student-submit">
+                                        <button type="submit" class="btn btn-primary">Create Invoice</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                    <hr />
+                    <div class="input-group mb-4 border rounded-pill p-1">
+                        <input type="search" id="searchInput" placeholder="Product search?" aria-describedby="button-addon3" class="form-control bg-none border-0">
+                        <div class="input-group-append border-0">
+                            <button id="button-addon3" type="button" class="btn btn-link text-success"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="card bg-comman w-100">
+                            <div class="card-body">
+                                <div class="row pb-5 mb-4" id="productContainer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="addCustomerModals" tabindex="-1" aria-labelledby="addCustomerModalLabels" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addCustomerModalLabels">Add Customer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/Admin/Customer/CreateCustomersss" method="post">
+                    <div class="mb-3">
+                        <label for="CompanyName" class="form-label">CompanyName</label>
+                        <input type="text" class="form-control" id="CompanyName" name="CompanyName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ContactPerson" class="form-label">ContactPerson</label>
+                        <input type="text" class="form-control" id="ContactPerson" name="ContactPerson">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="address" name="Email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="PhoneNumber" class="form-label">PhoneNumber</label>
+                        <input type="number" class="form-control" id="PhoneNumber" name="PhoneNumber">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="Address" name="Address">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                        <button type="submit" class="btn btn-primary">Lưu</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addProductModals" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+
+            <div class="modal-body">
+                <form action="/Admin/Product/Createaddproduct" method="POST" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="mb-3">
+                            <label for="ProductCode" class="form-label">Product Code <span class="login-danger">*</span></label>
+                            <input type="text" class="form-control" id="ProductCode" name="ProductCode" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Title" class="form-label">Title <span class="login-danger">*</span></label>
+                            <input type="text" class="form-control" id="Title" name="Title" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="ProductCategoryId" class="form-label">Category <span class="login-danger">*</span></label>
+                            <select class="form-control" id="ProductCategoryId" name="ProductCategoryId" required>
+                                <option value="">Select Category</option>
+                                @foreach (var category in Model.categories)
+                                {
+                                    <option value="@category.Id">@category.Title</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Description" class="form-label">Description</label>
+                            <textarea class="form-control" id="Description" name="Description" rows="3"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Detail" class="form-label">Detail</label>
+                            <textarea class="form-control" id="Detail" name="Detail" rows="3"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Image" class="form-label">Image (Optional)</label>
+                            <input type="file" class="form-control" id="Image" name="Image">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Price" class="form-label">Price <span class="login-danger">*</span></label>
+                            <input type="number" class="form-control" id="Price" name="Price" step="0.01" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="PriceSale" class="form-label">Sale Price</label>
+                            <input type="number" class="form-control" id="PriceSale" name="PriceSale" step="0.01">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Quantity" class="form-label">Quantity <span class="login-danger">*</span></label>
+                            <input type="number" class="form-control" id="Quantity" name="Quantity" required>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="IsHome" name="IsHome">
+                            <label class="form-check-label" for="IsHome">Is Home</label>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="IsSale" name="IsSale">
+                            <label class="form-check-label" for="IsSale">Is Sale</label>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="IsFeature" name="IsFeature">
+                            <label class="form-check-label" for="IsFeature">Is Feature</label>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="IsHot" name="IsHot">
+                            <label class="form-check-label" for="IsHot">Is Hot</label>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="SeoTitle" class="form-label">SEO Title</label>
+                            <input type="text" class="form-control" id="SeoTitle" name="SeoTitle">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="SeoKeyword" class="form-label">SEO Keyword</label>
+                            <input type="text" class="form-control" id="SeoKeyword" name="SeoKeyword">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="SeoDescription" class="form-label">SEO Description</label>
+                            <textarea class="form-control" id="SeoDescription" name="SeoDescription" rows="3"></textarea>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="student-submit">
+                                <button type="submit" class="btn btn-primary">Create</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal-header">
+            <h5 class="modal-title" id="addProductModals">Thêm sản phẩm</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    function loadProducts(keyword = '') {
+        $.ajax({
+            url: '/Admin/Product/GteAllProduct', // Đảm bảo URL chính xác
+            type: 'GET',
+            dataType: 'json',
+            data: { name: keyword }, // Gửi từ khóa tìm kiếm đến server
+            success: function (data) {
+                console.log(data);
+                $('#productContainer').empty();  // Xóa nội dung cũ trước khi thêm mới
+                if (data.length > 0) {
+                    $.each(data, function (index, product) {
+                        var cardHtml = `
+                                            <div class="col-2">
+                                                <div class="card shadow-lg border-0 rounded">
+                                                            <button class="btn btn-gray select-product" data-id="${product.id}" >
+                                                    <div class="card-body p-0">
+                                                            <img class="img-fluid card-img-top" alt="${product.title}" src="@Url.Content("~/${product.image}")" width="100" height="100" />
+                                                            <div class="p-4 d-flex flex-column align-items-center"  style="margin-top:-20px">
+                                                            <h5 class="mb-0 text-center product-title">${product.title}</h5>
+                                                                <p class="small text-muted text-center" style="margin-bottom: -1rem;">${product.price}</p>
+                                                            
+                                                        </div>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                            `;
+                        $('#productContainer').append(cardHtml);
+                    });
+
+                    // Xử lý khi người dùng nhấn nút chọn sản phẩm
+                    $('.select-product').on('click', function () {
+                        const selectedProductId = $(this).data('id');
+
+                        $.ajax({
+                            url: '/Admin/Order/Addorderdetals',
+                            type: 'GET',
+                            data: { idproduct: selectedProductId },
+                            success: function () {
+                                window.location.href = "/admin/invoice/CreateInvoice";
+                            },
+                            error: function () {
+                                alert('Có lỗi xảy ra khi lấy dữ liệu từ server.');
+                            }
+                        });
+                    });
+                } else {
+                    $('#productContainer').append('<p>Không có sản phẩm nào</p>');
+                }
+            },
+            error: function () {
+                alert('Có lỗi xảy ra khi lấy dữ liệu từ server.');
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        loadProducts(); // Tải sản phẩm khi trang được load
+        $('#searchInput').on('input', function () {
+            var keyword = $(this).val();
+            loadProducts(keyword); // Tìm kiếm sản phẩm với từ khóa
+        });
+    });
+</script>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        // Gọi Ajax khi trang được load
+        $.ajax({
+            url: '/Admin/Customer/GetAllKhachHang',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                if (data.length > 0) {
+                    // Lặp qua dữ liệu để thêm các option vào select
+                    $.each(data, function (index, customer) {
+                        $('#CompanyNameSelect').append(
+                            $('<option>', {
+                                value: customer.id,
+                                text: customer.companyName
+                            })
+                        );
+                    });
+                } else {
+                    $('#CompanyNameSelect').append('<option>No data available</option>');
+                }
+
+                // Xử lý khi người dùng chọn một công ty
+                $('#CompanyNameSelect').on('change', function () {
+                    const selectedCustomerId = $(this).val();
+
+                    if (selectedCustomerId) {
+                        // Gọi Ajax để lấy thông tin chi tiết của khách hàng
+                        $.ajax({
+                            url: '/Admin/Customer/GetKhachHangById',
+                            type: 'GET',
+                            data: { id: selectedCustomerId },
+                            success: function (datas) {
+                                if (datas) {
+                                    $('#Email').val(datas.email);
+                                    $('#Id').val(datas.id);
+                                    $('#ContactPerson').val(datas.contactPerson);
+                                    $('#PhoneNumber').val(datas.phoneNumber);
+                                    $('#Address').val(datas.address);
+                                } else {
+                                    $('#Email').val(''); // Không có dữ liệu, để trống
+                                }
+                            },
+                            error: function () {
+                                alert('Có lỗi xảy ra khi lấy dữ liệu từ server.');
+                            }
+                        });
+                    } else {
+                        $('#Email').val('');
+                    }
+                });
+            },
+            error: function () {
+                alert('Có lỗi xảy ra khi lấy dữ liệu từ server.');
+            }
+        });
+    });
+</script>
+<style>
+    .product-title {
+        white-space: nowrap; /* Ngăn không cho dòng bị ngắt */
+        overflow: hidden; /* Ẩn phần văn bản vượt quá kích thước */
+        text-overflow: ellipsis; /* Hiển thị ba chấm khi văn bản bị cắt */
+        width: 100%; /* Đảm bảo tiêu đề sử dụng toàn bộ chiều rộng của phần chứa */
+        text-align: center; /* Căn giữa văn bản */
+    }
+</style>

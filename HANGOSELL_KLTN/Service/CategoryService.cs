@@ -11,21 +11,21 @@ namespace HANGOSELL_KLTN.Service
             _context = context;
         }
 
-        public List<Category> GetAllCategory()
+        public List<ProductCategory> GetAllCategory()
         {
             return _context.Categories.ToList();
         }
-        public void AddCategory(Category Category)
+        public void AddCategory(ProductCategory Category)
         {
             _context.Categories.Add(Category);
             _context.SaveChanges();
         }
-        public Category GetCategoryById(int id)
+        public ProductCategory GetCategoryById(int id)
         {
             return _context.Categories.FirstOrDefault(p => p.Id == id);
         }
 
-        public void UpdateCategory(Category Category)
+        public void UpdateCategory(ProductCategory Category)
         {
             var existingemployee = _context.Categories.SingleOrDefault(u => u.Id == Category.Id);
             if (existingemployee != null)

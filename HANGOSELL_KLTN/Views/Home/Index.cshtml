@@ -1,8 +1,2679 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+	ViewData["Title"] = "Home Page";
+	Layout = "~/Views/Shared/_Index.cshtml";
 }
+<div class="header-menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9 col-12 col-menu">
+				<div class="menu-bar d-lg-none d-block">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12" fill="none">
+						<path d="M6 2V0H18V2H6Z" fill="#FE9614"></path>
+						<path d="M0 7H18V5H0V7Z" fill="#FE9614"></path>
+						<path d="M6 12H18V10H6V12Z" fill="#FE9614"></path>
+					</svg>
+				</div>
+				<nav class="header-nav">
+					<ul class="item_big">
+						<li class="nav-item active ">
+							<a class="a-img" href="/" title="Trang chủ">
+								Trang chủ
+							</a>
+						</li>
+						<li class="nav-item ">
+							<a class="a-img caret-down" href="/thoi-trang-nam" title="Thời trang Nam">
+								Thời trang Nam
+							</a>
+							<i class="fa fa-caret-down"></i>
+							<ul class="item_small">
+								<li>
+									<a class="caret-down" href="/so-mi-nam" title="Sơ mi nam">
+										Sơ mi nam
+									</a>
+									<i class="fa fa-caret-down"></i>
+									<ul>
+										<li>
+											<a href="/so-mi-ngan-tay" title="Sơ mi ngắn tay" class="a3">Sơ mi ngắn tay</a>
+										</li>
+										<li>
+											<a href="/so-mi-dai-tay" title="Sơ mi dài tay" class="a3">Sơ mi dài tay</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a class="" href="/quan-au-nam" title="Quần âu nam">
+										Quần âu nam
+									</a>
+								</li>
+								<li>
+									<a class="" href="/quan-short-nam" title="Quần short nam">
+										Quần short nam
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item ">
+							<a class="a-img caret-down" href="/collections/all" title="Sản phẩm">
+								Sản phẩm
+							</a>
+							<i class="fa fa-caret-down"></i>
+							<ul class="item_small">
+								<li>
+									<a class="caret-down" href="/san-pham-noi-bat" title="Sản phẩm nổi bật">
+										Sản phẩm nổi bật
+									</a>
+									<i class="fa fa-caret-down"></i>
+									<ul>
+										<li>
+											<a href="/quan-ao" title="Quần áo" class="a3">Quần áo</a>
+										</li>
+										<li>
+											<a href="/phu-kien" title="Phụ kiện" class="a3">Phụ kiện</a>
+										</li>
+										<li>
+											<a href="/giay-dep" title="Giầy dép" class="a3">Giầy dép</a>
+										</li>
+										<li>
+											<a href="/be-gai" title="Bé gái" class="a3">Bé gái</a>
+										</li>
+										<li>
+											<a href="/be-trai" title="Bé trai" class="a3">Bé trai</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a class="" href="/san-pham-hot-trend" title="Sản phẩm hot trend">
+										Sản phẩm hot trend
+									</a>
+								</li>
+								<li>
+									<a class="" href="/san-pham-khuyen-mai" title="Sản phẩm khuyến mãi">
+										Sản phẩm khuyến mãi
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item ">
+							<a class="a-img" href="/be-trai" title="Bé trai">
+								Bé trai
+							</a>
+						</li>
+						<li class="nav-item ">
+							<a class="a-img" href="/be-gai" title="Bé gái">
+								Bé gái
+							</a>
+						</li>
+						<li class="nav-item ">
+							<a class="a-img" href="/tin-tuc" title="Tin tức">
+								Tin tức
+							</a>
+						</li>
+						<li class="nav-item ">
+							<a class="a-img" href="/lien-he" title="Liên hệ">
+								Liên hệ
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-lg-3 col-search-cart">
+				<div class="phone_header">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+					<div class="ct-header">
+						<svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+							<path d="M7.0026 1.73991L7.81809 2.39884C9.15027 3.47525 9.3185 5.4399 8.18875 6.72742L8.07556 6.85642C7.26593 7.77912 7.04991 9.14192 7.85868 10.0643C8.63222 10.9465 9.67036 11.7227 11.1784 12.5682C12.3675 13.235 13.8544 12.9186 14.7532 11.8942L14.832 11.8045C15.9034 10.5834 17.7512 10.4249 19.0146 11.4458L19.7715 12.0573C20.8569 12.9344 21.2348 14.4653 20.4545 15.6219C19.7181 16.7134 18.8967 17.5674 17.9272 18.2654C17.3087 18.7107 16.512 18.8096 15.7757 18.6119C8.57753 16.6789 4.223 13.167 1.09904 6.66232C0.827031 6.09593 0.737959 5.44474 0.958532 4.85622C1.42443 3.61316 2.29572 2.56629 3.64249 1.56464C4.64717 0.817412 6.02944 0.953575 7.0026 1.73991Z" stroke="#1C5B41" stroke-width="1.5"></path>
+							<path d="M3.32318 2.79199L8.30918 6.82076" stroke="#1C5B41" stroke-width="1.5"></path>
+							<path d="M17.4891 2.54224L14.8114 5.20087" stroke="#1C5B41" stroke-width="1.5" stroke-linecap="round"></path>
+							<path d="M18.9584 6.37634L16.9225 7.08326" stroke="#1C5B41" stroke-width="1.5" stroke-linecap="round"></path>
+							<path d="M12.9167 3.0647L13.6407 1.04166" stroke="#1C5B41" stroke-width="1.5" stroke-linecap="round"></path>
+							<path d="M14.9571 12.1924L19.9431 16.2211" stroke="#1C5B41" stroke-width="1.5"></path>
+						</svg>
+						<span>Hotline:</span>
+						<a href="tel:19006750">1900 6750</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+
+
+
+<section class="section_slider">
+	<div class="home-slider swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
+		<div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+			<div class="swiper-slide swiper-slide-active" style="width: 1519px;">
+				<a href="#" class="clearfix" title="Alena">
+					<picture>
+						<source media="(min-width: 1200px)" srcset="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/slider_1.jpg?1723540086975">
+						<source media="(min-width: 992px)" srcset="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/slider_1.jpg?1723540086975">
+						<source media="(min-width: 569px)" srcset="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/slider_1.jpg?1723540086975">
+						<source media="(max-width: 567px)" srcset="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/slider_1.jpg?1723540086975">
+						<img src="//bizweb.dktcdn.net/thumb/grande/100/455/315/themes/894917/assets/slider_1.jpg?1723540086975" alt="Alena" class="img-responsive">
+					</picture>
+				</a>
+			</div>
+			<div class="swiper-slide swiper-slide-next" style="width: 1519px;">
+				<a href="#" class="clearfix" title="Alena 2">
+					<picture>
+						<source media="(min-width: 1200px)" srcset="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/slider_2.jpg?1723540086975">
+						<source media="(min-width: 992px)" srcset="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/slider_2.jpg?1723540086975">
+						<source media="(min-width: 569px)" srcset="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/slider_2.jpg?1723540086975">
+						<source media="(max-width: 567px)" srcset="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/slider_2.jpg?1723540086975">
+						<img src="//bizweb.dktcdn.net/thumb/grande/100/455/315/themes/894917/assets/slider_2.jpg?1723540086975" alt="Alena 2" class="img-responsive">
+					</picture>
+				</a>
+			</div>
+		</div>
+		<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span></div>
+	</div>
+</section>
+<script>
+	var swiper = new Swiper('.home-slider', {
+		autoplay: false,
+		spaceBetween: 0,
+		pagination: {
+			el: '.home-slider .swiper-pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.home-slider .swiper-button-next',
+			prevEl: '.home-slider .swiper-button-prev',
+		},
+	});
+</script>
+
+
+
+
+<section class="section_service">
+	<div class="home-service container swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
+		<div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+			<div class="swiper-slide swiper-slide-active" style="width: 262.5px; margin-right: 30px;">
+				<span class="image">
+					<img class="lazyload img-responsive loading" src="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/image_service1.png?1723540086975" alt="MIỄN PHÍ GIAO HÀNG" data-was-processed="true">
+				</span>
+				<h3>
+					MIỄN PHÍ GIAO HÀNG
+				</h3>
+				<p>
+					Miễn phí ship với đơn hàng &gt; 498K
+				</p>
+			</div>
+			<div class="swiper-slide swiper-slide-next" style="width: 262.5px; margin-right: 30px;">
+				<span class="image">
+					<img class="lazyload img-responsive loading" src="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/image_service2.png?1723540086975" alt="THANH TOÁN COD" data-was-processed="true">
+				</span>
+				<h3>
+					THANH TOÁN COD
+				</h3>
+				<p>
+					Thanh toán khi nhận hàng (COD)
+				</p>
+			</div>
+			<div class="swiper-slide" style="width: 262.5px; margin-right: 30px;">
+				<span class="image">
+					<img class="lazyload img-responsive loading" src="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/image_service3.png?1723540086975" alt="KHÁCH HÀNG VIP" data-was-processed="true">
+				</span>
+				<h3>
+					KHÁCH HÀNG VIP
+				</h3>
+				<p>
+					Ưu đãi dành cho khách hàng VIP
+				</p>
+			</div>
+			<div class="swiper-slide" style="width: 262.5px; margin-right: 30px;">
+				<span class="image">
+					<img class="lazyload img-responsive loading" src="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/image_service4.png?1723540086975" alt="HỖ TRỢ BẢO HÀNH" data-was-processed="true">
+				</span>
+				<h3>
+					HỖ TRỢ BẢO HÀNH
+				</h3>
+				<p>
+					Đổi , sửa đồ tại tất cả store
+				</p>
+			</div>
+		</div>
+
+
+	</div>
+</section>
+<script>
+	var swiper = new Swiper('.home-service', {
+		slidesPerView: 4,
+		autoplay: false,
+		pagination: {
+			el: '.home-service .swiper-pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.home-service .swiper-button-next',
+			prevEl: '.home-service .swiper-button-prev',
+		},
+		breakpoints: {
+			300: {
+				slidesPerView: 1,
+				spaceBetween: 30
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30
+			},
+			1024: {
+				slidesPerView: 4,
+				spaceBetween: 30
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 30
+			}
+		}
+	});
+</script>
+
+
+
+
+<section class="section_product_hot module_product">
+	<div class="container">
+		<div class="wrap_tab_index not-dqtab e-tabs ajax-tab-1" data-section="ajax-tab-1">
+			<div class="row">
+				<div class="col-xl-5 col-lg-4 col-md-6 col-12 block-title">
+					<h2>
+						<span>SẢN PHẨM HOT</span>
+					</h2>
+				</div>
+				<div class="tab_big col-xl-7 col-lg-8 col-md-6 col-12">
+					<div class="tab_ul">
+						<ul class="tabs tabs-title tab-pc tabtitle1 ajax clearfix">
+
+
+
+
+							<li class="tab-link tab_cate has-content current" data-tab="tab-1" data-url="/quan-ao">
+								<span>Quần áo</span>
+							</li>
+
+							<li class="tab-link tab_cate " data-tab="tab-2" data-url="/phu-kien">
+								<span>Phụ kiện</span>
+							</li>
+
+							<li class="tab-link tab_cate " data-tab="tab-3" data-url="/giay-dep">
+								<span>Giầy dép</span>
+							</li>
+
+							<li class="tab-link tab_cate " data-tab="tab-4" data-url="/be-gai">
+								<span>Bé gái</span>
+							</li>
+
+							<li class="tab-link tab_cate " data-tab="tab-5" data-url="/be-trai">
+								<span>Bé trai</span>
+							</li>
+
+						</ul>
+						<a class="prev button">
+							<svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9" fill="none">
+								<path d="M4.47107 1L0.999988 4.52892L4.47107 8" stroke="#AAABAB" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M6.49585 4.52905H1.05781" stroke="#AAABAB" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M10.8347 4.52905H8.80992" stroke="#AAABAB" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</a>
+						<a class="next button">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
+								<path d="M12.4492 1L18.4492 7.09998L12.4492 13.1" fill="#FFF6E8"></path>
+								<path d="M12.4492 1L18.4492 7.09998L12.4492 13.1" stroke="#1C5B41" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M8.94922 7.09998H18.3492" stroke="#1C5B41" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M1.44922 7.09998H4.94922" stroke="#1C5B41" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="col-12">
+
+
+
+
+					<div class="tab-1 tab-content current">
+
+						<div class="swiper_tab swiper-container swiper-carousel ajax-carousel swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-multirow">
+							<div class="swiper-wrapper" style="width: 1582px; transform: translate3d(0px, 0px, 0px);">
+
+								<div class="item swiper-slide swiper-slide-active" style="width: 206px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26199621" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-len-nu" title="Áo len nữ" style="height: 206px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/3-jpeg-dcba3f1d-413f-4e83-87bb-c21479ea321b.jpg?v=1653358923853" alt="Áo len nữ">
+												</a>
+
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65721053">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-len-nu" title="Áo len nữ">Áo len nữ</a></h3>
+												<div class="price-box">
+													110.000₫&nbsp;
+													<span class="compare-price">130.000₫</span>
+
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide swiper-slide-next" style="width: 206px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26199607" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/chan-vay-nu" title="Chân váy nữ" style="height: 206px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-e39c9ad8-b2bf-455a-a246-0cc8522a6de5.jpg?v=1653358813817" alt="Chân váy nữ">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65721028">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/chan-vay-nu" title="Chân váy nữ">Chân váy nữ</a></h3>
+												<div class="price-box">
+													70.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="width: 206px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26199457" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-khoac-nu" title="Áo khoác nữ" style="height: 206px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-1b210bcc-3357-4b40-8e48-dfa61547a4c4.jpg?v=1653358033383" alt="Áo khoác nữ">
+												</a>
+
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65720610">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-khoac-nu" title="Áo khoác nữ">Áo khoác nữ</a></h3>
+												<div class="price-box">
+													300.000₫&nbsp;
+													<span class="compare-price">500.000₫</span>
+
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="width: 206px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26194537" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/do-the-thao-nu" title="Đồ thể thao nữ" style="height: 206px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-f7c305fd-59f6-48f8-9e4f-76160626f710.jpg?v=1653301590830" alt="Đồ thể thao nữ">
+												</a>
+												<div class="action d-xl-flex d-none">
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/do-the-thao-nu" title="Đồ thể thao nữ">Đồ thể thao nữ</a></h3>
+												<div class="price-box">
+													Liên hệ
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="width: 206px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26194139" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/so-mi-tre-em" title="Sơ mi trẻ em" style="height: 206px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-aa81af63-c254-4833-b59b-53818cec4f32.jpg?v=1653299420297" alt="Sơ mi trẻ em">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65705537">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/so-mi-tre-em'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/so-mi-tre-em" title="Sơ mi trẻ em">Sơ mi trẻ em</a></h3>
+												<div class="price-box">
+													Liên hệ
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="width: 206px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26194126" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/quan-au-nam-1" title="Quần âu nam" style="height: 206px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/3-jpeg-d6dc2671-ad4d-4e7c-9a50-3607cf85ec34.jpg?v=1653299373627" alt="Quần âu nam">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65705519">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/quan-au-nam-1" title="Quần âu nam">Quần âu nam</a></h3>
+												<div class="price-box">
+													170.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="width: 206px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26193698" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/do-the-thao-nam" title="Đồ thể thao nam" style="height: 206px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/3-jpeg-3bf4e2e1-4f45-405a-9608-6a4f5679d671.jpg?v=1653297401413" alt="Đồ thể thao nam">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65700608">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/do-the-thao-nam" title="Đồ thể thao nam">Đồ thể thao nam</a></h3>
+												<div class="price-box">
+													100.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 206px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26193687" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/do-ngu-nam" title="Đồ ngủ nam" style="height: 206px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-bb35d9d9-1da6-438e-a3b2-8f03740dd9fc.jpg?v=1653298949747" alt="Đồ ngủ nam">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65700595">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/do-ngu-nam" title="Đồ ngủ nam">Đồ ngủ nam</a></h3>
+												<div class="price-box">
+													130.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 206px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26189645" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/bo-do-he-nam" title="Bộ đồ hè nam" style="height: 206px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/2-jpeg-3231af07-7bc0-4973-a4f1-bb844514d6d5.jpg?v=1653291329997" alt="Bộ đồ hè nam">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65690395">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/bo-do-he-nam'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/bo-do-he-nam" title="Bộ đồ hè nam">Bộ đồ hè nam</a></h3>
+												<div class="price-box">
+													200.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 206px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26189589" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/bo-2-day-tre-em" title="Bộ 2 dây trẻ em" style="height: 206px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/5-jpeg-415f7f3b-ce61-46de-b5f1-50c8688e1735.jpg?v=1653297283710" alt="Bộ 2 dây trẻ em">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65690368">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/bo-2-day-tre-em" title="Bộ 2 dây trẻ em">Bộ 2 dây trẻ em</a></h3>
+												<div class="price-box">
+													80.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 206px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26189504" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-phao-tre-em" title="Áo phao trẻ em" style="height: 206px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-3b6d691b-7706-434b-8652-1d03d083f97d.jpg?v=1653292095237" alt="Áo phao trẻ em">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65691051">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/ao-phao-tre-em'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-phao-tre-em" title="Áo phao trẻ em">Áo phao trẻ em</a></h3>
+												<div class="price-box">
+													260.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 206px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26189291" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-ni-tre-em" title="Áo nỉ trẻ em" style="height: 206px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/3-jpeg-fb10616a-35dc-4259-bc9a-da24b2a25201.jpg?v=1653291099893" alt="Áo nỉ trẻ em">
+												</a>
+
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65690092">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/ao-ni-tre-em'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-ni-tre-em" title="Áo nỉ trẻ em">Áo nỉ trẻ em</a></h3>
+												<div class="price-box">
+													120.000₫&nbsp;
+													<span class="compare-price">150.000₫</span>
+
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 206px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26188310" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-so-mi-nam" title="Áo sơ mi nam" style="height: 206px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-8a84ed16-fb1a-4092-8afa-17a33d167746.jpg?v=1653297236257" alt="Áo sơ mi nam">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65677534">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/ao-so-mi-nam'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-so-mi-nam" title="Áo sơ mi nam">Áo sơ mi nam</a></h3>
+												<div class="price-box">
+													80.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 206px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26182932" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-khoac-tre-em" title="Áo khoác trẻ em" style="height: 206px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg.jpg?v=1653279682177" alt="Áo khoác trẻ em">
+												</a>
+
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65670147">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/ao-khoac-tre-em'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-khoac-tre-em" title="Áo khoác trẻ em">Áo khoác trẻ em</a></h3>
+												<div class="price-box">
+													150.000₫&nbsp;
+													<span class="compare-price">200.000₫</span>
+
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="view-more clearfix">
+							<a href="/quan-ao" title="Xem tất cả">Xem tất cả</a>
+						</div>
+
+					</div>
+
+
+
+
+
+					<div class="tab-2 tab-content">
+					</div>
+
+
+
+
+
+					<div class="tab-3 tab-content">
+					</div>
+
+
+
+
+
+					<div class="tab-4 tab-content">
+					</div>
+
+
+
+
+
+					<div class="tab-5 tab-content">
+					</div>
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+	$(document).ready(function ($) {
+		$(".section_product_hot .tab_ul .prev").click(function () {
+			var leftPos = $('.section_product_hot .tab_ul ul').scrollLeft();
+			$(".section_product_hot .tab_ul ul").animate({ scrollLeft: leftPos - 345 }, 500);
+		});
+		$(".section_product_hot .tab_ul .next").click(function () {
+			var leftPos = $('.section_product_hot .tab_ul ul').scrollLeft();
+			$(".section_product_hot .tab_ul ul").animate({ scrollLeft: leftPos + 150 }, 500);
+		});
+	})
+</script>
+
+
+
+
+<section class="section_product_new module_product">
+	<div class="container">
+		<div class="wrap_tab_index not-dqtab e-tabs ajax-tab-2" data-section-2="ajax-tab-2">
+			<div class="row">
+				<div class="col-xl-5 col-lg-4 col-md-6 col-12 block-title">
+					<h2>
+						<span>HÀNG MỚI VỀ</span>
+					</h2>
+				</div>
+				<div class="tab_big col-xl-7 col-lg-8 col-md-6 col-12">
+					<div class="tab_ul">
+						<ul class="tabs tabs-title tab-pc tabtitle2 ajax clearfix">
+
+
+
+
+							<li class="tab-link tab_cate has-content current" data-tab="tab-1" data-url="/quan-ao">
+								<span>Quần áo</span>
+							</li>
+
+							<li class="tab-link tab_cate " data-tab="tab-2" data-url="/phu-kien">
+								<span>Phụ kiện</span>
+							</li>
+
+							<li class="tab-link tab_cate " data-tab="tab-3" data-url="/giay-dep">
+								<span>Giầy dép</span>
+							</li>
+
+							<li class="tab-link tab_cate " data-tab="tab-4" data-url="/be-gai">
+								<span>Bé gái</span>
+							</li>
+
+							<li class="tab-link tab_cate " data-tab="tab-5" data-url="/be-trai">
+								<span>Bé trai</span>
+							</li>
+
+						</ul>
+						<a class="prev2 button">
+							<svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9" fill="none">
+								<path d="M4.47107 1L0.999988 4.52892L4.47107 8" stroke="#AAABAB" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M6.49585 4.52905H1.05781" stroke="#AAABAB" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M10.8347 4.52905H8.80992" stroke="#AAABAB" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</a>
+						<a class="next2 button">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
+								<path d="M12.4492 1L18.4492 7.09998L12.4492 13.1" fill="#FFF6E8"></path>
+								<path d="M12.4492 1L18.4492 7.09998L12.4492 13.1" stroke="#1C5B41" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M8.94922 7.09998H18.3492" stroke="#1C5B41" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M1.44922 7.09998H4.94922" stroke="#1C5B41" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-5 col-12 banner">
+					<a href="#" title="banner"><img class="img-responsive" src="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/banner_new.png?1723540086975" alt="banner"></a>
+				</div>
+				<div class="col-md-7 col-12">
+
+
+
+
+					<div class="tab-1 tab-content current">
+
+						<div class="swiper_tab swiper-container swiper-carousel2 ajax-carousel swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-multirow">
+							<div class="swiper-wrapper" style="width: 1529px; transform: translate3d(0px, 0px, 0px);">
+
+								<div class="item swiper-slide swiper-slide-active" style="width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26199621" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-len-nu" title="Áo len nữ" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/3-jpeg-dcba3f1d-413f-4e83-87bb-c21479ea321b.jpg?v=1653358923853" alt="Áo len nữ">
+												</a>
+
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65721053">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-len-nu" title="Áo len nữ">Áo len nữ</a></h3>
+												<div class="price-box">
+													110.000₫&nbsp;
+													<span class="compare-price">130.000₫</span>
+
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide swiper-slide-next" style="width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26199607" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/chan-vay-nu" title="Chân váy nữ" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-e39c9ad8-b2bf-455a-a246-0cc8522a6de5.jpg?v=1653358813817" alt="Chân váy nữ">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65721028">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/chan-vay-nu" title="Chân váy nữ">Chân váy nữ</a></h3>
+												<div class="price-box">
+													70.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26199457" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-khoac-nu" title="Áo khoác nữ" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-1b210bcc-3357-4b40-8e48-dfa61547a4c4.jpg?v=1653358033383" alt="Áo khoác nữ">
+												</a>
+
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65720610">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-khoac-nu" title="Áo khoác nữ">Áo khoác nữ</a></h3>
+												<div class="price-box">
+													300.000₫&nbsp;
+													<span class="compare-price">500.000₫</span>
+
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26194537" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/do-the-thao-nu" title="Đồ thể thao nữ" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-f7c305fd-59f6-48f8-9e4f-76160626f710.jpg?v=1653301590830" alt="Đồ thể thao nữ">
+												</a>
+												<div class="action d-xl-flex d-none">
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/do-the-thao-nu" title="Đồ thể thao nữ">Đồ thể thao nữ</a></h3>
+												<div class="price-box">
+													Liên hệ
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26194139" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/so-mi-tre-em" title="Sơ mi trẻ em" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-aa81af63-c254-4833-b59b-53818cec4f32.jpg?v=1653299420297" alt="Sơ mi trẻ em">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65705537">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/so-mi-tre-em'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/so-mi-tre-em" title="Sơ mi trẻ em">Sơ mi trẻ em</a></h3>
+												<div class="price-box">
+													Liên hệ
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26194126" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/quan-au-nam-1" title="Quần âu nam" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/3-jpeg-d6dc2671-ad4d-4e7c-9a50-3607cf85ec34.jpg?v=1653299373627" alt="Quần âu nam">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65705519">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/quan-au-nam-1" title="Quần âu nam">Quần âu nam</a></h3>
+												<div class="price-box">
+													170.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26193698" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/do-the-thao-nam" title="Đồ thể thao nam" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/3-jpeg-3bf4e2e1-4f45-405a-9608-6a4f5679d671.jpg?v=1653297401413" alt="Đồ thể thao nam">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65700608">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/do-the-thao-nam" title="Đồ thể thao nam">Đồ thể thao nam</a></h3>
+												<div class="price-box">
+													100.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26193687" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/do-ngu-nam" title="Đồ ngủ nam" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-bb35d9d9-1da6-438e-a3b2-8f03740dd9fc.jpg?v=1653298949747" alt="Đồ ngủ nam">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65700595">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/do-ngu-nam" title="Đồ ngủ nam">Đồ ngủ nam</a></h3>
+												<div class="price-box">
+													130.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26189645" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/bo-do-he-nam" title="Bộ đồ hè nam" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/2-jpeg-3231af07-7bc0-4973-a4f1-bb844514d6d5.jpg?v=1653291329997" alt="Bộ đồ hè nam">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65690395">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/bo-do-he-nam'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/bo-do-he-nam" title="Bộ đồ hè nam">Bộ đồ hè nam</a></h3>
+												<div class="price-box">
+													200.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26189589" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/bo-2-day-tre-em" title="Bộ 2 dây trẻ em" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/5-jpeg-415f7f3b-ce61-46de-b5f1-50c8688e1735.jpg?v=1653297283710" alt="Bộ 2 dây trẻ em">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65690368">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/bo-2-day-tre-em" title="Bộ 2 dây trẻ em">Bộ 2 dây trẻ em</a></h3>
+												<div class="price-box">
+													80.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26189504" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-phao-tre-em" title="Áo phao trẻ em" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-3b6d691b-7706-434b-8652-1d03d083f97d.jpg?v=1653292095237" alt="Áo phao trẻ em">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65691051">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/ao-phao-tre-em'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-phao-tre-em" title="Áo phao trẻ em">Áo phao trẻ em</a></h3>
+												<div class="price-box">
+													260.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26189291" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-ni-tre-em" title="Áo nỉ trẻ em" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/3-jpeg-fb10616a-35dc-4259-bc9a-da24b2a25201.jpg?v=1653291099893" alt="Áo nỉ trẻ em">
+												</a>
+
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65690092">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/ao-ni-tre-em'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-ni-tre-em" title="Áo nỉ trẻ em">Áo nỉ trẻ em</a></h3>
+												<div class="price-box">
+													120.000₫&nbsp;
+													<span class="compare-price">150.000₫</span>
+
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26188310" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-so-mi-nam" title="Áo sơ mi nam" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-8a84ed16-fb1a-4092-8afa-17a33d167746.jpg?v=1653297236257" alt="Áo sơ mi nam">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65677534">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/ao-so-mi-nam'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-so-mi-nam" title="Áo sơ mi nam">Áo sơ mi nam</a></h3>
+												<div class="price-box">
+													80.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26182932" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-khoac-tre-em" title="Áo khoác trẻ em" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg.jpg?v=1653279682177" alt="Áo khoác trẻ em">
+												</a>
+
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65670147">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/ao-khoac-tre-em'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-khoac-tre-em" title="Áo khoác trẻ em">Áo khoác trẻ em</a></h3>
+												<div class="price-box">
+													150.000₫&nbsp;
+													<span class="compare-price">200.000₫</span>
+
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+
+					</div>
+
+
+
+
+
+					<div class="tab-2 tab-content">
+					</div>
+
+
+
+
+
+					<div class="tab-3 tab-content">
+					</div>
+
+
+
+
+
+					<div class="tab-4 tab-content">
+					</div>
+
+
+
+
+
+					<div class="tab-5 tab-content">
+					</div>
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+	$(document).ready(function ($) {
+		$(".section_product_new .tab_ul .prev2").click(function () {
+			var leftPos = $('.section_product_new .tab_ul ul').scrollLeft();
+			$(".section_product_new .tab_ul ul").animate({ scrollLeft: leftPos - 345 }, 500);
+		});
+		$(".section_product_new .tab_ul .next2").click(function () {
+			var leftPos = $('.section_product_new .tab_ul ul').scrollLeft();
+			$(".section_product_new .tab_ul ul").animate({ scrollLeft: leftPos + 150 }, 500);
+		});
+	})
+</script>
+
+
+
+
+<section class="section_product_sale module_product">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="block-title">
+					<h2>
+						<a href="san-pham-noi-bat" title="SALE ĐỒNG GIÁ - ĐỪNG LO VỀ GIÁ">SALE ĐỒNG GIÁ - ĐỪNG LO VỀ GIÁ</a>
+					</h2>
+				</div>
+			</div>
+			<div class="col-lg-12 banner_sale">
+				<a href="#" title="banner"><img class="img-responsive" src="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/banner_sale.png?1723540086975" alt="banner"></a>
+			</div>
+			<div class="col-lg-12 product">
+				<div class="block-product">
+					<div class="product-sale-swiper swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events" style="cursor: grab;">
+						<div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+							<div class="swiper-slide swiper-slide-active" style="width: 198px; margin-right: 30px;">
+
+								<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26199645" enctype="multipart/form-data">
+									<div class="product-thumbnail">
+										<a class="image_thumb scale_hover" href="/giay-nu" title="Giầy nữ">
+											<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-11f875cd-a3e4-4408-8296-c0498dba8f1f.jpg?v=1653359146257" alt="Giầy nữ">
+										</a>
+										<div class="action d-xl-flex d-none">
+										</div>
+									</div>
+									<div class="product-info">
+										<h3 class="product-name"><a href="/giay-nu" title="Giầy nữ">Giầy nữ</a></h3>
+										<div class="price-box">
+											Liên hệ
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="swiper-slide swiper-slide-next" style="width: 198px; margin-right: 30px;">
+
+								<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26199621" enctype="multipart/form-data">
+									<div class="product-thumbnail">
+										<a class="image_thumb scale_hover" href="/ao-len-nu" title="Áo len nữ">
+											<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/3-jpeg-dcba3f1d-413f-4e83-87bb-c21479ea321b.jpg?v=1653358923853" alt="Áo len nữ">
+										</a>
+
+										<div class="action d-xl-flex d-none">
+											<input type="hidden" name="variantId" value="65721053">
+											<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+												<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+													<g>
+														<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+														<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+														<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+														<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+													</g>
+													<defs>
+														<clipPath>
+															<rect width="19" height="19" fill="white"></rect>
+														</clipPath>
+													</defs>
+												</svg>
+												Thêm vào giỏ hàng
+											</button>
+
+										</div>
+									</div>
+									<div class="product-info">
+										<h3 class="product-name"><a href="/ao-len-nu" title="Áo len nữ">Áo len nữ</a></h3>
+										<div class="price-box">
+											110.000₫&nbsp;
+											<span class="compare-price">130.000₫</span>
+
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="swiper-slide" style="width: 198px; margin-right: 30px;">
+
+								<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26199607" enctype="multipart/form-data">
+									<div class="product-thumbnail">
+										<a class="image_thumb scale_hover" href="/chan-vay-nu" title="Chân váy nữ">
+											<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-e39c9ad8-b2bf-455a-a246-0cc8522a6de5.jpg?v=1653358813817" alt="Chân váy nữ">
+										</a>
+										<div class="action d-xl-flex d-none">
+											<input type="hidden" name="variantId" value="65721028">
+											<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+												<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+													<g>
+														<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+														<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+														<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+														<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+													</g>
+													<defs>
+														<clipPath>
+															<rect width="19" height="19" fill="white"></rect>
+														</clipPath>
+													</defs>
+												</svg>
+												Thêm vào giỏ hàng
+											</button>
+
+										</div>
+									</div>
+									<div class="product-info">
+										<h3 class="product-name"><a href="/chan-vay-nu" title="Chân váy nữ">Chân váy nữ</a></h3>
+										<div class="price-box">
+											70.000₫
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="swiper-slide" style="width: 198px; margin-right: 30px;">
+
+								<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26199518" enctype="multipart/form-data">
+									<div class="product-thumbnail">
+										<a class="image_thumb scale_hover" href="/vay-nu" title="Váy nữ">
+											<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/3-jpeg-6325ab0a-ce2e-49a7-a979-dc440c0a0518.jpg?v=1653358432663" alt="Váy nữ">
+										</a>
+										<div class="action d-xl-flex d-none">
+											<input type="hidden" name="variantId" value="65720714">
+											<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+												<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+													<g>
+														<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+														<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+														<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+														<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+													</g>
+													<defs>
+														<clipPath>
+															<rect width="19" height="19" fill="white"></rect>
+														</clipPath>
+													</defs>
+												</svg>
+												Thêm vào giỏ hàng
+											</button>
+
+										</div>
+									</div>
+									<div class="product-info">
+										<h3 class="product-name"><a href="/vay-nu" title="Váy nữ">Váy nữ</a></h3>
+										<div class="price-box">
+											150.000₫
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="swiper-slide" style="width: 198px; margin-right: 30px;">
+
+								<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26199457" enctype="multipart/form-data">
+									<div class="product-thumbnail">
+										<a class="image_thumb scale_hover" href="/ao-khoac-nu" title="Áo khoác nữ">
+											<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-1b210bcc-3357-4b40-8e48-dfa61547a4c4.jpg?v=1653358033383" alt="Áo khoác nữ">
+										</a>
+
+										<div class="action d-xl-flex d-none">
+											<input type="hidden" name="variantId" value="65720610">
+											<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+												<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+													<g>
+														<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+														<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+														<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+														<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+													</g>
+													<defs>
+														<clipPath>
+															<rect width="19" height="19" fill="white"></rect>
+														</clipPath>
+													</defs>
+												</svg>
+												Thêm vào giỏ hàng
+											</button>
+
+										</div>
+									</div>
+									<div class="product-info">
+										<h3 class="product-name"><a href="/ao-khoac-nu" title="Áo khoác nữ">Áo khoác nữ</a></h3>
+										<div class="price-box">
+											300.000₫&nbsp;
+											<span class="compare-price">500.000₫</span>
+
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="swiper-slide" style="width: 198px; margin-right: 30px;">
+
+								<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26194537" enctype="multipart/form-data">
+									<div class="product-thumbnail">
+										<a class="image_thumb scale_hover" href="/do-the-thao-nu" title="Đồ thể thao nữ">
+											<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-f7c305fd-59f6-48f8-9e4f-76160626f710.jpg?v=1653301590830" alt="Đồ thể thao nữ">
+										</a>
+										<div class="action d-xl-flex d-none">
+										</div>
+									</div>
+									<div class="product-info">
+										<h3 class="product-name"><a href="/do-the-thao-nu" title="Đồ thể thao nữ">Đồ thể thao nữ</a></h3>
+										<div class="price-box">
+											Liên hệ
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="swiper-slide" style="width: 198px; margin-right: 30px;">
+
+								<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26194515" enctype="multipart/form-data">
+									<div class="product-thumbnail">
+										<a class="image_thumb scale_hover" href="/balo-chong-gu" title="Balo chống gù">
+											<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/3-jpeg-8b160652-fd3a-4648-86b1-6d52a27c6ac6.jpg?v=1653301422547" alt="Balo chống gù">
+										</a>
+										<div class="action d-xl-flex d-none">
+										</div>
+									</div>
+									<div class="product-info">
+										<h3 class="product-name"><a href="/balo-chong-gu" title="Balo chống gù">Balo chống gù</a></h3>
+										<div class="price-box">
+											Liên hệ
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="swiper-slide" style="width: 198px; margin-right: 30px;">
+
+								<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26194507" enctype="multipart/form-data">
+									<div class="product-thumbnail">
+										<a class="image_thumb scale_hover" href="/balo-tre-em" title="Balo trẻ em">
+											<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-f89bcddf-d718-4862-9f2e-ef440e8de97b.jpg?v=1653301374827" alt="Balo trẻ em">
+										</a>
+										<div class="action d-xl-flex d-none">
+											<input type="hidden" name="variantId" value="65706893">
+											<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+												<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+													<g>
+														<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+														<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+														<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+														<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+													</g>
+													<defs>
+														<clipPath>
+															<rect width="19" height="19" fill="white"></rect>
+														</clipPath>
+													</defs>
+												</svg>
+												Thêm vào giỏ hàng
+											</button>
+
+										</div>
+									</div>
+									<div class="product-info">
+										<h3 class="product-name"><a href="/balo-tre-em" title="Balo trẻ em">Balo trẻ em</a></h3>
+										<div class="price-box">
+											100.000₫
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="swiper-slide" style="width: 198px; margin-right: 30px;">
+
+								<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26194139" enctype="multipart/form-data">
+									<div class="product-thumbnail">
+										<a class="image_thumb scale_hover" href="/so-mi-tre-em" title="Sơ mi trẻ em">
+											<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-aa81af63-c254-4833-b59b-53818cec4f32.jpg?v=1653299420297" alt="Sơ mi trẻ em">
+										</a>
+										<div class="action d-xl-flex d-none">
+											<input class="hidden" type="hidden" name="variantId" value="65705537">
+											<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/so-mi-tre-em'">
+												Tùy chọn
+											</button>
+
+										</div>
+									</div>
+									<div class="product-info">
+										<h3 class="product-name"><a href="/so-mi-tre-em" title="Sơ mi trẻ em">Sơ mi trẻ em</a></h3>
+										<div class="price-box">
+											Liên hệ
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="swiper-slide" style="width: 198px; margin-right: 30px;">
+
+								<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26194126" enctype="multipart/form-data">
+									<div class="product-thumbnail">
+										<a class="image_thumb scale_hover" href="/quan-au-nam-1" title="Quần âu nam">
+											<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/3-jpeg-d6dc2671-ad4d-4e7c-9a50-3607cf85ec34.jpg?v=1653299373627" alt="Quần âu nam">
+										</a>
+										<div class="action d-xl-flex d-none">
+											<input type="hidden" name="variantId" value="65705519">
+											<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+												<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+													<g>
+														<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+														<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+														<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+														<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+													</g>
+													<defs>
+														<clipPath>
+															<rect width="19" height="19" fill="white"></rect>
+														</clipPath>
+													</defs>
+												</svg>
+												Thêm vào giỏ hàng
+											</button>
+
+										</div>
+									</div>
+									<div class="product-info">
+										<h3 class="product-name"><a href="/quan-au-nam-1" title="Quần âu nam">Quần âu nam</a></h3>
+										<div class="price-box">
+											170.000₫
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="view-more clearfix">
+						<a href="san-pham-noi-bat" title="Xem tất cả">Xem tất cả</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+	var swiperwish = new Swiper('.product-sale-swiper', {
+		slidesPerView: 8,
+		loop: false,
+		grabCursor: true,
+		spaceBetween: 30,
+		roundLengths: true,
+		slideToClickedSlide: false,
+
+
+		autoplay: false,
+		breakpoints: {
+			300: {
+				slidesPerView: 2,
+				slidesPerColumnFill: 'row',
+				slidesPerColumn: 2,
+				spaceBetween: 30
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30
+			},
+			991: {
+				slidesPerView: 4,
+				spaceBetween: 30
+			},
+			1200: {
+				slidesPerView: 5,
+				spaceBetween: 30
+			}
+		}
+	});
+</script>
+
+
+
+
+<section class="section_product_goodprice module_product">
+	<div class="container">
+		<div class="wrap_tab_index not-dqtab e-tabs ajax-tab-2" data-section-2="ajax-tab-2">
+			<div class="row">
+				<div class="col-xl-5 col-lg-4 col-md-6 col-12 block-title">
+					<h2>
+						<span>SẢN PHẨM GIÁ TỐT</span>
+					</h2>
+				</div>
+				<div class="tab_big col-xl-7 col-lg-8 col-md-6 col-12">
+					<div class="tab_ul">
+						<ul class="tabs tabs-title tab-pc tabtitle2 ajax clearfix">
+
+
+
+
+							<li class="tab-link tab_cate has-content current" data-tab="tab-1" data-url="/quan-ao">
+								<span>Quần áo</span>
+							</li>
+
+							<li class="tab-link tab_cate " data-tab="tab-2" data-url="/phu-kien">
+								<span>Phụ kiện</span>
+							</li>
+
+							<li class="tab-link tab_cate " data-tab="tab-3" data-url="/giay-dep">
+								<span>Giầy dép</span>
+							</li>
+
+							<li class="tab-link tab_cate " data-tab="tab-4" data-url="/be-gai">
+								<span>Bé gái</span>
+							</li>
+
+							<li class="tab-link tab_cate " data-tab="tab-5" data-url="/be-trai">
+								<span>Bé trai</span>
+							</li>
+
+						</ul>
+						<a class="prev3 button">
+							<svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9" fill="none">
+								<path d="M4.47107 1L0.999988 4.52892L4.47107 8" stroke="#AAABAB" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M6.49585 4.52905H1.05781" stroke="#AAABAB" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M10.8347 4.52905H8.80992" stroke="#AAABAB" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</a>
+						<a class="next3 button">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
+								<path d="M12.4492 1L18.4492 7.09998L12.4492 13.1" fill="#FFF6E8"></path>
+								<path d="M12.4492 1L18.4492 7.09998L12.4492 13.1" stroke="#1C5B41" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M8.94922 7.09998H18.3492" stroke="#1C5B41" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M1.44922 7.09998H4.94922" stroke="#1C5B41" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-5 col-md-5 col-12 banner">
+					<a href="#" title="banner"><img class="img-responsive" src="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/banner_goodprice.png?1723540086975" alt="banner"></a>
+				</div>
+				<div class="col-lg-7 col-md-7 col-12">
+
+
+
+
+					<div class="tab-1 tab-content current">
+
+						<div class="swiper_tab swiper-container swiper-carousel2 ajax-carousel swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-multirow">
+							<div class="swiper-wrapper" style="width: 1529px; transform: translate3d(0px, 0px, 0px);">
+
+								<div class="item swiper-slide swiper-slide-active" style="width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26199621" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-len-nu" title="Áo len nữ" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/3-jpeg-dcba3f1d-413f-4e83-87bb-c21479ea321b.jpg?v=1653358923853" alt="Áo len nữ">
+												</a>
+
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65721053">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-len-nu" title="Áo len nữ">Áo len nữ</a></h3>
+												<div class="price-box">
+													110.000₫&nbsp;
+													<span class="compare-price">130.000₫</span>
+
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide swiper-slide-next" style="width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26199607" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/chan-vay-nu" title="Chân váy nữ" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-e39c9ad8-b2bf-455a-a246-0cc8522a6de5.jpg?v=1653358813817" alt="Chân váy nữ">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65721028">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/chan-vay-nu" title="Chân váy nữ">Chân váy nữ</a></h3>
+												<div class="price-box">
+													70.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26199457" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-khoac-nu" title="Áo khoác nữ" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-1b210bcc-3357-4b40-8e48-dfa61547a4c4.jpg?v=1653358033383" alt="Áo khoác nữ">
+												</a>
+
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65720610">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-khoac-nu" title="Áo khoác nữ">Áo khoác nữ</a></h3>
+												<div class="price-box">
+													300.000₫&nbsp;
+													<span class="compare-price">500.000₫</span>
+
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26194537" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/do-the-thao-nu" title="Đồ thể thao nữ" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-f7c305fd-59f6-48f8-9e4f-76160626f710.jpg?v=1653301590830" alt="Đồ thể thao nữ">
+												</a>
+												<div class="action d-xl-flex d-none">
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/do-the-thao-nu" title="Đồ thể thao nữ">Đồ thể thao nữ</a></h3>
+												<div class="price-box">
+													Liên hệ
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26194139" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/so-mi-tre-em" title="Sơ mi trẻ em" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-aa81af63-c254-4833-b59b-53818cec4f32.jpg?v=1653299420297" alt="Sơ mi trẻ em">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65705537">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/so-mi-tre-em'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/so-mi-tre-em" title="Sơ mi trẻ em">Sơ mi trẻ em</a></h3>
+												<div class="price-box">
+													Liên hệ
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26194126" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/quan-au-nam-1" title="Quần âu nam" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/3-jpeg-d6dc2671-ad4d-4e7c-9a50-3607cf85ec34.jpg?v=1653299373627" alt="Quần âu nam">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65705519">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/quan-au-nam-1" title="Quần âu nam">Quần âu nam</a></h3>
+												<div class="price-box">
+													170.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26193698" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/do-the-thao-nam" title="Đồ thể thao nam" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/3-jpeg-3bf4e2e1-4f45-405a-9608-6a4f5679d671.jpg?v=1653297401413" alt="Đồ thể thao nam">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65700608">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/do-the-thao-nam" title="Đồ thể thao nam">Đồ thể thao nam</a></h3>
+												<div class="price-box">
+													100.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26193687" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/do-ngu-nam" title="Đồ ngủ nam" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-bb35d9d9-1da6-438e-a3b2-8f03740dd9fc.jpg?v=1653298949747" alt="Đồ ngủ nam">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65700595">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/do-ngu-nam" title="Đồ ngủ nam">Đồ ngủ nam</a></h3>
+												<div class="price-box">
+													130.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26189645" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/bo-do-he-nam" title="Bộ đồ hè nam" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/2-jpeg-3231af07-7bc0-4973-a4f1-bb844514d6d5.jpg?v=1653291329997" alt="Bộ đồ hè nam">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65690395">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/bo-do-he-nam'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/bo-do-he-nam" title="Bộ đồ hè nam">Bộ đồ hè nam</a></h3>
+												<div class="price-box">
+													200.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26189589" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/bo-2-day-tre-em" title="Bộ 2 dây trẻ em" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/5-jpeg-415f7f3b-ce61-46de-b5f1-50c8688e1735.jpg?v=1653297283710" alt="Bộ 2 dây trẻ em">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input type="hidden" name="variantId" value="65690368">
+													<button class="btn-cart btn-views add_to_cart " title="Thêm vào giỏ hàng">
+														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+															<g>
+																<path d="M18.7179 6.86766C18.467 6.55289 18.0906 6.37232 17.6852 6.37232H14.026L12.0418 1.82891C11.9188 1.54721 11.5907 1.41848 11.309 1.54157C11.0272 1.66459 10.8986 1.99274 11.0216 2.27448L12.8112 6.37236H6.18877L7.97837 2.27448C8.10139 1.99274 7.97276 1.66462 7.69103 1.54157C7.40933 1.41848 7.08117 1.54713 6.95816 1.82891L4.97396 6.37236H1.31482C0.909367 6.37236 0.532967 6.55289 0.282071 6.86769C0.0357758 7.17674 -0.0551051 7.57403 0.0327328 7.95782L1.9868 16.493C2.12325 17.089 2.65046 17.5052 3.26889 17.5052H15.7311C16.3495 17.5052 16.8767 17.089 17.0132 16.493L18.9673 7.95778C19.0551 7.574 18.9642 7.1767 18.7179 6.86766ZM15.7311 16.3919H3.26889C3.17437 16.3919 3.09158 16.3299 3.07203 16.2445L1.11796 7.70937C1.10263 7.64239 1.12835 7.59199 1.15269 7.56153C1.17526 7.53318 1.22636 7.48564 1.31482 7.48564H4.48779L4.34198 7.81951C4.21897 8.10125 4.34759 8.42937 4.62932 8.55242C4.70183 8.58411 4.77739 8.59911 4.85179 8.59911C5.06636 8.59911 5.27083 8.47431 5.36219 8.26512L5.7026 7.48571H13.2975L13.6379 8.26512C13.7292 8.47434 13.9337 8.59911 14.1483 8.59911C14.2226 8.59911 14.2982 8.58411 14.3708 8.55242C14.6525 8.42941 14.7811 8.10125 14.6581 7.81951L14.5123 7.48564H17.6853C17.7737 7.48564 17.8248 7.53318 17.8474 7.56153C17.8717 7.59203 17.8974 7.64243 17.8821 7.70933L15.928 16.2445C15.9085 16.3299 15.8256 16.3919 15.7311 16.3919Z" fill="white"></path>
+																<path d="M6.16016 9.89771C5.85274 9.89771 5.60352 10.1469 5.60352 10.4543V14.5364C5.60352 14.8438 5.85274 15.093 6.16016 15.093C6.46757 15.093 6.7168 14.8438 6.7168 14.5364V10.4543C6.7168 10.1469 6.46761 9.89771 6.16016 9.89771Z" fill="white"></path>
+																<path d="M9.5 9.89771C9.19259 9.89771 8.94336 10.1469 8.94336 10.4543V14.5364C8.94336 14.8438 9.19259 15.093 9.5 15.093C9.80741 15.093 10.0566 14.8438 10.0566 14.5364V10.4543C10.0566 10.1469 9.80741 9.89771 9.5 9.89771Z" fill="white"></path>
+																<path d="M12.8398 9.89771C12.5324 9.89771 12.2832 10.1469 12.2832 10.4543V14.5364C12.2832 14.8438 12.5324 15.093 12.8398 15.093C13.1473 15.093 13.3965 14.8438 13.3965 14.5364V10.4543C13.3964 10.1469 13.1473 9.89771 12.8398 9.89771Z" fill="white"></path>
+															</g>
+															<defs>
+																<clipPath>
+																	<rect width="19" height="19" fill="white"></rect>
+																</clipPath>
+															</defs>
+														</svg>
+														Thêm vào giỏ hàng
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/bo-2-day-tre-em" title="Bộ 2 dây trẻ em">Bộ 2 dây trẻ em</a></h3>
+												<div class="price-box">
+													80.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26189504" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-phao-tre-em" title="Áo phao trẻ em" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-3b6d691b-7706-434b-8652-1d03d083f97d.jpg?v=1653292095237" alt="Áo phao trẻ em">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65691051">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/ao-phao-tre-em'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-phao-tre-em" title="Áo phao trẻ em">Áo phao trẻ em</a></h3>
+												<div class="price-box">
+													260.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26189291" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-ni-tre-em" title="Áo nỉ trẻ em" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/3-jpeg-fb10616a-35dc-4259-bc9a-da24b2a25201.jpg?v=1653291099893" alt="Áo nỉ trẻ em">
+												</a>
+
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65690092">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/ao-ni-tre-em'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-ni-tre-em" title="Áo nỉ trẻ em">Áo nỉ trẻ em</a></h3>
+												<div class="price-box">
+													120.000₫&nbsp;
+													<span class="compare-price">150.000₫</span>
+
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26188310" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-so-mi-nam" title="Áo sơ mi nam" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg-8a84ed16-fb1a-4092-8afa-17a33d167746.jpg?v=1653297236257" alt="Áo sơ mi nam">
+												</a>
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65677534">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/ao-so-mi-nam'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-so-mi-nam" title="Áo sơ mi nam">Áo sơ mi nam</a></h3>
+												<div class="price-box">
+													80.000₫
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="item swiper-slide" style="margin-top: 20px; width: 198.333px; margin-right: 20px;">
+									<div class="item_product_main">
+
+										<form action="/cart/add" method="post" class="variants product-action" data-cart-form="" data-id="product-actions-26182932" enctype="multipart/form-data">
+											<div class="product-thumbnail">
+												<a class="image_thumb scale_hover" href="/ao-khoac-tre-em" title="Áo khoác trẻ em" style="height: 198px;">
+													<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/thumb/large/100/455/315/products/1-jpeg.jpg?v=1653279682177" alt="Áo khoác trẻ em">
+												</a>
+
+												<div class="action d-xl-flex d-none">
+													<input class="hidden" type="hidden" name="variantId" value="65670147">
+													<button class="btn-cart btn-views" title="Tùy chọn" type="button" onclick="window.location.href='/ao-khoac-tre-em'">
+														Tùy chọn
+													</button>
+
+												</div>
+											</div>
+											<div class="product-info">
+												<h3 class="product-name"><a href="/ao-khoac-tre-em" title="Áo khoác trẻ em">Áo khoác trẻ em</a></h3>
+												<div class="price-box">
+													150.000₫&nbsp;
+													<span class="compare-price">200.000₫</span>
+
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="view-more clearfix">
+							<a href="sanphamnoibat" title="Xem tất cả">Xem tất cả</a>
+						</div>
+
+					</div>
+
+
+
+
+
+					<div class="tab-2 tab-content">
+					</div>
+
+
+
+
+
+					<div class="tab-3 tab-content">
+					</div>
+
+
+
+
+
+					<div class="tab-4 tab-content">
+					</div>
+
+
+
+
+
+					<div class="tab-5 tab-content">
+					</div>
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+	$(document).ready(function ($) {
+		$(".section_product_goodprice .tab_ul .prev3").click(function () {
+			var leftPos = $('.section_product_goodprice .tab_ul ul').scrollLeft();
+			$(".section_product_goodprice .tab_ul ul").animate({ scrollLeft: leftPos - 345 }, 500);
+		});
+		$(".section_product_goodprice .tab_ul .next3").click(function () {
+			var leftPos = $('.section_product_goodprice .tab_ul ul').scrollLeft();
+			$(".section_product_goodprice .tab_ul ul").animate({ scrollLeft: leftPos + 150 }, 500);
+		});
+	})
+</script>
+
+
+
+
+<section class="section_blog">
+	<div class="container">
+		<div class="block-title">
+			<h2>
+				<a href="tin-tuc" title="TIN TỨC THỜI TRANG">TIN TỨC THỜI TRANG</a>
+			</h2>
+		</div>
+		<div class="row row-75Gutter block-blog">
+			<div class="item col-lg-4 col-12">
+				<div class="item-blog">
+					<div class="block-thumb">
+
+						<a class="thumb" href="/cach-phoi-do-he-nam" title="Cách phối đồ hè nam">
+							<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://bizweb.dktcdn.net/100/455/315/articles/prada-men-xuan-he-2022-cam-hung-tu-ngay-he.jpg?v=1653638966533" alt="Cách phối đồ hè nam">
+						</a>
+
+					</div>
+					<div class="block-content">
+						<h3>
+							<a href="/cach-phoi-do-he-nam" title="Cách phối đồ hè nam">Cách phối đồ hè nam</a>
+						</h3>
+						<div class="time-post">
+							<svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+								<path d="M6.625 2.6875C6.625 3.61948 5.86948 4.375 4.9375 4.375C4.00552 4.375 3.25 3.61948 3.25 2.6875C3.25 1.75552 4.00552 1 4.9375 1C5.14011 1 5.33437 1.03571 5.51435 1.10117" stroke="#808080" stroke-linecap="round"></path>
+								<path d="M1 10V8.06439C1 7.45857 1.34677 6.9047 1.91417 6.69234C2.67955 6.40589 3.97001 6.0625 4.9375 6.0625C5.9254 6.0625 7.02163 6.42052 7.88588 6.71039C8.49054 6.91319 8.875 7.48924 8.875 8.12701V10" stroke="#808080" stroke-linecap="round"></path>
+							</svg>
+							<span>Cafein Team</span>
+						</div>
+						<span class="post">|</span>
+						<div class="time-post f">
+
+							<svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="clock" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-clock fa-w-16"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm216 248c0 118.7-96.1 216-216 216-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216zm-148.9 88.3l-81.2-59c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h14c6.6 0 12 5.4 12 12v146.3l70.5 51.3c5.4 3.9 6.5 11.4 2.6 16.8l-8.2 11.3c-3.9 5.3-11.4 6.5-16.8 2.6z" class=""></path></svg>
+							<span>Ngày</span>
+							27/05/2022
+						</div>
+
+						<p class="justify">
+							1.Sơ mi hoạ tiết + quần denim + giày sneaker
+							Hãy tranh thủ những ngày hè để diện ngay chiếc áo sơ mi ngắn tay với...
+						</p>
+
+						<a class="viewmore" href="/cach-phoi-do-he-nam" title="Xem thêm">
+							Xem thêm
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="11" viewBox="0 0 18 11" fill="none">
+								<path d="M12.9273 1.82929L15.5429 4.38568C15.7833 4.62065 15.6169 5.02886 15.2807 5.02886L1.20968 5.02885C0.949468 5.02885 0.738525 5.2398 0.738525 5.50001C0.738525 5.76022 0.949468 5.97116 1.20968 5.97116L15.2807 5.97117C15.6168 5.97117 15.7832 6.37938 15.5428 6.61435L12.9273 9.1707C12.7366 9.35708 12.7366 9.66385 12.9273 9.85023C13.1119 10.0307 13.4068 10.0307 13.5914 9.85023L17.585 5.94695C17.8359 5.70177 17.8359 5.2982 17.585 5.05301L13.5914 1.14977C13.4068 0.969331 13.1119 0.969331 12.9273 1.14977C12.7366 1.33614 12.7366 1.64292 12.9273 1.82929Z" fill="#F97E6C" stroke="#F97E6C" stroke-width="0.25"></path>
+							</svg>
+						</a>
+
+					</div>
+				</div>
+			</div>
+			<div class="item col-lg-4 col-12">
+				<div class="item-blog">
+					<div class="block-thumb">
+
+						<a class="thumb" href="/cach-phoi-do-voi-quan-the-thao-nam" title="Cách phối đồ với quần thể thao nam">
+							<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://bizweb.dktcdn.net/100/455/315/articles/4-mon-do-thoi-trang-giup-ban-chinh-phuc-phong-cach-sporty-chic-1000x600.jpg?v=1653895416730" alt="Cách phối đồ với quần thể thao nam">
+						</a>
+
+					</div>
+					<div class="block-content">
+						<h3>
+							<a href="/cach-phoi-do-voi-quan-the-thao-nam" title="Cách phối đồ với quần thể thao nam">Cách phối đồ với quần thể thao nam</a>
+						</h3>
+						<div class="time-post">
+							<svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+								<path d="M6.625 2.6875C6.625 3.61948 5.86948 4.375 4.9375 4.375C4.00552 4.375 3.25 3.61948 3.25 2.6875C3.25 1.75552 4.00552 1 4.9375 1C5.14011 1 5.33437 1.03571 5.51435 1.10117" stroke="#808080" stroke-linecap="round"></path>
+								<path d="M1 10V8.06439C1 7.45857 1.34677 6.9047 1.91417 6.69234C2.67955 6.40589 3.97001 6.0625 4.9375 6.0625C5.9254 6.0625 7.02163 6.42052 7.88588 6.71039C8.49054 6.91319 8.875 7.48924 8.875 8.12701V10" stroke="#808080" stroke-linecap="round"></path>
+							</svg>
+							<span>Cafein Team</span>
+						</div>
+						<span class="post">|</span>
+						<div class="time-post f">
+
+							<svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="clock" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-clock fa-w-16"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm216 248c0 118.7-96.1 216-216 216-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216zm-148.9 88.3l-81.2-59c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h14c6.6 0 12 5.4 12 12v146.3l70.5 51.3c5.4 3.9 6.5 11.4 2.6 16.8l-8.2 11.3c-3.9 5.3-11.4 6.5-16.8 2.6z" class=""></path></svg>
+							<span>Ngày</span>
+							27/05/2022
+						</div>
+
+						<p class="justify">
+							1. Quần jogger thể thao phối với áo khoác da
+							Nếu bạn nghĩ rằng áo khoác da chỉ có thể kết hợp với quần skinny thì...
+						</p>
+
+						<a class="viewmore" href="/cach-phoi-do-voi-quan-the-thao-nam" title="Xem thêm">
+							Xem thêm
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="11" viewBox="0 0 18 11" fill="none">
+								<path d="M12.9273 1.82929L15.5429 4.38568C15.7833 4.62065 15.6169 5.02886 15.2807 5.02886L1.20968 5.02885C0.949468 5.02885 0.738525 5.2398 0.738525 5.50001C0.738525 5.76022 0.949468 5.97116 1.20968 5.97116L15.2807 5.97117C15.6168 5.97117 15.7832 6.37938 15.5428 6.61435L12.9273 9.1707C12.7366 9.35708 12.7366 9.66385 12.9273 9.85023C13.1119 10.0307 13.4068 10.0307 13.5914 9.85023L17.585 5.94695C17.8359 5.70177 17.8359 5.2982 17.585 5.05301L13.5914 1.14977C13.4068 0.969331 13.1119 0.969331 12.9273 1.14977C12.7366 1.33614 12.7366 1.64292 12.9273 1.82929Z" fill="#F97E6C" stroke="#F97E6C" stroke-width="0.25"></path>
+							</svg>
+						</a>
+
+					</div>
+				</div>
+			</div>
+			<div class="item col-lg-4 col-12">
+				<div class="item-blog">
+					<div class="block-thumb">
+
+						<a class="thumb" href="/cach-phoi-do-so-mi-nam" title="Cách phối đồ sơ mi nam">
+							<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://bizweb.dktcdn.net/100/455/315/articles/chang-mac-gi-khi-du-tiec-367.png?v=1653634327270" alt="Cách phối đồ sơ mi nam">
+						</a>
+
+					</div>
+					<div class="block-content">
+						<h3>
+							<a href="/cach-phoi-do-so-mi-nam" title="Cách phối đồ sơ mi nam">Cách phối đồ sơ mi nam</a>
+						</h3>
+						<div class="time-post">
+							<svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+								<path d="M6.625 2.6875C6.625 3.61948 5.86948 4.375 4.9375 4.375C4.00552 4.375 3.25 3.61948 3.25 2.6875C3.25 1.75552 4.00552 1 4.9375 1C5.14011 1 5.33437 1.03571 5.51435 1.10117" stroke="#808080" stroke-linecap="round"></path>
+								<path d="M1 10V8.06439C1 7.45857 1.34677 6.9047 1.91417 6.69234C2.67955 6.40589 3.97001 6.0625 4.9375 6.0625C5.9254 6.0625 7.02163 6.42052 7.88588 6.71039C8.49054 6.91319 8.875 7.48924 8.875 8.12701V10" stroke="#808080" stroke-linecap="round"></path>
+							</svg>
+							<span>Cafein Team</span>
+						</div>
+						<span class="post">|</span>
+						<div class="time-post f">
+
+							<svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="clock" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-clock fa-w-16"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm216 248c0 118.7-96.1 216-216 216-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216zm-148.9 88.3l-81.2-59c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h14c6.6 0 12 5.4 12 12v146.3l70.5 51.3c5.4 3.9 6.5 11.4 2.6 16.8l-8.2 11.3c-3.9 5.3-11.4 6.5-16.8 2.6z" class=""></path></svg>
+							<span>Ngày</span>
+							27/05/2022
+						</div>
+
+						<p class="justify">
+							1.Quần jean ống đứng
+							Cách phối đồ với áo sơ mi nam đầu tiên mà Cardina gợi ý cho các bạn là mix cùng với quần...
+						</p>
+
+						<a class="viewmore" href="/cach-phoi-do-so-mi-nam" title="Xem thêm">
+							Xem thêm
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="11" viewBox="0 0 18 11" fill="none">
+								<path d="M12.9273 1.82929L15.5429 4.38568C15.7833 4.62065 15.6169 5.02886 15.2807 5.02886L1.20968 5.02885C0.949468 5.02885 0.738525 5.2398 0.738525 5.50001C0.738525 5.76022 0.949468 5.97116 1.20968 5.97116L15.2807 5.97117C15.6168 5.97117 15.7832 6.37938 15.5428 6.61435L12.9273 9.1707C12.7366 9.35708 12.7366 9.66385 12.9273 9.85023C13.1119 10.0307 13.4068 10.0307 13.5914 9.85023L17.585 5.94695C17.8359 5.70177 17.8359 5.2982 17.585 5.05301L13.5914 1.14977C13.4068 0.969331 13.1119 0.969331 12.9273 1.14977C12.7366 1.33614 12.7366 1.64292 12.9273 1.82929Z" fill="#F97E6C" stroke="#F97E6C" stroke-width="0.25"></path>
+							</svg>
+						</a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<section class="section_brand">
+	<div class="container">
+		<div class="brand-swiper swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events" style="cursor: grab;">
+			<div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+				<div class="swiper-slide swiper-slide-active" style="width: 160px; margin-right: 30px;">
+					<a href="#" title="Chanel">
+						<img src="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/img_brand_1.jpg?1723540086975" alt="Chanel" class="img-responsive lazyload">
+					</a>
+				</div>
+				<div class="swiper-slide swiper-slide-next" style="width: 160px; margin-right: 30px;">
+					<a href="#" title="Louis Vuittion">
+						<img src="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/img_brand_2.jpg?1723540086975" alt="Louis Vuittion" class="img-responsive lazyload">
+					</a>
+				</div>
+				<div class="swiper-slide" style="width: 160px; margin-right: 30px;">
+					<a href="#" title="Givenchy">
+						<img src="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/img_brand_3.jpg?1723540086975" alt="Givenchy" class="img-responsive lazyload">
+					</a>
+				</div>
+				<div class="swiper-slide" style="width: 160px; margin-right: 30px;">
+					<a href="#" title="Balenciaga">
+						<img src="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/img_brand_4.jpg?1723540086975" alt="Balenciaga" class="img-responsive lazyload">
+					</a>
+				</div>
+				<div class="swiper-slide" style="width: 160px; margin-right: 30px;">
+					<a href="#" title="Hermes">
+						<img src="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/img_brand_5.jpg?1723540086975" alt="Hermes" class="img-responsive lazyload">
+					</a>
+				</div>
+				<div class="swiper-slide" style="width: 160px; margin-right: 30px;">
+					<a href="#" title="YSL">
+						<img src="//bizweb.dktcdn.net/100/455/315/themes/894917/assets/img_brand_6.jpg?1723540086975" alt="YSL" class="img-responsive lazyload">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+	var swiperwish = new Swiper('.brand-swiper', {
+		slidesPerView: 6,
+		loop: false,
+		grabCursor: true,
+		spaceBetween: 30,
+		roundLengths: true,
+		slideToClickedSlide: false,
+		autoplay: false,
+		breakpoints: {
+			300: {
+				slidesPerView: 3,
+				spaceBetween: 10
+			},
+			500: {
+				slidesPerView: 3,
+				spaceBetween: 10
+			},
+			640: {
+				slidesPerView: 3,
+				spaceBetween: 10
+			},
+			768: {
+				slidesPerView: 4,
+				spaceBetween: 30
+			},
+			991: {
+				slidesPerView: 5,
+				spaceBetween: 30
+			},
+			1200: {
+				slidesPerView: 6,
+				spaceBetween: 30
+			}
+		}
+	});
+</script>
+
+
+
+
+<div class="mail">
+	<div class="container">
+		<div class="mailchim row">
+			<div class="text-email col-lg-6">
+				<h4 class="title-menu">
+					NHẬP THÔNG TIN KHUYẾN MÃI TỪ CHÚNG TÔI
+				</h4>
+			</div>
+			<div class="email col-lg-6">
+				<form id="mc-form" class="newsletter-form" data-toggle="validator" novalidate="true">
+					<input aria-label="Địa chỉ Email" type="email" class="form-control" placeholder="Nhập email của bạn" name="EMAIL" required="" autocomplete="off">
+					<button class="btn btn-default" type="submit" aria-label="Đăng ký nhận tin" name="subscribe">Gửi</button>
+				</form>
+				<div class="mailchimp-alerts ">
+					<div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+					<div class="mailchimp-success"></div><!-- mailchimp-success end -->
+					<div class="mailchimp-error"></div><!-- mailchimp-error end -->
+				</div>
+				<script>
+					$('#mc-form').ajaxChimp({
+						language: 'en',
+						callback: mailChimpResponse,
+						url: 'https://facebook.us7.list-manage.com/subscribe/post?u=97ba6d3ba28239250923925a8&id=4ef3a755a8'
+					});
+					function mailChimpResponse(resp) {
+						if (resp.result === 'success') {
+							if (resp.msg == 'Thank you for subscribing!') {
+								$('.mailchimp-success').html('Cảm ơn bạn đã đăng ký!').fadeIn(900);
+							} else {
+								$('.mailchimp-success').html('' + resp.msg).fadeIn(900);
+							}
+							$('.mailchimp-error').fadeOut(100);
+						} else if (resp.result === 'error') {
+							if (resp.msg == '0 - Please enter a value') {
+								$('.mailchimp-error').html('Vui lòng nhập các trường thông tin').fadeIn(900);
+							} else if (resp.msg == '0 - An email address must contain a single ') {
+								$('.mailchimp-error').html('Địa chỉ email phải chứa ký tự ').fadeIn(900);
+							} else if (resp.msg == 'This email cannot be added to this list. Please enter a different email address.') {
+								$('.mailchimp-error').html('Email này không thể được thêm vào danh sách này. Vui lòng nhập một địa chỉ email khác.').fadeIn(900);
+							} else if (resp.msg.includes('0 - The domain portion of the email address is invalid')) {
+								$('.mailchimp-error').html('Phần tên miền của địa chỉ email không hợp lệ').fadeIn(900);
+							} else if (resp.msg.includes('0 - The username portion of the email address is empty')) {
+								$('.mailchimp-error').html('Phần tên người dùng của địa chỉ email trống').fadeIn(900);
+							} else if (resp.msg == 'Thank you for subscribing!') {
+								$('.mailchimp-error').html('Cảm ơn bạn đã đăng ký!').fadeIn(900);
+							} else {
+								$('.mailchimp-error').html('' + resp.msg).fadeIn(900);
+							}
+						}
+					}
+				</script>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	(function ($) { "use strict"; $.ajaxChimp = { responses: { "We have sent you a confirmation email": 0, "Please enter a valueggg": 1, "An email address must contain a single ": 2, "The domain portion of the email address is invalid (the portion after the : )": 3, "The username portion of the email address is invalid (the portion before the : )": 4, "This email address looks fake or invalid. Please enter a real email address": 5 }, translations: { en: null }, init: function (selector, options) { $(selector).ajaxChimp(options) } }; $.fn.ajaxChimp = function (options) { $(this).each(function (i, elem) { var form = $(elem); var email = form.find("input[type=email]"); var label = form.find("label[for=" + email.attr("id") + "]"); var settings = $.extend({ url: form.attr("action"), language: "en" }, options); var url = settings.url.replace("/post?", "/post-json?").concat("&c=?"); form.attr("novalidate", "true"); email.attr("name", "EMAIL"); form.submit(function () { var msg; function successCallback(resp) { if (resp.result === "success") { msg = "We have sent you a confirmation email"; label.removeClass("error").addClass("valid"); email.removeClass("error").addClass("valid") } else { email.removeClass("valid").addClass("error"); label.removeClass("valid").addClass("error"); var index = -1; try { var parts = resp.msg.split(" - ", 2); if (parts[1] === undefined) { msg = resp.msg } else { var i = parseInt(parts[0], 10); if (i.toString() === parts[0]) { index = parts[0]; msg = parts[1] } else { index = -1; msg = resp.msg } } } catch (e) { index = -1; msg = resp.msg } } if (settings.language !== "en" && $.ajaxChimp.responses[msg] !== undefined && $.ajaxChimp.translations && $.ajaxChimp.translations[settings.language] && $.ajaxChimp.translations[settings.language][$.ajaxChimp.responses[msg]]) { msg = $.ajaxChimp.translations[settings.language][$.ajaxChimp.responses[msg]] } label.html(msg); label.show(2e3); if (settings.callback) { settings.callback(resp) } } var data = {}; var dataArray = form.serializeArray(); $.each(dataArray, function (index, item) { data[item.name] = item.value }); $.ajax({ url: url, data: data, success: successCallback, dataType: "jsonp", error: function (resp, text) { console.log("mailchimp ajax submit error: " + text) } }); var submitMsg = "Submitting..."; if (settings.language !== "en" && $.ajaxChimp.translations && $.ajaxChimp.translations[settings.language] && $.ajaxChimp.translations[settings.language]["submit"]) { submitMsg = $.ajaxChimp.translations[settings.language]["submit"] } label.html(submitMsg).show(2e3); return false }) }); return this } })(jQuery);
+</script>

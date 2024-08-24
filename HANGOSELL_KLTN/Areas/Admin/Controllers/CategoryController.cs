@@ -15,16 +15,22 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            List<Category> categories = categoryService.GetAllCategory();
+            ViewData["EmployeeName"] = HttpContext.Session.GetString("EmployeeName");
+            ViewData["Avatar"] = HttpContext.Session.GetString("Avatar");
+            ViewData["Position"] = HttpContext.Session.GetString("Position"); 
+            List<ProductCategory> categories = categoryService.GetAllCategory();
             return View(categories);
         }
 
         public IActionResult CreateCategory()
         {
+            ViewData["EmployeeName"] = HttpContext.Session.GetString("EmployeeName");
+            ViewData["Avatar"] = HttpContext.Session.GetString("Avatar");
+            ViewData["Position"] = HttpContext.Session.GetString("Position");
             return View();
         }
 
-        public IActionResult Create(Category category)
+        public IActionResult Create(ProductCategory category)
         {
             categoryService.AddCategory(category);
             return Redirect("/Admin/Category");
@@ -32,11 +38,14 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
 
         public IActionResult EditCategory(int id)
         {
-            Category category = categoryService.GetCategoryById(id);
+            ViewData["EmployeeName"] = HttpContext.Session.GetString("EmployeeName");
+            ViewData["Avatar"] = HttpContext.Session.GetString("Avatar");
+            ViewData["Position"] = HttpContext.Session.GetString("Position");
+            ProductCategory category = categoryService.GetCategoryById(id);
             return View(category);
         }
 
-        public IActionResult Edit(Category category)
+        public IActionResult Edit(ProductCategory category)
         {
             categoryService.UpdateCategory(category);
             return Redirect("/Admin/Category");
