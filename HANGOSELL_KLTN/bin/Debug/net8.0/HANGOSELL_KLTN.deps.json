@@ -346,6 +346,14 @@
         "runtime": {
           "HANGOSELL_KLTN.dll": {}
         },
+        "resources": {
+          "en-US/HANGOSELL_KLTN.resources.dll": {
+            "locale": "en-US"
+          },
+          "vi-VN/HANGOSELL_KLTN.resources.dll": {
+            "locale": "vi-VN"
+          }
+        },
         "compile": {
           "HANGOSELL_KLTN.dll": {}
         }

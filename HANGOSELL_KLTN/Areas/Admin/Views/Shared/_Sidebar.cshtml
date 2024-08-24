@@ -1,6 +1,8 @@
 ﻿@using Microsoft.AspNetCore.Http
+@using HANGOSELL_KLTN.Configuration
+@using Microsoft.Extensions.Localization
+@inject SharedViewLocalizer _localizer
 @inject IHttpContextAccessor HttpContextAccessor
-
 <div class="sidebar" id="sidebar">
     <div class="sidebar-inner slimscroll">
         <div id="sidebar-menu" class="sidebar-menu">
@@ -12,7 +14,7 @@
                 <li class="">
                     <a>
                         <i class="fas fa-tachometer-alt"></i>
-                        <span> Dashboard</span>
+                        <span> @_localizer.GetLocalizedString("Dashboard")</span>
                         <span class="menu-arrow"></span>
                     </a>
                     <ul>
@@ -24,53 +26,53 @@
                 <li class="">
                     <a href="/Admin/Employee">
                         <i class="fas fa-shield-alt"></i>
-                        <span>Employee Management</span>
+                        <span> @_localizer.GetLocalizedString("Employee Management")</span>
                     </a>
                 </li>
                 <li class="">
                     <a href="/Admin/Customer">
                         <i class="fas fa-users"></i>
-                        <span>Customer</span>
+                        <span> @_localizer.GetLocalizedString("Customer")</span>
                     </a>
                 </li>
                 <li class="">
                     <a href="/Admin/Product">
                         <i class="fas fa-box"></i>
-                        <span>Product</span>
+                        <span> @_localizer.GetLocalizedString("Product")</span>
                     </a>
                 </li>
 
                 <li class="">
                     <a href="/Admin/Category">
                         <i class="fas fa-sitemap"></i>
-                        <span>Category</span>
+                        <span> @_localizer.GetLocalizedString("Category")</span>
                     </a>
                 </li>
 
-                <li class="">
+                @* <li class="">
                     <a href="/Admin/Supplier">
                         <i class="fas fa-truck"></i>
                         <span> Supplier</span>
                     </a>
-                </li>
+                </li> *@
 
-                <li class="submenu ">
-                    <a href="#">
+                <li class="">
+                    <a href="/Admin/Invoice">
                         <i class="fas fa-file-invoice"></i>
                         <span> Invoice</span>
-                        <span class="menu-arrow"></span>
+                        @* <span class="menu-arrow"></span> *@
                     </a>
-                    <ul>
+                    @* <ul>
                         <li><a class="" href="">Invoices List</a></li>
                         <li><a class="" href="">Invoices Grid</a></li>
                         <li><a class="" href="">Add Invoices</a></li>
                         <li><a class="" href="">Edit Invoices</a></li>
                         <li><a class="" href="">Invoices Details</a></li>
                         <li><a class="" href="">Invoices Settings</a></li>
-                    </ul>
+                    </ul> *@
                 </li>
 
-                <li class="menu-title">
+                @* <li class="menu-title">
                     <span>Management</span>
                 </li>
 
@@ -109,7 +111,7 @@
                         <i class="fas fa-cog"></i>
                         <span>Settings</span>
                     </a>
-                </li>
+                </li> *@
             </ul>
         </div>
     </div>

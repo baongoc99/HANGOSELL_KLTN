@@ -1,8 +1,8 @@
-﻿@model List<HANGOSELL_KLTN.Models.EF.Role>
+﻿@model List<HANGOSELL_KLTN.Models.EF.ModelDataset>
 
 @{
     ViewData["Title"] = "Create Employee";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <div class="page-wrapper">
@@ -63,9 +63,9 @@
                                 <div class="form-group local-forms">
                                     <label for="RoleID" class="form-label">Role <span class="login-danger">*</span></label>
                                     <select class="form-control select" id="RoleID" name="RoleID" required>
-                                        @foreach (var role in ViewBag.Roles)
+                                        @foreach (var role in Model)
                                         {
-                                            <option value="@role.Id">@role.RoleName</option>
+                                            <option value="@role.role.Id">@role.role.RoleName</option>
                                         }
                                     </select>
                                 </div>
@@ -83,11 +83,35 @@
                                 </div>
                             </div>
                             <div class="col-12 col-sm-4">
-                                <div class="form-group local-forms">
-                                    <label for="Avatar" class="form-label">Avatar (Optional)</label>
-                                    <input type="file" class="form-control" id="Avatar" name="Avatar">
+                                <div class="row">
+                                    <div class="col-11">
+                                        <div class="form-group local-forms">
+                                            <label>Avatar <span class="login-danger">*</span></label>
+                                            <input type="file" class="form-control" accept="image/*" onchange="previewImage(event)" style="height: 45px;" name="image">
+                                        </div>
+                                    </div>
+                                    <div class="col-1">
+                                        <div class="user-img" style="margin-left: -20px; height: 45px;">
+                                            <img id="preview" class="rounded-circle" src="@Model ?? Url.Content(" ~ /images/default.jpg")" alt="Preview Image" />
+                                        </div>
+                                        @if (ViewBag.Message != null)
+                                        {
+                                            <div class="alert alert-info">@ViewBag.Message</div>
+                                        }
+                                    </div>
                                 </div>
                             </div>
+                            <script>
+                                function previewImage(event) {
+                                    var reader = new FileReader();
+                                    reader.onload = function () {
+                                        var output = document.getElementById('preview');
+                                        output.src = reader.result;
+                                        output.style.display = 'block'; // Display the image
+                                    }
+                                    reader.readAsDataURL(event.target.files[0]); // Read the image file
+                                }
+                            </script>
                             <div class="col-12 col-sm-4">
                                 <div class="form-group local-forms">
                                     <label for="Position" class="form-label">Position (Optional)</label>

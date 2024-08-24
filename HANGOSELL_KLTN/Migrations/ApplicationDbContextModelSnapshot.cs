@@ -70,82 +70,6 @@ namespace HANGOSELL_KLTN.Migrations
                     b.ToTable("tb_Adv");
                 });
 
-            modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Category", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("CreateBy")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<DateTime>("CreateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<string>("ModifiedBy")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<DateTime?>("ModifiedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Position")
-                        .HasColumnType("int");
-
-                    b.Property<string>("SeoDescription")
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("SeoKeyword")
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
-
-                    b.Property<string>("SeoTitle")
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Title")
-                        .IsUnique();
-
-                    b.ToTable("tb_Category");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Position = 1,
-                            SeoDescription = "Find the latest electronics here.",
-                            SeoKeyword = "electronics, gadgets",
-                            SeoTitle = "Electronics Category",
-                            Title = "Electronics"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Position = 2,
-                            SeoDescription = "Browse our collection of books.",
-                            SeoKeyword = "books, literature",
-                            SeoTitle = "Books Category",
-                            Title = "Books"
-                        });
-                });
-
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Contact", b =>
                 {
                     b.Property<int>("Id")
@@ -254,24 +178,24 @@ namespace HANGOSELL_KLTN.Migrations
                         new
                         {
                             Id = 1,
-                            Address = "123 Main St",
-                            CompanyName = "ABC Corporation",
-                            ContactPerson = "John Doe",
-                            CreateDate = new DateTime(2024, 8, 9, 15, 35, 2, 851, DateTimeKind.Local).AddTicks(9937),
-                            Email = "john.doe@example.com",
-                            Password = "password123",
-                            PhoneNumber = "123-456-7890"
+                            Address = "123 Đường ABC, TP.HCM",
+                            CompanyName = "Công ty TNHH ABC",
+                            ContactPerson = "Nguyễn Văn A",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "a.nguyen@abc.com",
+                            Password = "hashed_password_1",
+                            PhoneNumber = "0912345678"
                         },
                         new
                         {
                             Id = 2,
-                            Address = "456 Elm St",
-                            CompanyName = "XYZ Enterprises",
-                            ContactPerson = "Jane Smith",
-                            CreateDate = new DateTime(2024, 8, 9, 15, 35, 2, 851, DateTimeKind.Local).AddTicks(9947),
-                            Email = "jane.smith@example.com",
-                            Password = "password456",
-                            PhoneNumber = "987-654-3210"
+                            Address = "456 Đường DEF, Hà Nội",
+                            CompanyName = "Công ty CP XYZ",
+                            ContactPerson = "Trần Thị B",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "b.tran@xyz.com",
+                            Password = "hashed_password_2",
+                            PhoneNumber = "0987654321"
                         });
                 });
 
@@ -356,36 +280,36 @@ namespace HANGOSELL_KLTN.Migrations
                         new
                         {
                             Id = 1,
-                            Address = "789 Maple St",
-                            Avatar = "alice.jpg",
+                            Address = "123 Đường ABC, TP.HCM",
+                            Avatar = "avatar1.png",
                             CodeEmployee = "EMP001",
                             CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfBirth = new DateTime(1985, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "alice.johnson@example.com",
-                            EmployeeName = "Alice Johnson",
-                            JoinDate = new DateTime(2024, 8, 9, 15, 35, 2, 851, DateTimeKind.Local).AddTicks(9971),
-                            Password = "password123",
-                            PhoneNumber = "555-1234",
-                            Position = "Manager",
+                            DateOfBirth = new DateTime(1990, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "a.nguyen@example.com",
+                            EmployeeName = "Nguyễn Văn A",
+                            JoinDate = new DateTime(2021, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Password = "hashed_password_1",
+                            PhoneNumber = "0912345678",
+                            Position = "Senior Developer",
                             RoleID = 1,
                             Status = true
                         },
                         new
                         {
                             Id = 2,
-                            Address = "321 Oak St",
-                            Avatar = "bob.jpg",
+                            Address = "456 Đường DEF, Hà Nội",
+                            Avatar = "avatar2.png",
                             CodeEmployee = "EMP002",
                             CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfBirth = new DateTime(1990, 10, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "bob.brown@example.com",
-                            EmployeeName = "Bob Brown",
-                            JoinDate = new DateTime(2024, 8, 9, 15, 35, 2, 851, DateTimeKind.Local).AddTicks(9974),
-                            Password = "password456",
-                            PhoneNumber = "555-5678",
-                            Position = "Sales Clerk",
+                            DateOfBirth = new DateTime(1985, 8, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "b.tran@example.com",
+                            EmployeeName = "Trần Thị B",
+                            JoinDate = new DateTime(2020, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Password = "hashed_password_2",
+                            PhoneNumber = "0987654321",
+                            Position = "Junior Developer",
                             RoleID = 2,
-                            Status = true
+                            Status = false
                         });
                 });
 
@@ -445,8 +369,6 @@ namespace HANGOSELL_KLTN.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
-
                     b.ToTable("tb_News");
 
                     b.HasData(
@@ -489,10 +411,8 @@ namespace HANGOSELL_KLTN.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("CustomerName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
 
                     b.Property<string>("ModifiedBy")
                         .HasMaxLength(50)
@@ -509,7 +429,14 @@ namespace HANGOSELL_KLTN.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("TotalAmount")
+                    b.Property<DateTime?>("StartDatetime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Total")
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
@@ -517,31 +444,9 @@ namespace HANGOSELL_KLTN.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("tb_Order");
+                    b.HasIndex("CustomerId");
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Address = "123 Main St",
-                            Code = "ORD001",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CustomerName = "John Doe",
-                            Phone = "123-456-7890",
-                            Quantity = 2,
-                            TotalAmount = 1019.98m
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Address = "456 Elm St",
-                            Code = "ORD002",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CustomerName = "Jane Smith",
-                            Phone = "987-654-3210",
-                            Quantity = 1,
-                            TotalAmount = 19.99m
-                        });
+                    b.ToTable("tb_Order");
                 });
 
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.OrderDetail", b =>
@@ -555,14 +460,17 @@ namespace HANGOSELL_KLTN.Migrations
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
+
+                    b.Property<DateTime?>("StartDattetime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
@@ -571,32 +479,30 @@ namespace HANGOSELL_KLTN.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("tb_OrderDetail");
+                });
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            OrderId = 1,
-                            Price = 999.99m,
-                            ProductId = 1,
-                            Quantity = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            OrderId = 1,
-                            Price = 19.99m,
-                            ProductId = 2,
-                            Quantity = 1
-                        },
-                        new
-                        {
-                            Id = 3,
-                            OrderId = 2,
-                            Price = 19.99m,
-                            ProductId = 2,
-                            Quantity = 1
-                        });
+            modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.OrderDetailCustomer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("tb_OrderDetailCustomer");
                 });
 
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Payment", b =>
@@ -635,26 +541,6 @@ namespace HANGOSELL_KLTN.Migrations
                     b.HasIndex("OrderId");
 
                     b.ToTable("tb_Payment");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Amount = 1019.98m,
-                            EmployeeId = 1,
-                            OrderId = 1,
-                            PaymentDate = new DateTime(2024, 8, 9, 15, 35, 2, 852, DateTimeKind.Local).AddTicks(17),
-                            PaymentMethod = "Credit Card"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Amount = 19.99m,
-                            EmployeeId = 2,
-                            OrderId = 2,
-                            PaymentDate = new DateTime(2024, 8, 9, 15, 35, 2, 852, DateTimeKind.Local).AddTicks(19),
-                            PaymentMethod = "PayPal"
-                        });
                 });
 
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Posts", b =>
@@ -713,8 +599,6 @@ namespace HANGOSELL_KLTN.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
-
                     b.ToTable("tb_Posts");
 
                     b.HasData(
@@ -759,16 +643,16 @@ namespace HANGOSELL_KLTN.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
-                    b.Property<bool>("IsFeature")
+                    b.Property<bool?>("IsFeature")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsHome")
+                    b.Property<bool?>("IsHome")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsHot")
+                    b.Property<bool?>("IsHot")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsSale")
+                    b.Property<bool?>("IsSale")
                         .HasColumnType("bit");
 
                     b.Property<string>("ModifiedBy")
@@ -826,35 +710,37 @@ namespace HANGOSELL_KLTN.Migrations
                         {
                             Id = 1,
                             CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsFeature = false,
-                            IsHome = false,
+                            Description = "Áo thun trắng đơn giản, thoải mái.",
+                            IsFeature = true,
+                            IsHome = true,
                             IsHot = false,
                             IsSale = false,
-                            Price = 999.99m,
+                            Price = 150000m,
                             ProductCategoryId = 1,
-                            ProductCode = "LPT123",
-                            Quantity = 10,
-                            SeoDescription = "A high-performance laptop for all your needs.",
-                            SeoKeyword = "laptop, electronics",
-                            SeoTitle = "High Performance Laptop",
-                            Title = "Laptop"
+                            ProductCode = "AT01",
+                            Quantity = 100,
+                            SeoDescription = "Áo thun trắng với chất liệu vải cao cấp.",
+                            SeoKeyword = "ao thun trang, thun",
+                            SeoTitle = "Áo Thun Trắng",
+                            Title = "Áo Thun Trắng"
                         },
                         new
                         {
                             Id = 2,
                             CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "Quần jeans xanh, kiểu dáng trẻ trung.",
                             IsFeature = false,
                             IsHome = false,
-                            IsHot = false,
-                            IsSale = false,
-                            Price = 19.99m,
+                            IsHot = true,
+                            IsSale = true,
+                            Price = 250000m,
                             ProductCategoryId = 2,
-                            ProductCode = "NOV456",
-                            Quantity = 100,
-                            SeoDescription = "A bestselling novel for avid readers.",
-                            SeoKeyword = "novel, literature",
-                            SeoTitle = "Bestselling Novel",
-                            Title = "Novel"
+                            ProductCode = "QJ01",
+                            Quantity = 50,
+                            SeoDescription = "Quần jeans xanh với thiết kế hiện đại.",
+                            SeoKeyword = "quan jeans xanh, jeans",
+                            SeoTitle = "Quần Jeans Xanh",
+                            Title = "Quần Jeans Xanh"
                         });
                 });
 
@@ -907,6 +793,9 @@ namespace HANGOSELL_KLTN.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Title")
+                        .IsUnique();
+
                     b.ToTable("tb_ProductCategory");
 
                     b.HasData(
@@ -914,23 +803,23 @@ namespace HANGOSELL_KLTN.Migrations
                         {
                             Id = 1,
                             CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Electronic items",
-                            Icon = "electronics.png",
-                            SeoDescription = "Electronic products",
-                            SeoKeyword = "electronics",
-                            SeoTitle = "Electronics Category",
-                            Title = "Electronics"
+                            Description = "Áo thun các loại.",
+                            Icon = "icon-t-shirt",
+                            SeoDescription = "Áo thun đa dạng mẫu mã và màu sắc.",
+                            SeoKeyword = "ao thun, ao phông",
+                            SeoTitle = "Áo Thun",
+                            Title = "Áo Thun"
                         },
                         new
                         {
                             Id = 2,
                             CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Books and literature",
-                            Icon = "books.png",
-                            SeoDescription = "Books and literature",
-                            SeoKeyword = "books",
-                            SeoTitle = "Books Category",
-                            Title = "Books"
+                            Description = "Quần jeans thời trang.",
+                            Icon = "icon-jeans",
+                            SeoDescription = "Quần jeans phù hợp với nhiều phong cách.",
+                            SeoKeyword = "quan jeans, jeans",
+                            SeoTitle = "Quần Jeans",
+                            Title = "Quần Jeans"
                         });
                 });
 
@@ -988,7 +877,7 @@ namespace HANGOSELL_KLTN.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2024, 8, 9, 15, 35, 2, 852, DateTimeKind.Local).AddTicks(92),
+                            CreateDate = new DateTime(2024, 8, 22, 9, 6, 23, 238, DateTimeKind.Local).AddTicks(3815),
                             Email = "subscriber@example.com"
                         });
                 });
@@ -1038,13 +927,15 @@ namespace HANGOSELL_KLTN.Migrations
                     b.Navigation("Role");
                 });
 
-            modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.News", b =>
+            modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Order", b =>
                 {
-                    b.HasOne("HANGOSELL_KLTN.Models.EF.Category", null)
-                        .WithMany("News")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                    b.HasOne("HANGOSELL_KLTN.Models.EF.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Customer");
                 });
 
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.OrderDetail", b =>
@@ -1062,6 +953,17 @@ namespace HANGOSELL_KLTN.Migrations
                         .IsRequired();
 
                     b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.OrderDetailCustomer", b =>
+                {
+                    b.HasOne("HANGOSELL_KLTN.Models.EF.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Product");
                 });
@@ -1085,15 +987,6 @@ namespace HANGOSELL_KLTN.Migrations
                     b.Navigation("Order");
                 });
 
-            modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Posts", b =>
-                {
-                    b.HasOne("HANGOSELL_KLTN.Models.EF.Category", null)
-                        .WithMany("Posts")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Product", b =>
                 {
                     b.HasOne("HANGOSELL_KLTN.Models.EF.ProductCategory", "ProductCategory")
@@ -1103,13 +996,6 @@ namespace HANGOSELL_KLTN.Migrations
                         .IsRequired();
 
                     b.Navigation("ProductCategory");
-                });
-
-            modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Category", b =>
-                {
-                    b.Navigation("News");
-
-                    b.Navigation("Posts");
                 });
 
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Order", b =>

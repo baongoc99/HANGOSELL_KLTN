@@ -13,7 +13,7 @@ namespace HANGOSELL_KLTN.Service
         }
         public Employee CheckCodeAndPass(string codeEmployee, string password)
         {
-            Employee Employee = _context.Employees.FirstOrDefault(u => u.CodeEmployee == codeEmployee && u.Password == password);
+            Employee Employee = _context.Employees.FirstOrDefault(u => u.CodeEmployee == codeEmployee  || u.Email == codeEmployee && u.Password == password);
             return Employee;
         }
         public List<Employee> GetAllEmployee()

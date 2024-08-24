@@ -15,12 +15,28 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
+            ViewData["EmployeeName"] = HttpContext.Session.GetString("EmployeeName");
+            ViewData["Avatar"] = HttpContext.Session.GetString("Avatar");
+            ViewData["Position"] = HttpContext.Session.GetString("Position");
             List<Customer> customers = customerService.GetAllCustomer();
             return View(customers);
         }
 
+        public IActionResult GetAllKhachHang()
+        {
+            List<Customer> customerlist = customerService.GetAllCustomer();
+            return Json(customerlist);
+        }
+        public IActionResult GetKhachHangById(int id)
+        {
+            Customer customer = customerService.GetCustomerById(id);
+            return Json(customer);
+        }
         public IActionResult CreateCustomer()
         {
+            ViewData["EmployeeName"] = HttpContext.Session.GetString("EmployeeName");
+            ViewData["Avatar"] = HttpContext.Session.GetString("Avatar");
+            ViewData["Position"] = HttpContext.Session.GetString("Position");
             return View();
         }
 
@@ -29,9 +45,18 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             customerService.AddCustomer(customer);
             return Redirect("/Admin/Customer");
         }
+        public IActionResult CreateCustomersss(Customer customer)
+        {
+            customer.Password = "123456789";
+            customerService.AddCustomer(customer);
+            return Redirect("/Admin/Invoice/CreateInvoice");
+        }
 
         public IActionResult EditCustomer(int id)
         {
+            ViewData["EmployeeName"] = HttpContext.Session.GetString("EmployeeName");
+            ViewData["Avatar"] = HttpContext.Session.GetString("Avatar");
+            ViewData["Position"] = HttpContext.Session.GetString("Position");
             Customer customer = customerService.GetCustomerById(id);
             return View(customer);
         }

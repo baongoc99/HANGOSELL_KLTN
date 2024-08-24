@@ -18,11 +18,18 @@ namespace HANGOSELL_KLTN.Models.EF
 
         [Required(ErrorMessage = "Giá không được để trống.")]
         [Column(TypeName = "decimal(18,2)")]
-        public decimal Price { get; set; }
+        public decimal TotalPrice { get; set; }
 
         [Required(ErrorMessage = "Số lượng không được để trống.")]
         public int Quantity { get; set; }
+
+        [DataType(DataType.DateTime)]
+        public DateTime? StartDattetime { get; set; } // ngày đawntj hàng
+
+        [ForeignKey("OrderId")]
         public virtual Order Order { get; set; }
+
+        [ForeignKey("ProductId")]
         public virtual Product Product { get; set; }
     }
 }

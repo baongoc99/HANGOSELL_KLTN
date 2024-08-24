@@ -20,6 +20,17 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\Client\plugins\icons\ionic\fonts\assets\img\template\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\SharedResource.en-US.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\SharedResource.vi-VN.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

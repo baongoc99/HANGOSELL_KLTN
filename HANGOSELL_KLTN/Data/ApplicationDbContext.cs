@@ -11,7 +11,7 @@ namespace HANGOSELL_KLTN.Data
         }
 
         // Định nghĩa các DbSet cho từng thực thể (entity)
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<ProductCategory> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Role> Roles { get; set; }
@@ -26,6 +26,7 @@ namespace HANGOSELL_KLTN.Data
         public DbSet<ProductCategory> ProductCategories { get; set; }
         public DbSet<Adv> Adverts { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<OrderDetailCustomer> OrderDetailCustomers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,7 +35,7 @@ namespace HANGOSELL_KLTN.Data
             // Cấu hình quan hệ và ràng buộc cho các thực thể
 
             // Cấu hình cho thực thể Category
-            modelBuilder.Entity<Category>()
+            modelBuilder.Entity<ProductCategory>()
                 .HasIndex(c => c.Title)
                 .IsUnique();
 
@@ -48,12 +49,12 @@ namespace HANGOSELL_KLTN.Data
                 .HasIndex(o => o.Code)
                 .IsUnique();
 
-            // Cấu hình quan hệ giữa các thực thể
+            /*// Cấu hình quan hệ giữa các thực thể
             modelBuilder.Entity<News>()
-                .HasOne<Category>()
+                .HasOne<ProductCategory>()
                 .WithMany(c => c.News)
                 .HasForeignKey(n => n.CategoryId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Restrict);*/
 
             modelBuilder.Entity<Product>()
                 .HasOne(p => p.ProductCategory)
@@ -70,9 +71,9 @@ namespace HANGOSELL_KLTN.Data
                 .WithMany()
                 .HasForeignKey(od => od.ProductId);
 
-            modelBuilder.Entity<Order>()
+            /*modelBuilder.Entity<Order>()
                 .Property(o => o.TotalAmount)
-                .HasColumnType("decimal(18,2)");
+                .HasColumnType("decimal(18,2)");*/
 
             modelBuilder.Entity<Product>()
                 .Property(p => p.Price)
@@ -84,21 +85,29 @@ namespace HANGOSELL_KLTN.Data
 
             // Seed dữ liệu mẫu cho các thực thể
 
-                // Seed Categories
-                modelBuilder.Entity<Category>().HasData(
-                    new Category { Id = 1, Title = "Electronics", Description = "Explore a wide range of electronics and gadgets.", Position = 1, SeoTitle = "Electronics Category", SeoKeyword = "electronics, gadgets", SeoDescription = "Find the latest electronics here." ,
-                        CreateDate = new DateTime(2023, 1, 2),
-                        CreateBy = "Admin",
-                        ModifiedDate = new DateTime(2024, 8, 13),
-                        ModifiedBy = "Admin"
-                    },
-                    new Category { Id = 2, Title = "Books", Description = "Discover a world of literature with our vast collection of books.", Position = 2, SeoTitle = "Books Category", SeoKeyword = "books, literature", SeoDescription = "Browse our collection of books." ,
-                        CreateDate = new DateTime(2023, 1, 1),
-                        CreateBy = "Admin",
-                        ModifiedDate = new DateTime(2024, 8, 13),
-                        ModifiedBy = "Admin"
-                    }
-                );
+            // Seed Categories
+            modelBuilder.Entity<ProductCategory>().HasData(
+                new ProductCategory
+                {
+                    Id = 1,
+                    Title = "Áo Thun",
+                    Description = "Áo thun các loại.",
+                    Icon = "icon-t-shirt",
+                    SeoTitle = "Áo Thun",
+                    SeoKeyword = "ao thun, ao phông",
+                    SeoDescription = "Áo thun đa dạng mẫu mã và màu sắc."
+                },
+                new ProductCategory
+                {
+                    Id = 2,
+                    Title = "Quần Jeans",
+                    Description = "Quần jeans thời trang.",
+                    Icon = "icon-jeans",
+                    SeoTitle = "Quần Jeans",
+                    SeoKeyword = "quan jeans, jeans",
+                    SeoDescription = "Quần jeans phù hợp với nhiều phong cách."
+                }
+            );
 
             // Seed Roles
             modelBuilder.Entity<Role>().HasData(
@@ -106,42 +115,105 @@ namespace HANGOSELL_KLTN.Data
                 new Role { Id = 2, RoleName = "Customer" }
             );
 
-            // Seed Products
+            // Seed data for Product
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 1, Title = "Laptop", ProductCode = "LPT123", ProductCategoryId = 1, Price = 999.99m, Quantity = 10, SeoTitle = "High Performance Laptop", SeoKeyword = "laptop, electronics", SeoDescription = "A high-performance laptop for all your needs." },
-                new Product { Id = 2, Title = "Novel", ProductCode = "NOV456", ProductCategoryId = 2, Price = 19.99m, Quantity = 100, SeoTitle = "Bestselling Novel", SeoKeyword = "novel, literature", SeoDescription = "A bestselling novel for avid readers." }
+                new Product
+                {
+                    Id = 1,
+                    Title = "Áo Thun Trắng",
+                    ProductCode = "AT01",
+                    ProductCategoryId = 1,
+                    Description = "Áo thun trắng đơn giản, thoải mái.",
+                    Price = 150000,
+                    Quantity = 100,
+                    IsHome = true,
+                    IsSale = false,
+                    IsFeature = true,
+                    IsHot = false,
+                    SeoTitle = "Áo Thun Trắng",
+                    SeoKeyword = "ao thun trang, thun",
+                    SeoDescription = "Áo thun trắng với chất liệu vải cao cấp."
+                },
+                new Product
+                {
+                    Id = 2,
+                    Title = "Quần Jeans Xanh",
+                    ProductCode = "QJ01",
+                    ProductCategoryId = 2,
+                    Description = "Quần jeans xanh, kiểu dáng trẻ trung.",
+                    Price = 250000,
+                    Quantity = 50,
+                    IsHome = false,
+                    IsSale = true,
+                    IsFeature = false,
+                    IsHot = true,
+                    SeoTitle = "Quần Jeans Xanh",
+                    SeoKeyword = "quan jeans xanh, jeans",
+                    SeoDescription = "Quần jeans xanh với thiết kế hiện đại."
+                }
             );
 
             // Seed Customers
             modelBuilder.Entity<Customer>().HasData(
-                new Customer { Id = 1, CompanyName = "ABC Corporation", ContactPerson = "John Doe", Email = "john.doe@example.com", Password = "password123", PhoneNumber = "123-456-7890", Address = "123 Main St", CreateDate = DateTime.Now },
-                new Customer { Id = 2, CompanyName = "XYZ Enterprises", ContactPerson = "Jane Smith", Email = "jane.smith@example.com", Password = "password456", PhoneNumber = "987-654-3210", Address = "456 Elm St", CreateDate = DateTime.Now }
+                new Customer
+                {
+                    Id = 1,
+                    CompanyName = "Công ty TNHH ABC",
+                    ContactPerson = "Nguyễn Văn A",
+                    Email = "a.nguyen@abc.com",
+                    Password = "hashed_password_1", // Ensure this is hashed in a real application
+                    PhoneNumber = "0912345678",
+                    Address = "123 Đường ABC, TP.HCM"
+                },
+                new Customer
+                {
+                    Id = 2,
+                    CompanyName = "Công ty CP XYZ",
+                    ContactPerson = "Trần Thị B",
+                    Email = "b.tran@xyz.com",
+                    Password = "hashed_password_2", // Ensure this is hashed in a real application
+                    PhoneNumber = "0987654321",
+                    Address = "456 Đường DEF, Hà Nội"
+                }
             );
 
             // Seed Employees
             modelBuilder.Entity<Employee>().HasData(
-                new Employee { Id = 1, CodeEmployee = "EMP001", EmployeeName = "Alice Johnson", Email = "alice.johnson@example.com", Password = "password123", DateOfBirth = new DateTime(1985, 5, 15), PhoneNumber = "555-1234", Address = "789 Maple St", JoinDate = DateTime.Now, Status = true, RoleID = 1, Avatar = "alice.jpg", Position = "Manager" },
-                new Employee { Id = 2, CodeEmployee = "EMP002", EmployeeName = "Bob Brown", Email = "bob.brown@example.com", Password = "password456", DateOfBirth = new DateTime(1990, 10, 20), PhoneNumber = "555-5678", Address = "321 Oak St", JoinDate = DateTime.Now, Status = true, RoleID = 2, Avatar = "bob.jpg", Position = "Sales Clerk" }
+                new Employee
+                {
+                    Id = 1,
+                    CodeEmployee = "EMP001",
+                    EmployeeName = "Nguyễn Văn A",
+                    Email = "a.nguyen@example.com",
+                    Password = "hashed_password_1", // Ensure this is hashed in a real application
+                    DateOfBirth = new DateTime(1990, 5, 20),
+                    PhoneNumber = "0912345678",
+                    Address = "123 Đường ABC, TP.HCM",
+                    JoinDate = new DateTime(2021, 1, 15),
+                    Status = true, // Assuming Status is a boolean
+                    RoleID = 1, // Reference to Role table
+                    Avatar = "avatar1.png",
+                    Position = "Senior Developer"
+                },
+                new Employee
+                {
+                    Id = 2,
+                    CodeEmployee = "EMP002",
+                    EmployeeName = "Trần Thị B",
+                    Email = "b.tran@example.com",
+                    Password = "hashed_password_2", // Ensure this is hashed in a real application
+                    DateOfBirth = new DateTime(1985, 8, 10),
+                    PhoneNumber = "0987654321",
+                    Address = "456 Đường DEF, Hà Nội",
+                    JoinDate = new DateTime(2020, 6, 25),
+                    Status = false, // Assuming Status is a boolean
+                    RoleID = 2, // Reference to Role table
+                    Avatar = "avatar2.png",
+                    Position = "Junior Developer"
+                }
             );
 
-            // Seed Orders
-            modelBuilder.Entity<Order>().HasData(
-                new Order { Id = 1, Code = "ORD001", CustomerName = "John Doe", Phone = "123-456-7890", Address = "123 Main St", TotalAmount = 1019.98m, Quantity = 2 },
-                new Order { Id = 2, Code = "ORD002", CustomerName = "Jane Smith", Phone = "987-654-3210", Address = "456 Elm St", TotalAmount = 19.99m, Quantity = 1 }
-            );
 
-            // Seed Payments
-            modelBuilder.Entity<Payment>().HasData(
-                new Payment { Id = 1, Amount = 1019.98m, EmployeeId = 1, Notes = null, OrderId = 1, PaymentDate = DateTime.Now, PaymentMethod = "Credit Card" },
-                new Payment { Id = 2, Amount = 19.99m, EmployeeId = 2, Notes = null, OrderId = 2, PaymentDate = DateTime.Now, PaymentMethod = "PayPal" }
-            );
-
-            // Seed OrderDetails
-            modelBuilder.Entity<OrderDetail>().HasData(
-                new OrderDetail { Id = 1, OrderId = 1, ProductId = 1, Price = 999.99m, Quantity = 1 },
-                new OrderDetail { Id = 2, OrderId = 1, ProductId = 2, Price = 19.99m, Quantity = 1 },
-                new OrderDetail { Id = 3, OrderId = 2, ProductId = 2, Price = 19.99m, Quantity = 1 }
-            );
 
             // Seed News
             modelBuilder.Entity<News>().HasData(
@@ -164,11 +236,6 @@ namespace HANGOSELL_KLTN.Data
                 new SystemSetting { SettingKey = "SiteUrl", SettingValue = "https://www.myshop.com", SettingDescription = "The URL of the website" }
             );
 
-            // Seed ProductCategories
-            modelBuilder.Entity<ProductCategory>().HasData(
-                new ProductCategory { Id = 1, Title = "Electronics", Description = "Electronic items", Icon = "electronics.png", SeoTitle = "Electronics Category", SeoKeyword = "electronics", SeoDescription = "Electronic products" },
-                new ProductCategory { Id = 2, Title = "Books", Description = "Books and literature", Icon = "books.png", SeoTitle = "Books Category", SeoKeyword = "books", SeoDescription = "Books and literature" }
-            );
         }
     }
 }

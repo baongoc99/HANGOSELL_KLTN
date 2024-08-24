@@ -19,9 +19,10 @@ namespace HANGOSELL_KLTN.Models.EF
         [StringLength(50, ErrorMessage = "Mã đơn hàng không được vượt quá 50 ký tự.")]
         public string Code { get; set; }
 
-        [Required(ErrorMessage = "Tên khách hàng không được để trống.")]
-        [StringLength(100, ErrorMessage = "Tên khách hàng không được vượt quá 100 ký tự.")]
-        public string CustomerName { get; set; }
+        public int CustomerId { get; set; }
+
+        [ForeignKey("CustomerId")]
+        public Customer Customer { get; set; }
 
         [Required(ErrorMessage = "Số điện thoại không được để trống.")]
         [StringLength(15, ErrorMessage = "Số điện thoại không được vượt quá 15 ký tự.")]
@@ -33,12 +34,15 @@ namespace HANGOSELL_KLTN.Models.EF
 
         [Required(ErrorMessage = "Tổng số tiền không được để trống.")]
         [Range(0, double.MaxValue, ErrorMessage = "Tổng số tiền phải là số dương.")]
-        public decimal TotalAmount { get; set; }
+        public decimal Total { get; set; }
 
         [Required(ErrorMessage = "Số lượng không được để trống.")]
         [Range(0, int.MaxValue, ErrorMessage = "Số lượng phải là số dương.")]
         public int Quantity { get; set; }
 
+        public string Status { get; set; } /// chờ xác nhận, chờ lấy hàng chờ giao hàng, đã giao, đã huỷ, trả hàng
+
+        public DateTime? StartDatetime { get; set; }
         public ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }
