@@ -2,12 +2,14 @@
 using HANGOSELL_KLTN.Common;
 using HANGOSELL_KLTN.Configuration;
 using HANGOSELL_KLTN.Data;
+using HANGOSELL_KLTN.Models;
 using HANGOSELL_KLTN.Models.EF;
 using HANGOSELL_KLTN.Service;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using System.Configuration;
 using System.Globalization;
 using System.Reflection;
 
@@ -23,7 +25,8 @@ builder.Services.AddScoped<OrderDetailService>();
 builder.Services.AddScoped<OrderService>();
 builder.Services.AddScoped<PaymentService>();
 builder.Services.AddScoped<OrderDetailCustomerService>();
-
+builder.Services.AddHttpClient<VietQRService>();
+builder.Services.AddScoped<VietQRService>();
 
 // Thêm cấu hình DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -48,6 +51,10 @@ builder.Services.AddHttpContextAccessor();
 
 // Đăng ký dịch vụ Authorization
 builder.Services.AddAuthorization();
+
+
+builder.Services.Configure<InvoiceViewModel>(builder.Configuration.GetSection("VietQR"));
+
 
 // Đăng ký dịch vụ Controllers
 builder.Services.AddControllersWithViews();
@@ -97,14 +104,17 @@ app.UseSession();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
-// Cấu hình route mặc định trước, sau đó là route cho các khu vực
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Login}/{id?}");
 
 app.MapAreaControllerRoute(
     name: "adminArea",
     areaName: "Admin",
     pattern: "Admin/{controller=Home}/{action=Index}/{id?}");
+
+// Cấu hình route mặc định trước, sau đó là route cho các khu vực
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Login}/{id?}");
+
+
 
 app.Run();

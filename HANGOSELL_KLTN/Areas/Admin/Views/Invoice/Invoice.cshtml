@@ -1,0 +1,46 @@
+﻿@model InvoiceViewModel
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>Hóa đơn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .invoice {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .qr-code {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .qr-code img {
+                max-width: 200px;
+            }
+    </style>
+</head>
+<body>
+    <div class="invoice">
+        <h1>Hóa đơn</h1>
+        <p><strong>Số tài khoản:</strong> @Model.AccountNo</p>
+        <p><strong>Tên tài khoản:</strong> @Model.AccountName</p>
+        <p><strong>Số tiền:</strong> @Model.Amount.ToString("N0") VNĐ</p>
+        <p><strong>Nội dung:</strong> @Model.Description</p>
+
+        <div class="qr-code">
+            <h2>Quét mã QR để thanh toán</h2>
+            <img src="@Model.QRCodeUrl" alt="VietQR Code" />
+        </div>
+
+        <button onclick="window.print()">In hóa đơn</button>
+    </div>
+</body>
+</html>

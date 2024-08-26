@@ -393,11 +393,19 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+# Bỏ qua toàn bộ thư mục obj
+**/obj/
+
+# Bỏ qua toàn bộ thư mục Debug
+**/Debug/
+
+# Bỏ qua thư mục Debug trong obj của dự án HANGOSELL_KLTN
+HANGOSELL_KLTN/HANGOSELL_KLTN/obj/Debug/
 
 # JetBrains Rider
 *.sln.iml
 HANGOSELL_KLTN/wwwroot/images/
 *.vsidx
 .vs/HANGOSELL_KLTN/
-HANGOSELL_KLTN/obj/Debug/
+/HANGOSELL_KLTN/obj/Debug/
 *.dll

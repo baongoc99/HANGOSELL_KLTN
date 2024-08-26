@@ -11,6 +11,7 @@
             <div class="card bg-comman w-100">
                 <div class="card-body">
                     <div class="row">
+                        <!-- Logo và tiêu đề hóa đơn -->
                         <div class="col-6">
                             <a href="/Admin/Home/" class="logo">
                                 <img src="@Url.Content("~/Client/img/iconlogo.png")" alt="Logo" width="60" height="60">
@@ -25,46 +26,54 @@
                             </h3>
                         </div>
                     </div>
+
+                    <!-- Thông tin hóa đơn -->
                     <div class="row">
                         <div class="col-6">
-                        </div>
-                        <div class="col-6 " align="right">
                             <table class="inv-num-date text-dark f-13 mt-3">
                                 <tbody>
                                     <tr>
                                         <td class="bg-light-grey border-right-0 f-w-500">
-                                            STT
+                                            HD:
                                         </td>
-                                        <td class="border-left-0">Đặt hàng#3</td>
+                                        <td class="border-left-0">@Model.order.Code</td>
                                     </tr>
                                     <tr>
                                         <td class="bg-light-grey border-right-0 f-w-500">
-                                            Date
+                                            Date:
                                         </td>
-                                        <td class="border-left-0">
-                                            @Model.order.CreateDate
-                                        </td>
+                                        <td class="border-left-0">@Model.order.CreateDate</td>
                                     </tr>
                                 </tbody>
                             </table>
+                            <hr />
+                            <p>CompanyName: @Model.customer.CompanyName </p>
+                            <p>Customer: @Model.customer.ContactPerson</p>
+                            <p>Email: @Model.customer.Email</p>
+                        </div>
+                        <div class="col-6" align="right">
+                            <div class="invoice">
+                                        
+                                    <img src="@Model.invoiceViewModel.QRCodeUrl" alt="VietQR Code" />
+                                </p>
+
+                                <button onclick="window.print()">In hóa đơn</button>
+                            </div>
                         </div>
                     </div>
 
+                    <!-- Trạng thái hóa đơn -->
                     <div class="row">
-                        <div class="col-6">
-                            <p>CompanyName: @Model.customer.CompanyName </p>
-                            <p>Customer: @Model.customer.Id</p>
-                            <p>Email: @Model.customer.Email</p>
-                        </div>
-                        <div class="col-6 " align="right">
+                        <div class="col-6"></div>
+                        <div class="col-6" align="right">
                             <td align="right" class="mt-lg-0 mt-md-0">
-
-                                <span class="unpaid  text-warning border-warning  rounded f-15 ">@Model.order.Status</span>
+                                <span class="unpaid text-warning border-warning rounded f-15">@Model.order.Status</span>
                             </td>
                         </div>
                     </div>
                 </div>
 
+                <!-- Chi tiết hóa đơn -->
                 <table width="100%" class="inv-desc d-none d-lg-table d-md-table">
                     <tbody>
                         <tr>
@@ -81,40 +90,29 @@
                                             </td>
                                             <td class="border-right-0 border-left-0" align="right">Thuế</td>
                                             <td class="border-left-0" align="right">
-                                                Số tiền                                    (VND)
+                                                Số tiền (VND)
                                             </td>
                                         </tr>
-                                        @foreach (var or in Model.orderDetail)
+                                           @foreach (var or in Model.orderDetail)
                                         {
-                                            <tr class="text-dark">
-                                                <td>@or.Product.Title</td>
-                                                <td align="right">@or.Quantity</td>
-                                                <td align="right">
-                                                    @or.Product.Price
-                                                </td>
-                                                <td align="right"></td>
-                                                <td align="right">
-                                                    @or.TotalPrice
-                                                </td>
-                                            </tr>
+                                        <tr class="text-dark">
+                                        <td>@or.Product.Title</td>
+                                        <td align="right">@or.Quantity</td>
+                                        <td align="right">@or.Product.Price</td>
+                                        <td align="right"></td>
+                                        <td align="right">@or.TotalPrice</td>
+                                        </tr>
                                         }
-
-
-
                                         <tr>
                                             <td colspan="3" class="blank-td border-bottom-0 border-left-0 border-right-0"></td>
                                             <td class="p-0 border-right-0">
                                                 <table width="100%">
                                                     <tbody>
                                                         <tr class="text-dark-grey" align="right">
-                                                            <td class="w-50 border-top-0 border-left-0">
-                                                                Tổng phụ 
-                                                            </td>
+                                                            <td class="w-50 border-top-0 border-left-0">Tổng phụ</td>
                                                         </tr>
                                                         <tr class="bg-light-grey text-dark f-w-500 f-16" align="right">
-                                                            <td class="w-50 border-bottom-0 border-left-0">
-                                                                Tổng
-                                                            </td>
+                                                            <td class="w-50 border-bottom-0 border-left-0">Tổng</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -123,14 +121,10 @@
                                                 <table width="100%">
                                                     <tbody>
                                                         <tr class="text-dark-grey" align="right">
-                                                            <td class="border-top-0 border-left-0">
-                                                                @ViewData["TongTien"]
-                                                            </td>
+                                                            <td class="border-top-0 border-left-0">@ViewData["TongTien"]</td>
                                                         </tr>
                                                         <tr class="bg-light-grey text-dark f-w-500 f-16" align="right">
-                                                            <td class="border-bottom-0 border-left-0">
-                                                                @ViewData["TongTien"]
-                                                            </td>
+                                                            <td class="border-bottom-0 border-left-0">@ViewData["TongTien"]</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -139,10 +133,10 @@
                                     </tbody>
                                 </table>
                             </td>
-
                         </tr>
                     </tbody>
                 </table>
+
                 <div class="col-12">
                     <div class="student-submit">
                         <button type="submit" class="btn btn-primary">Create</button>
