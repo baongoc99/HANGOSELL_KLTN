@@ -35,15 +35,14 @@
                             <thead>
                                 <tr>
                                     
-                                    <th class="text-center">ID</th>
+                                    <th class="text-center">STT</th>
                                     <th class="text-center">Title</th>
                                     <th class="text-center">Product Code</th>
                                     <th class="text-center">Category</th>
-                                    <th class="text-center">Description</th>
-                                    <th class="text-center">Image</th>
                                     <th class="text-center">Price</th>
                                     <th class="text-center">Sale Price</th>
                                     <th class="text-center">Quantity</th>
+                                    <th class="text-center">Image</th>
                                     <th class="text-center">Actions</th>
                                 </tr>
                             </thead>
@@ -56,7 +55,10 @@
                                         <td class="text-center">@item.Title</td>
                                         <td class="text-center">@item.ProductCode</td>
                                         <td class="text-center">@item.ProductCategory.Title</td>
-                                        <td class="text-center">@item.Description</td>
+                                        
+                                        <td class="text-center">@item.Price.ToString("N0") đ</td>
+                                        <td class="text-center">@item.PriceSale?.ToString("N0") đ</td>
+                                        <td class="text-center">@item.Quantity</td>
                                         <td class="text-center">
                                             @if (!string.IsNullOrEmpty(item.Image))
                                             {
@@ -67,9 +69,6 @@
                                                 <span>No Image</span>
                                             }
                                         </td>
-                                        <td class="text-center">@item.Price.ToString("N0") đ</td>
-                                        <td class="text-center">@item.PriceSale?.ToString("N0") đ</td>
-                                        <td class="text-center">@item.Quantity</td>
                                         <td class="text-center">
                                             <a href="/Admin/Product/EditProduct/@item.Id" class="btn btn-sm btn-warning">
                                                 <i class="fa fa-edit"></i>

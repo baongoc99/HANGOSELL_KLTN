@@ -27,6 +27,8 @@ namespace HANGOSELL_KLTN.Data
         public DbSet<Adv> Adverts { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<OrderDetailCustomer> OrderDetailCustomers { get; set; }
+        public DbSet<QRCodeRequest> QRCodeRequests { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

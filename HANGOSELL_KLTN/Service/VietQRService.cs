@@ -1,6 +1,5 @@
 ﻿using HANGOSELL_KLTN.Common;
 using Newtonsoft.Json;
-
 namespace HANGOSELL_KLTN.Service
 {
     public class VietQRService
@@ -14,20 +13,21 @@ namespace HANGOSELL_KLTN.Service
             _configuration = configuration;
         }
 
-        public async Task<string> GenerateQRCodeAsync(decimal amount)
+        public async Task<string> GenerateQRCodeAsync(string amount, string accountNos, string accountNames, string acqIds)
         {
+
             var request = new HttpRequestMessage(HttpMethod.Post, "https://api.vietqr.io/v2/generate");
             request.Headers.Add("x-client-id", _configuration["VietQR:ClientId"]);
             request.Headers.Add("x-api-key", _configuration["VietQR:ApiKey"]);
 
             var payload = new
             {
-                accountNo = _configuration["VietQR:AccountNo"],
-                accountName = _configuration["VietQR:AccountName"],
-                acqId = _configuration["VietQR:BankId"],
-                addInfo = _configuration["VietQR:Description"],
+                accountNo = accountNos,
+                accountName = accountNames,
+                acqId = acqIds,
+                addInfo = $"CHUYỂN TIỀN HÓA ĐƠN",
                 amount,
-                template = _configuration["VietQR:Template"]
+                template = "print"
             };
 
             request.Content = new StringContent(JsonConvert.SerializeObject(payload), System.Text.Encoding.UTF8, "application/json");
@@ -46,6 +46,13 @@ namespace HANGOSELL_KLTN.Service
 
             return result.Data.QrDataURL;
         }
-
+        public class VietQRResponse
+        {
+            public VietQRData Data { get; set; }
+        }
+        public class VietQRData
+        {
+            public string QrDataURL { get; set; }
+        }
     }
 }

@@ -34,17 +34,17 @@ namespace HANGOSELL_KLTN.Controllers
         {
             return View();
         }
-        public IActionResult SetLanguage(string language)
-        {
-            Response.Cookies.Append(CookieRequestCultureProvider.DefaultCookieName,
-            CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(language)),
-            new CookieOptions()
-            {
-                Expires = DateTimeOffset.UtcNow.AddYears(1)
-            });
+        //public IActionResult SetLanguage(string language)
+        //{
+        //    Response.Cookies.Append(CookieRequestCultureProvider.DefaultCookieName,
+        //    CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(language)),
+        //    new CookieOptions()
+        //    {
+        //        Expires = DateTimeOffset.UtcNow.AddYears(1)
+        //    });
 
-            return Redirect(Request.Headers["Referer"].ToString());
-        } 
+        //    return Redirect(Request.Headers["Referer"].ToString());
+        //} 
 
     }
 }

@@ -18,8 +18,12 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
         private readonly VietQRService _vietQRService;
         private readonly IConfiguration _configuration;
         private readonly InvoiceViewModel _invoiceViewModel;
+        private readonly QRCodeRequestService _qRCodeRequestService;
         public InvoiceController(OrderDetailCustomerService orderDetailCustomerService, IOptions<InvoiceViewModel> invoiceViewModel,
-            CategoryService categoryService, OrderService orderService, CustomerService customerService, OrderDetailService orderDetailService, VietQRService vietQRService, IConfiguration configuration)
+            CategoryService categoryService, OrderService orderService,
+            CustomerService customerService, OrderDetailService orderDetailService,
+            QRCodeRequestService qRCodeRequestService,
+            VietQRService vietQRService, IConfiguration configuration)
         {
             this.orderDetailCustomerService = orderDetailCustomerService;
             this.categoryService = categoryService;
@@ -29,7 +33,48 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             _vietQRService = vietQRService;
             _configuration = configuration;
             _invoiceViewModel = invoiceViewModel.Value;
+            _qRCodeRequestService = qRCodeRequestService;
         }
+
+
+        public async Task<IActionResult> QrLisst()
+        {
+            List<QRCodeRequest> QRCodeRequestService = await _qRCodeRequestService.GetAllAsync();
+            return Ok(QRCodeRequestService);
+        }
+
+        public async Task<IActionResult> TaoMaQR(int IdQRCode)
+        {
+            QRCodeRequest qRCodeRequest = await _qRCodeRequestService.GetByIdAsync(IdQRCode);
+
+            List<OrderDetailCustomer> orderDetailCustomer = orderDetailCustomerService.GetAllOrderDetailCustomer();
+            decimal totalAmount = 0;
+
+            // Dùng vòng lặp để tính tổng số tiền
+            foreach (var orderDetail in orderDetailCustomer)
+            {
+                totalAmount += orderDetail.TotalPrice;
+            }
+
+            // Làm tròn số tiền
+
+            // Chuyển đổi số tiền đã làm tròn thành chuỗi không có dấu phân cách
+            string formattedAmount = totalAmount.ToString("0", System.Globalization.CultureInfo.InvariantCulture);
+
+            string qrCodeUrl = await _vietQRService.GenerateQRCodeAsync(formattedAmount, qRCodeRequest.AccountNo, qRCodeRequest.AccountName, qRCodeRequest.AcqId);
+            var payload = new
+            {
+                accountNo = qRCodeRequest.AccountNo,    
+                accountName = qRCodeRequest.AccountName,
+                acqId = qRCodeRequest.AcqId,
+                QRCodeUrl = qrCodeUrl
+            };
+            return Ok(payload);
+        }
+
+
+
+
         public IActionResult Index()
         {
             ViewData["EmployeeName"] = HttpContext.Session.GetString("EmployeeName");
@@ -72,19 +117,7 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             ViewData["TongTien"] = orderDetails.Sum(x => x.TotalPrice);
 
             decimal totalAmount = orderDetails.Sum(x => x.TotalPrice);
-
-            // Tạo URL mã QR
-            string qrCodeUrl = await _vietQRService.GenerateQRCodeAsync(totalAmount);
-
-            // Tạo instance của InvoiceViewModel với dữ liệu cần thiết
-            var invoiceViewModel = new InvoiceViewModel
-            {
-                AccountNo = _configuration["VietQR:AccountNo"], // Có thể lấy từ cấu hình
-                AccountName = _configuration["VietQR:AccountName"], // Có thể lấy từ cấu hình
-                Amount = totalAmount,
-                Description = _configuration["VietQR:Description"], // Có thể lấy từ cấu hình
-                QRCodeUrl = qrCodeUrl
-            };
+          
 
             // Tạo ModelDataset và truyền vào view
             var modelDataset = new ModelDataset
@@ -92,7 +125,6 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
                 order = order,
                 customer = customer,
                 orderDetail = orderDetails,
-                invoiceViewModel = invoiceViewModel
             };
 
             return View(modelDataset);
@@ -103,19 +135,19 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             return View(new InvoiceViewModel());
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateInvoiceTest(InvoiceViewModel model)
-        {
+        //    [HttpPost]
+        //    public async Task<IActionResult> CreateInvoiceTest(InvoiceViewModel model)
+        //    {
 
-            var qrCodeUrl = await _vietQRService.GenerateQRCodeAsync(model.Amount);
+        //        var qrCodeUrl = await _vietQRService.GenerateQRCodeAsync(model.Amount);
 
-            model.AccountNo = _configuration["VietQR:AccountNo"];
-            model.AccountName = _configuration["VietQR:AccountName"];
-            model.Description = _configuration["VietQR:Description"];
-            model.QRCodeUrl = qrCodeUrl;
+        //        model.AccountNo = _configuration["VietQR:AccountNo"];
+        //        model.AccountName = _configuration["VietQR:AccountName"];
+        //        model.Description = _configuration["VietQR:Description"];
+        //        model.QRCodeUrl = qrCodeUrl;
 
-            return View("Invoice", model);
+        //        return View("Invoice", model);
 
-        }
+        //}
     }
 }

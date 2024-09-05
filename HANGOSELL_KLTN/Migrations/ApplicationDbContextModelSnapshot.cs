@@ -823,6 +823,42 @@ namespace HANGOSELL_KLTN.Migrations
                         });
                 });
 
+            modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.QRCodeRequest", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AccountName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AccountNo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AcqId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AddInfo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Template")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("QRCodeRequests");
+                });
+
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Role", b =>
                 {
                     b.Property<int>("Id")
@@ -877,7 +913,7 @@ namespace HANGOSELL_KLTN.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2024, 8, 22, 9, 6, 23, 238, DateTimeKind.Local).AddTicks(3815),
+                            CreateDate = new DateTime(2024, 8, 26, 19, 50, 58, 581, DateTimeKind.Local).AddTicks(259),
                             Email = "subscriber@example.com"
                         });
                 });

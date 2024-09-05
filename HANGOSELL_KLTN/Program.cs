@@ -27,6 +27,7 @@ builder.Services.AddScoped<PaymentService>();
 builder.Services.AddScoped<OrderDetailCustomerService>();
 builder.Services.AddHttpClient<VietQRService>();
 builder.Services.AddScoped<VietQRService>();
+builder.Services.AddScoped<QRCodeRequestService>();
 
 // Thêm cấu hình DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
