@@ -1,4 +1,6 @@
 ﻿@model List<HANGOSELL_KLTN.Models.EF.ModelDataset>
+@using HANGOSELL_KLTN.Configuration
+@inject SharedViewLocalizer _localizer
 
 @{
     ViewData["Title"] = "Create Product";
@@ -10,10 +12,10 @@
         <div class="page-header">
             <div class="row align-items-center">
                 <div class="col">
-                    <h3 class="page-title">Add Product</h3>
+                    <h3 class="page-title">@_localizer.GetLocalizedString("Add") @_localizer.GetLocalizedString("Product")</h3>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/Admin/Product">Product</a></li>
-                        <li class="breadcrumb-item active">Add Product</li>
+                        <li class="breadcrumb-item"><a href="/Admin/Product">@_localizer.GetLocalizedString("Product")</a></li>
+                        <li class="breadcrumb-item active">@_localizer.GetLocalizedString("Add") @_localizer.GetLocalizedString("Product")</li>
                     </ul>
                 </div>
             </div>
@@ -24,17 +26,17 @@
                     <form action="/Admin/Product/Create" method="POST" enctype="multipart/form-data">
                         <div class="row">
                             <div class="mb-3">
-                                <label for="ProductCode" class="form-label">Product Code <span class="login-danger">*</span></label>
+                                <label for="ProductCode" class="form-label">@_localizer.GetLocalizedString("Product Code") <span class="login-danger">*</span></label>
                                 <input type="text" class="form-control" id="ProductCode" name="ProductCode" required>
                             </div>
 
                             <div class="mb-3">
-                                <label for="Title" class="form-label">Title <span class="login-danger">*</span></label>
+                                <label for="Title" class="form-label">@_localizer.GetLocalizedString("Title") <span class="login-danger">*</span></label>
                                 <input type="text" class="form-control" id="Title" name="Title" required>
                             </div>
 
                             <div class="mb-3">
-                                <label for="ProductCategoryId" class="form-label">Category <span class="login-danger">*</span></label>
+                                <label for="ProductCategoryId" class="form-label">@_localizer.GetLocalizedString("Category") <span class="login-danger">*</span></label>
                                 <select class="form-control" id="ProductCategoryId" name="ProductCategoryId" required>
                                     <option value="">---none---</option>
                                     @foreach (var category in Model)
@@ -45,73 +47,35 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="Description" class="form-label">Description</label>
+                                <label for="Description" class="form-label">@_localizer.GetLocalizedString("Description")</label>
                                 <textarea class="form-control" id="Description" name="Description" rows="3"></textarea>
                             </div>
 
                             <div class="mb-3">
-                                <label for="Detail" class="form-label">Detail</label>
-                                <textarea class="form-control" id="Detail" name="Detail" rows="3"></textarea>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="Image" class="form-label">Image (Optional)</label>
+                                <label for="Image" class="form-label">@_localizer.GetLocalizedString("Image")</label>
                                 <input type="file" class="form-control" id="Image" name="Image">
                             </div>
 
                             <div class="mb-3">
-                                <label for="Price" class="form-label">Price <span class="login-danger">*</span></label>
+                                <label for="Price" class="form-label">@_localizer.GetLocalizedString("Price") <span class="login-danger">*</span></label>
                                 <input type="number" class="form-control" id="Price" name="Price" step="0.01" required>
                             </div>
 
                             <div class="mb-3">
-                                <label for="PriceSale" class="form-label">Sale Price</label>
+                                <label for="PriceSale" class="form-label">@_localizer.GetLocalizedString("Sale Price")</label>
                                 <input type="number" class="form-control" id="PriceSale" name="PriceSale" step="0.01">
                             </div>
 
                             <div class="mb-3">
-                                <label for="Quantity" class="form-label">Quantity <span class="login-danger">*</span></label>
+                                <label for="Quantity" class="form-label">@_localizer.GetLocalizedString("Quantity") <span class="login-danger">*</span></label>
                                 <input type="number" class="form-control" id="Quantity" name="Quantity" required>
                             </div>
 
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="IsHome" name="IsHome">
-                                <label class="form-check-label" for="IsHome">Is Home</label>
-                            </div>
-
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="IsSale" name="IsSale">
-                                <label class="form-check-label" for="IsSale">Is Sale</label>
-                            </div>
-
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="IsFeature" name="IsFeature">
-                                <label class="form-check-label" for="IsFeature">Is Feature</label>
-                            </div>
-
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="IsHot" name="IsHot">
-                                <label class="form-check-label" for="IsHot">Is Hot</label>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="SeoTitle" class="form-label">SEO Title</label>
-                                <input type="text" class="form-control" id="SeoTitle" name="SeoTitle">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="SeoKeyword" class="form-label">SEO Keyword</label>
-                                <input type="text" class="form-control" id="SeoKeyword" name="SeoKeyword">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="SeoDescription" class="form-label">SEO Description</label>
-                                <textarea class="form-control" id="SeoDescription" name="SeoDescription" rows="3"></textarea>
-                            </div>
+                            
 
                             <div class="col-12">
                                 <div class="student-submit">
-                                    <button type="submit" class="btn btn-primary">Create</button>
+                                    <button type="submit" class="btn btn-primary">@_localizer.GetLocalizedString("Create")</button>
                                 </div>
                             </div>
                         </div>

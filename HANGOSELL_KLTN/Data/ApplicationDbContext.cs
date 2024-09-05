@@ -128,13 +128,6 @@ namespace HANGOSELL_KLTN.Data
                     Description = "Áo thun trắng đơn giản, thoải mái.",
                     Price = 150000,
                     Quantity = 100,
-                    IsHome = true,
-                    IsSale = false,
-                    IsFeature = true,
-                    IsHot = false,
-                    SeoTitle = "Áo Thun Trắng",
-                    SeoKeyword = "ao thun trang, thun",
-                    SeoDescription = "Áo thun trắng với chất liệu vải cao cấp."
                 },
                 new Product
                 {
@@ -145,13 +138,6 @@ namespace HANGOSELL_KLTN.Data
                     Description = "Quần jeans xanh, kiểu dáng trẻ trung.",
                     Price = 250000,
                     Quantity = 50,
-                    IsHome = false,
-                    IsSale = true,
-                    IsFeature = false,
-                    IsHot = true,
-                    SeoTitle = "Quần Jeans Xanh",
-                    SeoKeyword = "quan jeans xanh, jeans",
-                    SeoDescription = "Quần jeans xanh với thiết kế hiện đại."
                 }
             );
 

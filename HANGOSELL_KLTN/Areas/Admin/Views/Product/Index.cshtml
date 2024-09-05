@@ -1,5 +1,6 @@
 ﻿@model List<HANGOSELL_KLTN.Models.EF.Product>
-
+@using HANGOSELL_KLTN.Configuration
+@inject SharedViewLocalizer _localizer
 @{
     ViewData["Title"] = "List Product";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
@@ -11,10 +12,10 @@
 
             <div class="row align-items-center">
                 <div class="col">
-                    <h3 class="page-title">List Product</h3>
+                    <h3 class="page-title">@_localizer.GetLocalizedString("List") @_localizer.GetLocalizedString("Product")</h3>
                     <div class="col-auto text-end float-end ms-auto download-grp">
                         <a href="/Admin/Product/Download" class="btn btn-outline-success me-2">
-                            <i class="fas fa-download"></i> Download
+                            <i class="fas fa-download"></i> @_localizer.GetLocalizedString("Export")
                         </a>
                         <a href="/Admin/Product" class="btn btn-outline-gray me-2 active">
                             <i class="fa fa-list" aria-hidden="true"></i>
@@ -36,14 +37,14 @@
                                 <tr>
                                     
                                     <th class="text-center">STT</th>
-                                    <th class="text-center">Title</th>
-                                    <th class="text-center">Product Code</th>
-                                    <th class="text-center">Category</th>
-                                    <th class="text-center">Price</th>
-                                    <th class="text-center">Sale Price</th>
-                                    <th class="text-center">Quantity</th>
-                                    <th class="text-center">Image</th>
-                                    <th class="text-center">Actions</th>
+                                    <th class="text-center">@_localizer.GetLocalizedString("Title")</th>
+                                    <th class="text-center">@_localizer.GetLocalizedString("Product Code")</th>
+                                    <th class="text-center">@_localizer.GetLocalizedString("Category")</th>
+                                    <th class="text-center">@_localizer.GetLocalizedString("Price")</th>
+                                    <th class="text-center">@_localizer.GetLocalizedString("Sale Price")</th>
+                                    <th class="text-center">@_localizer.GetLocalizedString("Quantity")</th>
+                                    <th class="text-center">@_localizer.GetLocalizedString("Image")</th>
+                                    <th class="text-center">@_localizer.GetLocalizedString("Action")</th>
                                 </tr>
                             </thead>
                             <tbody>

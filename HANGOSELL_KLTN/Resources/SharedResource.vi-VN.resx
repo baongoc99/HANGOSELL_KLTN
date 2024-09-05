@@ -117,8 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About" xml:space="preserve">
+    <value>Thông tin</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Hành động</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Địa chỉ</value>
+  </data>
+  <data name="Avatar" xml:space="preserve">
+    <value>Ảnh đại diện</value>
+  </data>
   <data name="Category" xml:space="preserve">
     <value>Phân loại</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Thay đổi</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Công ty</value>
+  </data>
+  <data name="Company Name" xml:space="preserve">
+    <value>Tên công ty</value>
+  </data>
+  <data name="Confirm Password" xml:space="preserve">
+    <value>Xác nhận mật khẩu</value>
+  </data>
+  <data name="Contact Person" xml:space="preserve">
+    <value>Người liên hệ</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Tạo</value>
   </data>
   <data name="Customer" xml:space="preserve">
     <value>Khách hàng</value>
@@ -126,16 +159,106 @@
   <data name="Dashboard" xml:space="preserve">
     <value>Thống kê</value>
   </data>
+  <data name="Date of Birth" xml:space="preserve">
+    <value>Ngày sinh</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Nhân viên</value>
+  </data>
+  <data name="Employee Code" xml:space="preserve">
+    <value>Mã nhân viên</value>
+  </data>
   <data name="Employee Management" xml:space="preserve">
     <value>Quản lý nhân viên</value>
+  </data>
+  <data name="Employee Name" xml:space="preserve">
+    <value>Tên nhân viên</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Xuất file</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Trang chủ</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Hình ảnh</value>
   </data>
   <data name="Invoice" xml:space="preserve">
     <value>Hóa đơn</value>
   </data>
+  <data name="Join Date" xml:space="preserve">
+    <value>Ngày tham gia</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>Danh sách</value>
+  </data>
   <data name="Main Menu" xml:space="preserve">
     <value>Menu Chính</value>
   </data>
+  <data name="New Password" xml:space="preserve">
+    <value>Mật khẩu mới</value>
+  </data>
+  <data name="Old Password" xml:space="preserve">
+    <value>Mật khẩu cũ</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Đơn hàng</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+  <data name="Personal Details" xml:space="preserve">
+    <value>Thông tin cá nhân</value>
+  </data>
+  <data name="Phone Number" xml:space="preserve">
+    <value>Điện thoại </value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Bộ phận </value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Giá</value>
+  </data>
   <data name="Product" xml:space="preserve">
     <value>Sản phẩm</value>
+  </data>
+  <data name="Product Code" xml:space="preserve">
+    <value>Mã sản phẩm</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Hồ sơ</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Số lượng</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Chức vụ</value>
+  </data>
+  <data name="Sale Price" xml:space="preserve">
+    <value>Giá giảm</value>
+  </data>
+  <data name="Save Changes" xml:space="preserve">
+    <value>Lưu thay đổi</value>
+  </data>
+  <data name="Search here" xml:space="preserve">
+    <value>Tìm kiếm ở đây</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Cập nhật</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Xin chào</value>
   </data>
 </root>

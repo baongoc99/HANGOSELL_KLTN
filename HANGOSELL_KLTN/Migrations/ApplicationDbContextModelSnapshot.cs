@@ -643,18 +643,6 @@ namespace HANGOSELL_KLTN.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
-                    b.Property<bool?>("IsFeature")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("IsHome")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("IsHot")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("IsSale")
-                        .HasColumnType("bit");
-
                     b.Property<string>("ModifiedBy")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
@@ -679,18 +667,6 @@ namespace HANGOSELL_KLTN.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<string>("SeoDescription")
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("SeoKeyword")
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
-
-                    b.Property<string>("SeoTitle")
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasMaxLength(200)
@@ -711,17 +687,10 @@ namespace HANGOSELL_KLTN.Migrations
                             Id = 1,
                             CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Áo thun trắng đơn giản, thoải mái.",
-                            IsFeature = true,
-                            IsHome = true,
-                            IsHot = false,
-                            IsSale = false,
                             Price = 150000m,
                             ProductCategoryId = 1,
                             ProductCode = "AT01",
                             Quantity = 100,
-                            SeoDescription = "Áo thun trắng với chất liệu vải cao cấp.",
-                            SeoKeyword = "ao thun trang, thun",
-                            SeoTitle = "Áo Thun Trắng",
                             Title = "Áo Thun Trắng"
                         },
                         new
@@ -729,17 +698,10 @@ namespace HANGOSELL_KLTN.Migrations
                             Id = 2,
                             CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Quần jeans xanh, kiểu dáng trẻ trung.",
-                            IsFeature = false,
-                            IsHome = false,
-                            IsHot = true,
-                            IsSale = true,
                             Price = 250000m,
                             ProductCategoryId = 2,
                             ProductCode = "QJ01",
                             Quantity = 50,
-                            SeoDescription = "Quần jeans xanh với thiết kế hiện đại.",
-                            SeoKeyword = "quan jeans xanh, jeans",
-                            SeoTitle = "Quần Jeans Xanh",
                             Title = "Quần Jeans Xanh"
                         });
                 });
@@ -913,7 +875,7 @@ namespace HANGOSELL_KLTN.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2024, 8, 26, 19, 50, 58, 581, DateTimeKind.Local).AddTicks(259),
+                            CreateDate = new DateTime(2024, 9, 5, 10, 45, 0, 752, DateTimeKind.Local).AddTicks(8782),
                             Email = "subscriber@example.com"
                         });
                 });

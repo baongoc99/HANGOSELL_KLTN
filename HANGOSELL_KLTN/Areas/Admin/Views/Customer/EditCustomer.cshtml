@@ -1,5 +1,6 @@
 ﻿@model HANGOSELL_KLTN.Models.EF.Customer
-
+@using HANGOSELL_KLTN.Configuration
+@inject SharedViewLocalizer _localizer
 @{
     ViewData["Title"] = "Edit Customer";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
@@ -10,10 +11,10 @@
         <div class="page-header">
             <div class="row align-items-center">
                 <div class="col">
-                    <h3 class="page-title">Edit Customer</h3>
+                    <h3 class="page-title">@_localizer.GetLocalizedString("Edit") @_localizer.GetLocalizedString("Customer")</h3>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/Admin/Customer">Customer</a></li>
-                        <li class="breadcrumb-item active">Edit Customer</li>
+                        <li class="breadcrumb-item"><a href="/Admin/Customer">@_localizer.GetLocalizedString("Customer")</a></li>
+                        <li class="breadcrumb-item active">@_localizer.GetLocalizedString("Edit") @_localizer.GetLocalizedString("Customer")</li>
                     </ul>
                 </div>
             </div>
@@ -26,7 +27,7 @@
                         <div class="row">
                             <div class="col-12 col-sm-4">
                                 <div class="form-group local-forms">
-                                    <label asp-for="CompanyName" class="form-label">Company Name</label>
+                                    <label asp-for="CompanyName" class="form-label">@_localizer.GetLocalizedString("Company Name")</label>
                                     <input asp-for="CompanyName" class="form-control" id="CompanyName" name="CompanyName" value="@Model.CompanyName" />
                                     <span asp-validation-for="CompanyName" class="text-danger"></span>
                                 </div>
@@ -34,7 +35,7 @@
 
                             <div class="col-12 col-sm-4">
                                 <div class="form-group local-forms">
-                                    <label asp-for="ContactPerson" class="form-label">Contact Person</label>
+                                    <label asp-for="ContactPerson" class="form-label">@_localizer.GetLocalizedString("Contact Person")</label>
                                     <input asp-for="ContactPerson" class="form-control" id="ContactPerson" name="ContactPerson" value="@Model.ContactPerson" />
                                     <span asp-validation-for="ContactPerson" class="text-danger"></span>
                                 </div>
@@ -50,7 +51,7 @@
 
                             <div class="col-12 col-sm-4">
                                 <div class="form-group local-forms">
-                                    <label asp-for="PhoneNumber" class="form-label">Phone Number</label>
+                                    <label asp-for="PhoneNumber" class="form-label">@_localizer.GetLocalizedString("Phone Number")</label>
                                     <input asp-for="PhoneNumber" class="form-control" id="PhoneNumber" name="PhoneNumber" value="@Model.PhoneNumber" />
                                     <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                                 </div>
@@ -58,7 +59,7 @@
 
                             <div class="col-12 col-sm-4">
                                 <div class="form-group local-forms">
-                                    <label asp-for="Address" class="form-label">Address</label>
+                                    <label asp-for="Address" class="form-label">@_localizer.GetLocalizedString("Address")</label>
                                     <input asp-for="Address" class="form-control" id="Address" name="Address" value="@Model.Address" />
                                     <span asp-validation-for="Address" class="text-danger"></span>
                                 </div>
@@ -66,7 +67,7 @@
 
                             <div class="mb-3">
                                 <div class="student-submit">
-                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    <button type="submit" class="btn btn-primary">@_localizer.GetLocalizedString("Save Changes")</button>
                                 </div>
                             </div>
                         </div>

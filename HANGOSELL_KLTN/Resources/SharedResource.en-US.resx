@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
   <data name="Category" xml:space="preserve">
     <value>Category</value>
+  </data>
+  <data name="CodeEmployee" xml:space="preserve">
+    <value>CodeEmployee</value>
   </data>
   <data name="Customer" xml:space="preserve">
     <value>Customer</value>
@@ -129,13 +135,40 @@
   <data name="Employee Management" xml:space="preserve">
     <value>Employee Management</value>
   </data>
+  <data name="EmployeeName" xml:space="preserve">
+    <value>EmployeeName</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
   <data name="Invoice" xml:space="preserve">
     <value>Invoice</value>
+  </data>
+  <data name="JoinDate" xml:space="preserve">
+    <value>JoinDate</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>List</value>
   </data>
   <data name="Main Menu" xml:space="preserve">
     <value>Main Menu</value>
   </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
   <data name="Product" xml:space="preserve">
     <value>Product</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="Search here" xml:space="preserve">
+    <value>Search here</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome</value>
   </data>
 </root>

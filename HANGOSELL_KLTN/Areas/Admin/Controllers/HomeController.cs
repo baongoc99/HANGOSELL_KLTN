@@ -2,6 +2,7 @@
 using HANGOSELL_KLTN.Service;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 
 namespace HANGOSELL_KLTN.Areas.Admin.Controllers
 {
@@ -11,6 +12,7 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
         private readonly CustomerService customerService;
         private readonly OrderService orderService;
         private readonly ProductService productService;
+
         public HomeController(CustomerService customerService, OrderService orderService, ProductService productService)
         {
             this.customerService = customerService;

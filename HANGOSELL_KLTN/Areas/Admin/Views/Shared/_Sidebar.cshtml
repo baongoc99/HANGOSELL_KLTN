@@ -3,25 +3,26 @@
 @using Microsoft.Extensions.Localization
 @inject SharedViewLocalizer _localizer
 @inject IHttpContextAccessor HttpContextAccessor
+
 <div class="sidebar" id="sidebar">
     <div class="sidebar-inner slimscroll">
         <div id="sidebar-menu" class="sidebar-menu">
             <ul>
                 <li class="menu-title">
-                    <span>Main Menu</span>
+                    <span>@_localizer.GetLocalizedString("Main Menu")</span>
                 </li>
 
                 <li class="">
-                    <a>
+                    <a href="/Admin/Home">
                         <i class="fas fa-tachometer-alt"></i>
                         <span> @_localizer.GetLocalizedString("Dashboard")</span>
-                        <span class="menu-arrow"></span>
+                        @* <span class="menu-arrow"></span> *@
                     </a>
-                    <ul>
+                    @* <ul>
                         <li><a href="/Admin/Home/Index">Admin Dashboard</a></li>
                         <!-- <li><a href="" class="">Teacher Dashboard</a></li> -->
                         <!-- <li><a href="" class="">Student Dashboard</a></li> -->
-                    </ul>
+                    </ul> *@
                 </li>
                 <li class="">
                     <a href="/Admin/Employee">
@@ -59,7 +60,7 @@
                 <li class="">
                     <a href="/Admin/Invoice">
                         <i class="fas fa-file-invoice"></i>
-                        <span> Invoice</span>
+                        <span>@_localizer.GetLocalizedString("Invoice")</span>
                         @* <span class="menu-arrow"></span> *@
                     </a>
                     @* <ul>

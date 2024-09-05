@@ -1,5 +1,6 @@
 ﻿@model HANGOSELL_KLTN.Models.EF.Customer
-
+@using HANGOSELL_KLTN.Configuration
+@inject SharedViewLocalizer _localizer
 @{
     ViewData["Title"] = "Create Customer";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
@@ -10,10 +11,10 @@
         <div class="page-header">
             <div class="row align-items-center">
                 <div class="col">
-                    <h3 class="page-title">Add Customer</h3>
+                    <h3 class="page-title">@_localizer.GetLocalizedString("Add") @_localizer.GetLocalizedString("Customer")</h3>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/Admin/Customer">Customer</a></li>
-                        <li class="breadcrumb-item active">Add Customer</li>
+                        <li class="breadcrumb-item"><a href="/Admin/Customer">@_localizer.GetLocalizedString("Customer")</a></li>
+                        <li class="breadcrumb-item active">@_localizer.GetLocalizedString("Add") @_localizer.GetLocalizedString("Customer")</li>
                     </ul>
                 </div>
             </div>
@@ -25,12 +26,12 @@
 
                         <div class="row">
                             <div class="mb-3">
-                                <label for="CompanyName" class="form-label">CompanyName <span class="login-danger">*</span></label>
+                                <label for="CompanyName" class="form-label">@_localizer.GetLocalizedString("Company Name") <span class="login-danger">*</span></label>
                                 <input type="text" class="form-control" id="CompanyName" name="CompanyName" required>
                             </div>
 
                             <div class="mb-3">
-                                <label for="ContactPerson" class="form-label">ContactPerson <span class="login-danger">*</span></label>
+                                <label for="ContactPerson" class="form-label">@_localizer.GetLocalizedString("Contact Person") <span class="login-danger">*</span></label>
                                 <input type="text" class="form-control" id="ContactPerson" name="ContactPerson" required>
                             </div>
 
@@ -40,17 +41,17 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="PhoneNumber" class="form-label">Phone Number <span class="login-danger">*</span></label>
+                                <label for="PhoneNumber" class="form-label">@_localizer.GetLocalizedString("Phone Number") <span class="login-danger">*</span></label>
                                 <input type="tel" class="form-control" id="PhoneNumber" name="PhoneNumber" required>
                             </div>
 
                             <div class="mb-3">
-                                <label for="Password" class="form-label">Password <span class="login-danger">*</span></label>
+                                <label for="Password" class="form-label">@_localizer.GetLocalizedString("Password") <span class="login-danger">*</span></label>
                                 <input type="password" class="form-control" id="Password" name="Password" value="" autocomplete="new-password" required>
                             </div>
 
                             <div class="mb-3">
-                                <label for="Address" class="form-label">Address <span class="login-danger">*</span></label>
+                                <label for="Address" class="form-label">@_localizer.GetLocalizedString("Address") <span class="login-danger">*</span></label>
                                 <input type="text" class="form-control" id="Address" name="Address" required>
                             </div>
 
@@ -61,7 +62,7 @@
 
                             <div class="col-12">
                                 <div class="student-submit">
-                                    <button type="submit" class="btn btn-primary">Create</button>
+                                    <button type="submit" class="btn btn-primary">@_localizer.GetLocalizedString("Create")</button>
                                 </div>
                             </div>
                         </div>

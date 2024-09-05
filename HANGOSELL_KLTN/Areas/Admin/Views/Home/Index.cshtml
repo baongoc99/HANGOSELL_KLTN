@@ -1,4 +1,6 @@
-﻿
+﻿@using HANGOSELL_KLTN.Configuration
+@inject SharedViewLocalizer _localizer
+
 @{
     ViewData["Title"] = "Trang chủ Admin";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
@@ -9,10 +11,10 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="page-sub-header">
-                        <h3 class="page-title">Welcome, @ViewData["EmployeeName"] !!</h3>
+                        <h3 class="page-title">@_localizer.GetLocalizedString("Welcome"), @ViewData["EmployeeName"] !!</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
+                            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">@_localizer.GetLocalizedString("Home")</a></li>
+                            <li class="breadcrumb-item active">@_localizer.GetLocalizedString("Dashboard")</li>
                         </ul>
                     </div>
                 </div>
@@ -25,7 +27,7 @@
                     <div class="card-body">
                         <div class="db-widgets d-flex justify-content-between align-items-center">
                             <div class="db-info">
-                                <h6>Customer</h6>
+                                <h6>@_localizer.GetLocalizedString("Customer")</h6>
                                 <h3>@ViewData["tongcustomer"]</h3>
                             </div>
                             <div class="db-icon">
@@ -40,7 +42,7 @@
                     <div class="card-body">
                         <div class="db-widgets d-flex justify-content-between align-items-center">
                             <div class="db-info">
-                                <h6>Order</h6>
+                                <h6>@_localizer.GetLocalizedString("Order")</h6>
                                 <h3>@ViewData["tongorder"]</h3>
                             </div>
                             <div class="db-icon">
@@ -55,7 +57,7 @@
                     <div class="card-body">
                         <div class="db-widgets d-flex justify-content-between align-items-center">
                             <div class="db-info">
-                                <h6>Product</h6>
+                                <h6>@_localizer.GetLocalizedString("Product")</h6>
                                 <h3>@ViewData["tongproduct"]</h3>
                             </div>
                             <div class="db-icon">

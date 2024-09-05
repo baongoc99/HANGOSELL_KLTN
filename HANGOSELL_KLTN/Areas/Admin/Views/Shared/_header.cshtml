@@ -1,7 +1,8 @@
 ﻿@using HANGOSELL_KLTN.Configuration
 @inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
 @using Microsoft.AspNetCore.Localization
-@inject SharedViewLocalizer language
+@inject SharedViewLocalizer _localizer
+
 @{
     var languageCookie = HttpContextAccessor.HttpContext.Request.Cookies[CookieRequestCultureProvider.DefaultCookieName];
     var currentLanguage = "vi-VN"; // Ngôn ngữ mặc định
@@ -28,7 +29,7 @@
     </div>
     <div class="top-nav-search">
         <form>
-            <input type="text" class="form-control" placeholder="Search here">
+            <input type="text" class="form-control" placeholder="@_localizer.GetLocalizedString("Search here")">
             <button class="btn" type="submit"><i class="fas fa-search"></i></button>
         </form>
     </div>
@@ -53,12 +54,12 @@
                 <div class="noti-content" style="padding-right:-20px">
                     <div>
                         <a class="dropdown-item" asp-controller="Home" asp-action="SetLanguage" asp-route-language="vi-VN">
-                            <i class="flag flag-vn me-2"></i> @language.GetLocalizedString("Vietnam")
+                            <i class="flag flag-vn me-2"></i> @_localizer.GetLocalizedString("Vietnam")
                         </a>
                     </div>
                     <div>
                         <a class="dropdown-item" asp-controller="Home" asp-action="SetLanguage" asp-route-language="en-US">
-                            <i class="flag flag-lr me-2"></i> @language.GetLocalizedString("English")
+                            <i class="flag flag-lr me-2"></i> @_localizer.GetLocalizedString("English")
                         </a>
                     </div>
                 </div>

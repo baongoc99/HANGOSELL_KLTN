@@ -1,5 +1,6 @@
 ﻿@model HANGOSELL_KLTN.Models.EF.ModelDataset
-
+@using HANGOSELL_KLTN.Configuration
+@inject SharedViewLocalizer _localizer
 @{
     ViewData["Title"] = "Edit Product";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
@@ -10,10 +11,10 @@
         <div class="page-header">
             <div class="row align-items-center">
                 <div class="col">
-                    <h3 class="page-title">Edit Product</h3>
+                    <h3 class="page-title">@_localizer.GetLocalizedString("Edit") @_localizer.GetLocalizedString("Product")</h3>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/Admin/Product">Product</a></li>
-                        <li class="breadcrumb-item active">Edit Product</li>
+                        <li class="breadcrumb-item"><a href="/Admin/Product">@_localizer.GetLocalizedString("Product")</a></li>
+                        <li class="breadcrumb-item active">@_localizer.GetLocalizedString("Edit") @_localizer.GetLocalizedString("Product")</li>
                     </ul>
                 </div>
             </div>
@@ -27,7 +28,7 @@
                         <div class="row">
                             <div class="col-12 col-sm-6">
                                 <div class="form-group local-forms">
-                                    <label asp-for="@Model.product.Title" class="form-label">Title</label>
+                                    <label asp-for="@Model.product.Title" class="form-label">@_localizer.GetLocalizedString("Title")</label>
                                     <input asp-for="@Model.product.Title" class="form-control" id="Title" name="Title" value="@Model.product.Title" />
                                     <span asp-validation-for="@Model.product.Title" class="text-danger"></span>
                                 </div>
@@ -35,7 +36,7 @@
 
                             <div class="col-12 col-sm-6">
                                 <div class="form-group local-forms">
-                                    <label asp-for="@Model.product.ProductCode" class="form-label">Product Code</label>
+                                    <label asp-for="@Model.product.ProductCode" class="form-label">@_localizer.GetLocalizedString("Product Code")</label>
                                     <input asp-for="@Model.product.ProductCode" class="form-control" id="ProductCode" name="ProductCode" value="@Model.product.ProductCode" />
                                     <span asp-validation-for="@Model.product.ProductCode" class="text-danger"></span>
                                 </div>
@@ -43,7 +44,7 @@
 
                             <div class="col-12 col-sm-6">
                                 <div class="form-group local-forms">
-                                    <label asp-for="@Model.product.ProductCategoryId" class="form-label">Product Category</label>
+                                    <label asp-for="@Model.product.ProductCategoryId" class="form-label">@_localizer.GetLocalizedString("Category")</label>
                                     <select asp-for="@Model.product.ProductCategoryId" class="form-control select" id="ProductCategoryId" name="ProductCategoryId">
                                         <!-- Populate options dynamically from categories -->
                                         @foreach (var category in Model.categories)
@@ -57,7 +58,7 @@
 
                             <div class="col-12 col-sm-6">
                                 <div class="form-group local-forms">
-                                    <label asp-for="@Model.product.Description" class="form-label">Description</label>
+                                    <label asp-for="@Model.product.Description" class="form-label">@_localizer.GetLocalizedString("Description")</label>
                                     <input asp-for="@Model.product.Description" class="form-control" id="Description" name="Description" value="@Model.product.Description"></input>
                                     <span asp-validation-for="@Model.product.Description" class="text-danger"></span>
                                 </div>
@@ -67,7 +68,7 @@
                                 <div class="row">
                                     <div class="col-11">
                                         <div class="form-group local-forms">
-                                            <label>Image <span class="login-danger">*</span></label>
+                                            <label>@_localizer.GetLocalizedString("Image") <span class="login-danger">*</span></label>
                                             <input type="file" id="Image" name="Image" class="form-control" style="height: 45px;" value="@Model.product.Image">
                                         </div>
                                     </div>
@@ -100,7 +101,7 @@
 
                             <div class="col-12 col-sm-6">
                                 <div class="form-group local-forms">
-                                    <label asp-for="@Model.product.Quantity" class="form-label">Quantity</label>
+                                    <label asp-for="@Model.product.Quantity" class="form-label">@_localizer.GetLocalizedString("Quantity")</label>
                                     <input asp-for="@Model.product.Quantity" class="form-control" id="Quantity" name="Quantity" type="number" value="@Model.product.Quantity" />
                                     <span asp-validation-for="@Model.product.Quantity" class="text-danger"></span>
                                 </div>
@@ -108,7 +109,7 @@
 
                             <div class="col-12 col-sm-6">
                                 <div class="form-group local-forms">
-                                    <label asp-for="@Model.product.Price" class="form-label">Price</label>
+                                    <label asp-for="@Model.product.Price" class="form-label">@_localizer.GetLocalizedString("Price")</label>
                                     <input asp-for="@Model.product.Price" class="form-control" id="Price" name="Price" type="number" step="0.01" value="@Model.product.Price" />
                                     <span asp-validation-for="@Model.product.Price" class="text-danger"></span>
                                 </div>
@@ -116,67 +117,19 @@
 
                             <div class="col-12 col-sm-6">
                                 <div class="form-group local-forms">
-                                    <label asp-for="@Model.product.PriceSale" class="form-label">Sale Price</label>
+                                    <label asp-for="@Model.product.PriceSale" class="form-label">@_localizer.GetLocalizedString("Sale Price")</label>
                                     <input asp-for="@Model.product.PriceSale" class="form-control" id="PriceSale" name="PriceSale" type="number" step="0.01" value="@Model.product.PriceSale" />
                                     <span asp-validation-for="@Model.product.PriceSale" class="text-danger"></span>
                                 </div>
                             </div>
 
 
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group local-forms">
-                                    <label asp-for="@Model.product.SeoTitle" class="form-label">SEO Title</label>
-                                    <input asp-for="@Model.product.SeoTitle" class="form-control" id="SeoTitle" name="SeoTitle" value="@Model.product.SeoTitle" />
-                                    <span asp-validation-for="@Model.product.SeoTitle" class="text-danger"></span>
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group local-forms">
-                                    <label asp-for="@Model.product.SeoKeyword" class="form-label">SEO Keyword</label>
-                                    <input asp-for="@Model.product.SeoKeyword" class="form-control" id="SeoKeyword" name="SeoKeyword" value="@Model.product.SeoKeyword" />
-                                    <span asp-validation-for="@Model.product.SeoKeyword" class="text-danger"></span>
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group local-forms">
-                                    <label asp-for="@Model.product.SeoDescription" class="form-label">SEO Description</label>
-                                    <input asp-for="@Model.product.SeoDescription" class="form-control" id="SeoDescription" name="SeoDescription" value="@Model.product.SeoDescription"></input>
-                                    <span asp-validation-for="@Model.product.SeoDescription" class="text-danger"></span>
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-sm-6">
-                                <div class="row">
-                                    <div class="col-6 ">
-                                        <div class="form-check">
-                                            <input asp-for="@Model.product.IsHome" class="form-check-input" id="IsHome" name="IsHome" type="checkbox" />
-                                            <label class="form-check-label" for="IsHome">Is Home</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input asp-for="@Model.product.IsSale" class="form-check-input" id="IsSale" name="IsSale" type="checkbox" />
-                                            <label class="form-check-label" for="IsSale">Is Sale</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-6 ">
-                                        <div class="form-check">
-                                            <input asp-for="@Model.product.IsFeature" class="form-check-input" id="IsFeature" name="IsFeature" type="checkbox" />
-                                            <label class="form-check-label" for="IsFeature">Is Feature</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input asp-for="@Model.product.IsHot" class="form-check-input" id="IsHot" name="IsHot" type="checkbox" />
-                                            <label class="form-check-label" for="IsHot">Is Hot</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
 
 
                             <div class="mb-3">
                                 <div class="student-submit">
-                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    <button type="submit" class="btn btn-primary">@_localizer.GetLocalizedString("Save Changes")</button>
                                 </div>
                             </div>
                         </div>

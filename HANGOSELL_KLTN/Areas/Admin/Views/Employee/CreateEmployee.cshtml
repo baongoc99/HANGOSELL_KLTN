@@ -1,5 +1,6 @@
 ﻿@model List<HANGOSELL_KLTN.Models.EF.ModelDataset>
-
+@using HANGOSELL_KLTN.Configuration
+@inject SharedViewLocalizer _localizer
 @{
     ViewData["Title"] = "Create Employee";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
@@ -10,10 +11,10 @@
         <div class="page-header">
             <div class="row align-items-center">
                 <div class="col">
-                    <h3 class="page-title">Add Employee</h3>
+                    <h3 class="page-title">@_localizer.GetLocalizedString("Add") @_localizer.GetLocalizedString("Employee")</h3>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/Admin/Employee">Employees</a></li>
-                        <li class="breadcrumb-item active">Add Employee</li>
+                        <li class="breadcrumb-item"><a href="/Admin/Employee">@_localizer.GetLocalizedString("Employee")</a></li>
+                        <li class="breadcrumb-item active">@_localizer.GetLocalizedString("Add") @_localizer.GetLocalizedString("Employee")</li>
                     </ul>
                 </div>
             </div>
@@ -25,13 +26,13 @@
                         <div class="row">
                             <div class="col-12 col-sm-4">
                                 <div class="form-group local-forms">
-                                    <label for="CodeEmployee" class="form-label">Employee Code <span class="login-danger">*</span></label>
+                                    <label for="CodeEmployee" class="form-label">@_localizer.GetLocalizedString("Employee Code") <span class="login-danger">*</span></label>
                                     <input type="text" class="form-control" id="CodeEmployee" name="CodeEmployee" required>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-4">
                                 <div class="form-group local-forms">
-                                    <label for="EmployeeName" class="form-label">Employee Name <span class="login-danger">*</span></label>
+                                    <label for="EmployeeName" class="form-label">@_localizer.GetLocalizedString("Employee Name") <span class="login-danger">*</span></label>
                                     <input type="text" class="form-control" id="EmployeeName" name="EmployeeName" required>
                                 </div>
                             </div>
@@ -43,25 +44,25 @@
                             </div>
                             <div class="col-12 col-sm-4">
                                 <div class="form-group local-forms">
-                                    <label for="PhoneNumber" class="form-label">Phone Number <span class="login-danger">*</span></label>
+                                    <label for="PhoneNumber" class="form-label">@_localizer.GetLocalizedString("Phone Number") <span class="login-danger">*</span></label>
                                     <input type="tel" class="form-control" id="PhoneNumber" name="PhoneNumber" required>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-4">
                                 <div class="form-group local-forms">
-                                    <label for="DateOfBirth" class="form-label">Date of Birth <span class="login-danger">*</span></label>
+                                    <label for="DateOfBirth" class="form-label">@_localizer.GetLocalizedString("Date of Birth") <span class="login-danger">*</span></label>
                                     <input type="date" class="form-control datetimepicker" id="DateOfBirth" name="DateOfBirth" required>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-4">
                                 <div class="form-group local-forms">
-                                    <label for="JoinDate" class="form-label">Join Date <span class="login-danger">*</span></label>
+                                    <label for="JoinDate" class="form-label">@_localizer.GetLocalizedString("Join Date") <span class="login-danger">*</span></label>
                                     <input type="date" class="form-control datetimepicker" id="JoinDate" name="JoinDate" required>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-4">
                                 <div class="form-group local-forms">
-                                    <label for="RoleID" class="form-label">Role <span class="login-danger">*</span></label>
+                                    <label for="RoleID" class="form-label">@_localizer.GetLocalizedString("Roles") <span class="login-danger">*</span></label>
                                     <select class="form-control select" id="RoleID" name="RoleID" required>
                                         @foreach (var role in Model)
                                         {
@@ -72,13 +73,13 @@
                             </div>
                             <div class="col-12 col-sm-4">
                                 <div class="form-group local-forms">
-                                    <label for="Password" class="form-label">Password <span class="login-danger">*</span></label>
+                                    <label for="Password" class="form-label">@_localizer.GetLocalizedString("Password") <span class="login-danger">*</span></label>
                                     <input type="password" class="form-control" id="Password" name="Password" required>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-4">
                                 <div class="form-group local-forms">
-                                    <label for="Address" class="form-label">Address <span class="login-danger">*</span></label>
+                                    <label for="Address" class="form-label">@_localizer.GetLocalizedString("Address") <span class="login-danger">*</span></label>
                                     <input type="text" class="form-control" id="Address" name="Address" required>
                                 </div>
                             </div>
@@ -86,7 +87,7 @@
                                 <div class="row">
                                     <div class="col-11">
                                         <div class="form-group local-forms">
-                                            <label>Avatar <span class="login-danger">*</span></label>
+                                            <label>@_localizer.GetLocalizedString("Avatar") <span class="login-danger">*</span></label>
                                             <input type="file" class="form-control" accept="image/*" onchange="previewImage(event)" style="height: 45px;" name="image">
                                         </div>
                                     </div>
@@ -114,13 +115,13 @@
                             </script>
                             <div class="col-12 col-sm-4">
                                 <div class="form-group local-forms">
-                                    <label for="Position" class="form-label">Position (Optional)</label>
+                                    <label for="Position" class="form-label">@_localizer.GetLocalizedString("Position")</label>
                                     <input type="text" class="form-control" id="Position" name="Position">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="student-submit">
-                                    <button type="submit" class="btn btn-primary">Create</button>
+                                    <button type="submit" class="btn btn-primary">@_localizer.GetLocalizedString("Create")</button>
                                 </div>
                             </div>
                         </div>

@@ -39,23 +39,6 @@ namespace HANGOSELL_KLTN.Models.EF
         [Range(0, int.MaxValue, ErrorMessage = "Số lượng không được âm.")]
         public int Quantity { get; set; }
 
-        public bool? IsHome { get; set; }
-
-        public bool? IsSale { get; set; }
-
-        public bool? IsFeature { get; set; }
-
-        public bool? IsHot { get; set; }
-
-        [StringLength(150, ErrorMessage = "Tiêu đề SEO không được vượt quá 150 ký tự.")]
-        public string? SeoTitle { get; set; }
-
-        [StringLength(150, ErrorMessage = "Từ khóa SEO không được vượt quá 150 ký tự.")]
-        public string? SeoKeyword { get; set; }
-
-        [StringLength(250, ErrorMessage = "Mô tả SEO không được vượt quá 250 ký tự.")]
-        public string? SeoDescription { get; set; }
-
         public virtual ProductCategory ProductCategory { get; set; }
     }
 }
