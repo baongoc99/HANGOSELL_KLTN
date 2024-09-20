@@ -28,6 +28,7 @@ namespace HANGOSELL_KLTN.Data
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<OrderDetailCustomer> OrderDetailCustomers { get; set; }
         public DbSet<QRCodeRequest> QRCodeRequests { get; set; }
+        public DbSet<Store> Stores { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -146,12 +147,12 @@ namespace HANGOSELL_KLTN.Data
                 new Customer
                 {
                     Id = 1,
-                    CompanyName = "Công ty TNHH ABC",
-                    ContactPerson = "Nguyễn Văn A",
-                    Email = "a.nguyen@abc.com",
-                    Password = "hashed_password_1", // Ensure this is hashed in a real application
-                    PhoneNumber = "0912345678",
-                    Address = "123 Đường ABC, TP.HCM"
+                    CompanyName = "Khách lẻ", // Dữ liệu mặc định cho khách lẻ
+                    ContactPerson = "Khách lẻ",
+                    Email = "khach.le@example.com",
+                    Password = "hashed_password_3", // Đảm bảo mã hóa trong ứng dụng thực tế
+                    PhoneNumber = "0000000000",
+                    Address = "Không có địa chỉ"
                 },
                 new Customer
                 {
@@ -162,6 +163,16 @@ namespace HANGOSELL_KLTN.Data
                     Password = "hashed_password_2", // Ensure this is hashed in a real application
                     PhoneNumber = "0987654321",
                     Address = "456 Đường DEF, Hà Nội"
+                },
+                new Customer
+                {
+                    Id = 3,
+                    CompanyName = "Công ty TNHH ABC",
+                    ContactPerson = "Nguyễn Văn A",
+                    Email = "a.nguyen@abc.com",
+                    Password = "hashed_password_1", // Ensure this is hashed in a real application
+                    PhoneNumber = "0912345678",
+                    Address = "123 Đường ABC, TP.HCM"
                 }
             );
 

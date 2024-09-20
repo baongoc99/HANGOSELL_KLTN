@@ -1,5 +1,6 @@
 ﻿using HANGOSELL_KLTN.Models.EF;
 using HANGOSELL_KLTN.Service;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HANGOSELL_KLTN.Areas.Admin.Controllers
@@ -21,6 +22,26 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             ViewData["Position"] = HttpContext.Session.GetString("Position");
             List<Employee> employees = employeeService.GetAllEmployee();
             return View(employees);
+        }
+
+
+        public IActionResult Editpassword(int Idemployee, string CurrentPassword, string NewPassword, string ConfirmPassword)
+        {
+            Employee employee = employeeService.GetEmployeeById(Idemployee);
+            var checkmatkhau = employeeService.VerifyPassword(employee.Password, CurrentPassword);
+
+            if (checkmatkhau != PasswordVerificationResult.Success)
+            {
+                return Json(new { success = false, message = "Mật khẩu hiện tại không đúng!" });
+            }
+            if (NewPassword != ConfirmPassword)
+            {
+                return Json(new { success = false, message = "Nhập lại mật khẩu mới không đúng!" });
+            }
+            string mahoamatkhau = employeeService.HashPassword(NewPassword);
+            employee.Password = mahoamatkhau;
+            employeeService.UpdateEmployee(employee);
+            return Json(new { success = true, message = "Cập nhật mật khẩu thành công!" });
         }
 
         // Hiển thị giao diện lưới (Grid) danh sách người dùng
@@ -98,6 +119,9 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             {
                 employee.Avatar = "images/default.jpg";
             }
+            string mahoamatkhau = employeeService.HashPassword(employee.Password);
+            employee.Password = mahoamatkhau;
+            employee.Status = true;
             Employee employee1 = employeeService.GetEmployeeByCodeEmployee(employee.CodeEmployee);
             if (employee1 == null)
             {

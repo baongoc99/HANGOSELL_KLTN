@@ -1,6 +1,7 @@
 ﻿using HANGOSELL_KLTN.Models.EF;
 using HANGOSELL_KLTN.Service;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HANGOSELL_KLTN.Controllers
@@ -15,8 +16,9 @@ namespace HANGOSELL_KLTN.Controllers
 
         public IActionResult Login(string codeEmployee, string password)
         {
-            Employee employee = employeeService.CheckCodeAndPass(codeEmployee, password);
-            if (employee != null)
+            Employee employee = employeeService.CheckCodeAndPass(codeEmployee);
+            var checkmatkhau = employeeService.VerifyPassword(employee.Password, password);
+            if (checkmatkhau == PasswordVerificationResult.Success)
             {
                 // Lưu thông tin người dùng vào session
                 HttpContext.Session.SetInt32("Id", employee.Id);

@@ -1,5 +1,6 @@
 ﻿    @model HANGOSELL_KLTN.Models.EF.ModelDataset
-
+    @using HANGOSELL_KLTN.Configuration
+@inject SharedViewLocalizer _localizer
 @{
     ViewData["Title"] = "Create Invoice";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
@@ -11,18 +12,8 @@
 
             <div class="row align-items-center">
                 <div class="col">
-                    <h3 class="page-title">Create Invoice</h3>
-                    <div class="col-auto text-end float-end ms-auto download-grp">
-                        <a href="/Admin/Invoice" class="btn btn-outline-gray me-2 active">
-                            <i class="fa fa-list" aria-hidden="true"></i>
-                        </a>
-                        <a href="/Admin/Invoice/GridInvoice" class="btn btn-outline-gray me-2">
-                            <i class="fa fa-th" aria-hidden="true"></i>
-                        </a>
-                        <a href="/Admin/Invoice/CreateInvoice" class="btn btn-outline-gray me-2">
-                            <i class="fas fa-plus"></i>
-                        </a>
-                    </div>
+                    <h3 class="page-title">@_localizer.GetLocalizedString("Create") @_localizer.GetLocalizedString("Invoice")</h3>
+                    
                 </div>
             </div>
         </div>
@@ -39,14 +30,14 @@
                                         <div class=" local-forms">
                                             <div class="row">
                                                 <div class="col-10">
-                                                    <label>CompanyName <span class="login-danger">*</span></label>
+                                                    <label>@_localizer.GetLocalizedString("Company Name") <span class="login-danger">*</span></label>
                                                     <select id="CompanyNameSelect" class="form-select form-control" name="CompanyName">
                                                         <option value=""></option>
                                                     </select>
                                                 </div>
                                                 <div class="col-2" style="margin-left:-20px">
                                                     <button type="button" class="btn btn-primary " style="padding-bottom: 13px;" data-bs-toggle="modal" data-bs-target="#addCustomerModals">
-                                                        New
+                                                        @_localizer.GetLocalizedString("New")
                                                     </button>
                                                 </div>
                                             </div>
@@ -54,7 +45,7 @@
                                     </div>
                                     <div class="mb-3">
                                         <div class=" local-forms">
-                                            <label>ContactPerson <span class="login-danger">*</span></label>
+                                            <label>@_localizer.GetLocalizedString("Contact Person") <span class="login-danger">*</span></label>
                                             <input type="text" id="ContactPerson" class="form-control" name="ContactPerson">
                                             @* <span asp-validation-for="ContactPerson" class="invalid-feedback"></span> *@
                                         </div>
@@ -68,14 +59,14 @@
                                     </div>
                                     <div class="mb-3">
                                         <div class=" local-forms">
-                                            <label>PhoneNumber <span class="login-danger">*</span></label>
+                                            <label>@_localizer.GetLocalizedString("Phone Number") <span class="login-danger">*</span></label>
                                             <input type="text" id="PhoneNumber" class="form-control" name="PhoneNumber">
                                             @* <span asp-validation-for="PhoneNumber" class="invalid-feedback"></span> *@
                                         </div>
                                     </div>
                                     <div class="mb-3">
                                         <div class=" local-forms">
-                                            <label>Address <span class="login-danger">*</span></label>
+                                            <label>@_localizer.GetLocalizedString("Address") <span class="login-danger">*</span></label>
                                             <input type="text" id="Address" class="form-control" name="Address">
                                             @* <span asp-validation-for="Address" class="invalid-feedback"></span> *@
                                         </div>
@@ -88,10 +79,10 @@
                                     <thead>
                                         <tr>
                                             <th class="text-center">ID</th>
-                                            <th class="text-center">Quantity</th>
-                                            <th class="text-center">TotalPrice</th>
-                                            <th class="text-center">Product</th>
-                                            <th class="text-center">Action</th>
+                                            <th class="text-center">@_localizer.GetLocalizedString("Product")</th>
+                                            <th class="text-center">@_localizer.GetLocalizedString("Quantity")</th>
+                                            <th class="text-center">@_localizer.GetLocalizedString("Total Price")</th>
+                                            <th class="text-center">@_localizer.GetLocalizedString("Action")</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -102,15 +93,15 @@
                                                 <tr>
 
                                                     <td class="text-center">@orderDetailCustomer.Id</td>
+                                                    <td class="text-center">@orderDetailCustomer.Product.Title</td>
                                                     <td class="text-center">@orderDetailCustomer.Quantity</td>
                                                     <td class="text-center">@orderDetailCustomer.TotalPrice</td>
-                                                    <td class="text-center">@orderDetailCustomer.Product.Title</td>
                                                     <td class="text-center">
-                                                        <a href="/Admin/Customer/EditCustomer" class="btn btn-sm btn-warning">
-                                                            <i class="fa fa-edit"></i>
+                                                        <a href="/Admin/Order/Addorderdetals" class="btn btn-sm btn-warning">
+                                                            <i class="fa fa-plus"></i>
                                                         </a>
-                                                        <a href="/Admin/Customer/Delete" class="btn btn-sm btn-danger">
-                                                            <i class="fa fa-trash"></i>
+                                                        <a href="/Admin/Order/Delete" class="btn btn-sm btn-danger">
+                                                            <i class="fa fa-minus"></i>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -125,44 +116,53 @@
                                 </table>
                                 <hr />
                                 <div class="row">
-                                    <div class="col-6 ">
+                                    <div class="col-5 ">
                                         <div class="form-group local-forms">
-                                            <label for="CodeEmployee" class="form-label">Status <span class="login-danger">*</span></label>
-                                            <textarea type="text" class="form-control" id="Status" name="Status" required></textarea>
+                                            <label for="CodeEmployee" class="form-label">@_localizer.GetLocalizedString("Status") </label>
+                                            <textarea type="text" class="form-control" id="Status" name="Status" ></textarea>
                                         </div>
                                     </div>
-                                    <div class="col-6 ">
+                                    <div class="col-7 ">
                                         <div class="row">
                                             <table class="table table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th class="text-center">Total </th>
+                                                        <th class="text-center">@_localizer.GetLocalizedString("Total") </th>
                                                         <th class="text-center">@ViewData["TongTien"]</th>
                                                     </tr>
                                                     <tr>
-                                                        <th class="text-center">Sale</th>
+                                                        <th class="text-center">@_localizer.GetLocalizedString("Sale")</th>
                                                         <th class="text-center">000</th>
                                                     </tr>
                                                     <tr>
-                                                        <th class="text-center">Total Price</th>
+                                                        <th class="text-center">@_localizer.GetLocalizedString("Total Price")</th>
                                                         <th class="text-center">@ViewData["TongTien"]</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="text-center">@_localizer.GetLocalizedString("Payment Method")</th>
+                                                        <th class="text-center">
+                                                            <label for="chuyenKhoan" style=" margin-bottom: 0px;">
+                                                                @_localizer.GetLocalizedString("Transfer")
+                                                            </label>
+                                                            <input type="radio" id="chuyenKhoan" name="hinhthucthanhtoan" value="chuyển khoản">
+                                                       
+                                                            <label for="tienMat" style=" margin-bottom: 0px">
+                                                                @_localizer.GetLocalizedString("Cash")
+                                                            </label>
+                                                            <input type="radio" id="tienMat" name="hinhthucthanhtoan" value="tiền mặt">
+                                                        </th>
                                                     </tr>
                                                 </thead>
                                             </table>
-                                            <!-- Payment method selection -->
-                                            <div class="form-group">
-                                                <label class="form-label" for="chuyenKhoan"><h6>Chuyển Khoản</h6></label>
-                                                <input type="radio" id="chuyenKhoan" name="hinhthucthanhtoan" value="chuyển khoản">
-                                                <label class="form-label" for="tienMat"><h6 style="padding-left:100px">Tiền Mặt</h6></label>
-                                                <input type="radio" id="tienMat" name="hinhthucthanhtoan" value="tiền mặt">
-                                            </div>
                                         </div>
                                     </div>
 
                                 </div>
                                 <div class="col-12 text-end">
                                     <div class="student-submit">
-                                        <button type="submit" class="btn btn-primary">Create Invoice</button>
+                                        <button type="submit" class="btn btn-primary">
+                                            @_localizer.GetLocalizedString("Print Invoice")
+                                        </button>
                                     </div>
                                 </div>
                             </div>

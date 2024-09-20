@@ -178,13 +178,13 @@ namespace HANGOSELL_KLTN.Migrations
                         new
                         {
                             Id = 1,
-                            Address = "123 Đường ABC, TP.HCM",
-                            CompanyName = "Công ty TNHH ABC",
-                            ContactPerson = "Nguyễn Văn A",
+                            Address = "Không có địa chỉ",
+                            CompanyName = "Khách lẻ",
+                            ContactPerson = "Khách lẻ",
                             CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "a.nguyen@abc.com",
-                            Password = "hashed_password_1",
-                            PhoneNumber = "0912345678"
+                            Email = "khach.le@example.com",
+                            Password = "hashed_password_3",
+                            PhoneNumber = "0000000000"
                         },
                         new
                         {
@@ -196,6 +196,17 @@ namespace HANGOSELL_KLTN.Migrations
                             Email = "b.tran@xyz.com",
                             Password = "hashed_password_2",
                             PhoneNumber = "0987654321"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Address = "123 Đường ABC, TP.HCM",
+                            CompanyName = "Công ty TNHH ABC",
+                            ContactPerson = "Nguyễn Văn A",
+                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "a.nguyen@abc.com",
+                            Password = "hashed_password_1",
+                            PhoneNumber = "0912345678"
                         });
                 });
 
@@ -632,16 +643,13 @@ namespace HANGOSELL_KLTN.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Detail")
-                        .HasMaxLength(2000)
-                        .HasColumnType("nvarchar(2000)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ModifiedBy")
                         .HasMaxLength(50)
@@ -851,6 +859,41 @@ namespace HANGOSELL_KLTN.Migrations
                         });
                 });
 
+            modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Store", b =>
+                {
+                    b.Property<int>("StoreId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StoreId"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Logo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StoreName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("StoreId");
+
+                    b.ToTable("Stores");
+                });
+
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Subscribe", b =>
                 {
                     b.Property<int>("Id")
@@ -875,7 +918,7 @@ namespace HANGOSELL_KLTN.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2024, 9, 5, 10, 45, 0, 752, DateTimeKind.Local).AddTicks(8782),
+                            CreateDate = new DateTime(2024, 9, 10, 16, 11, 13, 160, DateTimeKind.Local).AddTicks(3010),
                             Email = "subscriber@example.com"
                         });
                 });

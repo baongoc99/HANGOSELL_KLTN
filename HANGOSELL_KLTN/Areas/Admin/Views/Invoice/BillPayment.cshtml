@@ -1,4 +1,6 @@
 ﻿@model HANGOSELL_KLTN.Models.EF.ModelDataset
+@using HANGOSELL_KLTN.Configuration
+@inject SharedViewLocalizer _localizer
 
 @{
     ViewData["Title"] = "Bill Payment";
@@ -51,16 +53,9 @@
                             <p>Customer: @Model.customer.ContactPerson</p>
                             <p>Email: @Model.customer.Email</p>
                         </div>
-                        <div class="col-6" align="right">
-                           @*   <div class="invoice">
-                                        
-                                     <img src="@Model.invoiceViewModel.QRCodeUrl" alt="VietQR Code" />
-                                 </p> *@
 
-                                <button onclick="window.print()">In hóa đơn</button>
-                            </div>
-                        </div>
                     </div>
+
 
                     <!-- Trạng thái hóa đơn -->
                     <div class="row">
@@ -71,78 +66,80 @@
                             </td>
                         </div>
                     </div>
+
+
+                    <!-- Chi tiết hóa đơn -->
+                    <table width="100%" class="inv-desc d-none d-lg-table d-md-table">
+                        <tbody>
+                            <tr>
+                                <td colspan="2">
+                                    <table class="inv-detail f-14 table-responsive-sm" width="100%">
+                                        <tbody>
+                                            <tr class="i-d-heading bg-light-grey text-dark-grey font-weight-bold">
+                                                <td class="border-right-0" width="35%">Sự miêu tả</td>
+                                                <td class="border-right-0 border-left-0" align="right">
+                                                    Qty\hrs
+                                                </td>
+                                                <td class="border-right-0 border-left-0" align="right">
+                                                    Đơn Giá (VND)
+                                                </td>
+                                                <td class="border-right-0 border-left-0" align="right">Thuế</td>
+                                                <td class="border-left-0" align="right">
+                                                    Số tiền (VND)
+                                                </td>
+                                            </tr>
+                                            @foreach (var or in Model.orderDetail)
+                                            {
+                                                <tr class="text-dark">
+                                                    <td>@or.Product.Title</td>
+                                                    <td align="right">@or.Quantity</td>
+                                                    <td align="right">@or.Product.Price</td>
+                                                    <td align="right"></td>
+                                                    <td align="right">@or.TotalPrice</td>
+                                                </tr>
+                                            }
+                                            <tr>
+                                                <td colspan="3" class="blank-td border-bottom-0 border-left-0 border-right-0"></td>
+                                                <td class="p-0 border-right-0">
+                                                    <table width="100%">
+                                                        <tbody>
+                                                            <tr class="text-dark-grey" align="right">
+                                                                <td class="w-50 border-top-0 border-left-0">Tổng phụ</td>
+                                                            </tr>
+                                                            <tr class="bg-light-grey text-dark f-w-500 f-16" align="right">
+                                                                <td class="w-50 border-bottom-0 border-left-0">Tổng</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td class="p-0 border-right-0" align="right">
+                                                    <table width="100%">
+                                                        <tbody>
+                                                            <tr class="text-dark-grey" align="right">
+                                                                <td class="border-top-0 border-left-0">@ViewData["TongTien"]</td>
+                                                            </tr>
+                                                            <tr class="bg-light-grey text-dark f-w-500 f-16" align="right">
+                                                                <td class="border-bottom-0 border-left-0">@ViewData["TongTien"]</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+            </div>
 
-                <!-- Chi tiết hóa đơn -->
-                <table width="100%" class="inv-desc d-none d-lg-table d-md-table">
-                    <tbody>
-                        <tr>
-                            <td colspan="2">
-                                <table class="inv-detail f-14 table-responsive-sm" width="100%">
-                                    <tbody>
-                                        <tr class="i-d-heading bg-light-grey text-dark-grey font-weight-bold">
-                                            <td class="border-right-0" width="35%">Sự miêu tả</td>
-                                            <td class="border-right-0 border-left-0" align="right">
-                                                Qty\hrs
-                                            </td>
-                                            <td class="border-right-0 border-left-0" align="right">
-                                                Đơn Giá (VND)
-                                            </td>
-                                            <td class="border-right-0 border-left-0" align="right">Thuế</td>
-                                            <td class="border-left-0" align="right">
-                                                Số tiền (VND)
-                                            </td>
-                                        </tr>
-                                           @foreach (var or in Model.orderDetail)
-                                        {
-                                        <tr class="text-dark">
-                                        <td>@or.Product.Title</td>
-                                        <td align="right">@or.Quantity</td>
-                                        <td align="right">@or.Product.Price</td>
-                                        <td align="right"></td>
-                                        <td align="right">@or.TotalPrice</td>
-                                        </tr>
-                                        }
-                                        <tr>
-                                            <td colspan="3" class="blank-td border-bottom-0 border-left-0 border-right-0"></td>
-                                            <td class="p-0 border-right-0">
-                                                <table width="100%">
-                                                    <tbody>
-                                                        <tr class="text-dark-grey" align="right">
-                                                            <td class="w-50 border-top-0 border-left-0">Tổng phụ</td>
-                                                        </tr>
-                                                        <tr class="bg-light-grey text-dark f-w-500 f-16" align="right">
-                                                            <td class="w-50 border-bottom-0 border-left-0">Tổng</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td class="p-0 border-right-0" align="right">
-                                                <table width="100%">
-                                                    <tbody>
-                                                        <tr class="text-dark-grey" align="right">
-                                                            <td class="border-top-0 border-left-0">@ViewData["TongTien"]</td>
-                                                        </tr>
-                                                        <tr class="bg-light-grey text-dark f-w-500 f-16" align="right">
-                                                            <td class="border-bottom-0 border-left-0">@ViewData["TongTien"]</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="col-12">
-                    <div class="student-submit">
-                        <button type="submit" class="btn btn-primary">Create</button>
-                    </div>
+            <div class="col-12">
+                <div class="student-submit">
+                    <button onclick="window.print()" type="submit" class="btn btn-primary">@_localizer.GetLocalizedString("Print Invoice")</button>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>

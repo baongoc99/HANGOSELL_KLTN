@@ -132,11 +132,20 @@
   <data name="Avatar" xml:space="preserve">
     <value>Ảnh đại diện</value>
   </data>
+  <data name="Bank Account Info" xml:space="preserve">
+    <value>Thông tin tài khoản ngân hàng</value>
+  </data>
+  <data name="Cash" xml:space="preserve">
+    <value>Tiền mặt</value>
+  </data>
   <data name="Category" xml:space="preserve">
     <value>Phân loại</value>
   </data>
   <data name="Change" xml:space="preserve">
     <value>Thay đổi</value>
+  </data>
+  <data name="Code Invoice" xml:space="preserve">
+    <value>Mã hóa đơn</value>
   </data>
   <data name="Company" xml:space="preserve">
     <value>Công ty</value>
@@ -159,6 +168,9 @@
   <data name="Dashboard" xml:space="preserve">
     <value>Thống kê</value>
   </data>
+  <data name="Date" xml:space="preserve">
+    <value>Ngày đặt </value>
+  </data>
   <data name="Date of Birth" xml:space="preserve">
     <value>Ngày sinh</value>
   </data>
@@ -167,6 +179,15 @@
   </data>
   <data name="Edit" xml:space="preserve">
     <value>Sửa</value>
+  </data>
+  <data name="Edit Bank Info" xml:space="preserve">
+    <value>Chỉnh sửa thông tin ngân hàng</value>
+  </data>
+  <data name="Edit Info" xml:space="preserve">
+    <value>Chỉnh sửa thông tin</value>
+  </data>
+  <data name="Edit Store Info" xml:space="preserve">
+    <value>Chỉnh sửa thông tin cửa hàng</value>
   </data>
   <data name="Employee" xml:space="preserve">
     <value>Nhân viên</value>
@@ -204,6 +225,9 @@
   <data name="New Password" xml:space="preserve">
     <value>Mật khẩu mới</value>
   </data>
+  <data name="No store information available!" xml:space="preserve">
+    <value>Không có thông tin cửa hàng có sẵn!</value>
+  </data>
   <data name="Old Password" xml:space="preserve">
     <value>Mật khẩu cũ</value>
   </data>
@@ -212,6 +236,9 @@
   </data>
   <data name="Password" xml:space="preserve">
     <value>Mật khẩu</value>
+  </data>
+  <data name="Payment Method" xml:space="preserve">
+    <value>Phương thức thanh toán</value>
   </data>
   <data name="Personal Details" xml:space="preserve">
     <value>Thông tin cá nhân</value>
@@ -224,6 +251,9 @@
   </data>
   <data name="Price" xml:space="preserve">
     <value>Giá</value>
+  </data>
+  <data name="Print Invoice" xml:space="preserve">
+    <value>In hóa đơn</value>
   </data>
   <data name="Product" xml:space="preserve">
     <value>Sản phẩm</value>
@@ -240,6 +270,9 @@
   <data name="Roles" xml:space="preserve">
     <value>Chức vụ</value>
   </data>
+  <data name="Sale" xml:space="preserve">
+    <value>Giảm giá</value>
+  </data>
   <data name="Sale Price" xml:space="preserve">
     <value>Giá giảm</value>
   </data>
@@ -252,8 +285,26 @@
   <data name="Status" xml:space="preserve">
     <value>Trạng thái</value>
   </data>
+  <data name="Store" xml:space="preserve">
+    <value>Cửa hàng</value>
+  </data>
+  <data name="Store Details" xml:space="preserve">
+    <value>Chi tiết cửa hàng</value>
+  </data>
+  <data name="Store Management" xml:space="preserve">
+    <value>Quản lý cửa hàng</value>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Tiêu đề</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Tổng hóa đơn</value>
+  </data>
+  <data name="Total Price" xml:space="preserve">
+    <value>Tổng tiền</value>
+  </data>
+  <data name="Transfer" xml:space="preserve">
+    <value>Chuyển khoản</value>
   </data>
   <data name="Update" xml:space="preserve">
     <value>Cập nhật</value>

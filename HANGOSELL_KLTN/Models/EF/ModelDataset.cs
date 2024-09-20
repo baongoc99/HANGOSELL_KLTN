@@ -15,5 +15,7 @@
         public List<OrderDetail> orderDetail { get; set; }
         public List<InvoiceViewModel> invoices { get; set; }
         public InvoiceViewModel invoiceViewModel { get; set; }
+        public Store store { get; set; }
+        public QRCodeRequest qRCodeRequest { get; set; }
     }
 }

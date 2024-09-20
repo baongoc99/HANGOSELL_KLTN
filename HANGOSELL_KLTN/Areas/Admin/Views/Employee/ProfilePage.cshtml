@@ -69,7 +69,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title d-flex justify-content-between">
                                             <span>@_localizer.GetLocalizedString("Personal Details")</span>
-                                            <a class="edit-link" data-bs-toggle="modal" href="#edit_personal_details"><i class="far fa-edit me-1"></i>Edit</a>
+                                            <a class="edit-link" data-bs-toggle="modal" href="#edit_profile"><i class="far fa-edit me-1"></i>Edit</a>
                                         </h5>
                                         <div class="row">
                                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">@_localizer.GetLocalizedString("Employee Name")</p>
@@ -91,6 +91,10 @@
                                             <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">@_localizer.GetLocalizedString("Phone Number")</p>
                                             <p class="col-sm-9">@Model.PhoneNumber</p>
                                         </div>
+                                        <div class="row">
+                                            <p class="col-sm-3 text-muted text-sm-end mb-0 mb-sm-3">@_localizer.GetLocalizedString("Address")</p>
+                                            <p class="col-sm-9">@Model.Address</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +107,8 @@
                                 <h5 class="card-title">@_localizer.GetLocalizedString("Change") @_localizer.GetLocalizedString("Password")</h5>
                                 <div class="row">
                                     <div class="col-md-10 col-lg-6">
-                                        <form asp-action="ChangePassword" method="post">
+                                        <form id="editPasswordForm">
+                                            <input type="hidden" class="form-control" name="Idemployee" value="@Model.Id">
                                             <div class="form-group">
                                                 <label>@_localizer.GetLocalizedString("Old Password")</label>
                                                 <input type="password" class="form-control" name="CurrentPassword">
@@ -116,7 +121,7 @@
                                                 <label>@_localizer.GetLocalizedString("Confirm Password")</label>
                                                 <input type="password" class="form-control" name="ConfirmPassword">
                                             </div>
-                                            <button type="submit" class="btn btn-primary">@_localizer.GetLocalizedString("Save Changes") </button>
+                                            <button type="button" class="btn btn-primary" id="saveChangesButton">@_localizer.GetLocalizedString("Save Changes")</button>
                                         </form>
                                     </div>
                                 </div>
@@ -153,3 +158,35 @@
     </div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#saveChangesButton").click(function (e) {
+            e.preventDefault();
+
+            var formData = {
+                Idemployee: $("input[name='Idemployee']").val(),
+                CurrentPassword: $("input[name='CurrentPassword']").val(),
+                NewPassword: $("input[name='NewPassword']").val(),
+                ConfirmPassword: $("input[name='ConfirmPassword']").val()
+            };
+
+            $.ajax({
+                url: '/admin/employee/editpassword',
+                type: 'POST',
+                data: formData,
+                success: function (response) {
+                    if (response.success) {
+                        alert(response.message);  // Cập nhật thành công
+                    } else {
+                        alert(response.message);  // Thông báo lỗi (mật khẩu không đúng hoặc không khớp)
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert('Đã xảy ra lỗi: ' + error);
+                }
+            });
+        });
+    });
+</script>

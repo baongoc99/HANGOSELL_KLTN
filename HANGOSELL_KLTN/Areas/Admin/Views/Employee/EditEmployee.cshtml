@@ -46,14 +46,39 @@
                             </div>
                             <div class="col-12 col-sm-4">
                                 <div class="form-group local-forms">
+                                    <label for="phoneNumber" class="form-label">@_localizer.GetLocalizedString("Phone Number") <span class="login-danger">*</span></label>
+                                    <input type="tel" class="form-control" id="phoneNumber" name="PhoneNumber" value="@Model.employee.PhoneNumber">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <div class="form-group local-forms">
                                     <label for="DateOfBirth" class="form-label">@_localizer.GetLocalizedString("Date of Birth") <span class="login-danger">*</span></label>
                                     <input type="date" class="form-control" id="dateOfBirth datetimepicker" name="DateOfBirth" value="@Model.employee.DateOfBirth.ToString("yyyy-MM-dd")" required>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-4">
                                 <div class="form-group local-forms">
-                                    <label for="phoneNumber" class="form-label">@_localizer.GetLocalizedString("Phone Number") <span class="login-danger">*</span></label>
-                                    <input type="tel" class="form-control" id="phoneNumber" name="PhoneNumber" value="@Model.employee.PhoneNumber">
+                                    <label for="JoinDate" class="form-label">@_localizer.GetLocalizedString("Join Date") <span class="login-danger">*</span></label>
+                                    <input type="date" class="form-control " id="JoinDate datetimepicker" value="@Model.employee.JoinDate.ToString("yyyy-MM-dd")" name="JoinDate">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <div class="form-group local-forms">
+                                    <label>@_localizer.GetLocalizedString("Roles") <span class="login-danger">*</span></label>
+                                    <select class="form-control select" name="RoleId">
+                                        @if (Model != null)
+                                        {
+                                            @foreach (var employee in Model.roles)
+                                            {
+                                                <option value="@employee.Id">@employee.RoleName</option>
+                                            }
+
+                                        }
+                                        else
+                                        {
+                                            <option>0</option>
+                                        }
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-4">
@@ -102,12 +127,6 @@
 
                             <div class="col-12 col-sm-4">
                                 <div class="form-group local-forms">
-                                    <label for="JoinDate" class="form-label">@_localizer.GetLocalizedString("Join Date") <span class="login-danger">*</span></label>
-                                    <input type="date" class="form-control " id="JoinDate datetimepicker" value="@Model.employee.JoinDate.ToString("yyyy-MM-dd")"  name="JoinDate">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-4">
-                                <div class="form-group local-forms">
                                     <label for="Status" class="form-label">@_localizer.GetLocalizedString("Status") <span class="login-danger">*</span></label>
                                     <select class="form-control select" name="status">
                                         <option disabled>Select Status</option>
@@ -121,25 +140,6 @@
                                 <div class="form-group local-forms">
                                     <label for="Position" class="form-label">@_localizer.GetLocalizedString("Position") <span class="login-danger">*</span></label>
                                     <input type="text" class="form-control" id="Position" value="@Model.employee.Position" name="Position">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-4">
-                                <div class="form-group local-forms">
-                                    <label>@_localizer.GetLocalizedString("Roles") <span class="login-danger">*</span></label>
-                                    <select class="form-control select" name="RoleId">
-                                        @if (Model != null)
-                                        {
-                                            @foreach (var employee in Model.roles)
-                                            {
-                                                <option value="@employee.Id">@employee.RoleName</option>
-                                            }
-
-                                        }
-                                        else
-                                        {
-                                            <option>0</option>
-                                        }
-                                    </select>
                                 </div>
                             </div>
 

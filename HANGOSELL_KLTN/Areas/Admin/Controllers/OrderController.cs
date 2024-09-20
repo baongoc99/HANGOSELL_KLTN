@@ -99,7 +99,7 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             }
             else
             {
-                customer.CompanyName = "Khach le";
+                customer.CompanyName = "Khách lẻ";
             }
             /// nếu khách hàng (lER)
             Customer customer1 = customerService.GetCustomerById(customer.Id);
@@ -110,7 +110,7 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             }
             else
             {
-                customer.CompanyName = "Khach le";
+                customer.CompanyName = "Khách lẻ";
             }
             customer.Email = customer1.Email;
             customer.PhoneNumber = customer1.PhoneNumber;
@@ -125,7 +125,7 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
 
             order.Code = GenerateOrderCode();
             order.CustomerId = customer1.Id;
-            order.Status = "đã giao";
+            order.Status = "Đã hoàn thành";
             order.Total = total;
             order.Quantity = 1;
             order.Phone = customer1.PhoneNumber;

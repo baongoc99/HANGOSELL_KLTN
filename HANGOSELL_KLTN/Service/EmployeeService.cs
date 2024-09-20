@@ -1,5 +1,6 @@
 ﻿using HANGOSELL_KLTN.Data;
 using HANGOSELL_KLTN.Models.EF;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace HANGOSELL_KLTN.Service
@@ -7,13 +8,34 @@ namespace HANGOSELL_KLTN.Service
     public class EmployeeService
     {
         private readonly ApplicationDbContext _context;
-        public EmployeeService(ApplicationDbContext context)
+        private readonly IPasswordHasher<Employee> _passwordHasher;
+        public EmployeeService(ApplicationDbContext context, IPasswordHasher<Employee> passwordHasher)
         {
             _context = context;
+            _passwordHasher = passwordHasher;
         }
-        public Employee CheckCodeAndPass(string codeEmployee, string password)
+
+        public string HashPassword(string password)
         {
-            Employee Employee = _context.Employees.FirstOrDefault(u => u.CodeEmployee == codeEmployee  || u.Email == codeEmployee && u.Password == password);
+            return _passwordHasher.HashPassword(null, password);
+        }
+        public PasswordVerificationResult VerifyPassword(string hashedPassword, string providedPassword)
+        {
+            try
+            {
+                return _passwordHasher.VerifyHashedPassword(null, hashedPassword, providedPassword);
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine($"x pass: {ex.Message}");
+                return PasswordVerificationResult.Failed;
+            }
+        }
+
+
+        public Employee CheckCodeAndPass(string codeEmployee)
+        {
+            Employee Employee = _context.Employees.FirstOrDefault(u => u.CodeEmployee == codeEmployee || u.Email == codeEmployee);
             return Employee;
         }
         public List<Employee> GetAllEmployee()
@@ -33,6 +55,12 @@ namespace HANGOSELL_KLTN.Service
         {
             return _context.Employees.FirstOrDefault(p => p.CodeEmployee == CodeEmployee);
         }
+
+        public Employee GetEmployeeByIdandCurrentPasswordEmployee(string CurrentPassword, int id)
+        {
+            return _context.Employees.FirstOrDefault(p => p.Password == CurrentPassword && p.Id == id);
+        }
+
 
         public void UpdateEmployee(Employee employee)
         {

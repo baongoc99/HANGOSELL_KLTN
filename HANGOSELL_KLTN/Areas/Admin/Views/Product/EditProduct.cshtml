@@ -110,7 +110,7 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group local-forms">
                                     <label asp-for="@Model.product.Price" class="form-label">@_localizer.GetLocalizedString("Price")</label>
-                                    <input asp-for="@Model.product.Price" class="form-control" id="Price" name="Price" type="number" step="0.01" value="@Model.product.Price" />
+                                    <input asp-for="@Model.product.Price" class="form-control" id="Price" name="Price" type="number"  value="@Model.product.Price" />
                                     <span asp-validation-for="@Model.product.Price" class="text-danger"></span>
                                 </div>
                             </div>
@@ -118,14 +118,10 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group local-forms">
                                     <label asp-for="@Model.product.PriceSale" class="form-label">@_localizer.GetLocalizedString("Sale Price")</label>
-                                    <input asp-for="@Model.product.PriceSale" class="form-control" id="PriceSale" name="PriceSale" type="number" step="0.01" value="@Model.product.PriceSale" />
+                                    <input asp-for="@Model.product.PriceSale" class="form-control" id="PriceSale" name="PriceSale" type="number"  value="@Model.product.PriceSale" />
                                     <span asp-validation-for="@Model.product.PriceSale" class="text-danger"></span>
                                 </div>
                             </div>
-
-
-                            
-
 
                             <div class="mb-3">
                                 <div class="student-submit">

@@ -5,6 +5,7 @@ using HANGOSELL_KLTN.Data;
 using HANGOSELL_KLTN.Models;
 using HANGOSELL_KLTN.Models.EF;
 using HANGOSELL_KLTN.Service;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
@@ -20,7 +21,7 @@ builder.Services.AddScoped<EmployeeService>();
 builder.Services.AddScoped<RoleService>();
 builder.Services.AddScoped<CustomerService>();
 builder.Services.AddScoped<ProductService>();
-/*builder.Services.AddScoped<SupplierService>();*/
+builder.Services.AddScoped<StoreService>();
 builder.Services.AddScoped<OrderDetailService>();
 builder.Services.AddScoped<OrderService>();
 builder.Services.AddScoped<PaymentService>();
@@ -28,6 +29,11 @@ builder.Services.AddScoped<OrderDetailCustomerService>();
 builder.Services.AddHttpClient<VietQRService>();
 builder.Services.AddScoped<VietQRService>();
 builder.Services.AddScoped<QRCodeRequestService>();
+
+
+
+/// mã hóa mật khẩu
+builder.Services.AddScoped<IPasswordHasher<Employee>, PasswordHasher<Employee>>();
 
 // Thêm cấu hình DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
