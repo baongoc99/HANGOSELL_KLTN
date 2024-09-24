@@ -5,6 +5,7 @@
     ViewData["Title"] = "Trang chủ Admin";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
+
 <div class="page-wrapper">
     <div class="content container-fluid">
         <div class="page-header">
@@ -90,12 +91,10 @@
                     <div class="card-header">
                         <div class="row align-items-center">
                             <div class="col-6">
-                                <h5 class="card-title">Overview</h5>
+                                <h5 class="card-title">@_localizer.GetLocalizedString("Overview")</h5>
                             </div>
                             <div class="col-6">
                                 <ul class="chart-list-out">
-                                    <li><span class="circle-blue"></span>Teacher</li>
-                                    <li><span class="circle-green"></span>Student</li>
                                     <li class="star-menus">
                                         <a href="javascript:;">
                                             <i class="fas fa-ellipsis-v"></i>
@@ -106,7 +105,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <div id="apexcharts-area"></div>
+                        <canvas id="myLineChart" width="300" height="200"></canvas>
                     </div>
                 </div>
             </div>
@@ -115,12 +114,10 @@
                     <div class="card-header">
                         <div class="row align-items-center">
                             <div class="col-6">
-                                <h5 class="card-title">Number of Students</h5>
+                                <h5 class="card-title">@_localizer.GetLocalizedString("Products sold")</h5>
                             </div>
                             <div class="col-6">
                                 <ul class="chart-list-out">
-                                    <li><span class="circle-blue"></span>Girls</li>
-                                    <li><span class="circle-green"></span>Boys</li>
                                     <li class="star-menus">
                                         <a href="javascript:;">
                                             <i class="fas fa-ellipsis-v"></i>
@@ -131,298 +128,181 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <div id="bar"></div>
+                        <canvas id="myPieChart" width="380" height="380"></canvas>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xl-6 d-flex">
-
-                <div class="card flex-fill student-space comman-shadow">
-                    <div class="card-header d-flex align-items-center">
-                        <h5 class="card-title">Star Students</h5>
-                        <ul class="chart-list-out student-ellips">
-                            <li class="star-menus">
-                                <a href="javascript:;"><i class="fas fa-ellipsis-v"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table star-student table-hover table-center table-borderless table-striped">
-                                <thead class="thead-light">
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th class="text-center">Marks</th>
-                                        <th class="text-center">Percentage</th>
-                                        <th class="text-end">Year</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-nowrap">
-                                            <div>PRE2209</div>
-                                        </td>
-                                        <td class="text-nowrap">
-                                            <a href="profile.html">
-                                                <img class="rounded-circle" src="@Url.Content("~/Client/img/profiles/avatar-01.jpg")" width="25" alt="Star Students"> Soeng Souy
-                                            </a>
-                                        </td>
-                                        <td class="text-center">1185</td>
-                                        <td class="text-center">98%</td>
-                                        <td class="text-end">
-                                            <div>2019</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-nowrap">
-                                            <div>PRE1245</div>
-                                        </td>
-                                        <td class="text-nowrap">
-                                            <a href="profile.html">
-                                                <img class="rounded-circle" src="@Url.Content("~/Client/img/profiles/avatar-01.jpg")" width="25" alt="Star Students"> Soeng Souy
-                                            </a>
-                                        </td>
-                                        <td class="text-center">1195</td>
-                                        <td class="text-center">99.5%</td>
-                                        <td class="text-end">
-                                            <div>2018</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-nowrap">
-                                            <div>PRE1625</div>
-                                        </td>
-                                        <td class="text-nowrap">
-                                            <a href="profile.html">
-                                                <img class="rounded-circle" src="@Url.Content("~/Client/img/profiles/avatar-01.jpg")" width="25" alt="Star Students"> Soeng Souy
-                                            </a>
-                                        </td>
-                                        <td class="text-center">1196</td>
-                                        <td class="text-center">99.6%</td>
-                                        <td class="text-end">
-                                            <div>2017</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-nowrap">
-                                            <div>PRE2516</div>
-                                        </td>
-                                        <td class="text-nowrap">
-                                            <a href="profile.html">
-                                                <img class="rounded-circle" src="@Url.Content("~/Client/img/profiles/avatar-01.jpg")" width="25" alt="Star Students"> Soeng Souy
-                                            </a>
-                                        </td>
-                                        <td class="text-center">1187</td>
-                                        <td class="text-center">98.2%</td>
-                                        <td class="text-end">
-                                            <div>2016</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-nowrap">
-                                            <div>PRE2209</div>
-                                        </td>
-                                        <td class="text-nowrap">
-                                            <a href="profile.html">
-                                                <img class="rounded-circle" src="@Url.Content("~/Client/img/profiles/avatar-01.jpg")" width="25" alt="Star Students"> Soeng Souy
-                                            </a>
-                                        </td>
-                                        <td class="text-center">1185</td>
-                                        <td class="text-center">98%</td>
-                                        <td class="text-end">
-                                            <div>2015</div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6">
-                <div class="card flex-fill student-space comman-shadow">
-                    <div class="card-header d-flex align-items-center">
-                        <h5 class="card-title">Latest Students</h5>
-                        <ul class="chart-list-out student-ellips">
-                            <li class="star-menus">
-                                <a href="javascript:;"><i class="fas fa-ellipsis-v"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table star-student table-hover table-center table-borderless table-striped">
-                                <thead class="thead-light">
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th class="text-center">Marks</th>
-                                        <th class="text-center">Percentage</th>
-                                        <th class="text-end">Year</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-nowrap">
-                                            <div>PRE2209</div>
-                                        </td>
-                                        <td class="text-nowrap">
-                                            <a href="profile.html">
-                                                <img class="rounded-circle" src="@Url.Content("~/Client/img/profiles/avatar-01.jpg")" width="25" alt="Star Students"> Soeng Souy
-                                            </a>
-                                        </td>
-                                        <td class="text-center">1185</td>
-                                        <td class="text-center">98%</td>
-                                        <td class="text-end">
-                                            <div>2019</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-nowrap">
-                                            <div>PRE1245</div>
-                                        </td>
-                                        <td class="text-nowrap">
-                                            <a href="profile.html">
-                                                <img class="rounded-circle" src="@Url.Content("~/Client/img/profiles/avatar-01.jpg")" width="25" alt="Star Students"> Soeng Souy
-                                            </a>
-                                        </td>
-                                        <td class="text-center">1195</td>
-                                        <td class="text-center">99.5%</td>
-                                        <td class="text-end">
-                                            <div>2018</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-nowrap">
-                                            <div>PRE1625</div>
-                                        </td>
-                                        <td class="text-nowrap">
-                                            <a href="profile.html">
-                                                <img class="rounded-circle" src="@Url.Content("~/Client/img/profiles/avatar-01.jpg")" width="25" alt="Star Students"> Soeng Souy
-                                            </a>
-                                        </td>
-                                        <td class="text-center">1196</td>
-                                        <td class="text-center">99.6%</td>
-                                        <td class="text-end">
-                                            <div>2017</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-nowrap">
-                                            <div>PRE2516</div>
-                                        </td>
-                                        <td class="text-nowrap">
-                                            <a href="profile.html">
-                                                <img class="rounded-circle" src="@Url.Content("~/Client/img/profiles/avatar-01.jpg")" width="25" alt="Star Students"> Soeng Souy
-                                            </a>
-                                        </td>
-                                        <td class="text-center">1187</td>
-                                        <td class="text-center">98.2%</td>
-                                        <td class="text-end">
-                                            <div>2016</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-nowrap">
-                                            <div>PRE2209</div>
-                                        </td>
-                                        <td class="text-nowrap">
-                                            <a href="profile.html">
-                                                <img class="rounded-circle" src="@Url.Content("~/Client/img/profiles/avatar-01.jpg")" width="25" alt="Star Students"> Soeng Souy
-                                            </a>
-                                        </td>
-                                        <td class="text-center">1185</td>
-                                        <td class="text-center">98%</td>
-                                        <td class="text-end">
-                                            <div>2015</div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12 col-lg-12">
-                <div class="card comman-shadow">
-                    <div class="card-header">
-                        <h5 class="card-title">Upcoming Exams</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table upcoming-exams table-borderless table-hover table-center">
-                                <thead class="thead-light">
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Subject</th>
-                                        <th>Date</th>
-                                        <th>Time</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>PRE2209</td>
-                                        <td>Soeng Souy</td>
-                                        <td>English</td>
-                                        <td>15:50 - 18:30</td>
-                                        <td class="text-success">Active</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>PRE2209</td>
-                                        <td>Soeng Souy</td>
-                                        <td>English</td>
-                                        <td>15:50 - 18:30</td>
-                                        <td class="text-success">Active</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>PRE2209</td>
-                                        <td>Soeng Souy</td>
-                                        <td>English</td>
-                                        <td>15:50 - 18:30</td>
-                                        <td class="text-success">Active</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>PRE2209</td>
-                                        <td>Soeng Souy</td>
-                                        <td>English</td>
-                                        <td>15:50 - 18:30</td>
-                                        <td class="text-success">Active</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>PRE2209</td>
-                                        <td>Soeng Souy</td>
-                                        <td>English</td>
-                                        <td>15:50 - 18:30</td>
-                                        <td class="text-success">Active</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    function generateRandomColors(numColors) {
+        const colors = [];
+        for (let i = 0; i < numColors; i++) {
+            const color = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.2)`;
+            colors.push(color);
+        }
+        return colors;
+    }
+
+    function generateRandomBorderColors(numColors) {
+        const colors = [];
+        for (let i = 0; i < numColors; i++) {
+            const color = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 1)`;
+            colors.push(color);
+        }
+        return colors;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // Tạo request AJAX để lấy dữ liệu từ server
+        fetch('/admin/home/tongphantram')  // Thay URL này bằng đúng route API
+            .then(response => response.json())
+            .then(data => {
+                // Xử lý dữ liệu nhận được từ API
+                const labels = data.map(item => item.product.title); // Tên sản phẩm
+                const doanhthu = data.map(item => item.tongdoanhthu); // Tổng doanh thu của từng sản phẩm
+                const backgroundColors = generateRandomColors(labels.length);
+                const borderColors = generateRandomBorderColors(labels.length);
+                // Tạo biểu đồ tròn với Chart.js
+                const ctx = document.getElementById('myPieChart').getContext('2d');
+                const myPieChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: labels,  // Tên sản phẩm
+                        datasets: [{
+                            label: 'Tổng doanh thu (%)',
+                            data: doanhthu, // Dữ liệu tổng doanh thu
+                            backgroundColor: backgroundColors, // Màu nền ngẫu nhiên
+                            borderColor: borderColors,         // Màu viền ngẫu nhiên
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function (context) {
+                                        let label = context.label || '';
+                                        if (label) {
+                                            label += ': ';
+                                        }
+                                        if (context.parsed !== null) {
+                                            label += context.parsed + '%';  // Hiển thị phần trăm
+                                        }
+                                        return label;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Lỗi khi lấy dữ liệu:', error);
+            });
+    });
+   
+
+</script>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: '/admin/home/Doanhthutheothang', // Đường dẫn đến controller
+            method: 'GET',
+            success: function (data) {
+                // Khởi tạo mảng doanh thu theo tháng
+                var months = [
+                    "Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6",
+                    "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"
+                ];
+                var revenues = new Array(12).fill(0); // Mảng doanh thu
+
+                // Duyệt qua dữ liệu từ server và gán doanh thu vào mảng
+                data.forEach(function (item) {
+                    var month = item.thang - 1; // Lấy tháng (giá trị từ 0 - 11)
+                    revenues[month] = item.tongdoanhthu; // Gán doanh thu cho tháng
+                });
+
+                // Tạo biểu đồ đường
+                const ctx = document.getElementById('myLineChart').getContext('2d');
+                const myLineChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: months, // Nhãn tháng
+                        datasets: [{
+                            label: 'Tổng doanh thu',
+                            data: revenues, // Dữ liệu doanh thu
+                            borderColor: generateRandomColor(), // Màu ngẫu nhiên cho đường
+                            fill: false,
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Tổng doanh thu (VND)'
+                                }
+                            },
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Tháng'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: true
+                            }
+                        }
+                    }
+                });
+            },
+            error: function (error) {
+                console.error('Lỗi khi lấy dữ liệu doanh thu:', error);
+                alert("Lỗi: " + error.responseText);
+            }
+        });
+    });
+
+    // Hàm tạo màu ngẫu nhiên
+    function generateRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+</script>
+<style>
+        /* CSS để điều chỉnh kích thước canvas */
+        #myPieChart {
+            max-width: 400px;  /* Đặt chiều rộng tối đa cho biểu đồ */
+            max-height: 400px; /* Đặt chiều cao tối đa cho biểu đồ */
+            margin: 0 auto;    /* Căn giữa biểu đồ */
+        }
+    </style>
+
 
 @section Scripts {
     <!-- Optional: JavaScript libraries for various components like ApexCharts, etc. -->
-    <script src="~/Client/plugins/apexcharts/apexcharts.min.js"></script>
-    <script src="~/Client/js/dashboard-charts.js"></script>
-    <script src="~/Client/js/script.js"></script>
+      <script src="~/Client/plugins/apexcharts/apexcharts.min.js"></script>
+      <script src="~/Client/js/dashboard-charts.js"></script>
+      <script src="~/Client/js/script.js"></script>
 
 }
 

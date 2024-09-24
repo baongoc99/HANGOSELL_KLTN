@@ -234,6 +234,9 @@
   <data name="Order" xml:space="preserve">
     <value>Đơn hàng</value>
   </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Tổng quan</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Mật khẩu</value>
   </data>
@@ -260,6 +263,9 @@
   </data>
   <data name="Product Code" xml:space="preserve">
     <value>Mã sản phẩm</value>
+  </data>
+  <data name="Products sold" xml:space="preserve">
+    <value>Sản phẩm bán ra </value>
   </data>
   <data name="Profile" xml:space="preserve">
     <value>Hồ sơ</value>

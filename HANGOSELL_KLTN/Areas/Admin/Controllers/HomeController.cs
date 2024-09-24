@@ -12,12 +12,15 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
         private readonly CustomerService customerService;
         private readonly OrderService orderService;
         private readonly ProductService productService;
+        private readonly OrderDetailService orderDetailService;
 
-        public HomeController(CustomerService customerService, OrderService orderService, ProductService productService)
+        public HomeController(CustomerService customerService, OrderService orderService, ProductService productService,
+            OrderDetailService orderDetailService)
         {
             this.customerService = customerService;
             this.orderService = orderService;
             this.productService = productService;
+            this.orderDetailService = orderDetailService;
         }
         public IActionResult Index()
         {
@@ -33,9 +36,78 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             ViewData["tongcustomer"] = customerService.GetAllCustomer().Count();
             ViewData["tongdoanhthu"] = orderService.GetAllorder().Sum(x => x.Total);
             ViewData["tongorder"] = orderService.GetAllorder().Count();
-            ViewData["tongproduct"]= productService.GetAllProduct().Count();
+            ViewData["tongproduct"] = productService.GetAllProduct().Count();
+
+
 
             return View();
+        }
+
+
+        public IActionResult Tongphantram()
+        {
+            List<OrderDetail> listorderdetel = orderDetailService.GetAllCategory();
+            var locsptheoid = listorderdetel.GroupBy(od => od.ProductId)
+                .Select(x => new
+                {
+                    productid = x.Key,
+                    quantity = x.Sum(x => x.Quantity),
+                }
+                ).ToList();
+            int tongsoluongmuaban = listorderdetel.Sum(muaproduct => muaproduct.Quantity);
+            var phantramproduct = locsptheoid.Select(item => new
+            {
+                Products = productService.GetProductById(item.productid),
+                phantramproduct = ((float)item.quantity / tongsoluongmuaban) * 100,
+            })
+                .OrderByDescending(p => p.phantramproduct).ToList();
+            List<Object> result = new List<Object>();
+            foreach (var item in phantramproduct)
+            {
+                item.Products.ProductCategory = null;
+                Phantram phantram = new Phantram()
+                {
+                    product = item.Products,
+                    tongdoanhthu = item.phantramproduct,
+                };
+                result.Add(phantram);
+            }
+            return Json(result);
+        }
+
+        private class Phantram
+        {
+            public Product product { get; set; }
+            public float tongdoanhthu { get; set; }
+        }
+
+        public IActionResult Doanhthutheothang()
+        {
+            List<Order> orders = orderService.GetAllorder();
+
+            var doanhthutheothang = orders.GroupBy(od => od.CreateDate.Month)
+                .Select(g => new
+                {
+                    Thang = g.Key,
+                    Tongdoanhthu = g.Sum(dt => dt.Total)
+                }).ToList();
+            List<object> result = new List<object>();
+            foreach (var doanhthu in doanhthutheothang)
+            {
+                Doanhthuthangs doanhthuthangs = new Doanhthuthangs()
+                {
+                    Thang = doanhthu.Thang,
+                    tongdoanhthu = (float)doanhthu.Tongdoanhthu,
+                };
+                result.Add(doanhthuthangs);
+            }
+            return Json(result);
+        }
+
+        private class Doanhthuthangs
+        {
+            public int Thang { get; set; }
+            public float tongdoanhthu { get; set; }
         }
 
 

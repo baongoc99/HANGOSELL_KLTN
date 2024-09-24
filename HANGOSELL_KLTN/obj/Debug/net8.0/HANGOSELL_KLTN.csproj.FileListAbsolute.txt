@@ -569,3 +569,4 @@ C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\bin\Debug\net8.0\Micros
 C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\bin\Debug\net8.0\Microsoft.Extensions.Localization.Abstractions.dll
 C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
