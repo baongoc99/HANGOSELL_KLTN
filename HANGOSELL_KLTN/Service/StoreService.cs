@@ -17,6 +17,23 @@ public class StoreService
     {
         return await _context.Stores.FirstOrDefaultAsync();
     }
+    public Store CreateStore(Store store)
+    {
+        _context.Stores.Add(store);
+        _context.SaveChangesAsync();
+        return store;
+    }
+    public Store UpdateStore(Store store)
+    {
+        _context.Stores.Update(store);
+        _context.SaveChangesAsync();
+        return store;
+    }
+    public Store GetStoreById(int id)
+    {
+        return _context.Stores.Find(id);
+    }
+
 
     public async Task<QRCodeRequest> GetQRCodeRequestAsync()
     {

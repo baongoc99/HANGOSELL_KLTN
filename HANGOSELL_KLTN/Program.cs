@@ -120,7 +120,7 @@ app.MapAreaControllerRoute(
 // Cấu hình route mặc định trước, sau đó là route cho các khu vực
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Login}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 
 

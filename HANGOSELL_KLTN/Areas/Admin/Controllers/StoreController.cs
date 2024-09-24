@@ -32,23 +32,56 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
 
             return View(model);
         }
-        public async Task<IActionResult> EditStore(Store model, IFormFile logo)
+
+
+        public IActionResult EditorAddStore(Store store, IFormFile Logo, int Id)
         {
-            if (!ModelState.IsValid)
+            if (Id > 0)
             {
-                // Nếu dữ liệu không hợp lệ, trả về trang chỉnh sửa với các lỗi
-                return View("Index", new ModelDataset { store = await _storeService.GetStoreAsync() });
+                Store store1 = _storeService.GetStoreById(Id);
+                if (store1 != null)
+                {
+                    store1.Logo = SaveImage(Logo);
+                    store1.Email = store.Email;
+                    store1.PhoneNumber = store.PhoneNumber;
+                    store1.Address = store.Address;
+                    store1.StoreName = store.StoreName;
+                    _storeService.UpdateStore(store1);
+                }
             }
-
-            var result = await _storeService.UpdateStoreAsync(model, logo);
-            if (!result)
+            else
             {
-                // Nếu không cập nhật thành công, chuyển hướng hoặc trả về lỗi
-                return NotFound();
+                store.Logo = SaveImage(Logo);
+                _storeService.CreateStore(store);
             }
-
-            // Sau khi lưu thành công, chuyển hướng hoặc trả về trang nào đó
             return RedirectToAction("Index");
+        }
+        private string SaveImage(IFormFile image)
+        {
+            if (image != null)
+            {
+                var fileExtension = Path.GetExtension(image.FileName).ToLowerInvariant();
+                var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
+                if (!allowedExtensions.Contains(fileExtension))
+                {
+                    throw new InvalidOperationException("Invalid image file type");
+                }
+
+                var uniqueFileName = Guid.NewGuid().ToString() + fileExtension;
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", uniqueFileName);
+                var directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    image.CopyTo(stream);
+                }
+                return Path.Combine("images", uniqueFileName).Replace("\\", "/");
+            }
+            return "images/default.jpg";
         }
     }
 }

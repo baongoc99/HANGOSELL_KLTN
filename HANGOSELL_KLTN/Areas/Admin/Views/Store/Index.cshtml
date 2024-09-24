@@ -28,7 +28,7 @@
                         {
                             <div class="col-auto ">
                                 <a href="#">
-                                    <img class="" alt="" style="width:204px;max-width:204px; height:60px" src="@Model.store.Logo" />
+                                    <img class="" alt="" style="width:204px;max-width:204px; height:60px" src="~/@Model.store.Logo" />
                                 </a>
                             </div>
                             <div class="col ms-md-n2 profile-user-info">
@@ -70,26 +70,28 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">@_localizer.GetLocalizedString("Edit Store Info")</h5>
-                                <form asp-action="EditStore" method="post" enctype="multipart/form-data">
+                                <form action="/admin/store/EditorAddStore" method="post" enctype="multipart/form-data">
+                                    <input type="hidden" class="form-control" name="Id" value="@Model?.store?.StoreId" />
+
                                     <div class="row">
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group local-forms">
                                                 <label>@_localizer.GetLocalizedString("Store Name")</label>
-                                                <input type="text" class="form-control" name="StoreName" value="@Model?.store?.StoreName ?? " "" />
+                                                <input type="text" class="form-control" name="StoreName" value="@Model?.store?.StoreName" />
                                             </div>
                                             <div class="form-group local-forms">
                                                 <label>@_localizer.GetLocalizedString("Address")</label>
-                                                <input type="text" class="form-control" name="Address" value="@Model?.store?.Address ?? " "" />
+                                                <input type="text" class="form-control" name="Address" value="@Model?.store?.Address" />
                                             </div>
                                             <div class="form-group local-forms">
                                                 <label>@_localizer.GetLocalizedString("Phone Number")</label>
-                                                <input type="text" class="form-control" name="PhoneNumber" value="@Model?.store?.PhoneNumber ?? " "" />
+                                                <input type="text" class="form-control" name="PhoneNumber" value="@Model?.store?.PhoneNumber " />
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group local-forms">
                                                 <label>@_localizer.GetLocalizedString("Email")</label>
-                                                <input type="email" class="form-control" name="Email" value="@Model?.store?.Email ?? " "" />
+                                                <input type="email" class="form-control" name="Email" value="@Model?.store?.Email " />
                                             </div>
                                             <div class="form-group local-forms">
                                                 <label>@_localizer.GetLocalizedString("Logo")</label>
