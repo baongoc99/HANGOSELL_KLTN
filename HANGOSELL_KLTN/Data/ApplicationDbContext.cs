@@ -88,29 +88,21 @@ namespace HANGOSELL_KLTN.Data
 
             // Seed dữ liệu mẫu cho các thực thể
 
-            // Seed Categories
-            modelBuilder.Entity<ProductCategory>().HasData(
-                new ProductCategory
-                {
-                    Id = 1,
-                    Title = "Áo Thun",
-                    Description = "Áo thun các loại.",
-                    Icon = "icon-t-shirt",
-                    SeoTitle = "Áo Thun",
-                    SeoKeyword = "ao thun, ao phông",
-                    SeoDescription = "Áo thun đa dạng mẫu mã và màu sắc."
-                },
-                new ProductCategory
-                {
-                    Id = 2,
-                    Title = "Quần Jeans",
-                    Description = "Quần jeans thời trang.",
-                    Icon = "icon-jeans",
-                    SeoTitle = "Quần Jeans",
-                    SeoKeyword = "quan jeans, jeans",
-                    SeoDescription = "Quần jeans phù hợp với nhiều phong cách."
-                }
-            );
+            // Dữ liệu cho ProductCategory
+            modelBuilder.Entity<ProductCategory>().HasData(new List<ProductCategory>
+            {
+                new ProductCategory { Id = 1, Title = "Áo", Description = "Các loại áo thời trang", CreateDate = DateTime.Now },
+                new ProductCategory { Id = 2, Title = "Quần", Description = "Các loại quần thời trang", CreateDate = DateTime.Now },
+                new ProductCategory { Id = 3, Title = "Giày", Description = "Giày dép thời trang", CreateDate = DateTime.Now },
+                new ProductCategory { Id = 4, Title = "Phụ kiện", Description = "Phụ kiện thời trang", CreateDate = DateTime.Now },
+                new ProductCategory { Id = 5, Title = "Đồ lót", Description = "Đồ lót thời trang", CreateDate = DateTime.Now },
+                new ProductCategory { Id = 6, Title = "Đầm", Description = "Đầm thời trang", CreateDate = DateTime.Now },
+                new ProductCategory { Id = 7, Title = "Áo khoác", Description = "Áo khoác thời trang", CreateDate = DateTime.Now },
+                new ProductCategory { Id = 8, Title = "Thời trang nam", Description = "Thời trang nam", CreateDate = DateTime.Now },
+                new ProductCategory { Id = 9, Title = "Thời trang nữ", Description = "Thời trang nữ", CreateDate = DateTime.Now },
+                new ProductCategory { Id = 10, Title = "Thời trang trẻ em", Description = "Thời trang trẻ em", CreateDate = DateTime.Now }
+            });
+
 
             // Seed Roles
             modelBuilder.Entity<Role>().HasData(
@@ -119,121 +111,59 @@ namespace HANGOSELL_KLTN.Data
             );
 
             // Seed data for Product
-            modelBuilder.Entity<Product>().HasData(
-                new Product
-                {
-                    Id = 1,
-                    Title = "Áo Thun Trắng",
-                    ProductCode = "AT01",
-                    ProductCategoryId = 1,
-                    Description = "Áo thun trắng đơn giản, thoải mái.",
-                    Price = 150000,
-                    Quantity = 100,
-                },
-                new Product
-                {
-                    Id = 2,
-                    Title = "Quần Jeans Xanh",
-                    ProductCode = "QJ01",
-                    ProductCategoryId = 2,
-                    Description = "Quần jeans xanh, kiểu dáng trẻ trung.",
-                    Price = 250000,
-                    Quantity = 50,
-                }
-            );
+            modelBuilder.Entity<Product>().HasData(new List<Product>
+            {
+                new Product { Id = 1, Title = "Áo thun trắng", ProductCode = "AT01", ProductCategoryId = 1, Description = "Áo thun trắng cotton thoải mái", Detail = "Áo thun trắng, chất liệu cotton 100%, dễ dàng kết hợp với nhiều trang phục.", Image = "images/products/ao_thun_trang.jpg", Price = 150000, PriceSale = null, Quantity = 100, CreateDate = DateTime.Now },
+                new Product { Id = 2, Title = "Quần jeans xanh", ProductCode = "QJ01", ProductCategoryId = 2, Description = "Quần jeans xanh, thời trang và bền bỉ", Detail = "Quần jeans màu xanh, chất liệu dày dặn, phong cách trẻ trung.", Image = "images/products/quan_jeans_xanh.jpg", Price = 250000, PriceSale = 200000, Quantity = 50, CreateDate = DateTime.Now },
+                new Product { Id = 3, Title = "Giày thể thao", ProductCode = "GT01", ProductCategoryId = 3, Description = "Giày thể thao, phù hợp cho mọi hoạt động", Detail = "Giày thể thao với thiết kế năng động, thoáng khí.", Image = "images/products/giai_the_thao.jpg", Price = 350000, PriceSale = 300000, Quantity = 75, CreateDate = DateTime.Now },
+                new Product { Id = 4, Title = "Mũ lưỡi trai", ProductCode = "MLT01", ProductCategoryId = 4, Description = "Mũ lưỡi trai thời trang", Detail = "Mũ lưỡi trai phong cách, có thể điều chỉnh kích cỡ.", Image = "images/products/mu_luoi_trai.jpg", Price = 80000, PriceSale = null, Quantity = 200, CreateDate = DateTime.Now },
+                new Product { Id = 5, Title = "Đồ lót nữ", ProductCode = "DLN01", ProductCategoryId = 5, Description = "Đồ lót nữ mềm mại và thoải mái", Detail = "Đồ lót nữ, chất liệu cotton, tạo cảm giác dễ chịu.", Image = "images/products/do_lot_nu.jpg", Price = 120000, PriceSale = null, Quantity = 150, CreateDate = DateTime.Now },
+                new Product { Id = 6, Title = "Đầm dạ hội", ProductCode = "DH01", ProductCategoryId = 6, Description = "Đầm dạ hội sang trọng", Detail = "Đầm dạ hội, thiết kế đẹp mắt, phù hợp cho các sự kiện.", Image = "images/products/dam_da_hội.jpg", Price = 600000, PriceSale = 500000, Quantity = 30, CreateDate = DateTime.Now },
+                new Product { Id = 7, Title = "Áo khoác nữ", ProductCode = "AKN01", ProductCategoryId = 7, Description = "Áo khoác nữ thời trang", Detail = "Áo khoác nữ ấm áp, thiết kế thời trang.", Image = "images/products/ao_khoac_nu.jpg", Price = 400000, PriceSale = null, Quantity = 50, CreateDate = DateTime.Now },
+                new Product { Id = 8, Title = "Thời trang nam", ProductCode = "TN01", ProductCategoryId = 8, Description = "Thời trang nam đa dạng", Detail = "Bộ sưu tập thời trang nam phong cách.", Image = "images/products/thoi_trang_nam.jpg", Price = 500000, PriceSale = null, Quantity = 60, CreateDate = DateTime.Now },
+                new Product { Id = 9, Title = "Thời trang nữ", ProductCode = "TN02", ProductCategoryId = 9, Description = "Thời trang nữ đẹp mắt", Detail = "Bộ sưu tập thời trang nữ mới nhất.", Image = "images/products/thoi_trang_nu.jpg", Price = 450000, PriceSale = 400000, Quantity = 70, CreateDate = DateTime.Now },
+                new Product { Id = 10, Title = "Thời trang trẻ em", ProductCode = "TT01", ProductCategoryId = 10, Description = "Thời trang trẻ em đáng yêu", Detail = "Bộ sưu tập thời trang trẻ em phong cách.", Image = "images/products/thoi_trang_tre_em.jpg", Price = 200000, PriceSale = null, Quantity = 80, CreateDate = DateTime.Now }
+            });
+
 
             // Seed Customers
-            modelBuilder.Entity<Customer>().HasData(
-                new Customer
-                {
-                    Id = 1,
-                    CompanyName = "Khách lẻ", // Dữ liệu mặc định cho khách lẻ
-                    ContactPerson = "Khách lẻ",
-                    Email = "khach.le@example.com",
-                    Password = "hashed_password_3", // Đảm bảo mã hóa trong ứng dụng thực tế
-                    PhoneNumber = "0000000000",
-                    Address = "Không có địa chỉ"
-                },
-                new Customer
-                {
-                    Id = 2,
-                    CompanyName = "Công ty CP XYZ",
-                    ContactPerson = "Trần Thị B",
-                    Email = "b.tran@xyz.com",
-                    Password = "hashed_password_2", // Ensure this is hashed in a real application
-                    PhoneNumber = "0987654321",
-                    Address = "456 Đường DEF, Hà Nội"
-                },
-                new Customer
-                {
-                    Id = 3,
-                    CompanyName = "Công ty TNHH ABC",
-                    ContactPerson = "Nguyễn Văn A",
-                    Email = "a.nguyen@abc.com",
-                    Password = "hashed_password_1", // Ensure this is hashed in a real application
-                    PhoneNumber = "0912345678",
-                    Address = "123 Đường ABC, TP.HCM"
-                }
-            );
+            modelBuilder.Entity<Customer>().HasData(new List<Customer>
+            {
+                new Customer { Id = 1, CompanyName = "Khách lẻ", ContactPerson = "Khách hàng", Email = "khachle@company.com", Password = "password1", PhoneNumber = "0123456789", Address = "Không xác định" },
+                new Customer { Id = 2, CompanyName = "Công ty ABC", ContactPerson = "Nguyễn Văn A", Email = "abc@company.com", Password = "password2", PhoneNumber = "0987654321", Address = "123 Đường ABC, TP.HCM" },
+                new Customer { Id = 3, CompanyName = "Công ty XYZ", ContactPerson = "Trần Thị B", Email = "xyz@company.com", Password = "password3", PhoneNumber = "0123456780", Address = "456 Đường XYZ, TP.HCM" },
+                new Customer { Id = 4, CompanyName = "Công ty DEF", ContactPerson = "Lê Văn C", Email = "def@company.com", Password = "password4", PhoneNumber = "0987654312", Address = "789 Đường DEF, TP.HCM" },
+                new Customer { Id = 5, CompanyName = "Công ty GHI", ContactPerson = "Phạm Thị D", Email = "ghi@company.com", Password = "password5", PhoneNumber = "0123456790", Address = "321 Đường GHI, TP.HCM" },
+                new Customer { Id = 6, CompanyName = "Công ty JKL", ContactPerson = "Nguyễn Văn E", Email = "jkl@company.com", Password = "password6", PhoneNumber = "0987654301", Address = "654 Đường JKL, TP.HCM" },
+                new Customer { Id = 7, CompanyName = "Công ty MNO", ContactPerson = "Trần Thị F", Email = "mno@company.com", Password = "password7", PhoneNumber = "0123456700", Address = "987 Đường MNO, TP.HCM" },
+                new Customer { Id = 8, CompanyName = "Công ty PQR", ContactPerson = "Lê Văn G", Email = "pqr@company.com", Password = "password8", PhoneNumber = "0987654320", Address = "159 Đường PQR, TP.HCM" },
+                new Customer { Id = 9, CompanyName = "Công ty STU", ContactPerson = "Phạm Thị H", Email = "stu@company.com", Password = "password9", PhoneNumber = "0123456781", Address = "753 Đường STU, TP.HCM" },
+                new Customer { Id = 10, CompanyName = "Công ty VWX", ContactPerson = "Nguyễn Văn I", Email = "vwx@company.com", Password = "password10", PhoneNumber = "0987654322", Address = "951 Đường VWX, TP.HCM" }
+            });
+
 
             // Seed Employees
-            modelBuilder.Entity<Employee>().HasData(
-                new Employee
-                {
-                    Id = 1,
-                    CodeEmployee = "EMP001",
-                    EmployeeName = "Nguyễn Văn A",
-                    Email = "a.nguyen@example.com",
-                    Password = "hashed_password_1", // Ensure this is hashed in a real application
-                    DateOfBirth = new DateTime(1990, 5, 20),
-                    PhoneNumber = "0912345678",
-                    Address = "123 Đường ABC, TP.HCM",
-                    JoinDate = new DateTime(2021, 1, 15),
-                    Status = true, // Assuming Status is a boolean
-                    RoleID = 1, // Reference to Role table
-                    Avatar = "avatar1.png",
-                    Position = "Senior Developer"
-                },
-                new Employee
-                {
-                    Id = 2,
-                    CodeEmployee = "EMP002",
-                    EmployeeName = "Trần Thị B",
-                    Email = "b.tran@example.com",
-                    Password = "hashed_password_2", // Ensure this is hashed in a real application
-                    DateOfBirth = new DateTime(1985, 8, 10),
-                    PhoneNumber = "0987654321",
-                    Address = "456 Đường DEF, Hà Nội",
-                    JoinDate = new DateTime(2020, 6, 25),
-                    Status = false, // Assuming Status is a boolean
-                    RoleID = 2, // Reference to Role table
-                    Avatar = "avatar2.png",
-                    Position = "Junior Developer"
-                }
-            );
+            modelBuilder.Entity<Employee>().HasData(new List<Employee>
+            {
+                new Employee { Id = 1, CodeEmployee = "AD001", EmployeeName = "Admin", Email = "admin@lena.com", Password = "admin123", DateOfBirth = new DateTime(1990, 1, 1), PhoneNumber = "0901234567", Address = "123 Đường ABC, TP.HCM", JoinDate = new DateTime(2020, 1, 1), Status = true, RoleID = 1, Avatar = "admin_avatar.png", Position = "Admin" },
+                new Employee { Id = 2, CodeEmployee = "QL001", EmployeeName = "Nguyễn Văn A", Email = "a@lena.com", Password = "password", DateOfBirth = new DateTime(1995, 2, 2), PhoneNumber = "0907654321", Address = "456 Đường XYZ, TP.HCM", JoinDate = new DateTime(2021, 2, 1), Status = true, RoleID = 2, Avatar = "a_avatar.png", Position = "Quản lý" },
+                new Employee { Id = 3, CodeEmployee = "NV001", EmployeeName = "Trần Thị B", Email = "b@lena.com", Password = "password", DateOfBirth = new DateTime(1992, 3, 3), PhoneNumber = "0912345678", Address = "789 Đường DEF, TP.HCM", JoinDate = new DateTime(2021, 3, 1), Status = true, RoleID = 3, Avatar = "b_avatar.png", Position = "Nhân viên" },
+                new Employee { Id = 4, CodeEmployee = "NV002", EmployeeName = "Lê Văn C", Email = "c@lena.com", Password = "password", DateOfBirth = new DateTime(1994, 4, 4), PhoneNumber = "0923456789", Address = "321 Đường GHI, TP.HCM", JoinDate = new DateTime(2021, 4, 1), Status = true, RoleID = 3, Avatar = "c_avatar.png", Position = "Nhân viên" },
+                new Employee { Id = 5, CodeEmployee = "NV003", EmployeeName = "Phạm Thị D", Email = "d@lena.com", Password = "password", DateOfBirth = new DateTime(1990, 5, 5), PhoneNumber = "0934567890", Address = "654 Đường JKL, TP.HCM", JoinDate = new DateTime(2021, 5, 1), Status = true, RoleID = 3, Avatar = "d_avatar.png", Position = "Nhân viên" },
+                new Employee { Id = 6, CodeEmployee = "NV004", EmployeeName = "Nguyễn Văn E", Email = "e@lena.com", Password = "password", DateOfBirth = new DateTime(1988, 6, 6), PhoneNumber = "0945678901", Address = "987 Đường MNO, TP.HCM", JoinDate = new DateTime(2021, 6, 1), Status = true, RoleID = 3, Avatar = "e_avatar.png", Position = "Nhân viên" },
+                new Employee { Id = 7, CodeEmployee = "NV005", EmployeeName = "Trần Thị F", Email = "f@lena.com", Password = "password", DateOfBirth = new DateTime(1993, 7, 7), PhoneNumber = "0956789012", Address = "159 Đường PQR, TP.HCM", JoinDate = new DateTime(2021, 7, 1), Status = true, RoleID = 3, Avatar = "f_avatar.png", Position = "Nhân viên" },
+                new Employee { Id = 8, CodeEmployee = "NV006", EmployeeName = "Lê Văn G", Email = "g@lena.com", Password = "password", DateOfBirth = new DateTime(1995, 8, 8), PhoneNumber = "0967890123", Address = "753 Đường STU, TP.HCM", JoinDate = new DateTime(2021, 8, 1), Status = true, RoleID = 3, Avatar = "g_avatar.png", Position = "Nhân viên" },
+                new Employee { Id = 9, CodeEmployee = "NV007", EmployeeName = "Phạm Thị H", Email = "h@lena.com", Password = "password", DateOfBirth = new DateTime(1991, 9, 9), PhoneNumber = "0978901234", Address = "369 Đường VWX, TP.HCM", JoinDate = new DateTime(2021, 9, 1), Status = true, RoleID = 3, Avatar = "h_avatar.png", Position = "Nhân viên" },
+                new Employee { Id = 10, CodeEmployee = "NV008", EmployeeName = "Nguyễn Văn I", Email = "i@lena.com", Password = "password", DateOfBirth = new DateTime(1989, 10, 10), PhoneNumber = "0989012345", Address = "852 Đường YZA, TP.HCM", JoinDate = new DateTime(2021, 10, 1), Status = true, RoleID = 3, Avatar = "i_avatar.png", Position = "Nhân viên" }
+            });
+
+            modelBuilder.Entity<QRCodeRequest>().HasData(new List<QRCodeRequest>
+            {
+                new QRCodeRequest { Id = 1, AccountNo = "34509092002", AccountName = "NGUYEN BAO NGOC", AcqId = "970422", AddInfo = "Thông tin bổ sung 1", Template = "Template1", CreatedAt = DateTime.Now },
+                new QRCodeRequest { Id = 2, AccountNo = "0913710873", AccountName = "NGUYEN BAO NGOC", AcqId = "970422", AddInfo = "Thông tin bổ sung 2", Template = "Template2", CreatedAt = DateTime.Now },
+            });
 
 
-
-            // Seed News
-            modelBuilder.Entity<News>().HasData(
-                new News { Id = 1, Title = "Latest Tech News", Description = "Update on the latest technology trends.", Image = "tech-news.jpg", SeoTitle = "Tech News", SeoKeyword = "technology, news", SeoDescription = "Latest updates on technology.", CategoryId = 1 }
-            );
-
-            // Seed Posts
-            modelBuilder.Entity<Posts>().HasData(
-                new Posts { Id = 1, Title = "New Product Launch", Description = "Introducing our new product.", Image = "product-launch.jpg", SeoTitle = "Product Launch", SeoKeyword = "product, launch", SeoDescription = "New product launch details.", CategoryId = 1 }
-            );
-
-            // Seed Subscribes
-            modelBuilder.Entity<Subscribe>().HasData(
-                new Subscribe { Id = 1, Email = "subscriber@example.com", CreateDate = DateTime.Now }
-            );
-
-            // Seed SystemSettings
-            modelBuilder.Entity<SystemSetting>().HasData(
-                new SystemSetting { SettingKey = "SiteName", SettingValue = "My Shop", SettingDescription = "The name of the website" },
-                new SystemSetting { SettingKey = "SiteUrl", SettingValue = "https://www.myshop.com", SettingDescription = "The URL of the website" }
-            );
 
         }
     }

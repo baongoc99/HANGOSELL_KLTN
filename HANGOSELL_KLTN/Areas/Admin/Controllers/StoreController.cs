@@ -1,4 +1,5 @@
 ﻿using HANGOSELL_KLTN.Models.EF;
+using HANGOSELL_KLTN.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -9,10 +10,13 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
     public class StoreController : Controller
     {
         private readonly StoreService _storeService;
+        private readonly BankAccountService _bankAccountService; // Dịch vụ tài khoản ngân hàng
 
-        public StoreController(StoreService storeService)
+
+        public StoreController(StoreService storeService, BankAccountService bankAccountService)
         {
             _storeService = storeService;
+            _bankAccountService = bankAccountService;
         }
 
         public async Task<IActionResult> Index()
@@ -22,12 +26,13 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             ViewData["Position"] = HttpContext.Session.GetString("Position");
 
             var store = await _storeService.GetStoreAsync();
-            var qRCodeRequest = await _storeService.GetQRCodeRequestAsync() ?? new QRCodeRequest();
+            List<QRCodeRequest> bankAccounts = _bankAccountService.GetAllBankAccounts(); // Lấy danh sách tài khoản ngân hàng
+
 
             var model = new ModelDataset
             {
                 store = store ?? new Store(), // Khởi tạo đối tượng Store nếu null
-                qRCodeRequest = qRCodeRequest
+                qRCodeRequests = bankAccounts
             };
 
             return View(model);

@@ -73,7 +73,7 @@
                                         <a href="/Admin/UserRoles/DetailUserRoles/@item.Id" class="btn btn-sm btn-info">
                                             <i class="fa fa-info-circle"></i>
                                         </a>
-                                        <a href="/Admin/Employee/Delete?id=@item.Id" class="btn btn-sm btn-danger">
+                                        <a href="/Admin/Employee/Delete?id=@item.Id" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa nhân viên này?');">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     </td>

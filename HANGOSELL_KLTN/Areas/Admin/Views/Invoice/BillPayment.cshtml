@@ -10,7 +10,7 @@
 <div class="page-wrapper">
     <div class="content container-fluid">
         <div class="row">
-            <div class="card bg-comman w-100">
+            <div id="print-area" class="card bg-comman w-100">
                 <div class="card-body">
                     <div class="row">
                         <!-- Logo và tiêu đề hóa đơn -->
@@ -136,10 +136,21 @@
 
             <div class="col-12">
                 <div class="student-submit">
-                    <button onclick="window.print()" type="submit" class="btn btn-primary">@_localizer.GetLocalizedString("Print Invoice")</button>
+                    <button onclick="printDiv('print-area')" class="btn btn-primary">@_localizer.GetLocalizedString("Print Invoice")</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 </div>
+<script>
+    function printDiv(divId) {
+        var printContents = document.getElementById(divId).innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
+
+</script>

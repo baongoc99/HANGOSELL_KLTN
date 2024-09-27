@@ -17,5 +17,7 @@
         public InvoiceViewModel invoiceViewModel { get; set; }
         public Store store { get; set; }
         public QRCodeRequest qRCodeRequest { get; set; }
+        public List<QRCodeRequest> qRCodeRequests { get; set; }
+
     }
 }

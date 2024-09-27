@@ -40,7 +40,6 @@
                                 <th class="text-center">@_localizer.GetLocalizedString("Total")</th>
                                 <th class="text-center">@_localizer.GetLocalizedString("Date")</th>
                                 <th class="text-center">@_localizer.GetLocalizedString("Status")</th>
-                                <th class="text-center">@_localizer.GetLocalizedString("Action")</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -53,17 +52,7 @@
                                     <td class="text-center">@item.Total</td>
                                     <td class="text-center">@item.CreateDate</td>
                                     <td class="text-center">@item.Status</td>
-                                    <td class="text-center">
-                                        <a href="/Admin/Employee/EditEmployee?id=@item.Id" class="btn btn-sm btn-warning">
-                                            <i class="fa fa-edit"></i>
-                                        </a>
-                                        <a href="/Admin/UserRoles/DetailUserRoles/@item.Id" class="btn btn-sm btn-info">
-                                            <i class="fa fa-info-circle"></i>
-                                        </a>
-                                        <a href="/Admin/Employee/Delete?id=@item.Id" class="btn btn-sm btn-danger">
-                                            <i class="fa fa-trash"></i>
-                                        </a>
-                                    </td>
+                                    
                                 </tr>
                             }
                         </tbody>
@@ -72,7 +61,6 @@
             </div>
         </div>
     </div>
-    <a href="/Admin/Invoice/CreateTestInvoice">Tao Qrcode</a>
 
 </div>
 

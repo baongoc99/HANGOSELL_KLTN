@@ -29,6 +29,7 @@ builder.Services.AddScoped<OrderDetailCustomerService>();
 builder.Services.AddHttpClient<VietQRService>();
 builder.Services.AddScoped<VietQRService>();
 builder.Services.AddScoped<QRCodeRequestService>();
+builder.Services.AddScoped<BankAccountService>();
 
 
 
@@ -48,7 +49,7 @@ builder.Services.AddNotyf(config => { config.DurationInSeconds = 10; config.IsDi
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(5);
+    options.IdleTimeout = TimeSpan.FromHours(6);
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });

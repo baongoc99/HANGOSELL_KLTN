@@ -3,32 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Migrations\\20240927185351_updatedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HANGOSELL_KLTN\\Migrations\\20240927185351_updatedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|c:\\users\\user\\source\\repos\\hangosell_kltn\\hangosell_kltn\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|solutionrelative:hangosell_kltn\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|c:\\users\\user\\source\\repos\\hangosell_kltn\\hangosell_kltn\\areas\\admin\\views\\invoice\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|solutionrelative:hangosell_kltn\\areas\\admin\\views\\invoice\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|c:\\users\\user\\source\\repos\\hangosell_kltn\\hangosell_kltn\\areas\\admin\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|solutionrelative:hangosell_kltn\\areas\\admin\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|c:\\users\\user\\source\\repos\\hangosell_kltn\\hangosell_kltn\\areas\\admin\\views\\store\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|solutionrelative:hangosell_kltn\\areas\\admin\\views\\store\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|c:\\users\\user\\source\\repos\\hangosell_kltn\\hangosell_kltn\\views\\shared\\_index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|solutionrelative:hangosell_kltn\\views\\shared\\_index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|c:\\users\\user\\source\\repos\\hangosell_kltn\\hangosell_kltn\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|solutionrelative:hangosell_kltn\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|c:\\users\\user\\source\\repos\\hangosell_kltn\\hangosell_kltn\\service\\vietqrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|solutionrelative:hangosell_kltn\\service\\vietqrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|c:\\users\\user\\source\\repos\\hangosell_kltn\\hangosell_kltn\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|solutionrelative:hangosell_kltn\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|c:\\users\\user\\source\\repos\\hangosell_kltn\\hangosell_kltn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|solutionrelative:hangosell_kltn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|c:\\users\\user\\source\\repos\\hangosell_kltn\\hangosell_kltn\\areas\\admin\\controllers\\storecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|solutionrelative:hangosell_kltn\\areas\\admin\\controllers\\storecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|c:\\users\\user\\source\\repos\\hangosell_kltn\\hangosell_kltn\\areas\\admin\\views\\invoice\\billpayment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8371AA5A-51C4-486E-8B25-B927482DBBCF}|HANGOSELL_KLTN\\HANGOSELL_KLTN.csproj|solutionrelative:hangosell_kltn\\areas\\admin\\views\\invoice\\billpayment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,97 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20240927185351_updatedb.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Migrations\\20240927185351_updatedb.cs",
+              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Migrations\\20240927185351_updatedb.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Migrations\\20240927185351_updatedb.cs",
+              "RelativeToolTip": "HANGOSELL_KLTN\\Migrations\\20240927185351_updatedb.cs",
+              "ViewState": "AQIAAIIAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T18:53:51.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Views\\Shared\\_Index.cshtml",
-              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Views\\Shared\\_Index.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Views\\Shared\\_Index.cshtml",
-              "RelativeToolTip": "HANGOSELL_KLTN\\Views\\Shared\\_Index.cshtml",
-              "ViewState": "AQIAAOkCAAAAAAAAAAAAAPsCAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-24T13:30:03.539Z",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "HANGOSELL_KLTN\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAA9wBwAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T18:21:11.916Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "HANGOSELL_KLTN\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Invoice\\Index.cshtml",
+              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Invoice\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Invoice\\Index.cshtml",
+              "RelativeToolTip": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Invoice\\Index.cshtml",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAEkAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-24T13:29:55.669Z",
+              "WhenOpened": "2024-09-27T18:15:55.231Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "VietQRService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Service\\VietQRService.cs",
-              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Service\\VietQRService.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Service\\VietQRService.cs",
-              "RelativeToolTip": "HANGOSELL_KLTN\\Service\\VietQRService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T13:29:54.454Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Employee\\Index.cshtml",
+              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Employee\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Employee\\Index.cshtml",
+              "RelativeToolTip": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Employee\\Index.cshtml",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAE0AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-27T18:13:45.446Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "HANGOSELL_KLTN\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAK4HAAAANDMzM5MwwL0JAABTAAAA",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Store\\Index.cshtml",
+              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Store\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Store\\Index.cshtml",
+              "RelativeToolTip": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Store\\Index.cshtml",
+              "ViewState": "AQIAAOoAAAAAAAAAAAAAAPUAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-24T13:29:01.248Z",
+              "WhenOpened": "2024-09-27T17:54:12.003Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Program.cs",
-              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Program.cs",
-              "RelativeToolTip": "HANGOSELL_KLTN\\Program.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAkwHUAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T13:27:54.437Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Store\\Index.cshtml",
-              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Store\\Index.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Store\\Index.cshtml",
-              "RelativeToolTip": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Store\\Index.cshtml",
-              "ViewState": "AQIAABMAAAAAY2ZmZmYEwB4AAABxAAAA",
+              "Title": "BillPayment.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Invoice\\BillPayment.cshtml",
+              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Invoice\\BillPayment.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Views\\Invoice\\BillPayment.cshtml",
+              "RelativeToolTip": "HANGOSELL_KLTN\\Areas\\Admin\\Views\\Invoice\\BillPayment.cshtml",
+              "ViewState": "AQIAAAMAAADYzMzMzMwXwJoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-24T12:47:50.324Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "StoreController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Controllers\\StoreController.cs",
-              "RelativeDocumentMoniker": "HANGOSELL_KLTN\\Areas\\Admin\\Controllers\\StoreController.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\Areas\\Admin\\Controllers\\StoreController.cs",
-              "RelativeToolTip": "HANGOSELL_KLTN\\Areas\\Admin\\Controllers\\StoreController.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAgwDMAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T12:46:23.456Z",
+              "WhenOpened": "2024-09-27T16:41:47.204Z",
               "EditorCaption": ""
             }
           ]
