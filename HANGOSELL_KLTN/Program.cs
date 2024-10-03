@@ -5,6 +5,7 @@ using HANGOSELL_KLTN.Data;
 using HANGOSELL_KLTN.Models;
 using HANGOSELL_KLTN.Models.EF;
 using HANGOSELL_KLTN.Service;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
@@ -17,7 +18,7 @@ using System.Reflection;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<CategoryService>();
-builder.Services.AddScoped<EmployeeService>();
+builder.Services.AddScoped<AccountService>();
 builder.Services.AddScoped<RoleService>();
 builder.Services.AddScoped<CustomerService>();
 builder.Services.AddScoped<ProductService>();
@@ -35,6 +36,8 @@ builder.Services.AddScoped<BankAccountService>();
 
 /// mã hóa mật khẩu
 builder.Services.AddScoped<IPasswordHasher<Employee>, PasswordHasher<Employee>>();
+builder.Services.AddScoped<IPasswordHasher<Customer>, PasswordHasher<Customer>>();
+
 
 // Thêm cấu hình DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -44,6 +47,16 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 builder.Services.AddNotyf(config => { config.DurationInSeconds = 10; config.IsDismissable = true; config.Position = NotyfPosition.BottomRight; });
+
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+        .AddCookie(options =>
+        {
+            options.LoginPath = "/Login/Login"; // Đường dẫn tới trang login
+            options.AccessDeniedPath = "/Account/AccessDenied"; // Đường dẫn tới trang thông báo truy cập bị từ chối
+        });
+builder.Services.AddAuthorization();
+
 
 // Thêm Session
 builder.Services.AddDistributedMemoryCache();
@@ -117,6 +130,11 @@ app.MapAreaControllerRoute(
     name: "adminArea",
     areaName: "Admin",
     pattern: "Admin/{controller=Home}/{action=Index}/{id?}");
+
+app.MapAreaControllerRoute(
+    name: "loginArea",
+    areaName: "Login",
+    pattern: "Login/{controller=Login}/{action=Login}/{id?}");
 
 // Cấu hình route mặc định trước, sau đó là route cho các khu vực
 app.MapControllerRoute(

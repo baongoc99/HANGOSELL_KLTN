@@ -127,19 +127,14 @@ namespace HANGOSELL_KLTN.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CompanyName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ContactPerson")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CreateBy")
                         .HasMaxLength(50)
@@ -149,9 +144,7 @@ namespace HANGOSELL_KLTN.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ModifiedBy")
                         .HasMaxLength(50)
@@ -162,129 +155,19 @@ namespace HANGOSELL_KLTN.Migrations
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("tb_Customer");
+                    b.HasIndex("RoleId");
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Address = "Không xác định",
-                            CompanyName = "Khách lẻ",
-                            ContactPerson = "Khách hàng",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "khachle@company.com",
-                            Password = "password1",
-                            PhoneNumber = "0123456789"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Address = "123 Đường ABC, TP.HCM",
-                            CompanyName = "Công ty ABC",
-                            ContactPerson = "Nguyễn Văn A",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "abc@company.com",
-                            Password = "password2",
-                            PhoneNumber = "0987654321"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Address = "456 Đường XYZ, TP.HCM",
-                            CompanyName = "Công ty XYZ",
-                            ContactPerson = "Trần Thị B",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "xyz@company.com",
-                            Password = "password3",
-                            PhoneNumber = "0123456780"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Address = "789 Đường DEF, TP.HCM",
-                            CompanyName = "Công ty DEF",
-                            ContactPerson = "Lê Văn C",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "def@company.com",
-                            Password = "password4",
-                            PhoneNumber = "0987654312"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Address = "321 Đường GHI, TP.HCM",
-                            CompanyName = "Công ty GHI",
-                            ContactPerson = "Phạm Thị D",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "ghi@company.com",
-                            Password = "password5",
-                            PhoneNumber = "0123456790"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Address = "654 Đường JKL, TP.HCM",
-                            CompanyName = "Công ty JKL",
-                            ContactPerson = "Nguyễn Văn E",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "jkl@company.com",
-                            Password = "password6",
-                            PhoneNumber = "0987654301"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Address = "987 Đường MNO, TP.HCM",
-                            CompanyName = "Công ty MNO",
-                            ContactPerson = "Trần Thị F",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "mno@company.com",
-                            Password = "password7",
-                            PhoneNumber = "0123456700"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Address = "159 Đường PQR, TP.HCM",
-                            CompanyName = "Công ty PQR",
-                            ContactPerson = "Lê Văn G",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "pqr@company.com",
-                            Password = "password8",
-                            PhoneNumber = "0987654320"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Address = "753 Đường STU, TP.HCM",
-                            CompanyName = "Công ty STU",
-                            ContactPerson = "Phạm Thị H",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "stu@company.com",
-                            Password = "password9",
-                            PhoneNumber = "0123456781"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Address = "951 Đường VWX, TP.HCM",
-                            CompanyName = "Công ty VWX",
-                            ContactPerson = "Nguyễn Văn I",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "vwx@company.com",
-                            Password = "password10",
-                            PhoneNumber = "0987654322"
-                        });
+                    b.ToTable("tb_Customer");
                 });
 
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Employee", b =>
@@ -296,17 +179,14 @@ namespace HANGOSELL_KLTN.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Avatar")
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CodeEmployee")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CreateBy")
                         .HasMaxLength(50)
@@ -320,13 +200,11 @@ namespace HANGOSELL_KLTN.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EmployeeName")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("JoinDate")
                         .HasColumnType("datetime2");
@@ -340,19 +218,16 @@ namespace HANGOSELL_KLTN.Migrations
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Position")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("RoleID")
+                    b.Property<int>("RoleId")
                         .HasColumnType("int");
 
                     b.Property<bool>("Status")
@@ -360,181 +235,9 @@ namespace HANGOSELL_KLTN.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RoleID");
+                    b.HasIndex("RoleId");
 
                     b.ToTable("tb_Employee");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Address = "123 Đường ABC, TP.HCM",
-                            Avatar = "admin_avatar.png",
-                            CodeEmployee = "AD001",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfBirth = new DateTime(1990, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "admin@lena.com",
-                            EmployeeName = "Admin",
-                            JoinDate = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Password = "admin123",
-                            PhoneNumber = "0901234567",
-                            Position = "Admin",
-                            RoleID = 1,
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Address = "456 Đường XYZ, TP.HCM",
-                            Avatar = "a_avatar.png",
-                            CodeEmployee = "QL001",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfBirth = new DateTime(1995, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "a@lena.com",
-                            EmployeeName = "Nguyễn Văn A",
-                            JoinDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Password = "password",
-                            PhoneNumber = "0907654321",
-                            Position = "Quản lý",
-                            RoleID = 2,
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Address = "789 Đường DEF, TP.HCM",
-                            Avatar = "b_avatar.png",
-                            CodeEmployee = "NV001",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfBirth = new DateTime(1992, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "b@lena.com",
-                            EmployeeName = "Trần Thị B",
-                            JoinDate = new DateTime(2021, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Password = "password",
-                            PhoneNumber = "0912345678",
-                            Position = "Nhân viên",
-                            RoleID = 3,
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Address = "321 Đường GHI, TP.HCM",
-                            Avatar = "c_avatar.png",
-                            CodeEmployee = "NV002",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfBirth = new DateTime(1994, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "c@lena.com",
-                            EmployeeName = "Lê Văn C",
-                            JoinDate = new DateTime(2021, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Password = "password",
-                            PhoneNumber = "0923456789",
-                            Position = "Nhân viên",
-                            RoleID = 3,
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Address = "654 Đường JKL, TP.HCM",
-                            Avatar = "d_avatar.png",
-                            CodeEmployee = "NV003",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfBirth = new DateTime(1990, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "d@lena.com",
-                            EmployeeName = "Phạm Thị D",
-                            JoinDate = new DateTime(2021, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Password = "password",
-                            PhoneNumber = "0934567890",
-                            Position = "Nhân viên",
-                            RoleID = 3,
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Address = "987 Đường MNO, TP.HCM",
-                            Avatar = "e_avatar.png",
-                            CodeEmployee = "NV004",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfBirth = new DateTime(1988, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "e@lena.com",
-                            EmployeeName = "Nguyễn Văn E",
-                            JoinDate = new DateTime(2021, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Password = "password",
-                            PhoneNumber = "0945678901",
-                            Position = "Nhân viên",
-                            RoleID = 3,
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Address = "159 Đường PQR, TP.HCM",
-                            Avatar = "f_avatar.png",
-                            CodeEmployee = "NV005",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfBirth = new DateTime(1993, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "f@lena.com",
-                            EmployeeName = "Trần Thị F",
-                            JoinDate = new DateTime(2021, 7, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Password = "password",
-                            PhoneNumber = "0956789012",
-                            Position = "Nhân viên",
-                            RoleID = 3,
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Address = "753 Đường STU, TP.HCM",
-                            Avatar = "g_avatar.png",
-                            CodeEmployee = "NV006",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfBirth = new DateTime(1995, 8, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "g@lena.com",
-                            EmployeeName = "Lê Văn G",
-                            JoinDate = new DateTime(2021, 8, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Password = "password",
-                            PhoneNumber = "0967890123",
-                            Position = "Nhân viên",
-                            RoleID = 3,
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Address = "369 Đường VWX, TP.HCM",
-                            Avatar = "h_avatar.png",
-                            CodeEmployee = "NV007",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfBirth = new DateTime(1991, 9, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "h@lena.com",
-                            EmployeeName = "Phạm Thị H",
-                            JoinDate = new DateTime(2021, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Password = "password",
-                            PhoneNumber = "0978901234",
-                            Position = "Nhân viên",
-                            RoleID = 3,
-                            Status = true
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Address = "852 Đường YZA, TP.HCM",
-                            Avatar = "i_avatar.png",
-                            CodeEmployee = "NV008",
-                            CreateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfBirth = new DateTime(1989, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "i@lena.com",
-                            EmployeeName = "Nguyễn Văn I",
-                            JoinDate = new DateTime(2021, 10, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Password = "password",
-                            PhoneNumber = "0989012345",
-                            Position = "Nhân viên",
-                            RoleID = 3,
-                            Status = true
-                        });
                 });
 
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.News", b =>
@@ -873,142 +576,6 @@ namespace HANGOSELL_KLTN.Migrations
                         .IsUnique();
 
                     b.ToTable("tb_Product");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6690),
-                            Description = "Áo thun trắng cotton thoải mái",
-                            Detail = "Áo thun trắng, chất liệu cotton 100%, dễ dàng kết hợp với nhiều trang phục.",
-                            Image = "images/products/ao_thun_trang.jpg",
-                            Price = 150000m,
-                            ProductCategoryId = 1,
-                            ProductCode = "AT01",
-                            Quantity = 100,
-                            Title = "Áo thun trắng"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6696),
-                            Description = "Quần jeans xanh, thời trang và bền bỉ",
-                            Detail = "Quần jeans màu xanh, chất liệu dày dặn, phong cách trẻ trung.",
-                            Image = "images/products/quan_jeans_xanh.jpg",
-                            Price = 250000m,
-                            PriceSale = 200000m,
-                            ProductCategoryId = 2,
-                            ProductCode = "QJ01",
-                            Quantity = 50,
-                            Title = "Quần jeans xanh"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6698),
-                            Description = "Giày thể thao, phù hợp cho mọi hoạt động",
-                            Detail = "Giày thể thao với thiết kế năng động, thoáng khí.",
-                            Image = "images/products/giai_the_thao.jpg",
-                            Price = 350000m,
-                            PriceSale = 300000m,
-                            ProductCategoryId = 3,
-                            ProductCode = "GT01",
-                            Quantity = 75,
-                            Title = "Giày thể thao"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6701),
-                            Description = "Mũ lưỡi trai thời trang",
-                            Detail = "Mũ lưỡi trai phong cách, có thể điều chỉnh kích cỡ.",
-                            Image = "images/products/mu_luoi_trai.jpg",
-                            Price = 80000m,
-                            ProductCategoryId = 4,
-                            ProductCode = "MLT01",
-                            Quantity = 200,
-                            Title = "Mũ lưỡi trai"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6703),
-                            Description = "Đồ lót nữ mềm mại và thoải mái",
-                            Detail = "Đồ lót nữ, chất liệu cotton, tạo cảm giác dễ chịu.",
-                            Image = "images/products/do_lot_nu.jpg",
-                            Price = 120000m,
-                            ProductCategoryId = 5,
-                            ProductCode = "DLN01",
-                            Quantity = 150,
-                            Title = "Đồ lót nữ"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6707),
-                            Description = "Đầm dạ hội sang trọng",
-                            Detail = "Đầm dạ hội, thiết kế đẹp mắt, phù hợp cho các sự kiện.",
-                            Image = "images/products/dam_da_hội.jpg",
-                            Price = 600000m,
-                            PriceSale = 500000m,
-                            ProductCategoryId = 6,
-                            ProductCode = "DH01",
-                            Quantity = 30,
-                            Title = "Đầm dạ hội"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6748),
-                            Description = "Áo khoác nữ thời trang",
-                            Detail = "Áo khoác nữ ấm áp, thiết kế thời trang.",
-                            Image = "images/products/ao_khoac_nu.jpg",
-                            Price = 400000m,
-                            ProductCategoryId = 7,
-                            ProductCode = "AKN01",
-                            Quantity = 50,
-                            Title = "Áo khoác nữ"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6751),
-                            Description = "Thời trang nam đa dạng",
-                            Detail = "Bộ sưu tập thời trang nam phong cách.",
-                            Image = "images/products/thoi_trang_nam.jpg",
-                            Price = 500000m,
-                            ProductCategoryId = 8,
-                            ProductCode = "TN01",
-                            Quantity = 60,
-                            Title = "Thời trang nam"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6754),
-                            Description = "Thời trang nữ đẹp mắt",
-                            Detail = "Bộ sưu tập thời trang nữ mới nhất.",
-                            Image = "images/products/thoi_trang_nu.jpg",
-                            Price = 450000m,
-                            PriceSale = 400000m,
-                            ProductCategoryId = 9,
-                            ProductCode = "TN02",
-                            Quantity = 70,
-                            Title = "Thời trang nữ"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6757),
-                            Description = "Thời trang trẻ em đáng yêu",
-                            Detail = "Bộ sưu tập thời trang trẻ em phong cách.",
-                            Image = "images/products/thoi_trang_tre_em.jpg",
-                            Price = 200000m,
-                            ProductCategoryId = 10,
-                            ProductCode = "TT01",
-                            Quantity = 80,
-                            Title = "Thời trang trẻ em"
-                        });
                 });
 
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.ProductCategory", b =>
@@ -1064,78 +631,6 @@ namespace HANGOSELL_KLTN.Migrations
                         .IsUnique();
 
                     b.ToTable("tb_ProductCategory");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6477),
-                            Description = "Các loại áo thời trang",
-                            Title = "Áo"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6490),
-                            Description = "Các loại quần thời trang",
-                            Title = "Quần"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6492),
-                            Description = "Giày dép thời trang",
-                            Title = "Giày"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6493),
-                            Description = "Phụ kiện thời trang",
-                            Title = "Phụ kiện"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6495),
-                            Description = "Đồ lót thời trang",
-                            Title = "Đồ lót"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6498),
-                            Description = "Đầm thời trang",
-                            Title = "Đầm"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6499),
-                            Description = "Áo khoác thời trang",
-                            Title = "Áo khoác"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6501),
-                            Description = "Thời trang nam",
-                            Title = "Thời trang nam"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6503),
-                            Description = "Thời trang nữ",
-                            Title = "Thời trang nữ"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CreateDate = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6505),
-                            Description = "Thời trang trẻ em",
-                            Title = "Thời trang trẻ em"
-                        });
                 });
 
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.QRCodeRequest", b =>
@@ -1172,28 +667,6 @@ namespace HANGOSELL_KLTN.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("QRCodeRequests");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            AccountName = "NGUYEN BAO NGOC",
-                            AccountNo = "34509092002",
-                            AcqId = "970422",
-                            AddInfo = "Thông tin bổ sung 1",
-                            CreatedAt = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6909),
-                            Template = "Template1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            AccountName = "NGUYEN BAO NGOC",
-                            AccountNo = "0913710873",
-                            AcqId = "970422",
-                            AddInfo = "Thông tin bổ sung 2",
-                            CreatedAt = new DateTime(2024, 9, 28, 1, 53, 50, 254, DateTimeKind.Local).AddTicks(6913),
-                            Template = "Template2"
-                        });
                 });
 
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Role", b =>
@@ -1206,24 +679,11 @@ namespace HANGOSELL_KLTN.Migrations
 
                     b.Property<string>("RoleName")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("tb_Role");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            RoleName = "Admin"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            RoleName = "Customer"
-                        });
                 });
 
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Store", b =>
@@ -1302,12 +762,23 @@ namespace HANGOSELL_KLTN.Migrations
                     b.ToTable("tb_SystemSetting");
                 });
 
+            modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Customer", b =>
+                {
+                    b.HasOne("HANGOSELL_KLTN.Models.EF.Role", "Role")
+                        .WithMany("Customers")
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+                });
+
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Employee", b =>
                 {
                     b.HasOne("HANGOSELL_KLTN.Models.EF.Role", "Role")
-                        .WithMany()
-                        .HasForeignKey("RoleID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .WithMany("Employees")
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Role");
@@ -1392,6 +863,13 @@ namespace HANGOSELL_KLTN.Migrations
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.ProductCategory", b =>
                 {
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Role", b =>
+                {
+                    b.Navigation("Customers");
+
+                    b.Navigation("Employees");
                 });
 #pragma warning restore 612, 618
         }

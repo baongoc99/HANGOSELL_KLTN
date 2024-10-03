@@ -1,5 +1,6 @@
 ﻿using HANGOSELL_KLTN.Models.EF;
 using HANGOSELL_KLTN.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
@@ -7,6 +8,7 @@ using Microsoft.Extensions.Localization;
 namespace HANGOSELL_KLTN.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class HomeController : Controller
     {
         private readonly CustomerService customerService;
@@ -37,9 +39,9 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             ViewData["tongdoanhthu"] = orderService.GetAllorder().Sum(x => x.Total);
             ViewData["tongorder"] = orderService.GetAllorder().Count();
             ViewData["tongproduct"] = productService.GetAllProduct().Count();
+            var userName = User.Identity.Name;
 
-
-
+            ViewBag.UserName = userName;
             return View();
         }
 

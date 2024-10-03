@@ -1,4 +1,4 @@
-﻿@{
+﻿	@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -761,9 +761,9 @@
 						</svg>
 						<div class="list-unstyled">
 							
-							<a class="btnx" href="/home/login" title="Đăng nhập">Đăng nhập</a>
+							<a class="btn"  asp-area="Login"  asp-controller="Login" asp-action="Login"  title="Đăng nhập">Đăng nhập</a>
 							<span>/</span>
-							<a href="/account/register" title="Đăng ký">Đăng ký</a>
+							<a asp-area="Login"  asp-controller="Login" asp-action="Register" title="Đăng ký">Đăng ký</a>
 							
 						</div>
 					</div>

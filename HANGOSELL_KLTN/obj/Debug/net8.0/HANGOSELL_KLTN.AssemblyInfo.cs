@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HANGOSELL_KLTN")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f723da6e56d7cdea1bbb71f475b00f20edfe73ed")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06d30a50ec16fe8db3931be6e0dc40d9aaf6b8b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("HANGOSELL_KLTN")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HANGOSELL_KLTN")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

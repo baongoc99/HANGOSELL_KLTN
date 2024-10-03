@@ -1,0 +1,53 @@
+﻿@model HANGOSELL_KLTN.Models.EF.Customer
+
+
+
+<div class="login-right">
+    <div class="login-right-wrap">
+        <h1>Welcome to Register</h1>
+        <p class="account-subtitle">Already have an account? <a href="/Login">Sign in</a></p>
+
+        <form method="post">
+            <div class="form-group">
+                <label for="FullName">Full Name <span class="login-danger">*</span></label>
+                <input asp-for="CompanyName" type="text" id="CompanyName" class="form-control" name="CompanyName" required>
+                <span class="profile-views"><i class="fas fa-user-circle"></i></span>
+            </div>
+            <div class="form-group">
+                <label for="ContactPerson">Contact Person <span class="login-danger">*</span></label>
+                <input type="text" id="ContactPerson" class="form-control" name="ContactPerson" required>
+                <span class="profile-views"><i class="fas fa-user-circle"></i></span>
+            </div>
+            <div class="form-group">
+                <label for="Email">Email <span class="login-danger">*</span></label>
+                <input type="email" id="Email" class="form-control" name="Email" required>
+                <span class="profile-views"><i class="fas fa-envelope"></i></span>
+            </div>
+            <div class="form-group">
+                <label for="PhoneNumber">Phone Number <span class="login-danger">*</span></label>
+                <input type="text" id="PhoneNumber" class="form-control" name="PhoneNumber" required>
+                <span class="profile-views"><i class="fas fa-phone"></i></span>
+            </div>
+            <div class="form-group">
+                <label for="Address">Address <span class="login-danger">*</span></label>
+                <input type="text" id="Address" class="form-control" name="Address" required>
+                <span class="profile-views"><i class="fas fa-map-marker"></i></span>
+            </div>
+            <div class="form-group">
+                <label for="Password">Password <span class="login-danger">*</span></label>
+                <input type="password" id="Password" class="form-control pass-input" name="Password" required autocomplete="new-password">
+                <span class="profile-views feather-eye toggle-password"></span>
+            </div>
+            <div class="form-group">
+                <label for="password_confirmation">Repeat Password <span class="login-danger">*</span></label>
+                <input type="password" id="password_confirmation" class="form-control pass-confirm" name="password_confirmation" required>
+                <span class="profile-views feather-eye reg-toggle-password"></span>
+            </div>
+            <div class="form-group mb-0">
+                <button class="btn btn-primary btn-block" type="submit">Register</button>
+            </div>
+        </form>
+
+        
+    </div>
+</div>

@@ -1,46 +1,95 @@
-/* _content/HANGOSELL_KLTN/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* _content/HANGOSELL_KLTN/Areas/Login/Views/Shared/_LayoutLogin.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-a.navbar-brand[b-gkf0v9whc0] {
+a.navbar-brand[b-ihy4f1trbd] {
   white-space: normal;
   text-align: center;
   word-break: break-all;
 }
 
-a[b-gkf0v9whc0] {
+a[b-ihy4f1trbd] {
   color: #0077cc;
 }
 
-.btn-primary[b-gkf0v9whc0] {
+.btn-primary[b-ihy4f1trbd] {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
-.nav-pills .nav-link.active[b-gkf0v9whc0], .nav-pills .show > .nav-link[b-gkf0v9whc0] {
+.nav-pills .nav-link.active[b-ihy4f1trbd], .nav-pills .show > .nav-link[b-ihy4f1trbd] {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
-.border-top[b-gkf0v9whc0] {
+.border-top[b-ihy4f1trbd] {
   border-top: 1px solid #e5e5e5;
 }
-.border-bottom[b-gkf0v9whc0] {
+.border-bottom[b-ihy4f1trbd] {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.box-shadow[b-gkf0v9whc0] {
+.box-shadow[b-ihy4f1trbd] {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
-button.accept-policy[b-gkf0v9whc0] {
+button.accept-policy[b-ihy4f1trbd] {
   font-size: 1rem;
   line-height: inherit;
 }
 
-.footer[b-gkf0v9whc0] {
+.footer[b-ihy4f1trbd] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* _content/HANGOSELL_KLTN/Views/Shared/_LayoutLogin.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-rwtb8ejpsp] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-rwtb8ejpsp] {
+  color: #0077cc;
+}
+
+.btn-primary[b-rwtb8ejpsp] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-rwtb8ejpsp], .nav-pills .show > .nav-link[b-rwtb8ejpsp] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-rwtb8ejpsp] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-rwtb8ejpsp] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-rwtb8ejpsp] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-rwtb8ejpsp] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-rwtb8ejpsp] {
   position: absolute;
   bottom: 0;
   width: 100%;

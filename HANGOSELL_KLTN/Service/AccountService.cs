@@ -5,25 +5,28 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HANGOSELL_KLTN.Service
 {
-    public class EmployeeService
+    public class AccountService
     {
         private readonly ApplicationDbContext _context;
-        private readonly IPasswordHasher<Employee> _passwordHasher;
-        public EmployeeService(ApplicationDbContext context, IPasswordHasher<Employee> passwordHasher)
+        private readonly IPasswordHasher<Employee> _passwordHasherEmployee;
+		private readonly IPasswordHasher<Customer> _passwordHasherCustomer;
+
+		public AccountService(ApplicationDbContext context, IPasswordHasher<Employee> passwordHasherEmployee, IPasswordHasher<Customer> passwordHasherCustomer)
         {
             _context = context;
-            _passwordHasher = passwordHasher;
+			_passwordHasherEmployee = passwordHasherEmployee;
+            _passwordHasherCustomer = passwordHasherCustomer;
         }
 
         public string HashPassword(string password)
         {
-            return _passwordHasher.HashPassword(null, password);
+            return _passwordHasherEmployee.HashPassword(null, password);
         }
         public PasswordVerificationResult VerifyPassword(string hashedPassword, string providedPassword)
         {
             try
             {
-                return _passwordHasher.VerifyHashedPassword(null, hashedPassword, providedPassword);
+                return _passwordHasherEmployee.VerifyHashedPassword(null, hashedPassword, providedPassword);
             }
             catch (FormatException ex)
             {
@@ -31,9 +34,12 @@ namespace HANGOSELL_KLTN.Service
                 return PasswordVerificationResult.Failed;
             }
         }
+		public string HashPasswordCustomer(Customer customer, string password)
+		{
+			return _passwordHasherCustomer.HashPassword(customer, password);
+		}
 
-
-        public Employee CheckCodeAndPass(string codeEmployee)
+		public Employee CheckCodeAndPass(string codeEmployee)
         {
             Employee Employee = _context.Employees.FirstOrDefault(u => u.CodeEmployee == codeEmployee || u.Email == codeEmployee);
             return Employee;

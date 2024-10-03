@@ -429,7 +429,6 @@ C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\obj\Debug\net8.0\static
 C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.HANGOSELL_KLTN.props
 C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.HANGOSELL_KLTN.props
 C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\obj\Debug\net8.0\scopedcss\bundle\HANGOSELL_KLTN.styles.css
 C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\obj\Debug\net8.0\scopedcss\projectbundle\HANGOSELL_KLTN.bundle.scp.css
 C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\obj\Debug\net8.0\HANGOSEL.FD4C4306.Up2Date
@@ -570,3 +569,5 @@ C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\bin\Debug\net8.0\Micros
 C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutLogin.cshtml.rz.scp.css
+C:\Users\User\source\repos\HANGOSELL_KLTN\HANGOSELL_KLTN\obj\Debug\net8.0\scopedcss\Areas\Login\Views\Shared\_LayoutLogin.cshtml.rz.scp.css

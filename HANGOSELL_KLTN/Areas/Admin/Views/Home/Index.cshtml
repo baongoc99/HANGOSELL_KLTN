@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="page-sub-header">
-                        <h3 class="page-title">@_localizer.GetLocalizedString("Welcome"), @ViewData["EmployeeName"] !!</h3>
+                        <h3 class="page-title">@_localizer.GetLocalizedString("Welcome"), @ViewBag.UserName !!</h3>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">@_localizer.GetLocalizedString("Home")</a></li>
                             <li class="breadcrumb-item active">@_localizer.GetLocalizedString("Dashboard")</li>

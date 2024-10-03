@@ -8,11 +8,11 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
     [Area("Admin")]
     public class EmployeeController : Controller
     {
-        private readonly EmployeeService employeeService;
+        private readonly AccountService AccountService;
         private readonly RoleService roleService;
-        public EmployeeController(EmployeeService employeeService, RoleService roleService)
+        public EmployeeController(AccountService AccountService, RoleService roleService)
         {
-            this.employeeService = employeeService;
+            this.AccountService = AccountService;
             this.roleService = roleService;
         }
         public IActionResult Index()
@@ -20,15 +20,15 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             ViewData["EmployeeName"] = HttpContext.Session.GetString("EmployeeName");
             ViewData["Avatar"] = HttpContext.Session.GetString("Avatar");
             ViewData["Position"] = HttpContext.Session.GetString("Position");
-            List<Employee> employees = employeeService.GetAllEmployee();
+            List<Employee> employees = AccountService.GetAllEmployee();
             return View(employees);
         }
 
 
         public IActionResult Editpassword(int Idemployee, string CurrentPassword, string NewPassword, string ConfirmPassword)
         {
-            Employee employee = employeeService.GetEmployeeById(Idemployee);
-            var checkmatkhau = employeeService.VerifyPassword(employee.Password, CurrentPassword);
+            Employee employee = AccountService.GetEmployeeById(Idemployee);
+            var checkmatkhau = AccountService.VerifyPassword(employee.Password, CurrentPassword);
 
             if (checkmatkhau != PasswordVerificationResult.Success)
             {
@@ -38,9 +38,9 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Nhập lại mật khẩu mới không đúng!" });
             }
-            string mahoamatkhau = employeeService.HashPassword(NewPassword);
+            string mahoamatkhau = AccountService.HashPassword(NewPassword);
             employee.Password = mahoamatkhau;
-            employeeService.UpdateEmployee(employee);
+            AccountService.UpdateEmployee(employee);
             return Json(new { success = true, message = "Cập nhật mật khẩu thành công!" });
         }
 
@@ -52,7 +52,7 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
                 ViewData["EmployeeName"] = HttpContext.Session.GetString("EmployeeName");
                 ViewData["Avatar"] = HttpContext.Session.GetString("Avatar");
                 ViewData["Position"] = HttpContext.Session.GetString("Position");
-                List<Employee> employees = employeeService.GetAllEmployee();
+                List<Employee> employees = AccountService.GetAllEmployee();
                 return View(employees);
             }
             else
@@ -119,13 +119,13 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             {
                 employee.Avatar = "images/default.jpg";
             }
-            string mahoamatkhau = employeeService.HashPassword(employee.Password);
+            string mahoamatkhau = AccountService.HashPassword(employee.Password);
             employee.Password = mahoamatkhau;
             employee.Status = true;
-            Employee employee1 = employeeService.GetEmployeeByCodeEmployee(employee.CodeEmployee);
+            Employee employee1 = AccountService.GetEmployeeByCodeEmployee(employee.CodeEmployee);
             if (employee1 == null)
             {
-                employeeService.AddEmployee(employee);
+                AccountService.AddEmployee(employee);
                 return Redirect("/Admin/Employee");
             }
             else
@@ -142,7 +142,7 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             ViewData["Position"] = HttpContext.Session.GetString("Position");
             List<Role> roles = roleService.GetAllRoles();
 
-            Employee employee = employeeService.GetEmployeeById(id);
+            Employee employee = AccountService.GetEmployeeById(id);
             ModelDataset model = new ModelDataset()
             {
                 employee = employee,
@@ -153,7 +153,7 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
         }
         public IActionResult Edit(Employee employee, IFormFile image)
         {
-            Employee employee1 = employeeService.GetEmployeeById(employee.Id);
+            Employee employee1 = AccountService.GetEmployeeById(employee.Id);
             if (image != null)
             {
                 var fileExtension = Path.GetExtension(image.FileName).ToLowerInvariant();
@@ -193,12 +193,12 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
                 employee.Avatar = "images/default.jpg";
             }
             employee.Password = employee1.Password;
-            employeeService.UpdateEmployee(employee);
+            AccountService.UpdateEmployee(employee);
             return Redirect("/Admin/Employee");
         }
         public IActionResult Delete(int id)
         {
-            employeeService.DeleteEmployee(id);
+            AccountService.DeleteEmployee(id);
             return Redirect("/Admin/Employee");
         }
         public IActionResult ProfilePage()
@@ -210,7 +210,7 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             ViewData["Avatar"] = HttpContext.Session.GetString("Avatar");
             ViewData["Position"] = HttpContext.Session.GetString("Position");
 
-            Employee employee = employeeService.GetEmployeeById(id);
+            Employee employee = AccountService.GetEmployeeById(id);
             return View(employee);
         }
 
