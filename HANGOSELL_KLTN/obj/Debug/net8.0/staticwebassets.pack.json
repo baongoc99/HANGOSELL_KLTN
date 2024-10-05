@@ -23481,6 +23481,474 @@
       "PackagePath": "staticwebassets\\Client\\plugins\\icons\\ionic\\ionicons.css"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\Source\\OwlCarousel2-2.3.4.zip",
+      "PackagePath": "staticwebassets\\Home\\Source\\OwlCarousel2-2.3.4.zip"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\Source\\SlickNav-master.zip",
+      "PackagePath": "staticwebassets\\Home\\Source\\SlickNav-master.zip"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\Source\\bootstrap-4.4.1-dist.zip",
+      "PackagePath": "staticwebassets\\Home\\Source\\bootstrap-4.4.1-dist.zip"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\Source\\font-awesome-4.7.0.zip",
+      "PackagePath": "staticwebassets\\Home\\Source\\font-awesome-4.7.0.zip"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\Source\\jquery-nice-select-1.1.0.zip",
+      "PackagePath": "staticwebassets\\Home\\Source\\jquery-nice-select-1.1.0.zip"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\Source\\jquery-ui-1.12.1.zip",
+      "PackagePath": "staticwebassets\\Home\\Source\\jquery-ui-1.12.1.zip"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\Source\\sass.zip",
+      "PackagePath": "staticwebassets\\Home\\Source\\sass.zip"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Home\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\css\\elegant-icons.css",
+      "PackagePath": "staticwebassets\\Home\\css\\elegant-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\Home\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\css\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\Home\\css\\jquery-ui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\Home\\css\\nice-select.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\Home\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\css\\slicknav.min.css",
+      "PackagePath": "staticwebassets\\Home\\css\\slicknav.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\css\\style.css",
+      "PackagePath": "staticwebassets\\Home\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\fonts\\ElegantIcons.eot",
+      "PackagePath": "staticwebassets\\Home\\fonts\\ElegantIcons.eot"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\fonts\\ElegantIcons.svg",
+      "PackagePath": "staticwebassets\\Home\\fonts\\ElegantIcons.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\fonts\\ElegantIcons.ttf",
+      "PackagePath": "staticwebassets\\Home\\fonts\\ElegantIcons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\fonts\\ElegantIcons.woff",
+      "PackagePath": "staticwebassets\\Home\\fonts\\ElegantIcons.woff"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\Home\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\Home\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\Home\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\Home\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\Home\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\Home\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\banner\\banner-1.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\banner\\banner-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\banner\\banner-2.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\banner\\banner-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\blog\\blog-1.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\blog\\blog-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\blog\\blog-2.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\blog\\blog-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\blog\\blog-3.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\blog\\blog-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\blog\\blog-4.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\blog\\blog-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\blog\\blog-5.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\blog\\blog-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\blog\\blog-6.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\blog\\blog-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\blog\\details\\details-author.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\blog\\details\\details-author.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\blog\\details\\details-hero.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\blog\\details\\details-hero.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\blog\\details\\details-pic.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\blog\\details\\details-pic.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\blog\\sidebar\\sr-1.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\blog\\sidebar\\sr-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\blog\\sidebar\\sr-2.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\blog\\sidebar\\sr-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\blog\\sidebar\\sr-3.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\blog\\sidebar\\sr-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\breadcrumb.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\breadcrumb.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\cart\\cart-1.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\cart\\cart-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\cart\\cart-2.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\cart\\cart-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\cart\\cart-3.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\cart\\cart-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\categories\\cat-1.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\categories\\cat-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\categories\\cat-2.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\categories\\cat-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\categories\\cat-3.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\categories\\cat-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\categories\\cat-4.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\categories\\cat-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\categories\\cat-5.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\categories\\cat-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\featured\\feature-1.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\featured\\feature-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\featured\\feature-2.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\featured\\feature-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\featured\\feature-3.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\featured\\feature-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\featured\\feature-4.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\featured\\feature-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\featured\\feature-5.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\featured\\feature-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\featured\\feature-6.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\featured\\feature-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\featured\\feature-7.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\featured\\feature-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\featured\\feature-8.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\featured\\feature-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\hero\\banner.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\hero\\banner.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\language.png",
+      "PackagePath": "staticwebassets\\Home\\img\\language.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\latest-product\\lp-1.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\latest-product\\lp-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\latest-product\\lp-2.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\latest-product\\lp-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\latest-product\\lp-3.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\latest-product\\lp-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\logo.png",
+      "PackagePath": "staticwebassets\\Home\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\payment-item.png",
+      "PackagePath": "staticwebassets\\Home\\img\\payment-item.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\details\\product-details-1.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\details\\product-details-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\details\\product-details-2.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\details\\product-details-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\details\\product-details-3.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\details\\product-details-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\details\\product-details-4.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\details\\product-details-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\details\\product-details-5.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\details\\product-details-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\details\\thumb-1.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\details\\thumb-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\details\\thumb-2.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\details\\thumb-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\details\\thumb-3.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\details\\thumb-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\details\\thumb-4.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\details\\thumb-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\discount\\pd-1.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\discount\\pd-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\discount\\pd-2.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\discount\\pd-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\discount\\pd-3.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\discount\\pd-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\discount\\pd-4.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\discount\\pd-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\discount\\pd-5.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\discount\\pd-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\discount\\pd-6.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\discount\\pd-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\product-1.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\product-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\product-10.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\product-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\product-11.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\product-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\product-12.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\product-12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\product-2.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\product-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\product-3.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\product-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\product-4.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\product-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\product-5.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\product-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\product-6.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\product-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\product-7.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\product-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\product-8.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\product-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\img\\product\\product-9.jpg",
+      "PackagePath": "staticwebassets\\Home\\img\\product\\product-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\Home\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\Home\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\Home\\js\\jquery-ui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\Home\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\js\\jquery.slicknav.js",
+      "PackagePath": "staticwebassets\\Home\\js\\jquery.slicknav.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\js\\main.js",
+      "PackagePath": "staticwebassets\\Home\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\js\\mixitup.min.js",
+      "PackagePath": "staticwebassets\\Home\\js\\mixitup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\Home\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_base.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_base.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_blog-details.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_blog-details.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_blog-sidebar.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_blog-sidebar.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_blog.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_blog.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_checkout.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_checkout.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_contact.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_contact.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_footer.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_header.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_hero.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_hero.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_home-page.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_home-page.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_mixins.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_responsive.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_responsive.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_shop-details.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_shop-details.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_shop-grid.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_shop-grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_shoping-cart.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_shoping-cart.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_sidebar.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_sidebar.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\_variable.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\_variable.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\Home\\sass\\style.scss",
+      "PackagePath": "staticwebassets\\Home\\sass\\style.scss"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -23501,6 +23969,10 @@
       "PackagePath": "staticwebassets\\images\\0dbd9e5c-a404-4550-a81c-15a7ee714d15.png"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\103ec39f-4ae4-4db2-9271-e6ea1c28c48c.png",
+      "PackagePath": "staticwebassets\\images\\103ec39f-4ae4-4db2-9271-e6ea1c28c48c.png"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\1113e003-b582-462d-8352-7cad92c04ff0.png",
       "PackagePath": "staticwebassets\\images\\1113e003-b582-462d-8352-7cad92c04ff0.png"
     },
@@ -23519,6 +23991,10 @@
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\247fea74-d9a0-43aa-a074-be35c3f240a2.png",
       "PackagePath": "staticwebassets\\images\\247fea74-d9a0-43aa-a074-be35c3f240a2.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\24ab97b9-5f94-4d59-a397-74dd340602da.png",
+      "PackagePath": "staticwebassets\\images\\24ab97b9-5f94-4d59-a397-74dd340602da.png"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\283cfb0b-4793-4e68-b696-5a3fc03afdd4.png",
@@ -23595,6 +24071,10 @@
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\7086ea2c-e0cb-4fc0-94ea-d31ded83e3a4.png",
       "PackagePath": "staticwebassets\\images\\7086ea2c-e0cb-4fc0-94ea-d31ded83e3a4.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\714724cb-801d-467f-8326-97c680693eda.png",
+      "PackagePath": "staticwebassets\\images\\714724cb-801d-467f-8326-97c680693eda.png"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\74c01e38-cfd0-4c87-885e-7b3028692941.png",
@@ -23763,6 +24243,14 @@
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\ef873723-d480-4697-a577-ec7d79631faf.png",
       "PackagePath": "staticwebassets\\images\\ef873723-d480-4697-a577-ec7d79631faf.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\f73daac0-0925-46e7-90ee-f8e476596f37.png",
+      "PackagePath": "staticwebassets\\images\\f73daac0-0925-46e7-90ee-f8e476596f37.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\f9858ded-b11c-491c-9c28-0513fce66e56.png",
+      "PackagePath": "staticwebassets\\images\\f9858ded-b11c-491c-9c28-0513fce66e56.png"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\fad1e842-108e-4a91-9ec9-4841534fb5c0.png",

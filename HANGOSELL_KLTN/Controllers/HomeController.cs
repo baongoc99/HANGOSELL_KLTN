@@ -4,36 +4,28 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Microsoft.Extensions.Localization;
+using HANGOSELL_KLTN.Service;
 
 namespace HANGOSELL_KLTN.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly IStringLocalizer<HomeController> _localizer;
 
-        public HomeController(ILogger<HomeController> logger, IStringLocalizer<HomeController> localizer)
+        private readonly ProductService productService;
+        public HomeController(ProductService productService)
         {
-            _logger = logger;
-            _localizer = localizer;
+
+            this.productService = productService;
         }
 
-        public IActionResult Register()
-        {
-            return View();
-        }
         public IActionResult Index()
         {
-            return View();
+            List<Product> products = productService.GetAllProduct();
+            return View(products);
         }
         public IActionResult Cart()
         {
             return View();
         }
-		public IActionResult Product()
-		{
-			return View();
-		}
-
-	}
+    }
 }

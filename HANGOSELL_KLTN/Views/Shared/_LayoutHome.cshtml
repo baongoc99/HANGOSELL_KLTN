@@ -1,0 +1,48 @@
+﻿
+@using Microsoft.Extensions.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ogani | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/home/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/home/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/home/css/elegant-icons.css">
+    <link rel="stylesheet" href="~/home/css/nice-select.css">
+    <link rel="stylesheet" href="~/home/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="~/home/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/home/css/slicknav.min.css">
+    <link rel="stylesheet" href="~/home/css/style.css">
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+</head>
+
+<body>
+   
+
+        @* content page *@
+       
+            @RenderBody()
+
+        @* footer *@
+        @await Html.PartialAsync("_Footer")
+    </div>
+
+
+</body>
+</html>

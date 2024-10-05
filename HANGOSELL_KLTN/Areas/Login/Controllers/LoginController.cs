@@ -12,76 +12,76 @@ using System.Text;
 
 namespace HANGOSELL_KLTN.Areas.Login.Controllers
 {
-	[Area("Login")]
-	public class LoginController : Controller
-	{
-		private readonly AccountService AccountService;
-		private readonly ApplicationDbContext _context;
+    [Area("Login")]
+    public class LoginController : Controller
+    {
+        private readonly AccountService AccountService;
+        private readonly ApplicationDbContext _context;
 
-		public LoginController(AccountService AccountService, ApplicationDbContext context)
-		{
-			this.AccountService = AccountService;
-			this._context = context;
-		}
-		[HttpGet]
-		public IActionResult Login()
-		{
-			return View();
-		}
+        public LoginController(AccountService AccountService, ApplicationDbContext context)
+        {
+            this.AccountService = AccountService;
+            this._context = context;
+        }
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
 
-		[HttpGet]
-		public IActionResult Register()
-		{
-			return View();
-		}
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
 
 
-		[HttpPost]
-		public IActionResult Register(Customer customer, string password, string password_confirmation)
-		{
-			try
-			{
-				// Kiểm tra mật khẩu nhập lại
-				if (password != password_confirmation)
-				{
-					ModelState.AddModelError(string.Empty, "Passwords do not match.");
-					return View(customer);
-				}
+        [HttpPost]
+        public IActionResult Register(Customer customer, string password, string password_confirmation)
+        {
+            try
+            {
+                // Kiểm tra mật khẩu nhập lại
+                if (password != password_confirmation)
+                {
+                    ModelState.AddModelError(string.Empty, "Passwords do not match.");
+                    return View(customer);
+                }
 
-				// Kiểm tra email đã tồn tại chưa
-				var existingCustomer = _context.Customers.FirstOrDefault(c => c.Email == customer.Email);
-				if (existingCustomer != null)
-				{
-					ModelState.AddModelError(string.Empty, "Email already exists.");
-					return View(customer);
-				}
+                // Kiểm tra email đã tồn tại chưa
+                var existingCustomer = _context.Customers.FirstOrDefault(c => c.Email == customer.Email);
+                if (existingCustomer != null)
+                {
+                    ModelState.AddModelError(string.Empty, "Email already exists.");
+                    return View(customer);
+                }
 
-				// Mã hóa mật khẩu bằng IPasswordHasher từ AccountService
-				customer.Password = AccountService.HashPasswordCustomer(customer, password);
+                // Mã hóa mật khẩu bằng IPasswordHasher từ AccountService
+                customer.Password = AccountService.HashPasswordCustomer(customer, password);
 
-				// Gán vai trò mặc định cho customer (RoleID là vai trò Customer)
-				var customerRole = _context.Roles.FirstOrDefault(r => r.RoleName == "Customer");
-				if (customerRole != null)
-				{
-					customer.RoleId = customerRole.Id;
-				}
-				else
-				{
-					ModelState.AddModelError(string.Empty, "Role Customer not found.");
-					return View(customer);
-				}
+                // Gán vai trò mặc định cho customer (RoleID là vai trò Customer)
+                var customerRole = _context.Roles.FirstOrDefault(r => r.RoleName == "Customer");
+                if (customerRole != null)
+                {
+                    customer.RoleId = customerRole.Id;
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Role Customer not found.");
+                    return View(customer);
+                }
 
-				// Lưu customer vào database
-				_context.Customers.Add(customer);
-				_context.SaveChanges();
+                // Lưu customer vào database
+                _context.Customers.Add(customer);
+                _context.SaveChanges();
 
-				return RedirectToAction("Login", "Login");
-			}
-			catch (Exception ex)
-			{
-				return View(customer);
-			}
-		}
+                return RedirectToAction("Login", "Login");
+            }
+            catch (Exception ex)
+            {
+                return View(customer);
+            }
+        }
 
         // POST: /Account/Login
         [HttpPost]
@@ -182,26 +182,26 @@ namespace HANGOSELL_KLTN.Areas.Login.Controllers
         //	return Redirect($"/Home");
         //}
 
-  //      public IActionResult Logout()
-		//{
-		//	HttpContext.Session.Clear();
-		//	return RedirectToAction("Login", "Home");
-		//}
-		public string MD5Hash(string input)
-		{
-			using (MD5 md5 = MD5.Create())
-			{
-				byte[] inputBytes = Encoding.ASCII.GetBytes(input);
-				byte[] hashBytes = md5.ComputeHash(inputBytes);
+        //      public IActionResult Logout()
+        //{
+        //	HttpContext.Session.Clear();
+        //	return RedirectToAction("Login", "Home");
+        //}
+        public string MD5Hash(string input)
+        {
+            using (MD5 md5 = MD5.Create())
+            {
+                byte[] inputBytes = Encoding.ASCII.GetBytes(input);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
 
-				StringBuilder sb = new StringBuilder();
-				for (int i = 0; i < hashBytes.Length; i++)
-				{
-					sb.Append(hashBytes[i].ToString("X2"));
-				}
-				return sb.ToString();
-			}
-		}
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("X2"));
+                }
+                return sb.ToString();
+            }
+        }
 
         public async Task<IActionResult> Logout()
         {
