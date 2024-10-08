@@ -70,6 +70,41 @@ namespace HANGOSELL_KLTN.Migrations
                     b.ToTable("tb_Adv");
                 });
 
+            modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.CartItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("anhsp")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("productId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("productName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("productPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerId");
+
+                    b.ToTable("CartItems");
+                });
+
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Contact", b =>
                 {
                     b.Property<int>("Id")
@@ -160,12 +195,7 @@ namespace HANGOSELL_KLTN.Migrations
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("RoleId");
 
                     b.ToTable("tb_Customer");
                 });
@@ -762,15 +792,15 @@ namespace HANGOSELL_KLTN.Migrations
                     b.ToTable("tb_SystemSetting");
                 });
 
-            modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Customer", b =>
+            modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.CartItem", b =>
                 {
-                    b.HasOne("HANGOSELL_KLTN.Models.EF.Role", "Role")
-                        .WithMany("Customers")
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                    b.HasOne("HANGOSELL_KLTN.Models.EF.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Role");
+                    b.Navigation("Customer");
                 });
 
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Employee", b =>
@@ -867,8 +897,6 @@ namespace HANGOSELL_KLTN.Migrations
 
             modelBuilder.Entity("HANGOSELL_KLTN.Models.EF.Role", b =>
                 {
-                    b.Navigation("Customers");
-
                     b.Navigation("Employees");
                 });
 #pragma warning restore 612, 618

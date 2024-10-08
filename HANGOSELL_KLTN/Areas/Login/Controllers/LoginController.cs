@@ -17,11 +17,13 @@ namespace HANGOSELL_KLTN.Areas.Login.Controllers
     {
         private readonly AccountService AccountService;
         private readonly ApplicationDbContext _context;
+        private readonly CustomerService customerService;
 
-        public LoginController(AccountService AccountService, ApplicationDbContext context)
+        public LoginController(AccountService AccountService, ApplicationDbContext context, CustomerService customerService)
         {
             this.AccountService = AccountService;
             this._context = context;
+            this.customerService = customerService;
         }
         [HttpGet]
         public IActionResult Login()
@@ -61,16 +63,7 @@ namespace HANGOSELL_KLTN.Areas.Login.Controllers
 
                 // Gán vai trò mặc định cho customer (RoleID là vai trò Customer)
                 var customerRole = _context.Roles.FirstOrDefault(r => r.RoleName == "Customer");
-                if (customerRole != null)
-                {
-                    customer.RoleId = customerRole.Id;
-                }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Role Customer not found.");
-                    return View(customer);
-                }
-
+               
                 // Lưu customer vào database
                 _context.Customers.Add(customer);
                 _context.SaveChanges();
@@ -84,109 +77,133 @@ namespace HANGOSELL_KLTN.Areas.Login.Controllers
         }
 
         // POST: /Account/Login
-        [HttpPost]
-        public IActionResult Login(LoginViewModel model)
+        //[HttpPost]
+        //public IActionResult Login(LoginViewModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        // Tìm Customer
+        //        var customer = _context.Customers.FirstOrDefault(c => c.Email == model.Email);
+        //        if (customer != null)
+        //        {
+        //            var result = AccountService.VerifyPassword(customer.Password, model.Password);
+        //            if (result == PasswordVerificationResult.Success)
+        //            {
+        //                // Đăng nhập thành công, tạo Claims
+        //                var claims = new List<Claim>
+        //        {
+        //            new Claim(ClaimTypes.Name, customer.ContactPerson), // Tên
+        //            new Claim(ClaimTypes.Email, customer.Email), // Email
+        //            new Claim("Position", "Customer") // Vai trò hoặc vị trí
+        //        };
+
+        //                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+        //                var authProperties = new AuthenticationProperties
+        //                {
+        //                    // Các tùy chọn về thời gian lưu trữ phiên đăng nhập
+        //                    IsPersistent = true // Để phiên đăng nhập tồn tại sau khi đóng trình duyệt
+        //                };
+
+        //                // Thực hiện đăng nhập
+        //                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+
+        //                // Điều hướng đến view của Customer
+        //                return RedirectToAction("Index", "Home", new { area = "" });
+        //            }
+        //        }
+
+        //        // Tìm Admin
+        //        var admin = _context.Employees.FirstOrDefault(a => a.Email == model.Email);
+        //        if (admin != null)
+        //        {
+        //            var result = AccountService.VerifyPassword(admin.Password, model.Password);
+        //            Console.WriteLine(result);
+        //            if (result == PasswordVerificationResult.Success)
+        //            {
+        //                // Đăng nhập thành công, tạo Claims
+        //                var claims = new List<Claim>
+        //        {
+        //            new Claim(ClaimTypes.Name, admin.EmployeeName), // Tên
+        //            new Claim(ClaimTypes.Email, admin.Email), // Email
+        //            new Claim("Position", admin.Position) // Vai trò hoặc vị trí
+        //        };
+
+        //                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+        //                var authProperties = new AuthenticationProperties
+        //                {
+        //                    IsPersistent = true
+        //                };
+
+        //                // Thực hiện đăng nhập
+        //                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+
+        //                // Điều hướng đến view của Admin
+        //                return RedirectToAction("Index", "Home", new { area = "Admin" });
+        //            }
+        //        }
+
+        //        // Nếu không tìm thấy hoặc mật khẩu không đúng
+        //        //ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+        //    }
+
+        //    return Ok();
+        //}
+
+
+        public IActionResult Logins(string codeEmployee, string password)
         {
-            if (ModelState.IsValid)
+            var employee = AccountService.CheckCodeAndPass(codeEmployee);
+            var customer = customerService.CheckCodeAndPass(codeEmployee);
+
+
+            if (employee != null)
             {
-                // Tìm Customer
-                var customer = _context.Customers.FirstOrDefault(c => c.Email == model.Email);
-                if (customer != null)
+                var passwordVerificationResult = AccountService.VerifyPassword(employee.Password, password);
+                if (passwordVerificationResult == PasswordVerificationResult.Success)
                 {
-                    var result = AccountService.VerifyPassword(customer.Password, model.Password);
-                    if (result == PasswordVerificationResult.Success)
-                    {
-                        // Đăng nhập thành công, tạo Claims
-                        var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, customer.ContactPerson), // Tên
-                    new Claim(ClaimTypes.Email, customer.Email), // Email
-                    new Claim("Position", "Customer") // Vai trò hoặc vị trí
-                };
+                    // Lưu thông tin người dùng vào session
+                    HttpContext.Session.SetInt32("Id", employee.Id);
+                    HttpContext.Session.SetString("CodeEmployee", employee.CodeEmployee.ToString());
+                    HttpContext.Session.SetString("EmployeeName", employee.EmployeeName);
+                    HttpContext.Session.SetString("Email", employee.Email);
+                    HttpContext.Session.SetString("DateOfBirth", employee.DateOfBirth.ToString("yyyy-MM-dd"));
+                    HttpContext.Session.SetString("PhoneNumber", employee.PhoneNumber);
+                    HttpContext.Session.SetString("Address", employee.Address);
+                    HttpContext.Session.SetString("JoinDate", employee.JoinDate.ToString("yyyy-MM-dd"));
+                    HttpContext.Session.SetString("Status", employee.Status.ToString());
+                    HttpContext.Session.SetString("Position", employee.Position);
+                    HttpContext.Session.SetString("Avatar", employee.Avatar);
 
-                        var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                        var authProperties = new AuthenticationProperties
-                        {
-                            // Các tùy chọn về thời gian lưu trữ phiên đăng nhập
-                            IsPersistent = true // Để phiên đăng nhập tồn tại sau khi đóng trình duyệt
-                        };
-
-                        // Thực hiện đăng nhập
-                        HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
-
-                        // Điều hướng đến view của Customer
-                        return RedirectToAction("Index", "Home", new { area = "" });
-                    }
+                    // Đăng nhập thành công, chuyển hướng đến trang chính
+                    return Redirect("/Admin/Home/");
                 }
-
-                // Tìm Admin
-                var admin = _context.Employees.FirstOrDefault(a => a.Email == model.Email);
-                if (admin != null)
-                {
-                    var result = AccountService.VerifyPassword(admin.Password, model.Password);
-                    if (result == PasswordVerificationResult.Success)
-                    {
-                        // Đăng nhập thành công, tạo Claims
-                        var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, admin.EmployeeName), // Tên
-                    new Claim(ClaimTypes.Email, admin.Email), // Email
-                    new Claim("Position", admin.Position) // Vai trò hoặc vị trí
-                };
-
-                        var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                        var authProperties = new AuthenticationProperties
-                        {
-                            IsPersistent = true
-                        };
-
-                        // Thực hiện đăng nhập
-                        HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
-
-                        // Điều hướng đến view của Admin
-                        return RedirectToAction("Index", "Home", new { area = "Admin" });
-                    }
-                }
-
-                // Nếu không tìm thấy hoặc mật khẩu không đúng
-                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
             }
 
-            return View(model);
+            if (customer != null)
+            {
+                var passwordVerificationResult = AccountService.VerifyPassword(customer.Password, password);
+                if (passwordVerificationResult == PasswordVerificationResult.Success)
+                {
+                    HttpContext.Session.SetInt32("Id", customer.Id);
+                    HttpContext.Session.SetString("Email", customer.Email);
+                    HttpContext.Session.SetString("PhoneNumber", customer.PhoneNumber);
+                    HttpContext.Session.SetString("Address", customer.Address);
+
+                    // Đăng nhập thành công cho khách hàng, chuyển hướng đến trang chính
+                    return Redirect("/");
+                }
+            }
+
+            // Đăng nhập không thành công, có thể thông báo lỗi
+            TempData["ErrorMessage"] = "Mã nhân viên hoặc mật khẩu không đúng.";
+            return RedirectToAction("Login", "Account"); // Redirect đến trang đăng nhập
         }
 
-
-        //[HttpPost]
-        //public IActionResult Login(string codeEmployee, string password)
-        //{
-        //	Employee employee = AccountService.CheckCodeAndPass(codeEmployee);
-        //	var checkmatkhau = AccountService.VerifyPassword(employee.Password, password);
-        //	if (checkmatkhau == PasswordVerificationResult.Success)
-        //	{
-        //		// Lưu thô	ng tin người dùng vào session
-        //		HttpContext.Session.SetInt32("Id", employee.Id);
-        //		HttpContext.Session.SetString("CodeEmployee", employee.CodeEmployee.ToString());
-        //		HttpContext.Session.SetString("EmployeeName", employee.EmployeeName);
-        //		HttpContext.Session.SetString("Email", employee.Email);
-        //		HttpContext.Session.SetString("DateOfBirth", employee.DateOfBirth.ToString("yyyy-MM-dd"));
-        //		HttpContext.Session.SetString("PhoneNumber", employee.PhoneNumber);
-        //		HttpContext.Session.SetString("Address", employee.Address);
-        //		HttpContext.Session.SetString("JoinDate", employee.JoinDate.ToString("yyyy-MM-dd"));
-        //		HttpContext.Session.SetString("Status", employee.Status.ToString());
-        //		HttpContext.Session.SetString("Position", employee.Position);
-        //		HttpContext.Session.SetString("Avatar", employee.Avatar);
-
-        //		// Đăng nhập thành công, chuyển hướng đến trang chính
-        //		return Redirect($"/Admin/Home/");
-        //	}
-        //	return Redirect($"/Home");
-        //}
-
-        //      public IActionResult Logout()
-        //{
-        //	HttpContext.Session.Clear();
-        //	return RedirectToAction("Login", "Home");
-        //}
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Login", "Home");
+        }
         public string MD5Hash(string input)
         {
             using (MD5 md5 = MD5.Create())
@@ -203,11 +220,11 @@ namespace HANGOSELL_KLTN.Areas.Login.Controllers
             }
         }
 
-        public async Task<IActionResult> Logout()
-        {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToAction("Login", "Login");
-        }
+        //public async Task<IActionResult> Logout()
+        //{
+        //    await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        //    return RedirectToAction("Login", "Login");
+        //}
 
     }
 }

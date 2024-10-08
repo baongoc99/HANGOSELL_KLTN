@@ -55,5 +55,10 @@ namespace HANGOSELL_KLTN.Service
             }
 
         }
+        public Customer CheckCodeAndPass(string codecustomer)
+        {
+            Customer Employee = _context.Customers.FirstOrDefault(u => u.CompanyName == codecustomer || u.Email == codecustomer);
+            return Employee;
+        }
     }
 }

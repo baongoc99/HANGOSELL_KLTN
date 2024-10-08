@@ -122,7 +122,6 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             Order order = new Order();
             order.CreateDate = DateTime.Now;
             order.Address = customer1.Address;
-
             order.Code = GenerateOrderCode();
             order.CustomerId = customer1.Id;
             order.Status = "Đã hoàn thành";

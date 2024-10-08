@@ -1,20 +1,19 @@
-﻿@model HANGOSELL_KLTN.Models.LoginViewModel
-
+﻿
 <div class="login-right">
     <div class="login-right-wrap">
         <h1>Welcome to Hangosell</h1>
         <p class="account-subtitle">Need an account? <a href="/Home/Register">Sign Up</a></p>
         <h2>Sign in</h2>
 
-         <form action="/Login/Login" method="post">
+        <form action="/Login/Login/Logins" method="post">
              <div class="form-group">
                  <label for="CodeEmployee" class="form-label">CodeEmployee<span class="login-danger">*</span></label>
-                <input asp-for="Email" type="email" class="form-control" name="Email" id="Email" required>
+                <input  type="text" class="form-control" name="codeEmployee" id="codeEmployee" required>
                  <span class="profile-views"><i class="fas fa-user"></i></span>
              </div>
              <div class="form-group">
                  <label for="password" class="form-label">Password<span class="login-danger">*</span></label>
-                <input asp-for="Password" type="password" class="form-control" name="Password" id="Password" required>
+                <input  type="password" class="form-control" name="password" id="Password" required>
                  <span class="profile-views " onclick="togglePassword()">
                      <i class="fas fa-eye" id="togglePasswordIcon"></i>
                  </span>

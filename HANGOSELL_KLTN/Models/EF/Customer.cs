@@ -16,11 +16,7 @@ public class Customer : CommonAbtract
     public string? PhoneNumber { get; set; }
     public string? Address { get; set; }
     // Thêm khóa ngoại RoleId để phân quyền
-    public int RoleId { get; set; }
-
-    // Thuộc tính điều hướng đến bảng Role
-    [ForeignKey("RoleId")]
-    public virtual Role Role { get; set; }
+ 
 }
 
 }

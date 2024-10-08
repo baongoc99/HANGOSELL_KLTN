@@ -29,9 +29,11 @@ namespace HANGOSELL_KLTN.Data
 		public DbSet<OrderDetailCustomer> OrderDetailCustomers { get; set; }
 		public DbSet<QRCodeRequest> QRCodeRequests { get; set; }
 		public DbSet<Store> Stores { get; set; }
+        public DbSet<CartItem> CartItems { get; set; }
 
 
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			base.OnModelCreating(modelBuilder);
 
@@ -43,12 +45,7 @@ namespace HANGOSELL_KLTN.Data
 				.IsRequired()
 				.OnDelete(DeleteBehavior.Restrict); // Hạn chế việc xóa vai trò nếu có nhân viên liên quan
 
-			modelBuilder.Entity<Role>()
-				.HasMany(r => r.Customers) // Một Role có nhiều Customer
-				.WithOne(c => c.Role)      // Một Customer chỉ thuộc một Role
-				.HasForeignKey(c => c.RoleId) // Khóa ngoại RoleId trong bảng Customer
-				.IsRequired()
-				.OnDelete(DeleteBehavior.Restrict);
+		
 
 
 			// Cấu hình cho thực thể Category

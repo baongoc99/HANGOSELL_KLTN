@@ -13,7 +13,6 @@ namespace HANGOSELL_KLTN.Models.EF
 		// Điều hướng đến Employee
 		public virtual ICollection<Employee> Employees { get; set; }
 		// Điều hướng đến Customer
-		public virtual ICollection<Customer> Customers { get; set; }
 	}
 
 }
