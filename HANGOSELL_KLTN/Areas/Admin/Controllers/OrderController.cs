@@ -155,6 +155,19 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             paymentService.AddCPayment(payment);
             return Redirect($"/admin/invoice/BillPayment/?idcustomer={customer1.Id}&id={idorder}");
         }
-
+        public IActionResult updatedatdat(int id)
+        {
+            Order order = orderService.GetOrderById(id);
+            order.Status = "Đang giao hàng";
+            orderService.UpdateCategory(order);
+            return Redirect($"/admin/invoice");
+        }
+        public IActionResult updategiaohang(int id)
+        {
+            Order order = orderService.GetOrderById(id);
+            order.Status = "Đã giao";
+            orderService.UpdateCategory(order);
+            return Redirect($"/admin/invoice");
+        }
     }
 }

@@ -188,6 +188,8 @@ namespace HANGOSELL_KLTN.Areas.Login.Controllers
                     HttpContext.Session.SetString("Email", customer.Email);
                     HttpContext.Session.SetString("PhoneNumber", customer.PhoneNumber);
                     HttpContext.Session.SetString("Address", customer.Address);
+                    HttpContext.Session.SetString("ContactPerson", customer.ContactPerson);
+
 
                     // Đăng nhập thành công cho khách hàng, chuyển hướng đến trang chính
                     return Redirect("/");

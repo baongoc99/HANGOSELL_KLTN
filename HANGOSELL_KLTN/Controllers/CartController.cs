@@ -11,6 +11,7 @@ namespace HANGOSELL_KLTN.Controllers
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly ApplicationDbContext _context;
         private readonly OrderService orderService;
+        private readonly StoreService storeService;
 
         private readonly OrderDetailService orderDetailService;
         private readonly ProductService productService;
@@ -19,7 +20,8 @@ namespace HANGOSELL_KLTN.Controllers
             OrderService orderService,
             OrderDetailService orderDetailService,
             ProductService productService,
-            CustomerService customerService)
+            CustomerService customerService,
+            StoreService storeService)
         {
             _httpContextAccessor = httpContextAccessor;
             _context = applicationDbContext;
@@ -27,13 +29,14 @@ namespace HANGOSELL_KLTN.Controllers
             this.orderDetailService = orderDetailService;
             this.productService = productService;
             this.customerService = customerService;
+            this.storeService = storeService;
         }
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult ListCart()
+        public async Task<IActionResult> ListCart()
         {
             if (HttpContext.Session.GetInt32("Id") != null)
             {
@@ -50,6 +53,13 @@ namespace HANGOSELL_KLTN.Controllers
 
                 ViewData["tongtien"] = tongtien;
                 ViewData["soluong"] = soluong;
+                Store store = await storeService.GetStoreAsync();
+                ViewData["emailstore"] = store.Email;
+                ViewData["logo"] = store.Logo;
+                ViewData["PhoneNumber"] = store.PhoneNumber;
+                ViewData["Address"] = store.Address;
+                ViewData["ContactPerson"] = HttpContext.Session.GetString("ContactPerson");
+
                 return View(cartItems);
             }
             else
@@ -84,7 +94,6 @@ namespace HANGOSELL_KLTN.Controllers
             var serializedCartItems = JsonSerializer.Serialize(cartItems);
             _httpContextAccessor.HttpContext.Session.SetString("CartItems", serializedCartItems);
         }
-        [HttpPost]
         [HttpPost]
         public IActionResult AddToCart(int productId, string productName, decimal price, int quantitys, string anhsps)
         {

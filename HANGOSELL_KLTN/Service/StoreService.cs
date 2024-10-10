@@ -1,6 +1,7 @@
 ﻿using HANGOSELL_KLTN.Data;
 using HANGOSELL_KLTN.Models.EF;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -15,7 +16,13 @@ public class StoreService
 
     public async Task<Store> GetStoreAsync()
     {
+        
         return await _context.Stores.FirstOrDefaultAsync();
+    }
+    public Store GetStore()
+    {
+
+        return  _context.Stores.FirstOrDefault();
     }
     public Store CreateStore(Store store)
     {
