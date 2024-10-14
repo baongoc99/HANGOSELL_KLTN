@@ -204,7 +204,7 @@ namespace HANGOSELL_KLTN.Areas.Login.Controllers
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
-            return RedirectToAction("Login", "Home");
+            return RedirectToAction("Login", "Login");
         }
         public string MD5Hash(string input)
         {

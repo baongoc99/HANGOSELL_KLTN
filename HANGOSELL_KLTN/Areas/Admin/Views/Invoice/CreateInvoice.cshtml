@@ -78,7 +78,7 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th class="text-center">ID</th>
+                                            <th class="text-center">STT</th>
                                             <th class="text-center">@_localizer.GetLocalizedString("Product")</th>
                                             <th class="text-center">@_localizer.GetLocalizedString("Quantity")</th>
                                             <th class="text-center">@_localizer.GetLocalizedString("Total Price")</th>
@@ -88,11 +88,12 @@
                                     <tbody>
                                         @if (Model.orderDetailCustomers != null)
                                         {
+                                            var index = 1;
                                             @foreach (var orderDetailCustomer in Model.orderDetailCustomers)
                                             {
                                                 <tr>
 
-                                                    <td class="text-center">@orderDetailCustomer.Id</td>
+                                                    <td class="text-center">@index</td>
                                                     <td class="text-center">@orderDetailCustomer.Product.Title</td>
                                                     <td class="text-center">@orderDetailCustomer.Quantity</td>
                                                     <td class="text-center">@orderDetailCustomer.TotalPrice</td>
@@ -105,6 +106,7 @@
                                                         </a>
                                                     </td>
                                                 </tr>
+                                                index++;
                                             }
 
                                         }
