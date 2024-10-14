@@ -1,0 +1,61 @@
+﻿@model List<HANGOSELL_KLTN.Models.EF.ModelDataset>
+@using HANGOSELL_KLTN.Configuration
+@inject SharedViewLocalizer _localizer
+@{
+    ViewData["Title"] = "List Invoice";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        <div class="page-header">
+
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">@_localizer.GetLocalizedString("List") @_localizer.GetLocalizedString("Invoice")</h3>
+                    <div class="col-auto text-end float-end ms-auto download-grp">
+                        <a href="/Admin/Invoice/Download" class="btn btn-outline-success me-2">
+                            <i class="fas fa-download"></i> @_localizer.GetLocalizedString("Export")
+                        </a>
+                        <a href="/Admin/Invoice" class="btn btn-outline-gray me-2 active">
+                            <i class="fa fa-list" aria-hidden="true"></i>
+                        </a>
+                        <a href="/Admin/Invoice/CreateInvoice" class="btn btn-outline-gray me-2">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card bg-comman w-100">
+                <div class="card-body">
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="text-center">@_localizer.GetLocalizedString("Tên sản phẩm")</th>
+                                <th class="text-center">@_localizer.GetLocalizedString("Số lượng")</th>
+                                <th class="text-center">@_localizer.GetLocalizedString("Tổng tiền")</th>
+                                <th class="text-center">@_localizer.GetLocalizedString("Ngày mua")</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="text-center">@item.product.Title</td>
+                                    <td class="text-center">@item.orderDetal.Quantity</td>
+                                    <td class="text-center">@item.orderDetal.TotalPrice</td>
+                                    <td class="text-center">@item.orderDetal.StartDattetime</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

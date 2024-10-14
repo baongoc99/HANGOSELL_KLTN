@@ -34,9 +34,8 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th class="text-center">STT</th>
                                 <th class="text-center">@_localizer.GetLocalizedString("Code Invoice")</th>
-                                <th class="text-center">@_localizer.GetLocalizedString("Company Name")</th>
+                                <th class="text-center">@_localizer.GetLocalizedString("Contact Person")</th>
                                 <th class="text-center">@_localizer.GetLocalizedString("Total")</th>
                                 <th class="text-center">@_localizer.GetLocalizedString("Date")</th>
                                 <th class="text-center">@_localizer.GetLocalizedString("Status")</th>
@@ -47,9 +46,8 @@
                             @foreach (var item in Model)
                             {
                                 <tr>
-                                    <td class="text-center">@item.Id</td>
                                     <td class="text-center">@item.Code</td>
-                                    <td class="text-center">@item.Customer.CompanyName</td>
+                                    <td class="text-center">@item.Customer.ContactPerson</td>
                                     <td class="text-center">@item.Total</td>
                                     <td class="text-center">@item.CreateDate</td>
                                     <td class="text-center">@item.Status</td>
@@ -58,14 +56,18 @@
                                         {
                                             /// khách đặt và chờ xác nhận lấy hàng và giao hàng
                                             <a href="/admin/order/updatedatdat/@item.Id" class="btn btn-primary">Lấy hàng và vận chuyển</a>
+                                            <a href="/Admin/Invoice/DetailInvoice?id=@item.Id" class="btn btn-primary">Xem thông tin đơn hàng</a>
+
                                         }
                                         else if (item.Status.Equals("Đang giao hàng"))
                                         {
                                             <a href="/admin/order/updategiaohang/@item.Id" class="btn btn-primary">Giao hàng</a>
+                                            <a href="/Admin/Invoice/DetailInvoice?id=@item.Id" class="btn btn-primary">Xem thông tin đơn hàng</a>
+
                                         }
                                         else if (item.Status.Equals("Đã nhận hàng"))
                                         {
-                                            <a href="/order/Details/@item.Id" class="btn btn-primary">Xem thông tin đơn hàng</a>
+                                            <a href="/Admin/Invoice/DetailInvoice?id=@item.Id" class="btn btn-primary">Xem thông tin đơn hàng</a>
                                         }
                                     </td>
 

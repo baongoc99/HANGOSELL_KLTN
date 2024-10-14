@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Areas\Admin\Views\Invoice\DetailInvoice.cshtml" />
+    <Content Remove="Views\Order\ListOrderDetail.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AspNetCoreHero.ToastNotification" Version="1.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0" />
@@ -35,6 +40,24 @@
     <EmbeddedResource Update="Resources\SharedResource.vi-VN.resx">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Areas\Admin\Views\Invoice\DetailInvoice.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Areas\Admin\Views\Invoice\DetailInvoice.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Order\ListOrderDetail.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Areas\Admin\Views\Invoice\DetailInvoice.cshtml" />
+    <None Include="Views\Order\ListOrderDetail.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Order\ListOrderDetail.cshtml" />
   </ItemGroup>
 
 </Project>

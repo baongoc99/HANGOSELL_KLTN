@@ -13,6 +13,8 @@
         public Customer customer { get; set; }
         public List<OrderDetailCustomer> orderDetailCustomers { get; set; }
         public List<OrderDetail> orderDetail { get; set; }
+        public OrderDetail orderDetal { get; set; }
+
         public List<InvoiceViewModel> invoices { get; set; }
         public InvoiceViewModel invoiceViewModel { get; set; }
         public Store store { get; set; }

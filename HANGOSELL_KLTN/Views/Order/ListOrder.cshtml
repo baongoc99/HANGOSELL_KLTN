@@ -103,15 +103,18 @@
                                         <td>
                                             @if (item.Status.Equals("Đã đặt"))
                                             {
-                                                <a href="@item.Id" class="btn btn-primary">Xem thông tin đơn hàng</a>
+                                                <a href="/order/ListOrderDetail?id=@item.Id" class="btn btn-primary">Xem thông tin đơn hàng</a>
+
                                             }
                                             else if (item.Status.Equals("Đã giao"))
                                             {
                                                 <a href="/order/updategiaohang/@item.Id" class="btn btn-primary">Xác nhận đơn hàng</a>
+                                                <a href="/order/ListOrderDetail?id=@item.Id" class="btn btn-primary">Xem thông tin đơn hàng</a>
+
                                             }
                                             else if (item.Status.Equals("Đã nhận hàng"))
                                             {
-                                                <a href="@item.Id" class="btn btn-primary">Xem thông tin đơn hàng</a>
+                                                <a href="/order/ListOrderDetail?id=@item.Id" class="btn btn-primary">Xem thông tin đơn hàng</a>
                                             }
                                         </td>
                                     </tr>

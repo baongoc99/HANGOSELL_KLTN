@@ -215,13 +215,20 @@ namespace HANGOSELL_KLTN.Controllers
             return newOrderCode;
         }
 
-        public IActionResult DatHang()
+        public IActionResult DatHang(string CompanyName, string Address, string PhoneNumber)
         {
             int CustomerId = HttpContext.Session.GetInt32("Id").Value;
             List<CartItem> cartItems = _context.CartItems
                                                                 .Where(item => item.CustomerId == CustomerId)
                                                                 .ToList();
             Customer customer = customerService.GetCustomerById(CustomerId);
+            if (CompanyName != null && Address != null && PhoneNumber != null)
+            {
+                customer.CompanyName = CompanyName;
+                customer.Address = Address;
+                customer.PhoneNumber = PhoneNumber;
+                customerService.UpdateCustomer(customer);
+            }
             decimal total = cartItems.Sum(o => o.productPrice * o.quantity);
             Order order = new Order();
             order.CreateDate = DateTime.Now;
@@ -248,8 +255,47 @@ namespace HANGOSELL_KLTN.Controllers
                 _context.CartItems.Remove(item);
                 _context.SaveChanges();
             }
-            
-            return Redirect("/cart/Listcart");
+
+            return Redirect("/order/Listorder");
+        }
+
+        public async Task<IActionResult> CheckOut()
+        {
+
+            if (HttpContext.Session.GetInt32("Id") != null)
+            {
+                int CustomerId = HttpContext.Session.GetInt32("Id").Value;
+                List<CartItem> cartItems = _context.CartItems.Where(item => item.CustomerId == CustomerId).ToList();
+                float tongtien = 0;
+                int soluong = 0;
+                foreach (CartItem cartItem in cartItems)
+                {
+                    cartItem.Customer = null;
+                    tongtien += (float)(cartItem.quantity * cartItem.productPrice);
+                    soluong += cartItem.quantity;
+                }
+
+                ViewData["tongtien"] = tongtien;
+                ViewData["soluong"] = soluong;
+                Store store = await storeService.GetStoreAsync();
+                ViewData["emailstore"] = store.Email;
+                ViewData["logo"] = store.Logo;
+                ViewData["PhoneNumber"] = store.PhoneNumber;
+                ViewData["Address"] = store.Address;
+                ViewData["ContactPerson"] = HttpContext.Session.GetString("ContactPerson");
+
+
+                ViewData["Emailkh"] = HttpContext.Session.GetString("Email");
+                ViewData["PhoneNumberkh"] = HttpContext.Session.GetString("PhoneNumber");
+                ViewData["Addresskh"] = HttpContext.Session.GetString("Address");
+                ViewData["ContactPersonkh"] = HttpContext.Session.GetString("ContactPerson");
+                return View(cartItems);
+            }
+            else
+            {
+                return Redirect($"/login");
+
+            }
         }
 
     }
