@@ -159,16 +159,16 @@
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-        // Tạo request AJAX để lấy dữ liệu từ server
-        fetch('/admin/home/tongphantram')  // Thay URL này bằng đúng route API
+        // Tạo request AJAX $ể lấy dữ liệu từ server
+        fetch('/admin/home/tongphantram')  // Thay URL này bằng $úng route API
             .then(response => response.json())
             .then(data => {
-                // Xử lý dữ liệu nhận được từ API
+                // Xử lý dữ liệu nhận $ược từ API
                 const labels = data.map(item => item.product.title); // Tên sản phẩm
                 const doanhthu = data.map(item => item.tongdoanhthu); // Tổng doanh thu của từng sản phẩm
                 const backgroundColors = generateRandomColors(labels.length);
                 const borderColors = generateRandomBorderColors(labels.length);
-                // Tạo biểu đồ tròn với Chart.js
+                // Tạo biểu $ồ tròn với Chart.js
                 const ctx = document.getElementById('myPieChart').getContext('2d');
                 const myPieChart = new Chart(ctx, {
                     type: 'pie',
@@ -218,7 +218,7 @@
 <script>
     $(document).ready(function () {
         $.ajax({
-            url: '/admin/home/Doanhthutheothang', // Đường dẫn đến controller
+            url: '/admin/home/Doanhthutheothang', // $ường dẫn $ến controller
             method: 'GET',
             success: function (data) {
                 // Khởi tạo mảng doanh thu theo tháng
@@ -234,7 +234,7 @@
                     revenues[month] = item.tongdoanhthu; // Gán doanh thu cho tháng
                 });
 
-                // Tạo biểu đồ đường
+                // Tạo biểu $ồ $ường
                 const ctx = document.getElementById('myLineChart').getContext('2d');
                 const myLineChart = new Chart(ctx, {
                     type: 'line',
@@ -243,7 +243,7 @@
                         datasets: [{
                             label: 'Tổng doanh thu',
                             data: revenues, // Dữ liệu doanh thu
-                            borderColor: generateRandomColor(), // Màu ngẫu nhiên cho đường
+                            borderColor: generateRandomColor(), // Màu ngẫu nhiên cho $ường
                             fill: false,
                             borderWidth: 2
                         }]
@@ -291,11 +291,11 @@
     }
 </script>
 <style>
-        /* CSS để điều chỉnh kích thước canvas */
+        /* CSS $ể $iều chỉnh kích thước canvas */
         #myPieChart {
-            max-width: 400px;  /* Đặt chiều rộng tối đa cho biểu đồ */
-            max-height: 400px; /* Đặt chiều cao tối đa cho biểu đồ */
-            margin: 0 auto;    /* Căn giữa biểu đồ */
+            max-width: 400px;  /* $ặt chiều rộng tối $a cho biểu $ồ */
+            max-height: 400px; /* $ặt chiều cao tối $a cho biểu $ồ */
+            margin: 0 auto;    /* Căn giữa biểu $ồ */
         }
     </style>
 

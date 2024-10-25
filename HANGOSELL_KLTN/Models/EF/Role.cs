@@ -10,9 +10,9 @@ namespace HANGOSELL_KLTN.Models.EF
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int Id { get; set; }
 		public string RoleName { get; set; }
-		// Điều hướng đến Employee
+		// $iều hướng $ến Employee
 		public virtual ICollection<Employee> Employees { get; set; }
-		// Điều hướng đến Customer
+		// $iều hướng $ến Customer
 	}
 
 }

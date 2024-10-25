@@ -99,11 +99,11 @@ namespace HANGOSELL_KLTN.Controllers
             {
                 if (sortOrder == "asc")
                 {
-                    products = products.OrderBy(p => p.Price).ToList(); // Giá từ thấp đến cao
+                    products = products.OrderBy(p => p.Price).ToList(); // Giá từ thấp $ến cao
                 }
                 else if (sortOrder == "desc")
                 {
-                    products = products.OrderByDescending(p => p.Price).ToList(); // Giá từ cao đến thấp
+                    products = products.OrderByDescending(p => p.Price).ToList(); // Giá từ cao $ến thấp
                 }
             }
             ViewData["tongproduct"] =products.Count;

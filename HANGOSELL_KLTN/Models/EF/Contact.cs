@@ -10,22 +10,22 @@ namespace HANGOSELL_KLTN.Models.EF
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Tên không được để trống.")]
-        [StringLength(100, ErrorMessage = "Tên không được vượt quá 100 ký tự.")]
+        [Required(ErrorMessage = "Tên không $ược $ể trống.")]
+        [StringLength(100, ErrorMessage = "Tên không $ược vượt quá 100 ký tự.")]
         public string Name { get; set; }
 
-        [StringLength(250, ErrorMessage = "Website không được vượt quá 250 ký tự.")]
+        [StringLength(250, ErrorMessage = "Website không $ược vượt quá 250 ký tự.")]
         public string? Website { get; set; }
 
-        [Required(ErrorMessage = "Email không được để trống.")]
-        [StringLength(100, ErrorMessage = "Email không được vượt quá 100 ký tự.")]
-        [EmailAddress(ErrorMessage = "Địa chỉ email không hợp lệ.")]
+        [Required(ErrorMessage = "Email không $ược $ể trống.")]
+        [StringLength(100, ErrorMessage = "Email không $ược vượt quá 100 ký tự.")]
+        [EmailAddress(ErrorMessage = "$ịa chỉ email không hợp lệ.")]
         public string Email { get; set; }
 
-        [StringLength(1000, ErrorMessage = "Tin nhắn không được vượt quá 1000 ký tự.")]
+        [StringLength(1000, ErrorMessage = "Tin nhắn không $ược vượt quá 1000 ký tự.")]
         public string? Message { get; set; }
 
-        [Required(ErrorMessage = "Trạng thái đọc không được để trống.")]
+        [Required(ErrorMessage = "Trạng thái $ọc không $ược $ể trống.")]
         public bool IsRead { get; set; }
     }
 }

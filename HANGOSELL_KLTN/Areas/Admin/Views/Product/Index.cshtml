@@ -57,8 +57,8 @@
                                         <td class="text-center">@item.ProductCode</td>
                                         <td class="text-center">@item.ProductCategory.Title</td>
                                         
-                                        <td class="text-center">@item.Price.ToString("N0") đ</td>
-                                        <td class="text-center">@item.PriceSale?.ToString("N0") đ</td>
+                                        <td class="text-center">@item.Price.ToString("N0") $</td>
+                                        <td class="text-center">@item.PriceSale?.ToString("N0") $</td>
                                         <td class="text-center">@item.Quantity</td>
                                         <td class="text-center">
                                             @if (!string.IsNullOrEmpty(item.Image))

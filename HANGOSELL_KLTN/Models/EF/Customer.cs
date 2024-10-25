@@ -15,7 +15,7 @@ public class Customer : CommonAbtract
     public string Password { get; set; }
     public string? PhoneNumber { get; set; }
     public string? Address { get; set; }
-    // Thêm khóa ngoại RoleId để phân quyền
+    // Thêm khóa ngoại RoleId $ể phân quyền
  
 }
 

@@ -52,8 +52,8 @@ builder.Services.AddNotyf(config => { config.DurationInSeconds = 10; config.IsDi
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
         .AddCookie(options =>
         {
-            options.LoginPath = "/Login/Login"; // Đường dẫn tới trang login
-            options.AccessDeniedPath = "/Account/AccessDenied"; // Đường dẫn tới trang thông báo truy cập bị từ chối
+            options.LoginPath = "/Login/Login"; // $ường dẫn tới trang login
+            options.AccessDeniedPath = "/Account/AccessDenied"; // $ường dẫn tới trang thông báo truy cập bị từ chối
         });
 builder.Services.AddAuthorization();
 
@@ -67,20 +67,20 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-// Đăng ký IHttpContextAccessor
+// $ăng ký IHttpContextAccessor
 builder.Services.AddHttpContextAccessor();
 
-// Đăng ký dịch vụ Authorization
+// $ăng ký dịch vụ Authorization
 builder.Services.AddAuthorization();
 
 
 builder.Services.Configure<InvoiceViewModel>(builder.Configuration.GetSection("VietQR"));
 
 
-// Đăng ký dịch vụ Controllers
+// $ăng ký dịch vụ Controllers
 builder.Services.AddControllersWithViews();
 
-// Đăng ký tích hợp đa ngôn ngữ
+// $ăng ký tích hợp $a ngôn ngữ
 // Cấu hình localization
 builder.Services.AddControllersWithViews().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
 builder.Services.AddSingleton<SharedViewLocalizer>();
@@ -136,7 +136,7 @@ app.MapAreaControllerRoute(
     areaName: "Login",
     pattern: "Login/{controller=Login}/{action=Login}/{id?}");
 
-// Cấu hình route mặc định trước, sau đó là route cho các khu vực
+// Cấu hình route mặc $ịnh trước, sau $ó là route cho các khu vực
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

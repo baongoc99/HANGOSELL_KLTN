@@ -70,7 +70,7 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
         }
         public string GenerateOrderCode()
         {
-            // Giả sử bạn đã có danh sách các mã đơn hàng hiện tại
+            // Giả sử bạn $ã có danh sách các mã $ơn hàng hiện tại
             var lastOrder = orderService.GetCode();
 
             int nextNumber;
@@ -82,10 +82,10 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             }
             else
             {
-                nextNumber = 100; // Bắt đầu từ 100 nếu không có mã nào trước đó
+                nextNumber = 100; // Bắt $ầu từ 100 nếu không có mã nào trước $ó
             }
 
-            // Tạo mã mới với tiền tố "HD" và định dạng "00000" (thêm số 0 phía trước nếu cần)
+            // Tạo mã mới với tiền tố "HD" và $ịnh dạng "00000" (thêm số 0 phía trước nếu cần)
             string newOrderCode = "HD" + nextNumber.ToString("D5");
 
             return newOrderCode;

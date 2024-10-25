@@ -85,7 +85,7 @@
                                             <h5>@item.productName</h5>
                                         </td>
                                         <td class="shoping__cart__price">
-                                            @item.productPrice.ToString("N0") đ
+                                            @String.Format("{0:C}",item.productPrice)
                                         </td>
                                         <td class="shoping__cart__quantity">
                                             <div class="quantity">
@@ -99,7 +99,7 @@
                                             </div>
                                         </td>
                                         <td class="shoping__cart__total">
-                                            @((@item.productPrice * @item.quantity).ToString("N0")) đ
+                                            @String.Format("{0:C}",(@item.productPrice * @item.quantity))
                                         </td>
                                        
                                     </tr>
@@ -135,15 +135,15 @@
                 <div class="shoping__checkout">
                     <h5>Cart Total</h5>
                     <ul>
-                        <li>Số lượng <span>@ViewData["soluong"]</span></li>
+                        <li>Quantity <span>@ViewData["soluong"]</span></li>
                         <li>
-                            Tổng tiền
+                            Total
                             <span>
-                                @(Convert.ToDecimal(ViewData["tongtien"]).ToString("N0") + " đ")
+                                @String.Format("{0:C}",Convert.ToDecimal(ViewData["tongtien"]))
                             </span>
                         </li>
                     </ul>
-                    <a href="/cart/checkout" class="primary-btn">Đặt hàng</a>
+                    <a href="/cart/checkout" class="primary-btn">ORDER NOW</a>
                 </div>
             </div>
         </div>

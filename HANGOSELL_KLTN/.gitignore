@@ -122,7 +122,7 @@ ipch/
 *.e2e
 
 # TFS 2012 Local Workspace
-$tf/
+đtf/
 
 # Guidance Automation Toolkit
 *.gpState
@@ -231,7 +231,7 @@ _pkginfo.txt
 
 # Others
 ClientBin/
-~$*
+~đ*
 *~
 *.dbmdl
 *.dbproj.schemaview

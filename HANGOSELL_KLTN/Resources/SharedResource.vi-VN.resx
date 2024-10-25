@@ -121,16 +121,16 @@
     <value>Thông tin</value>
   </data>
   <data name="Action" xml:space="preserve">
-    <value>Hành động</value>
+    <value>Hành $ộng</value>
   </data>
   <data name="Add" xml:space="preserve">
     <value>Thêm</value>
   </data>
   <data name="Address" xml:space="preserve">
-    <value>Địa chỉ</value>
+    <value>$ịa chỉ</value>
   </data>
   <data name="Avatar" xml:space="preserve">
-    <value>Ảnh đại diện</value>
+    <value>Ảnh $ại diện</value>
   </data>
   <data name="Bank Account Info" xml:space="preserve">
     <value>Thông tin tài khoản ngân hàng</value>
@@ -142,10 +142,10 @@
     <value>Phân loại</value>
   </data>
   <data name="Change" xml:space="preserve">
-    <value>Thay đổi</value>
+    <value>Thay $ổi</value>
   </data>
   <data name="Code Invoice" xml:space="preserve">
-    <value>Mã hóa đơn</value>
+    <value>Mã hóa $ơn</value>
   </data>
   <data name="Company" xml:space="preserve">
     <value>Công ty</value>
@@ -172,7 +172,7 @@
     <value>Thống kê</value>
   </data>
   <data name="Date" xml:space="preserve">
-    <value>Ngày đặt </value>
+    <value>Ngày $ặt </value>
   </data>
   <data name="Date of Birth" xml:space="preserve">
     <value>Ngày sinh</value>
@@ -214,10 +214,10 @@
     <value>Hình ảnh</value>
   </data>
   <data name="Invoice" xml:space="preserve">
-    <value>Hóa đơn</value>
+    <value>Hóa $ơn</value>
   </data>
   <data name="Invoice Management" xml:space="preserve">
-    <value>Quản lý hóa đơn</value>
+    <value>Quản lý hóa $ơn</value>
   </data>
   <data name="Join Date" xml:space="preserve">
     <value>Ngày tham gia</value>
@@ -238,7 +238,7 @@
     <value>Mật khẩu cũ</value>
   </data>
   <data name="Order" xml:space="preserve">
-    <value>Đơn hàng</value>
+    <value>$ơn hàng</value>
   </data>
   <data name="Overview" xml:space="preserve">
     <value>Tổng quan</value>
@@ -253,7 +253,7 @@
     <value>Thông tin cá nhân</value>
   </data>
   <data name="Phone Number" xml:space="preserve">
-    <value>Điện thoại </value>
+    <value>$iện thoại </value>
   </data>
   <data name="Position" xml:space="preserve">
     <value>Bộ phận </value>
@@ -262,7 +262,7 @@
     <value>Giá</value>
   </data>
   <data name="Print Invoice" xml:space="preserve">
-    <value>In hóa đơn</value>
+    <value>In hóa $ơn</value>
   </data>
   <data name="Product" xml:space="preserve">
     <value>Sản phẩm</value>
@@ -292,10 +292,10 @@
     <value>Giá giảm</value>
   </data>
   <data name="Save Changes" xml:space="preserve">
-    <value>Lưu thay đổi</value>
+    <value>Lưu thay $ổi</value>
   </data>
   <data name="Search here" xml:space="preserve">
-    <value>Tìm kiếm ở đây</value>
+    <value>Tìm kiếm ở $ây</value>
   </data>
   <data name="Status" xml:space="preserve">
     <value>Trạng thái</value>
@@ -310,10 +310,10 @@
     <value>Quản lý cửa hàng</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>Tiêu đề</value>
+    <value>Tiêu $ề</value>
   </data>
   <data name="Total" xml:space="preserve">
-    <value>Tổng hóa đơn</value>
+    <value>Tổng hóa $ơn</value>
   </data>
   <data name="Total Price" xml:space="preserve">
     <value>Tổng tiền</value>

@@ -50,7 +50,7 @@ namespace HANGOSELL_KLTN.Areas.Login.Controllers
                     return View(customer);
                 }
 
-                // Kiểm tra email đã tồn tại chưa
+                // Kiểm tra email $ã tồn tại chưa
                 var existingCustomer = _context.Customers.FirstOrDefault(c => c.Email == customer.Email);
                 if (existingCustomer != null)
                 {
@@ -61,7 +61,7 @@ namespace HANGOSELL_KLTN.Areas.Login.Controllers
                 // Mã hóa mật khẩu bằng IPasswordHasher từ AccountService
                 customer.Password = AccountService.HashPasswordCustomer(customer, password);
 
-                // Gán vai trò mặc định cho customer (RoleID là vai trò Customer)
+                // Gán vai trò mặc $ịnh cho customer (RoleID là vai trò Customer)
                 var customerRole = _context.Roles.FirstOrDefault(r => r.RoleName == "Customer");
                
                 // Lưu customer vào database
@@ -89,7 +89,7 @@ namespace HANGOSELL_KLTN.Areas.Login.Controllers
         //            var result = AccountService.VerifyPassword(customer.Password, model.Password);
         //            if (result == PasswordVerificationResult.Success)
         //            {
-        //                // Đăng nhập thành công, tạo Claims
+        //                // $ăng nhập thành công, tạo Claims
         //                var claims = new List<Claim>
         //        {
         //            new Claim(ClaimTypes.Name, customer.ContactPerson), // Tên
@@ -100,14 +100,14 @@ namespace HANGOSELL_KLTN.Areas.Login.Controllers
         //                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
         //                var authProperties = new AuthenticationProperties
         //                {
-        //                    // Các tùy chọn về thời gian lưu trữ phiên đăng nhập
-        //                    IsPersistent = true // Để phiên đăng nhập tồn tại sau khi đóng trình duyệt
+        //                    // Các tùy chọn về thời gian lưu trữ phiên $ăng nhập
+        //                    IsPersistent = true // $ể phiên $ăng nhập tồn tại sau khi $óng trình duyệt
         //                };
 
-        //                // Thực hiện đăng nhập
+        //                // Thực hiện $ăng nhập
         //                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
 
-        //                // Điều hướng đến view của Customer
+        //                // $iều hướng $ến view của Customer
         //                return RedirectToAction("Index", "Home", new { area = "" });
         //            }
         //        }
@@ -120,7 +120,7 @@ namespace HANGOSELL_KLTN.Areas.Login.Controllers
         //            Console.WriteLine(result);
         //            if (result == PasswordVerificationResult.Success)
         //            {
-        //                // Đăng nhập thành công, tạo Claims
+        //                // $ăng nhập thành công, tạo Claims
         //                var claims = new List<Claim>
         //        {
         //            new Claim(ClaimTypes.Name, admin.EmployeeName), // Tên
@@ -134,15 +134,15 @@ namespace HANGOSELL_KLTN.Areas.Login.Controllers
         //                    IsPersistent = true
         //                };
 
-        //                // Thực hiện đăng nhập
+        //                // Thực hiện $ăng nhập
         //                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
 
-        //                // Điều hướng đến view của Admin
+        //                // $iều hướng $ến view của Admin
         //                return RedirectToAction("Index", "Home", new { area = "Admin" });
         //            }
         //        }
 
-        //        // Nếu không tìm thấy hoặc mật khẩu không đúng
+        //        // Nếu không tìm thấy hoặc mật khẩu không $úng
         //        //ModelState.AddModelError(string.Empty, "Invalid login attempt.");
         //    }
 
@@ -174,7 +174,7 @@ namespace HANGOSELL_KLTN.Areas.Login.Controllers
                     HttpContext.Session.SetString("Position", employee.Position);
                     HttpContext.Session.SetString("Avatar", employee.Avatar);
 
-                    // Đăng nhập thành công, chuyển hướng đến trang chính
+                    // $ăng nhập thành công, chuyển hướng $ến trang chính
                     return Redirect("/Admin/Home/");
                 }
             }
@@ -191,14 +191,14 @@ namespace HANGOSELL_KLTN.Areas.Login.Controllers
                     HttpContext.Session.SetString("ContactPerson", customer.ContactPerson);
 
 
-                    // Đăng nhập thành công cho khách hàng, chuyển hướng đến trang chính
+                    // $ăng nhập thành công cho khách hàng, chuyển hướng $ến trang chính
                     return Redirect("/");
                 }
             }
 
-            // Đăng nhập không thành công, có thể thông báo lỗi
-            TempData["ErrorMessage"] = "Mã nhân viên hoặc mật khẩu không đúng.";
-            return RedirectToAction("Login", "Account"); // Redirect đến trang đăng nhập
+            // $ăng nhập không thành công, có thể thông báo lỗi
+            TempData["ErrorMessage"] = "Mã nhân viên hoặc mật khẩu không $úng.";
+            return RedirectToAction("Login", "Account"); // Redirect $ến trang $ăng nhập
         }
 
         public IActionResult Logout()

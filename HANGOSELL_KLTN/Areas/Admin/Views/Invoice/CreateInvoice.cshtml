@@ -243,7 +243,7 @@
                         <input type="text" class="form-control" id="Address" name="Address">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">$óng</button>
                         <button type="submit" class="btn btn-primary">Lưu</button>
                     </div>
                 </form>
@@ -441,10 +441,10 @@
 <script type="text/javascript">
     function loadProducts(keyword = '') {
         $.ajax({
-            url: '/Admin/Product/GteAllProduct', // Đảm bảo URL chính xác
+            url: '/Admin/Product/GteAllProduct', // $ảm bảo URL chính xác
             type: 'GET',
             dataType: 'json',
-            data: { name: keyword }, // Gửi từ khóa tìm kiếm đến server
+            data: { name: keyword }, // Gửi từ khóa tìm kiếm $ến server
             success: function (data) {
                 console.log(data);
                 $('#productContainer').empty();  // Xóa nội dung cũ trước khi thêm mới
@@ -496,7 +496,7 @@
     }
 
     $(document).ready(function () {
-        loadProducts(); // Tải sản phẩm khi trang được load
+        loadProducts(); // Tải sản phẩm khi trang $ược load
         $('#searchInput').on('input', function () {
             var keyword = $(this).val();
             loadProducts(keyword); // Tìm kiếm sản phẩm với từ khóa
@@ -508,7 +508,7 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        // Gọi Ajax khi trang được load
+        // Gọi Ajax khi trang $ược load
         $.ajax({
             url: '/Admin/Customer/GetAllKhachHang',
             type: 'GET',
@@ -516,7 +516,7 @@
             success: function (data) {
                 console.log(data);
                 if (data.length > 0) {
-                    // Lặp qua dữ liệu để thêm các option vào select
+                    // Lặp qua dữ liệu $ể thêm các option vào select
                     $.each(data, function (index, customer) {
                         $('#CompanyNameSelect').append(
                             $('<option>', {
@@ -534,7 +534,7 @@
                     const selectedCustomerId = $(this).val();
 
                     if (selectedCustomerId) {
-                        // Gọi Ajax để lấy thông tin chi tiết của khách hàng
+                        // Gọi Ajax $ể lấy thông tin chi tiết của khách hàng
                         $.ajax({
                             url: '/Admin/Customer/GetKhachHangById',
                             type: 'GET',
@@ -547,7 +547,7 @@
                                     $('#PhoneNumber').val(datas.phoneNumber);
                                     $('#Address').val(datas.address);
                                 } else {
-                                    $('#Email').val(''); // Không có dữ liệu, để trống
+                                    $('#Email').val(''); // Không có dữ liệu, $ể trống
                                 }
                             },
                             error: function () {
@@ -570,7 +570,7 @@
         white-space: nowrap; /* Ngăn không cho dòng bị ngắt */
         overflow: hidden; /* Ẩn phần văn bản vượt quá kích thước */
         text-overflow: ellipsis; /* Hiển thị ba chấm khi văn bản bị cắt */
-        width: 100%; /* Đảm bảo tiêu đề sử dụng toàn bộ chiều rộng của phần chứa */
+        width: 100%; /* $ảm bảo tiêu $ề sử dụng toàn bộ chiều rộng của phần chứa */
         text-align: center; /* Căn giữa văn bản */
     }
 </style>

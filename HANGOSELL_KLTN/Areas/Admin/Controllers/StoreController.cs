@@ -31,7 +31,7 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
 
             var model = new ModelDataset
             {
-                store = store ?? new Store(), // Khởi tạo đối tượng Store nếu null
+                store = store ?? new Store(), // Khởi tạo $ối tượng Store nếu null
                 qRCodeRequests = bankAccounts
             };
 

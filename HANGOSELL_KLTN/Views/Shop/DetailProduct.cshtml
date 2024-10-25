@@ -38,7 +38,7 @@
                         <i class="fa fa-star-half-o"></i>
                         <span>(18 reviews)</span>
                     </div>
-                    <div class="product__details__price">@Model.Price.ToString("N0") đ</div>
+                    <div class="product__details__price">@String.Format("{0:C}",Model.Price)</div>
                     <p>
                         @Model.Description
                     </p>
@@ -189,7 +189,7 @@
             },
             error: function (error) {
                 console.log('Error: ', error);
-                alert('Đã xảy ra lỗi khi thêm sản phẩm vào giỏ hàng. Vui lòng thử lại sau!');
+                alert('$ã xảy ra lỗi khi thêm sản phẩm vào giỏ hàng. Vui lòng thử lại sau!');
             }
         });
     }

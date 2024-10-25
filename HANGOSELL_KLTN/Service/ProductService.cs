@@ -32,7 +32,7 @@ namespace HANGOSELL_KLTN.Service
 
         public void UpdateProduct(Product product)
         {
-            // Tìm kiếm sản phẩm hiện có trong cơ sở dữ liệu dựa trên Id của đối tượng product truyền vào.
+            // Tìm kiếm sản phẩm hiện có trong cơ sở dữ liệu dựa trên Id của $ối tượng product truyền vào.
             var existingProduct = _context.Products.SingleOrDefault(p => p.Id == product.Id);
 
             // Nếu tìm thấy sản phẩm (khác null)
@@ -40,7 +40,7 @@ namespace HANGOSELL_KLTN.Service
             {
                 _context.Entry(existingProduct).CurrentValues.SetValues(product);
 
-                // Lưu lại các thay đổi vào cơ sở dữ liệu.
+                // Lưu lại các thay $ổi vào cơ sở dữ liệu.
                 _context.SaveChanges();
             }
             else

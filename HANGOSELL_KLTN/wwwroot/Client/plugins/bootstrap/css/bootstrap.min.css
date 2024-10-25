@@ -652,14 +652,14 @@ progress {
 
 
 .user-card {
-    border: 1px solid #ddd; /* Đổi màu và kích thước của đường viền */
+    border: 1px solid #ddd; /* $ổi màu và kích thước của $ường viền */
     border-radius: 10px; /* Bo tròn góc của card */
-    transition: box-shadow 0.3s ease-in-out; /* Tạo hiệu ứng chuyển động cho card */
+    transition: box-shadow 0.3s ease-in-out; /* Tạo hiệu ứng chuyển $ộng cho card */
     overflow: hidden; /* Ngăn chặn boder vượt ra ngoài */
 }
 
 .user-card:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Tăng độ đậm của đổ bóng khi di chuột qua */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Tăng $ộ $ậm của $ổ bóng khi di chuột qua */
 }
 
 .user-avatar img {
@@ -672,11 +672,11 @@ progress {
 
 .user-name {
     margin-bottom: 5px; /* Tăng khoảng cách giữa tên người dùng và vai trò */
-    font-size: 1.2em; /* Đặt kích thước chữ cho tên người dùng */
+    font-size: 1.2em; /* $ặt kích thước chữ cho tên người dùng */
 }
 
 .user-role {
-    color: #888; /* Đổi màu chữ của vai trò để làm nổi bật hơn */
+    color: #888; /* $ổi màu chữ của vai trò $ể làm nổi bật hơn */
 }
 
 .figure {

@@ -18,7 +18,7 @@ namespace HANGOSELL_KLTN.Models.EF
         public string? Description { get; set; }
 
         [Required(ErrorMessage = "Hình ảnh không được để trống.")]
-        [StringLength(250, ErrorMessage = "Đường dẫn hình ảnh không được vượt quá 250 ký tự.")]
+        [StringLength(250, ErrorMessage = "đường dẫn hình ảnh không được vượt quá 250 ký tự.")]
         public string Image { get; set; }
 
         [Required(ErrorMessage = "Loại không được để trống.")]

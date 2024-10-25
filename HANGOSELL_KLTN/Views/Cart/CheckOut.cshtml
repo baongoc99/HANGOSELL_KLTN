@@ -57,7 +57,7 @@
                                     {
                                         <li>
                                             @item.productName <span>
-                                                @((@item.productPrice * @item.quantity).ToString("N0")) đ
+                                                @String.Format("{0:C}",((@item.productPrice * @item.quantity)))
                                             </span>
                                         </li>
                                     }
@@ -65,12 +65,12 @@
                             </ul>
                             <div class="checkout__order__subtotal">
                                 Subtotal <span>
-                                    @(Convert.ToDecimal(ViewData["tongtien"]).ToString("N0") + " đ")
+                                    @String.Format("{0:C}",Convert.ToDecimal(ViewData["tongtien"]))
                                 </span>
                             </div>
                             <div class="checkout__order__total">
                                 Total <span>
-                                    @(Convert.ToDecimal(ViewData["tongtien"]).ToString("N0") + " đ")
+                                    @String.Format("{0:C}",Convert.ToDecimal(ViewData["tongtien"]))
                                 </span>
                             </div>
 

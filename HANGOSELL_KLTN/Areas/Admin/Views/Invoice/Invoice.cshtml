@@ -4,7 +4,7 @@
 <html lang="vi">
 <head>
     <meta charset="utf-8" />
-    <title>Hóa đơn</title>
+    <title>Hóa Đơn</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -29,18 +29,18 @@
 </head>
 <body>
     <div class="invoice">
-        <h1>Hóa đơn</h1>
+        <h1>Hóa Đơn</h1>
         <p><strong>Số tài khoản:</strong> @Model.AccountNo</p>
         <p><strong>Tên tài khoản:</strong> @Model.AccountName</p>
-        <p><strong>Số tiền:</strong> @Model.Amount.ToString("N0") VNĐ</p>
+        <p><strong>Số tiền:</strong> @String.Format("{0:C}",Model.Amount)</p>
         <p><strong>Nội dung:</strong> @Model.Description</p>
 
         <div class="qr-code">
-            <h2>Quét mã QR để thanh toán</h2>
+            <h2>Quét mã QR $ể thanh toán</h2>
             <img src="@Model.QRCodeUrl" alt="VietQR Code" />
         </div>
 
-        <button onclick="window.print()">In hóa đơn</button>
+        <button onclick="window.print()">In hóa $ơn</button>
     </div>
 </body>
 </html>

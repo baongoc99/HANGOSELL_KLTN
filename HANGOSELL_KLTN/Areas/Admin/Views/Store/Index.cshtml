@@ -219,8 +219,8 @@
                                                         <input type="text" class="form-control" id="addInfo" name="AddInfo" />
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                                                        <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">$óng</button>
+                                                        <button type="submit" class="btn btn-primary">Lưu thay $ổi</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -248,12 +248,12 @@
                                 return;
                             }
 
-                            // Gửi yêu cầu AJAX đến server để xóa tài khoản
+                            // Gửi yêu cầu AJAX $ến server $ể xóa tài khoản
                             fetch(`/Admin/BankAccount/DeleteBankAccount/${accountId}`, {
                                 method: 'DELETE', // Sử dụng phương thức DELETE
                                 headers: {
                                     'Content-Type': 'application/json',
-                                    'X-CSRF-TOKEN': document.querySelector('input[name="__RequestVerificationToken"]').value // Đảm bảo có CSRF token
+                                    'X-CSRF-TOKEN': document.querySelector('input[name="__RequestVerificationToken"]').value // $ảm bảo có CSRF token
                                 }
                             })
                                 .then(response => response.json())

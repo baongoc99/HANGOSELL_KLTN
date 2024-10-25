@@ -10,16 +10,16 @@ namespace HANGOSELL_KLTN.Models.EF
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Số lượng không được để trống.")]
-        [Range(0, int.MaxValue, ErrorMessage = "Số lượng không được âm.")]
+        [Required(ErrorMessage = "Số lượng không $ược $ể trống.")]
+        [Range(0, int.MaxValue, ErrorMessage = "Số lượng không $ược âm.")]
         public int Quantity { get; set; }
 
-        [Required(ErrorMessage = "Tổng giá không được để trống.")]
+        [Required(ErrorMessage = "Tổng giá không $ược $ể trống.")]
         [Column(TypeName = "decimal(18,2)")]
-        [Range(0, double.MaxValue, ErrorMessage = "Tổng giá không được âm.")]
+        [Range(0, double.MaxValue, ErrorMessage = "Tổng giá không $ược âm.")]
         public decimal TotalPrice { get; set; }
 
-        [Required(ErrorMessage = "Mã sản phẩm không được để trống.")]
+        [Required(ErrorMessage = "Mã sản phẩm không $ược $ể trống.")]
         public int ProductId { get; set; }
 
         public virtual Product Product { get; set; }

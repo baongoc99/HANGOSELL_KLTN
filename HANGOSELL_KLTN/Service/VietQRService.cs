@@ -25,7 +25,7 @@ namespace HANGOSELL_KLTN.Service
                 accountNo = accountNos,
                 accountName = accountNames,
                 acqId = acqIds,
-                addInfo = $"CHUYỂN TIỀN HÓA ĐƠN",
+                addInfo = $"CHUYỂN TIỀN HÓA $ƠN",
                 amount,
                 template = "print"
             };

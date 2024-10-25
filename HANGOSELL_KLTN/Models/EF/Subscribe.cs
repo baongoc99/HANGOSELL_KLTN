@@ -10,12 +10,12 @@ namespace HANGOSELL_KLTN.Models.EF
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Email không được để trống.")]
-        [StringLength(100, ErrorMessage = "Email không được vượt quá 100 ký tự.")]
-        [EmailAddress(ErrorMessage = "Địa chỉ email không hợp lệ.")]
+        [Required(ErrorMessage = "Email không $ược $ể trống.")]
+        [StringLength(100, ErrorMessage = "Email không $ược vượt quá 100 ký tự.")]
+        [EmailAddress(ErrorMessage = "$ịa chỉ email không hợp lệ.")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Ngày tạo không được để trống.")]
+        [Required(ErrorMessage = "Ngày tạo không $ược $ể trống.")]
         public DateTime CreateDate { get; set; }
     }
 }

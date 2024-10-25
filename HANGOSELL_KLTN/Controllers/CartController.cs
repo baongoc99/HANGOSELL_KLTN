@@ -104,12 +104,12 @@ namespace HANGOSELL_KLTN.Controllers
                 // Lấy danh sách các sản phẩm hiện có trong giỏ hàng từ database
                 List<CartItem> cartItems = _context.CartItems.ToList();
 
-                // Kiểm tra xem sản phẩm đã có trong giỏ hàng hay chưa
+                // Kiểm tra xem sản phẩm $ã có trong giỏ hàng hay chưa
                 var existingItem = cartItems.FirstOrDefault(item => item.productId == productId && item.CustomerId == CustomerId);
 
                 if (existingItem != null)
                 {
-                    // Nếu sản phẩm đã tồn tại, cập nhật số lượng và giá
+                    // Nếu sản phẩm $ã tồn tại, cập nhật số lượng và giá
                     existingItem.quantity += quantitys;
                     // Cập nhật lại sản phẩm trong cơ sở dữ liệu
                     _context.CartItems.Update(existingItem);
@@ -131,10 +131,10 @@ namespace HANGOSELL_KLTN.Controllers
                     _context.CartItems.Add(newItem);
                 }
 
-                // Lưu thay đổi vào cơ sở dữ liệu
+                // Lưu thay $ổi vào cơ sở dữ liệu
                 _context.SaveChanges();
 
-                return Json(new { success = true, message = "Sản phẩm đã được thêm vào giỏ hàng thành công!" });
+                return Json(new { success = true, message = "Sản phẩm $ã $ược thêm vào giỏ hàng thành công!" });
             }
             else
             {
@@ -161,7 +161,7 @@ namespace HANGOSELL_KLTN.Controllers
             _context.CartItems.Update(existingItem);
             _context.SaveChanges();
 
-            return Redirect("/cart/Listcart"); // Chuyển hướng đến trang danh sách giỏ hàng
+            return Redirect("/cart/Listcart"); // Chuyển hướng $ến trang danh sách giỏ hàng
         }
         public IActionResult DeleteQuantity(int productId)
         {
@@ -190,11 +190,11 @@ namespace HANGOSELL_KLTN.Controllers
 
 
 
-            return Redirect("/cart/Listcart"); // Chuyển hướng đến trang danh sách giỏ hàng
+            return Redirect("/cart/Listcart"); // Chuyển hướng $ến trang danh sách giỏ hàng
         }
         public string GenerateOrderCode()
         {
-            // Giả sử bạn đã có danh sách các mã đơn hàng hiện tại
+            // Giả sử bạn $ã có danh sách các mã $ơn hàng hiện tại
             var lastOrder = orderService.GetCode();
 
             int nextNumber;
@@ -206,10 +206,10 @@ namespace HANGOSELL_KLTN.Controllers
             }
             else
             {
-                nextNumber = 100; // Bắt đầu từ 100 nếu không có mã nào trước đó
+                nextNumber = 100; // Bắt $ầu từ 100 nếu không có mã nào trước $ó
             }
 
-            // Tạo mã mới với tiền tố "HD" và định dạng "00000" (thêm số 0 phía trước nếu cần)
+            // Tạo mã mới với tiền tố "HD" và $ịnh dạng "00000" (thêm số 0 phía trước nếu cần)
             string newOrderCode = "HD" + nextNumber.ToString("D5");
 
             return newOrderCode;
@@ -235,7 +235,7 @@ namespace HANGOSELL_KLTN.Controllers
             order.Address = customer.Address;
             order.Code = GenerateOrderCode();
             order.CustomerId = CustomerId;
-            order.Status = "Đã đặt";
+            order.Status = "$ã $ặt";
             order.Total = total;
             order.Quantity = 1;
             order.Phone = customer.PhoneNumber;
@@ -253,6 +253,10 @@ namespace HANGOSELL_KLTN.Controllers
                 };
                 orderDetailService.AddCOrder(orderDetail);
                 _context.CartItems.Remove(item);
+                _context.SaveChanges();
+                Product product = _context.Products.FirstOrDefault(p => p.Id == item.productId);
+                product.Quantity = product.Quantity - item.quantity;
+                _context.Update(product);
                 _context.SaveChanges();
             }
 

@@ -33,7 +33,7 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             }
             else
             {
-                // Nếu có từ khóa, lọc sản phẩm theo tiêu đề chứa từ khóa
+                // Nếu có từ khóa, lọc sản phẩm theo tiêu $ề chứa từ khóa
                 listproduct = productService.GetAllProducts()
                     .Where(p => p.Title.Contains(name, StringComparison.OrdinalIgnoreCase))
                     .ToList();

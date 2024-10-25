@@ -18,11 +18,11 @@ namespace HANGOSELL_KLTN.Models.EF
 		public string? Address { get; set; }
 		public DateTime JoinDate { get; set; }
 		public bool Status { get; set; }
-		// Thêm khóa ngoại RoleID để phân quyền
+		// Thêm khóa ngoại RoleID $ể phân quyền
 		public int RoleId { get; set; }
 		public string? Avatar { get; set; }
 		public string? Position { get; set; }
-		// Thuộc tính điều hướng đến bảng Role
+		// Thuộc tính $iều hướng $ến bảng Role
 		[ForeignKey("RoleId")]
 		public virtual Role Role { get; set; }
 	}

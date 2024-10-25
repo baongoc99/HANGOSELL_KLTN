@@ -73,7 +73,7 @@
                         <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
                         <li><a href="/cart/listcart"><i class="fa fa-shopping-bag"></i><span>@(Convert.ToDecimal(ViewData["soluong"]))</span></a></li>
                     </ul>
-                    <div class="header__cart__price">item: <span>@(Convert.ToDecimal(ViewData["tongtien"]).ToString("N0") + " đ")</div>
+                    <div class="header__cart__price">item: <span>@String.Format("{0:C}",Convert.ToDecimal(ViewData["tongtien"]))</div>
                 </div>
             </div>
         </div>

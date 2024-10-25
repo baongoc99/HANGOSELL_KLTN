@@ -8,6 +8,6 @@
         public string PhoneNumber { get; set; }
         public string Email { get; set; } // Thêm email nếu cần
         public DateTime CreatedDate { get; set; }
-        public string? Logo { get; set; } // Đường dẫn logo của cửa hàng
+        public string? Logo { get; set; } // $ường dẫn logo của cửa hàng
     }
 }

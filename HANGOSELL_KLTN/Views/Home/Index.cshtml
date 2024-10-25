@@ -89,7 +89,7 @@
                             </div>
                             <div class="featured__item__text">
                                 <h6><a href="#">@item.Title</a></h6>
-                                <h5>@item.Price.ToString("N0") đ</h5>
+                                <h5>@String.Format("{0:C}",item.Price) </h5>
                             </div>
                         </div>
                     </div>
@@ -154,7 +154,7 @@
             },
             error: function (error) {
                 console.log('Error: ', error);
-                alert('Đã xảy ra lỗi khi thêm sản phẩm vào giỏ hàng. Vui lòng thử lại sau!');
+                alert('$ã xảy ra lỗi khi thêm sản phẩm vào giỏ hàng. Vui lòng thử lại sau!');
             }
         });
     }

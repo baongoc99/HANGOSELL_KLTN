@@ -52,7 +52,7 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             List<OrderDetailCustomer> orderDetailCustomer = orderDetailCustomerService.GetAllOrderDetailCustomer();
             decimal totalAmount = 0;
 
-            // Dùng vòng lặp để tính tổng số tiền
+            // Dùng vòng lặp $ể tính tổng số tiền
             foreach (var orderDetail in orderDetailCustomer)
             {
                 totalAmount += orderDetail.TotalPrice;
@@ -60,7 +60,7 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
 
             // Làm tròn số tiền
 
-            // Chuyển đổi số tiền đã làm tròn thành chuỗi không có dấu phân cách
+            // Chuyển $ổi số tiền $ã làm tròn thành chuỗi không có dấu phân cách
             string formattedAmount = totalAmount.ToString("0", System.Globalization.CultureInfo.InvariantCulture);
 
             string qrCodeUrl = await _vietQRService.GenerateQRCodeAsync(formattedAmount, qRCodeRequest.AccountNo, qRCodeRequest.AccountName, qRCodeRequest.AcqId);
@@ -111,11 +111,11 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
             ViewData["Avatar"] = HttpContext.Session.GetString("Avatar");
             ViewData["Position"] = HttpContext.Session.GetString("Position");
 
-            // Lấy thông tin đơn hàng và khách hàng
+            // Lấy thông tin $ơn hàng và khách hàng
             Order order = orderService.GetOrderByIdCustomer(idcustomer, id);
             Customer customer = customerService.GetCustomerById(idcustomer);
 
-            // Lấy chi tiết đơn hàng
+            // Lấy chi tiết $ơn hàng
             List<OrderDetail> orderDetails = orderDetailService.GetOrderDetailByIdOrder(id);
             ViewData["TongTien"] = orderDetails.Sum(x => x.TotalPrice);
 

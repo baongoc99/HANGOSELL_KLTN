@@ -205,7 +205,7 @@ namespace HANGOSELL_KLTN.Areas.Admin.Controllers
         {
             int id = HttpContext.Session.GetInt32("Id").Value;
 
-            // Nếu đã đăng nhập, lưu thông tin người dùng vào ViewData
+            // Nếu $ã $ăng nhập, lưu thông tin người dùng vào ViewData
             ViewData["EmployeeName"] = HttpContext.Session.GetString("EmployeeName");
             ViewData["Avatar"] = HttpContext.Session.GetString("Avatar");
             ViewData["Position"] = HttpContext.Session.GetString("Position");

@@ -15,23 +15,23 @@ namespace HANGOSELL_KLTN.Models.EF
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Tiêu đề không được để trống.")]
-        [StringLength(200, ErrorMessage = "Tiêu đề không được vượt quá 200 ký tự.")]
+        [Required(ErrorMessage = "Tiêu $ề không $ược $ể trống.")]
+        [StringLength(200, ErrorMessage = "Tiêu $ề không $ược vượt quá 200 ký tự.")]
         public string Title { get; set; }
 
-        [StringLength(500, ErrorMessage = "Mô tả không được vượt quá 500 ký tự.")]
+        [StringLength(500, ErrorMessage = "Mô tả không $ược vượt quá 500 ký tự.")]
         public string? Description { get; set; }
 
-        [StringLength(100, ErrorMessage = "Biểu tượng không được vượt quá 100 ký tự.")]
+        [StringLength(100, ErrorMessage = "Biểu tượng không $ược vượt quá 100 ký tự.")]
         public string? Icon { get; set; }
 
-        [StringLength(150, ErrorMessage = "Tiêu đề SEO không được vượt quá 150 ký tự.")]
+        [StringLength(150, ErrorMessage = "Tiêu $ề SEO không $ược vượt quá 150 ký tự.")]
         public string? SeoTitle { get; set; }
 
-        [StringLength(150, ErrorMessage = "Từ khóa SEO không được vượt quá 150 ký tự.")]
+        [StringLength(150, ErrorMessage = "Từ khóa SEO không $ược vượt quá 150 ký tự.")]
         public string? SeoKeyword { get; set; }
 
-        [StringLength(250, ErrorMessage = "Mô tả SEO không được vượt quá 250 ký tự.")]
+        [StringLength(250, ErrorMessage = "Mô tả SEO không $ược vượt quá 250 ký tự.")]
         public string? SeoDescription { get; set; }
 
         public ICollection<Product> Products { get; set; }

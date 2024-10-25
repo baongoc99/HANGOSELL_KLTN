@@ -7,15 +7,15 @@ namespace HANGOSELL_KLTN.Models.EF
     public class SystemSetting
     {
         [Key]
-        [Required(ErrorMessage = "Khóa thiết lập không được để trống.")]
-        [StringLength(100, ErrorMessage = "Khóa thiết lập không được vượt quá 100 ký tự.")]
+        [Required(ErrorMessage = "Khóa thiết lập không $ược $ể trống.")]
+        [StringLength(100, ErrorMessage = "Khóa thiết lập không $ược vượt quá 100 ký tự.")]
         public string SettingKey { get; set; }
 
-        [Required(ErrorMessage = "Giá trị thiết lập không được để trống.")]
-        [StringLength(500, ErrorMessage = "Giá trị thiết lập không được vượt quá 500 ký tự.")]
+        [Required(ErrorMessage = "Giá trị thiết lập không $ược $ể trống.")]
+        [StringLength(500, ErrorMessage = "Giá trị thiết lập không $ược vượt quá 500 ký tự.")]
         public string SettingValue { get; set; }
 
-        [StringLength(1000, ErrorMessage = "Mô tả thiết lập không được vượt quá 1000 ký tự.")]
+        [StringLength(1000, ErrorMessage = "Mô tả thiết lập không $ược vượt quá 1000 ký tự.")]
         public string? SettingDescription { get; set; }
     }
 }

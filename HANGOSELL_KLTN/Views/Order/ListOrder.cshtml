@@ -74,6 +74,7 @@
                                 <th>Status</th>
                                 <th>StartDatetime</th>
                                 <th>Action</th>
+                                <th>View</th>
                             </tr>
                         </thead>
                         <tbody id="cartItems">
@@ -92,7 +93,7 @@
                                             @item.Address
                                         </td>
                                         <td class="">
-                                            @item.Total.ToString("N0") đ
+                                            @String.Format("{0:C}", item.Total)
                                         </td>
                                         <td>
                                             @item.Status
@@ -100,23 +101,31 @@
                                         <td class="">
                                             @item.StartDatetime?.ToString("dd/MM/yyyy")
                                         </td>
-                                        <td>
-                                            @if (item.Status.Equals("Đã đặt"))
-                                            {
-                                                <a href="/order/ListOrderDetail?id=@item.Id" class="btn btn-primary">Xem thông tin đơn hàng</a>
 
-                                            }
-                                            else if (item.Status.Equals("Đã giao"))
-                                            {
-                                                <a href="/order/updategiaohang/@item.Id" class="btn btn-primary">Xác nhận đơn hàng</a>
-                                                <a href="/order/ListOrderDetail?id=@item.Id" class="btn btn-primary">Xem thông tin đơn hàng</a>
-
-                                            }
-                                            else if (item.Status.Equals("Đã nhận hàng"))
-                                            {
-                                                <a href="/order/ListOrderDetail?id=@item.Id" class="btn btn-primary">Xem thông tin đơn hàng</a>
-                                            }
-                                        </td>
+                                        @if (item.Status.Equals("Đã đặt"))
+                                        {
+                                            <td></td>
+                                            <td>
+                                                <a href="/order/ListOrderDetail?id=@item.Id" class="btn btn-primary">Xem thông tin</a>
+                                            </td>
+                                        }
+                                        else if (item.Status.Equals("Đã giao"))
+                                        {
+                                            <td>
+                                                <a href="/order/updategiaohang/@item.Id" class="btn btn-warning">Xác nhận đơn hàng</a>
+                                            </td>
+                                            <td>
+                                                <a href="/order/ListOrderDetail?id=@item.Id" class="btn btn-primary">Xem thông tin</a>
+                                            </td>
+                                        }
+                                        else if (item.Status.Equals("Đã nhận hàng"))
+                                        {
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <a href="/order/ListOrderDetail?id=@item.Id" class="btn btn-primary">Xem thông tin</a>
+                                            </td>
+                                        }
                                     </tr>
                                 }
                             }

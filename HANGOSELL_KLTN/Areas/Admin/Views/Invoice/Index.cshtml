@@ -39,7 +39,8 @@
                                 <th class="text-center">@_localizer.GetLocalizedString("Total")</th>
                                 <th class="text-center">@_localizer.GetLocalizedString("Date")</th>
                                 <th class="text-center">@_localizer.GetLocalizedString("Status")</th>
-                                <th>Action</th>
+                                <th class="text-center">Action</th>
+                                <th class="text-center">View</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -51,25 +52,35 @@
                                     <td class="text-center">@item.Total</td>
                                     <td class="text-center">@item.CreateDate</td>
                                     <td class="text-center">@item.Status</td>
-                                    <td>
-                                        @if (item.Status.Equals("Đã đặt"))
-                                        {
-                                            /// khách đặt và chờ xác nhận lấy hàng và giao hàng
-                                            <a href="/admin/order/updatedatdat/@item.Id" class="btn btn-primary">Lấy hàng và vận chuyển</a>
-                                            <a href="/Admin/Invoice/DetailInvoice?id=@item.Id" class="btn btn-primary">Xem thông tin đơn hàng</a>
 
-                                        }
-                                        else if (item.Status.Equals("Đang giao hàng"))
-                                        {
-                                            <a href="/admin/order/updategiaohang/@item.Id" class="btn btn-primary">Giao hàng</a>
-                                            <a href="/Admin/Invoice/DetailInvoice?id=@item.Id" class="btn btn-primary">Xem thông tin đơn hàng</a>
+                                    @if (item.Status.Equals("Đã đặt"))
+                                    {
+                                        /// khách Đặt và chờ xác nhận lấy hàng và giao hàng
+                                        <td class="text-center">
+                                            <a href="/admin/order/updatedatdat/@item.Id" class="btn btn-warning">Vận chuyển</a>
+                                        </td>
+                                        <td class="text-center">
+                                            <a href="/Admin/Invoice/DetailInvoice?id=@item.Id" class="btn btn-primary">Xem thông tin</a>
+                                        </td>
+                                    }
+                                    else if (item.Status.Equals("Đang giao hàng"))
+                                    {
+                                        <td class="text-center">
+                                            <a href="/admin/order/updategiaohang/@item.Id" class="btn btn-success">Giao hàng</a>
+                                        </td>
+                                        <td class="text-center">
+                                            <a href="/Admin/Invoice/DetailInvoice?id=@item.Id" class="btn btn-primary">Xem thông tin</a>
+                                        </td>
+                                    }
+                                    else if (item.Status.Equals("Đã nhận hàng"))
+                                    {
+                                        <td class="text-center">
+                                        </td>
+                                        <td class="text-center">
+                                            <a href="/Admin/Invoice/DetailInvoice?id=@item.Id" class="btn btn-primary">Xem thông tin</a>
+                                        </td>
+                                    }
 
-                                        }
-                                        else if (item.Status.Equals("Đã nhận hàng"))
-                                        {
-                                            <a href="/Admin/Invoice/DetailInvoice?id=@item.Id" class="btn btn-primary">Xem thông tin đơn hàng</a>
-                                        }
-                                    </td>
 
                                 </tr>
                             }

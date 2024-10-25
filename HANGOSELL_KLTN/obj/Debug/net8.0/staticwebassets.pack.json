@@ -23961,6 +23961,10 @@
       "PackagePath": "staticwebassets\\images\\034df16a-7009-4fa3-ac13-dfdc3686ac04.png"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\0a08b9c0-84f3-4f7e-89c2-7f0987c783eb.png",
+      "PackagePath": "staticwebassets\\images\\0a08b9c0-84f3-4f7e-89c2-7f0987c783eb.png"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\0ac496c3-0906-41f5-b966-5c53056ea577.png",
       "PackagePath": "staticwebassets\\images\\0ac496c3-0906-41f5-b966-5c53056ea577.png"
     },
@@ -23981,6 +23985,14 @@
       "PackagePath": "staticwebassets\\images\\1113e003-b582-462d-8352-7cad92c04ff0.png"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\117cc2f8-8144-40c0-b289-679b9b67eada.jpg",
+      "PackagePath": "staticwebassets\\images\\117cc2f8-8144-40c0-b289-679b9b67eada.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\133f0d27-e90a-436a-8349-e2398a463f2b.jpg",
+      "PackagePath": "staticwebassets\\images\\133f0d27-e90a-436a-8349-e2398a463f2b.jpg"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\149910a3-872d-424d-8766-e43d44ebecab.png",
       "PackagePath": "staticwebassets\\images\\149910a3-872d-424d-8766-e43d44ebecab.png"
     },
@@ -23989,12 +24001,20 @@
       "PackagePath": "staticwebassets\\images\\1698ca12-d182-4a05-af79-00721ad572a0.png"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\18fb21a0-bcbc-49f5-9b6a-3c563412e025.png",
+      "PackagePath": "staticwebassets\\images\\18fb21a0-bcbc-49f5-9b6a-3c563412e025.png"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\19b4f646-3627-43a8-ab47-98780d5b6381.png",
       "PackagePath": "staticwebassets\\images\\19b4f646-3627-43a8-ab47-98780d5b6381.png"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\1a0e593d-4840-4aeb-9365-7e5a453c3c13.png",
       "PackagePath": "staticwebassets\\images\\1a0e593d-4840-4aeb-9365-7e5a453c3c13.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\23ee6010-6c70-4b56-b414-1b86f747f57d.jpg",
+      "PackagePath": "staticwebassets\\images\\23ee6010-6c70-4b56-b414-1b86f747f57d.jpg"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\247fea74-d9a0-43aa-a074-be35c3f240a2.png",
@@ -24009,8 +24029,16 @@
       "PackagePath": "staticwebassets\\images\\283cfb0b-4793-4e68-b696-5a3fc03afdd4.png"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\2a0066bc-c62f-4663-be9b-02d81ff277aa.png",
+      "PackagePath": "staticwebassets\\images\\2a0066bc-c62f-4663-be9b-02d81ff277aa.png"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\2ad3f560-80dd-48c0-93a1-a3241252bae5.png",
       "PackagePath": "staticwebassets\\images\\2ad3f560-80dd-48c0-93a1-a3241252bae5.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\2d04a7d3-5a07-43e3-a89c-d42200a92afd.jpg",
+      "PackagePath": "staticwebassets\\images\\2d04a7d3-5a07-43e3-a89c-d42200a92afd.jpg"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\2d696b5e-270a-43ae-b961-fb185ec8db1f.png",
@@ -24031,6 +24059,10 @@
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\32dbb0b2-1ae2-4696-9663-86b8dd0902f3.png",
       "PackagePath": "staticwebassets\\images\\32dbb0b2-1ae2-4696-9663-86b8dd0902f3.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\33bd803e-c06b-4295-ab59-083b2af4b486.jpg",
+      "PackagePath": "staticwebassets\\images\\33bd803e-c06b-4295-ab59-083b2af4b486.jpg"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\35aaeff1-2d13-4f0b-9927-8ab25633fbc5.png",
@@ -24057,6 +24089,10 @@
       "PackagePath": "staticwebassets\\images\\50dc0bba-1a1a-4bb3-b926-c5b471fc6ba7.png"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\55edb906-6291-4175-a746-54e452f96295.png",
+      "PackagePath": "staticwebassets\\images\\55edb906-6291-4175-a746-54e452f96295.png"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\5914d719-d0f2-43c8-8d5a-dd9523a9680b.png",
       "PackagePath": "staticwebassets\\images\\5914d719-d0f2-43c8-8d5a-dd9523a9680b.png"
     },
@@ -24065,8 +24101,20 @@
       "PackagePath": "staticwebassets\\images\\5c05ad55-a2ca-4d84-a23c-6a973e75e220.png"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\6053bee0-0fb1-435a-ab99-2fe114183690.jpg",
+      "PackagePath": "staticwebassets\\images\\6053bee0-0fb1-435a-ab99-2fe114183690.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\61e49af4-cea0-40bb-888a-d4458d494f52.png",
+      "PackagePath": "staticwebassets\\images\\61e49af4-cea0-40bb-888a-d4458d494f52.png"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\623d4090-ee0a-4284-acd4-b966eb6637a1.png",
       "PackagePath": "staticwebassets\\images\\623d4090-ee0a-4284-acd4-b966eb6637a1.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\69b14fc2-a7f1-4488-8c1d-e8672d0d5ab2.png",
+      "PackagePath": "staticwebassets\\images\\69b14fc2-a7f1-4488-8c1d-e8672d0d5ab2.png"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\6bc1af1f-6fb3-4437-876c-6605cd2ff9b7.png",
@@ -24089,8 +24137,16 @@
       "PackagePath": "staticwebassets\\images\\74c01e38-cfd0-4c87-885e-7b3028692941.png"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\761e8414-3a2c-4cd7-9b82-00c264ee209e.jpg",
+      "PackagePath": "staticwebassets\\images\\761e8414-3a2c-4cd7-9b82-00c264ee209e.jpg"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\7740ec52-95f3-4e15-b719-10706159b5b4.png",
       "PackagePath": "staticwebassets\\images\\7740ec52-95f3-4e15-b719-10706159b5b4.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\77ebf854-2adf-4f97-b9c5-e9c9ecdd4294.jpg",
+      "PackagePath": "staticwebassets\\images\\77ebf854-2adf-4f97-b9c5-e9c9ecdd4294.jpg"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\7862ed5f-1949-411d-ae28-0fb0507435e8.png",
@@ -24145,8 +24201,16 @@
       "PackagePath": "staticwebassets\\images\\99d56dc1-9cfd-4b9d-901a-a045a468d3f7.png"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\9a6ec54d-aef3-43d5-a181-67abf34b161d.jpg",
+      "PackagePath": "staticwebassets\\images\\9a6ec54d-aef3-43d5-a181-67abf34b161d.jpg"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\9fb283cb-9b5a-4cd8-8fcb-82be3acccf30.png",
       "PackagePath": "staticwebassets\\images\\9fb283cb-9b5a-4cd8-8fcb-82be3acccf30.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\9fcf8a61-59fc-4423-9574-f0f2c27d6476.jpg",
+      "PackagePath": "staticwebassets\\images\\9fcf8a61-59fc-4423-9574-f0f2c27d6476.jpg"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\LogoHanGoSell.png",
@@ -24159,6 +24223,10 @@
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\a66cbd69-4573-445d-b9e7-d332342b6e70.png",
       "PackagePath": "staticwebassets\\images\\a66cbd69-4573-445d-b9e7-d332342b6e70.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\a73785bb-098e-459d-90ec-9741afde2795.png",
+      "PackagePath": "staticwebassets\\images\\a73785bb-098e-459d-90ec-9741afde2795.png"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\a9b276de-eb37-4f18-8a72-d6dbefa0e2a8.png",
@@ -24257,6 +24325,10 @@
       "PackagePath": "staticwebassets\\images\\ec8dd787-21c5-4bdd-9b2a-99d71ca829f4.png"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\ed68e893-3a6f-4d43-a6fd-9ae0bc525a93.png",
+      "PackagePath": "staticwebassets\\images\\ed68e893-3a6f-4d43-a6fd-9ae0bc525a93.png"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\ef05c000-6bdb-49d8-b259-7fea502160ee.png",
       "PackagePath": "staticwebassets\\images\\ef05c000-6bdb-49d8-b259-7fea502160ee.png"
     },
@@ -24267,6 +24339,10 @@
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\ef873723-d480-4697-a577-ec7d79631faf.png",
       "PackagePath": "staticwebassets\\images\\ef873723-d480-4697-a577-ec7d79631faf.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\f6502130-8b32-4601-a20b-11d9d39d635d.jpg",
+      "PackagePath": "staticwebassets\\images\\f6502130-8b32-4601-a20b-11d9d39d635d.jpg"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\f71f390c-f5d8-4159-88b9-99bc0d0e369b.png",
@@ -24291,6 +24367,10 @@
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\fdd4f22b-9e4f-4a81-b48d-52d05f625d00.jpg",
       "PackagePath": "staticwebassets\\images\\fdd4f22b-9e4f-4a81-b48d-52d05f625d00.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\fe8e805d-741d-4d33-87a0-374685c62fb1.jpg",
+      "PackagePath": "staticwebassets\\images\\fe8e805d-741d-4d33-87a0-374685c62fb1.jpg"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\HANGOSELL_KLTN\\HANGOSELL_KLTN\\wwwroot\\images\\ff40f8a9-ace8-4f1d-ac76-0d19ebb4a5e6.png",
